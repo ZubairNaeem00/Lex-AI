@@ -1,0 +1,96 @@
+........F..........FF..................                                  [100%]
+================================== FAILURES ===================================
+______________ test_refresh_rotates_and_reuse_revokes_the_family ______________
+
+client = <starlette.testclient.TestClient object at 0x000001D7E318B460>
+account_a = {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWU3MTg1ZTlkNjM3OTkyMWM5YmNkNzYiLCJ0eXAiOiJhY2Nlc3MiLCJqdG...mxBXQttj6fDuyIQtSyY0', 'id': '6ae7185e9d6379921c9bcd76', 'email': 'advocate.a@example.com', 'password': 'LegalLens123'}
+
+    def test_refresh_rotates_and_reuse_revokes_the_family(client, account_a):
+        session_row = crud.user_sessions.find_one({"user_id": account_a["id"]})
+        login = client.post("/api/auth/login",
+                            json={"email": account_a["email"], "password": PASSWORD})
+        refresh_token = login.json()["refresh_token"]
+    
+        rotated = client.post("/api/auth/refresh", json={"refresh_token": refresh_token})
+        assert rotated.status_code == 200
+        new_tokens = rotated.json()
+        assert new_tokens["refresh_token"] != refresh_token
+        assert new_tokens["access_token"] != login.json()["access_token"]
+    
+        reuse = client.post("/api/auth/refresh", json={"refresh_token": refresh_token})
+        assert reuse.status_code == 401
+    
+        family = session_row["family_id"]
+        live = crud.user_sessions.count({"family_id": family, "revoked_at": None})
+>       assert live == 0, "reuse must revoke every session in the family"
+E       AssertionError: reuse must revoke every session in the family
+E       assert 1 == 0
+
+tests\test_authentication.py:110: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+[Email] log to=advocate.a@example.com subject='Welcome to AI Law Agent' link=
+_______________________ test_case_search_and_pagination _______________________
+
+client = <starlette.testclient.TestClient object at 0x000001D7E3128340>
+account_a = {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWU3MTg2NjlkNjM3OTkyMWM5YmNkYmEiLCJ0eXAiOiJhY2Nlc3MiLCJqdG...icl_9ASBt03EHctIz7_Q', 'id': '6ae718669d6379921c9bcdba', 'email': 'advocate.a@example.com', 'password': 'LegalLens123'}
+
+    def test_case_search_and_pagination(client, account_a):
+        headers = auth_header(account_a["token"])
+        for index in range(3):
+            create_case(client, account_a, name=f"Matter number {index}")
+    
+        page = client.get("/api/cases?page_size=2", headers=headers)
+>       assert page.json()["total"] == 4
+E       assert 3 == 4
+
+tests\test_crud.py:69: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+[Email] log to=advocate.a@example.com subject='Welcome to AI Law Agent' link=
+_______________ test_conversation_crud_with_messages_and_memory _______________
+
+client = <starlette.testclient.TestClient object at 0x000001D7E31444F0>
+account_a = {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWU3MTg2NjlkNjM3OTkyMWM5YmNkY2EiLCJ0eXAiOiJhY2Nlc3MiLCJqdG...X3pDzs3t1RdLKGJ9Z4CE', 'id': '6ae718669d6379921c9bcdca', 'email': 'advocate.a@example.com', 'password': 'LegalLens123'}
+
+    def test_conversation_crud_with_messages_and_memory(client, account_a):
+        headers = auth_header(account_a["token"])
+        case = create_case(client, account_a)["case"]
+    
+        conversation = client.post("/api/conversations", headers=headers,
+                                   json={"title": "Bail hearing prep", "case_id": case["id"]})
+        assert conversation.status_code == 201
+        conversation_id = conversation.json()["id"]
+        assert conversation.json()["type"] == "case"
+        assert conversation.json()["case_id"] == case["id"]
+    
+        for index in range(3):
+            appended = client.post(f"/api/conversations/{conversation_id}/messages", headers=headers,
+                                   json={"role": "user", "content": f"Question number {index}"})
+            assert appended.status_code == 201
+    
+        transcript = client.get(f"/api/conversations/{conversation_id}/messages", headers=headers)
+        assert transcript.json()["total"] == 3
+        assert [item["content"] for item in transcript.json()["items"]][0] == "Question number 0"
+    
+        memory = client.put(f"/api/conversations/{conversation_id}/memory", headers=headers,
+                            json={"summary": "User is preparing a bail application.",
+                                  "key_facts": ["arrested on 12 March"],
+                                  "open_questions": ["is surety available?"],
+                                  "message_count": 3})
+        assert memory.status_code == 200
+        assert memory.json()["version"] == 1
+    
+        stored = client.get(f"/api/conversations/{conversation_id}/memory", headers=headers)
+        assert stored.json()["key_facts"] == ["arrested on 12 March"]
+    
+        listing = client.get(f"/api/conversations?case_id={case['id']}", headers=headers)
+>       assert listing.json()["total"] == 1
+E       assert 2 == 1
+
+tests\test_crud.py:112: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+[Email] log to=advocate.a@example.com subject='Welcome to AI Law Agent' link=
+=========================== short test summary info ===========================
+FAILED tests/test_authentication.py::test_refresh_rotates_and_reuse_revokes_the_family
+FAILED tests/test_crud.py::test_case_search_and_pagination - assert 3 == 4
+FAILED tests/test_crud.py::test_conversation_crud_with_messages_and_memory - ...
+3 failed, 36 passed in 21.36s

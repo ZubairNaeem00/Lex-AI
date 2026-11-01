@@ -1,0 +1,210 @@
+INFO:     Started server process [2916]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58043 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58047 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58148 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58149 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58150 - "POST /api/sessions HTTP/1.1" 200 OK
+Loading law FAISS index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_law'...
+Loading embedding model 'BAAI/bge-base-en-v1.5' on 'cpu'...
+C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py:169: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the `langchain-huggingface package and should be used instead. To use it run `pip install -U `langchain-huggingface` and import as `from `langchain_huggingface import HuggingFaceEmbeddings``.
+  _embeddings = HuggingFaceEmbeddings(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793533064.894036    7420 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793533116.047547    7420 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+INFO:     127.0.0.1:58473 - "GET /openapi.json HTTP/1.1" 200 OK
+Embedding model ready.
+INFO:     127.0.0.1:58480 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58483 - "POST /api/sessions HTTP/1.1" 200 OK
+Law FAISS index ready (51,475 vectors).
+Loading cases FAISS index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_cases'...
+Cases FAISS index ready (209,168 vectors).
+[LLM] legal answer: input=3109 output=626 reasoning=57 total=3735
+[LLM] legal answer: input=3109 output=654 reasoning=56 total=3763
+INFO:     127.0.0.1:58484 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58497 - "GET /api/sessions/case_85d31c5b4ade45f9811be6b573bcd813 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58498 - "PATCH /api/sessions/case_85d31c5b4ade45f9811be6b573bcd813 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58499 - "PATCH /api/sessions/case_85d31c5b4ade45f9811be6b573bcd813 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58500 - "PATCH /api/sessions/case_85d31c5b4ade45f9811be6b573bcd813 HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:58501 - "DELETE /api/sessions/case_85d31c5b4ade45f9811be6b573bcd813?only_if_empty=true HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:58502 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_70fd6a548e1c4c559b2603366010660b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "PATCH /api/sessions/case_70fd6a548e1c4c559b2603366010660b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "PATCH /api/sessions/case_70fd6a548e1c4c559b2603366010660b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "PATCH /api/sessions/case_70fd6a548e1c4c559b2603366010660b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_70fd6a548e1c4c559b2603366010660b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_ccb7dfcb376a4e7fbe59fd27551fd39c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_ccb7dfcb376a4e7fbe59fd27551fd39c?only_if_empty=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_be62d232b6a2491abfbf802d4313725d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_be62d232b6a2491abfbf802d4313725d?only_if_empty=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1ceb0142254f4bba84b517114228af99 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_1ceb0142254f4bba84b517114228af99?only_if_empty=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_528fa708c0094305b5f08dbdb3e8b58c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+[LLM] legal answer: input=3017 output=249 reasoning=64 total=3266
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_528fa708c0094305b5f08dbdb3e8b58c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_43698730821e44608ed9f22340befa96 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+[LLM] legal answer: input=3017 output=250 reasoning=58 total=3267
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_43698730821e44608ed9f22340befa96 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "PATCH /api/sessions/case_528fa708c0094305b5f08dbdb3e8b58c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_959f303a2e844cd987bf3d183faf2fae HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_b1a757aba2884739a7f937035e53879e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_dda96a71549242b3a98cd7c0b02bde03 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_25894a16835c405f956897a8a2a3da3c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_79e583a71a6e4d5bb427b9ac1ffb6c8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_6125ffb060584390b5c86ee4109985d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_959f303a2e844cd987bf3d183faf2fae HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_71351e175c3d4c6b9f20cf579f757a2c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_71351e175c3d4c6b9f20cf579f757a2c?only_if_empty=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3fbd0115febf47e7be03abac21d6288d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_3fbd0115febf47e7be03abac21d6288d?only_if_empty=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_a9d611839fee4c3f868618d66a29b6d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_a9d611839fee4c3f868618d66a29b6d1?only_if_empty=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_aea6756729224e3b8965d19b4f834f3a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_aea6756729224e3b8965d19b4f834f3a?only_if_empty=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_13744a363dd542e0b183c6e95f94786d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_13744a363dd542e0b183c6e95f94786d?only_if_empty=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_2299e81a73f4427f9f950f59a5e16415 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_2299e81a73f4427f9f950f59a5e16415?only_if_empty=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+[LLM] legal answer: input=3091 output=520 reasoning=57 total=3611
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+[LLM] follow-up resolution: input=219 output=66 reasoning=49 total=285
+[LLM] question decomposition: input=284 output=196 reasoning=74 total=480
+[LLM] legal answer: input=3394 output=789 reasoning=123 total=4183
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_87f955a126664761844acc7b9acece8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_87f955a126664761844acc7b9acece8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_87f955a126664761844acc7b9acece8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_87f955a126664761844acc7b9acece8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_87f955a126664761844acc7b9acece8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_87f955a126664761844acc7b9acece8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_87f955a126664761844acc7b9acece8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/analyze HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_87f955a126664761844acc7b9acece8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_793eaf77eddc40ec9e7940323fd3f462 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_793eaf77eddc40ec9e7940323fd3f462 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_43698730821e44608ed9f22340befa96 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_43698730821e44608ed9f22340befa96 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_43698730821e44608ed9f22340befa96 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_43698730821e44608ed9f22340befa96 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_43698730821e44608ed9f22340befa96 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_28477d13cca24cd0af25d5b9b9286299 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_28477d13cca24cd0af25d5b9b9286299?only_if_empty=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60134 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60135 - "GET /api/sessions HTTP/1.1" 200 OK

@@ -1,0 +1,58 @@
+{
+  "Bail Application.docx": {
+    "fields": [
+      {
+        "name": "applicants_full_name",
+        "description": "Full legal name of the applicant/accused.",
+        "required": true
+      },
+      {
+        "name": "applicant_fathers_name",
+        "description": "Full name of the applicant's father.",
+        "required": true
+      },
+      {
+        "name": "applicants_address",
+        "description": "Residential address of the applicant.",
+        "required": true
+      },
+      {
+        "name": "applicants_cnic_no",
+        "description": "CNIC number of the applicant.",
+        "required": true
+      },
+      {
+        "name": "police_station",
+        "description": "Police station where the FIR was registered.",
+        "required": true
+      },
+      {
+        "name": "list_relevant_sections",
+        "description": "PPC, CrPC, or other relevant legal sections in the case.",
+        "required": true
+      },
+      {
+        "name": "police_station_investigation_officer",
+        "description": "Name of the investigating officer, or the police station if the officer's name is unavailable.",
+        "required": true
+      },
+      {
+        "name": "fir_number",
+        "description": "FIR registration number and year.",
+        "required": true
+      },
+      {
+        "name": "court_name_location",
+        "description": "Competent court (for example, Court of Sessions Judge, Lahore).",
+        "required": false,
+        "default": "Sessions Court, Lahore"
+      },
+      {
+        "name": "law_firm_address",
+        "description": "Advocate or law-firm name and address.",
+        "required": false,
+        "default": "Advocate High Court, Lahore"
+      }
+    ]
+  }
+}

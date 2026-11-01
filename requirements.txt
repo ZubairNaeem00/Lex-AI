@@ -1,0 +1,36 @@
+# LegalLens runtime dependencies
+# Python 3.10+
+
+# Web API
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+python-multipart>=0.0.9
+pydantic>=2.6.0
+python-dotenv>=1.0.1
+email-validator>=2.1.0
+
+# Persistence and accounts
+pymongo>=4.6.0
+PyJWT>=2.8.0
+argon2-cffi>=23.1.0
+slowapi>=0.1.9
+
+# LLM providers
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-groq>=0.1.0
+groq>=0.9.0
+
+# Legal RAG index and embeddings
+faiss-cpu>=1.8.0
+sentence-transformers>=2.6.0
+torch>=2.2.0
+
+# Token budgeting (falls back to character estimates if unavailable)
+tiktoken>=0.7.0
+
+# Document extraction (LlamaParse only) and DOCX rendering
+llama-cloud>=2.0.0
+docxtpl>=0.16.8
+python-docx>=1.1.0
+jinja2>=3.1.3

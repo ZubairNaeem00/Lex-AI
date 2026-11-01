@@ -1,0 +1,167 @@
+INFO:     Started server process [16420]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:55909 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55913 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55914 - "GET /api/sessions/case_4c4ea9c9ad0d431b8346c3fa3d6010b9 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55915 - "GET /sessions/case_4c4ea9c9ad0d431b8346c3fa3d6010b9/download/nope.docx HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:55916 - "GET /sessions/case_4c4ea9c9ad0d431b8346c3fa3d6010b9/download/nope.docx HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_48ca0939a028401a8e556a4d80b5a696 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_13fca578d2544d29baf98ce874922d54 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_13fca578d2544d29baf98ce874922d54 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_13fca578d2544d29baf98ce874922d54 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_13fca578d2544d29baf98ce874922d54 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56516 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56520 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56521 - "POST /api/sessions HTTP/1.1" 200 OK
+[LLM] generation field extraction: input=? output=? reasoning=? total=?
+INFO:     127.0.0.1:56522 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56528 - "GET /api/sessions/case_c153d4ee86b74000b7f97fceca81ecd6/generation HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56529 - "GET /api/sessions/case_c153d4ee86b74000b7f97fceca81ecd6/generation/gen_07094d3daa014aecb71ebddfabcc37e9/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56530 - "PUT /api/sessions/case_c153d4ee86b74000b7f97fceca81ecd6/generation/gen_07094d3daa014aecb71ebddfabcc37e9/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56532 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56533 - "GET /api/sessions/case_c153d4ee86b74000b7f97fceca81ecd6/generation HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56534 - "GET /sessions/case_c153d4ee86b74000b7f97fceca81ecd6/download/Bail_Application_case_c153d4ee86b74000b7f97fceca81ecd6_20261101_155233_f0618e.docx HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56535 - "GET /sessions/case_c153d4ee86b74000b7f97fceca81ecd6/download/Bail_Application_case_c153d4ee86b74000b7f97fceca81ecd6_20261101_155233_f0618e.docx HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56536 - "GET /api/sessions/case_c153d4ee86b74000b7f97fceca81ecd6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_cc1a549b7fc64d8791a56827eb92fb31 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_c153d4ee86b74000b7f97fceca81ecd6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_13fca578d2544d29baf98ce874922d54 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_4c4ea9c9ad0d431b8346c3fa3d6010b9 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_61edab6f18bc45a0a4b07dfa51892cff HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_c153d4ee86b74000b7f97fceca81ecd6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_cc1a549b7fc64d8791a56827eb92fb31 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_cc1a549b7fc64d8791a56827eb92fb31 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_cc1a549b7fc64d8791a56827eb92fb31 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_cc1a549b7fc64d8791a56827eb92fb31 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_cc1a549b7fc64d8791a56827eb92fb31 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_cc1a549b7fc64d8791a56827eb92fb31 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_c153d4ee86b74000b7f97fceca81ecd6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /sessions/case_c153d4ee86b74000b7f97fceca81ecd6/download/Bail_Application_case_c153d4ee86b74000b7f97fceca81ecd6_20261101_155233_f0618e.docx HTTP/1.1" 200 OK
+[Email] log to=rida.test@example.com subject='Welcome to AI Law Agent' link=
+INFO:     127.0.0.1:0 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_c153d4ee86b74000b7f97fceca81ecd6 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_9ccff8730cbe490782a21bfc4952b461 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+[Email] log to=zubiarnaeem00@gmail.com subject='Welcome to AI Law Agent' link=
+INFO:     127.0.0.1:0 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6125ffb060584390b5c86ee4109985d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6125ffb060584390b5c86ee4109985d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6125ffb060584390b5c86ee4109985d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_79e583a71a6e4d5bb427b9ac1ffb6c8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6125ffb060584390b5c86ee4109985d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_79e583a71a6e4d5bb427b9ac1ffb6c8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6125ffb060584390b5c86ee4109985d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_79e583a71a6e4d5bb427b9ac1ffb6c8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6125ffb060584390b5c86ee4109985d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_79e583a71a6e4d5bb427b9ac1ffb6c8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_25894a16835c405f956897a8a2a3da3c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_dda96a71549242b3a98cd7c0b02bde03 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6125ffb060584390b5c86ee4109985d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_79e583a71a6e4d5bb427b9ac1ffb6c8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_25894a16835c405f956897a8a2a3da3c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_dda96a71549242b3a98cd7c0b02bde03 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6125ffb060584390b5c86ee4109985d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_79e583a71a6e4d5bb427b9ac1ffb6c8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_25894a16835c405f956897a8a2a3da3c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_dda96a71549242b3a98cd7c0b02bde03 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_b1a757aba2884739a7f937035e53879e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_b1a757aba2884739a7f937035e53879e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_dda96a71549242b3a98cd7c0b02bde03 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_25894a16835c405f956897a8a2a3da3c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_79e583a71a6e4d5bb427b9ac1ffb6c8b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6125ffb060584390b5c86ee4109985d1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+Loading law FAISS index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_law'...
+Loading embedding model 'BAAI/bge-base-en-v1.5' on 'cpu'...
+C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py:169: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the `langchain-huggingface package and should be used instead. To use it run `pip install -U `langchain-huggingface` and import as `from `langchain_huggingface import HuggingFaceEmbeddings``.
+  _embeddings = HuggingFaceEmbeddings(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793531968.841800   10864 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793531974.972384   10864 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+Embedding model ready.
+Law FAISS index ready (51,475 vectors).
+Loading cases FAISS index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_cases'...
+Cases FAISS index ready (209,168 vectors).
+[LLM] legal answer: input=3082 output=502 reasoning=26 total=3584
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_b1a757aba2884739a7f937035e53879e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_b1a757aba2884739a7f937035e53879e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_dda96a71549242b3a98cd7c0b02bde03 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_b1a757aba2884739a7f937035e53879e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_b1a757aba2884739a7f937035e53879e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_9ccff8730cbe490782a21bfc4952b461 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c6a427fc7014a2f82b17a9c3326c2de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK

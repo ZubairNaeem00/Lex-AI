@@ -1,0 +1,60 @@
+INFO:     Started server process [12624]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52860 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52868 - "GET / HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:0 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /login HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /dashboard HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_8a32f2feadca4b10941905c9669070eb HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_48ca0939a028401a8e556a4d80b5a696 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+Loading law FAISS index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_law'...
+Loading embedding model 'BAAI/bge-base-en-v1.5' on 'cpu'...
+C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py:169: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the `langchain-huggingface package and should be used instead. To use it run `pip install -U `langchain-huggingface` and import as `from `langchain_huggingface import HuggingFaceEmbeddings``.
+  _embeddings = HuggingFaceEmbeddings(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793527025.103903   17860 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793527034.763998   17860 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+Embedding model ready.
+Law FAISS index ready (51,475 vectors).
+Loading cases FAISS index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_cases'...
+Cases FAISS index ready (209,168 vectors).
+[LLM] legal answer: input=2754 output=709 reasoning=32 total=3463
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52970 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_bcc244fbaf33439e96de0f7202cf783e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_48ca0939a028401a8e556a4d80b5a696 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_499a696febe84c7e81b6f7e134e7707c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_499a696febe84c7e81b6f7e134e7707c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_48ca0939a028401a8e556a4d80b5a696 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_bcc244fbaf33439e96de0f7202cf783e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_48ca0939a028401a8e556a4d80b5a696 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_499a696febe84c7e81b6f7e134e7707c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_bcc244fbaf33439e96de0f7202cf783e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_499a696febe84c7e81b6f7e134e7707c HTTP/1.1" 200 OK
