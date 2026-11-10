@@ -53,13 +53,16 @@ from document_analysis import (
 from generation_workflow import (
     CANCEL_WORDS,
     GenerationConflict,
+    GenerationDocumentMissing,
     cancel_generation,
     continue_generation,
     detect_generation_request,
     generation_snapshot,
     get_generation_fields,
+    read_generation_document,
     retry_generation,
     retry_word_requested,
+    save_generation_document,
     start_generation,
     update_generation_fields,
 )
@@ -151,6 +154,10 @@ class EditReportRequest(BaseModel):
 class GenerationFieldsRequest(BaseModel):
     values: Dict[str, str] = Field(default_factory=dict)
     generate: bool = True
+
+
+class GenerationDocumentRequest(BaseModel):
+    html: str = Field(default="", max_length=600_000)
 
 
 class SessionUpdateRequest(BaseModel):
@@ -572,6 +579,60 @@ def write_generation_fields(
             raise HTTPException(404, "Document generation not found in this case.")
         persistence.sync_session(session)
         result.setdefault("case_id", case_id)
+        return result
+
+
+@app.get("/api/sessions/{case_id}/generation/{generation_id}/document")
+def preview_generation_document(
+    case_id: str,
+    generation_id: str,
+    user: Optional[AuthenticatedUser] = Depends(get_optional_user),
+):
+    """Editable Word-style HTML for a completed draft, read from its DOCX."""
+    session = _runtime_session(case_id, user)
+    with session.lock:
+        try:
+            payload = read_generation_document(session, generation_id)
+        except GenerationDocumentMissing as exc:
+            raise HTTPException(404, str(exc)) from exc
+        except Exception as exc:
+            print("[DraftPreview] unexpected error:\n" + traceback.format_exc(), flush=True)
+            raise HTTPException(
+                500, "This draft could not be opened for editing. Download still works."
+            ) from exc
+    if not payload:
+        raise HTTPException(404, "Document generation not found in this case.")
+    return payload
+
+
+@app.put("/api/sessions/{case_id}/generation/{generation_id}/document")
+def revise_generation_document(
+    case_id: str,
+    generation_id: str,
+    payload: GenerationDocumentRequest,
+    user: Optional[AuthenticatedUser] = Depends(get_optional_user),
+):
+    """Save the edited draft as a new DOCX revision served by the download route."""
+    session = _runtime_session(case_id, user)
+    if not payload.html.strip():
+        raise HTTPException(400, "The edited draft is empty, so nothing was saved.")
+    with session.lock:
+        try:
+            result = save_generation_document(session, generation_id, payload.html)
+        except GenerationDocumentMissing as exc:
+            raise HTTPException(404, str(exc)) from exc
+        except GenerationConflict as exc:
+            raise HTTPException(409, str(exc)) from exc
+        except (ValueError, SyntaxError) as exc:
+            raise HTTPException(
+                400, f"The edited draft could not be saved ({type(exc).__name__})."
+            ) from exc
+        except Exception as exc:
+            print("[DraftRevision] unexpected error:\n" + traceback.format_exc(), flush=True)
+            raise HTTPException(500, "The revised draft could not be saved.") from exc
+        if not result:
+            raise HTTPException(404, "Document generation not found in this case.")
+        persistence.sync_session(session)
         return result
 
 

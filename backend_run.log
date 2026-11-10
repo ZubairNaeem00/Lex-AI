@@ -1,60 +1,498 @@
-INFO:     Started server process [12624]
+INFO:     Started server process [7964]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     127.0.0.1:52860 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52868 - "GET / HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:0 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /chat HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /chat HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:0 - "GET /login HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:0 - "GET /dashboard HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_8a32f2feadca4b10941905c9669070eb HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51874 - "GET /api/auth/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51878 - "GET /api/auth/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51884 - "GET /api/auth/login HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:51922 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51926 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51929 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51930 - "GET /api/cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51936 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51937 - "GET /api/cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51956 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51957 - "POST /api/cases HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:51958 - "POST /api/chat HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:51965 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51967 - "POST /api/cases HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52001 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52002 - "POST /api/cases HTTP/1.1" 201 Created
+[Generation] LLM extraction failed (InvalidURL); falling back to known facts.
+INFO:     127.0.0.1:52003 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52004 - "GET /api/sessions/case_b89ea99fcc1546cb93e6da718d39a597/generation/gen_b8c5405728694d45a0f3ee04cb14019a/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52005 - "PUT /api/sessions/case_b89ea99fcc1546cb93e6da718d39a597/generation/gen_b8c5405728694d45a0f3ee04cb14019a/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55182 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55183 - "GET /api/sessions/case_b89ea99fcc1546cb93e6da718d39a597/generation/gen_b8c5405728694d45a0f3ee04cb14019a/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55184 - "PUT /api/sessions/case_b89ea99fcc1546cb93e6da718d39a597/generation/gen_b8c5405728694d45a0f3ee04cb14019a/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55185 - "GET /sessions/case_b89ea99fcc1546cb93e6da718d39a597/download/Bail_Application_edited_case_b89ea99fcc1546cb93e6da718d39a597_20261109_154808_64cf73.docx HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55186 - "GET /sessions/case_b89ea99fcc1546cb93e6da718d39a597/download/Bail_Application_case_b89ea99fcc1546cb93e6da718d39a597_20261109_154743_48d303.docx HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55187 - "PUT /api/sessions/case_b89ea99fcc1546cb93e6da718d39a597/generation/gen_b8c5405728694d45a0f3ee04cb14019a/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55188 - "GET /sessions/case_b89ea99fcc1546cb93e6da718d39a597/download/Bail_Application_edited_case_b89ea99fcc1546cb93e6da718d39a597_20261109_154808_ab6349.docx HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55189 - "GET /sessions/case_b89ea99fcc1546cb93e6da718d39a597/download/Bail_Application_edited_case_b89ea99fcc1546cb93e6da718d39a597_20261109_154808_64cf73.docx HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:55190 - "GET /api/sessions/case_ffffffff/generation/gen_b8c5405728694d45a0f3ee04cb14019a/document HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55191 - "PUT /api/sessions/case_b89ea99fcc1546cb93e6da718d39a597/generation/gen_b8c5405728694d45a0f3ee04cb14019a/document HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:55192 - "PUT /api/sessions/case_b89ea99fcc1546cb93e6da718d39a597/generation/gen_b8c5405728694d45a0f3ee04cb14019a/document HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:55193 - "GET /api/sessions/case_b89ea99fcc1546cb93e6da718d39a597/generation/gen_missing/document HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
 INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
 INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_48ca0939a028401a8e556a4d80b5a696 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+[Generation] LLM extraction failed (InvalidURL); falling back to known facts.
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "PUT /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/undefined/document HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/undefined/document HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "PUT /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /sessions/case_03b9036448f34f2cb9486e9d605cc944/download/Bail_Application_edited_case_03b9036448f34f2cb9486e9d605cc944_20261109_160550_21dddc.docx HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "PUT /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /sessions/case_03b9036448f34f2cb9486e9d605cc944/download/Bail_Application_edited_case_03b9036448f34f2cb9486e9d605cc944_20261109_160752_669ab0.docx HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1e413934b92d45dd91f3d4baff8080f1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "DELETE /api/sessions/case_69a1a1e8320e45d79c9948ea55a9979a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_768e9f2e401f484eaea47edc64e5a0c3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+[Generation] LLM extraction failed (InvalidURL); falling back to known facts.
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+[Generation] answer normalization failed (InvalidURL); using deterministic cleanup.
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+[Generation] answer normalization failed (InvalidURL); using deterministic cleanup.
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+[Generation] answer normalization failed (InvalidURL); using deterministic cleanup.
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+[Generation] answer normalization failed (InvalidURL); using deterministic cleanup.
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "PUT /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "PUT /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/fields HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+[Legal] follow-up resolution skipped: InvalidURL: Invalid port: ':1]'
 Loading law FAISS index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_law'...
 Loading embedding model 'BAAI/bge-base-en-v1.5' on 'cpu'...
 C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py:169: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the `langchain-huggingface package and should be used instead. To use it run `pip install -U `langchain-huggingface` and import as `from `langchain_huggingface import HuggingFaceEmbeddings``.
   _embeddings = HuggingFaceEmbeddings(
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1e413934b92d45dd91f3d4baff8080f1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-I0000 00:00:1793527025.103903   17860 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794223060.151484   14116 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_768e9f2e401f484eaea47edc64e5a0c3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1e413934b92d45dd91f3d4baff8080f1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1330850379e6475eabcdb4c941306112 HTTP/1.1" 200 OK
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-I0000 00:00:1793527034.763998   17860 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794223076.708011   14116 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
 WARNING:tensorflow:From C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
 
 Embedding model ready.
 Law FAISS index ready (51,475 vectors).
 Loading cases FAISS index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_cases'...
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
 Cases FAISS index ready (209,168 vectors).
-[LLM] legal answer: input=2754 output=709 reasoning=32 total=3463
+[Chat] unexpected error:
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 409, in normalize_port
+    port_as_int = int(port)
+ValueError: invalid literal for int() with base 10: ':1]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Main\Desktop\legallens_local_demo\main.py", line 524, in _run_chat_step
+    result = ask_legal_agent(message, session.session_id)
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 1581, in ask_legal_agent
+    answer = generate_legal_answer(
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 1383, in generate_legal_answer
+    llm = get_llm()
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 264, in get_llm
+    _llm = get_groq_llm(max_tokens=MAX_OUTPUT_TOKENS, temperature=0)
+  File "C:\Users\Main\Desktop\legallens_local_demo\groq_utils.py", line 56, in get_groq_llm
+    client = ChatGroq(**kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\langchain_core\load\serializable.py", line 118, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\langchain_groq\chat_models.py", line 520, in validate_environment
+    self.client = groq.Groq(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_client.py", line 89, in __init__
+    super().__init__(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_base_client.py", line 862, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_base_client.py", line 792, in __init__
+    super().__init__(**kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 697, in __init__
+    self._mounts: dict[URLPattern, BaseTransport | None] = {
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 698, in <dictcomp>
+    URLPattern(key): None
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_utils.py", line 172, in __init__
+    url = URL(pattern)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urls.py", line 117, in __init__
+    self._uri_reference = urlparse(url, **kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 321, in urlparse
+    parsed_port: int | None = normalize_port(port, scheme)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 411, in normalize_port
+    raise InvalidURL(f"Invalid port: {port!r}")
+httpx.InvalidURL: Invalid port: ':1]'
+
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944/generation/gen_77f3f5e2503543aa8aff988e1dc9ff54/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/document HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b/generation/gen_27c571f6e8a04b429f1033b0daaafc59/document HTTP/1.1" 200 OK
+[Analyze] unexpected error:
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 409, in normalize_port
+    port_as_int = int(port)
+ValueError: invalid literal for int() with base 10: ':1]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Main\Desktop\legallens_local_demo\main.py", line 360, in analyze
+    extracted = await run_in_threadpool(extract_text, temp_path)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\anyio\to_thread.py", line 61, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\anyio\_backends\_asyncio.py", line 2525, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "C:\Users\Main\Desktop\legallens_local_demo\document_analysis.py", line 82, in extract_text
+    client = LlamaCloud(api_key=key)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\llama_cloud\_client.py", line 146, in __init__
+    super().__init__(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\llama_cloud\_base_client.py", line 889, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\llama_cloud\_base_client.py", line 819, in __init__
+    super().__init__(**kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 697, in __init__
+    self._mounts: dict[URLPattern, BaseTransport | None] = {
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 698, in <dictcomp>
+    URLPattern(key): None
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_utils.py", line 172, in __init__
+    url = URL(pattern)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urls.py", line 117, in __init__
+    self._uri_reference = urlparse(url, **kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 321, in urlparse
+    parsed_port: int | None = normalize_port(port, scheme)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 411, in normalize_port
+    raise InvalidURL(f"Invalid port: {port!r}")
+httpx.InvalidURL: Invalid port: ':1]'
+
+INFO:     127.0.0.1:0 - "POST /api/analyze HTTP/1.1" 502 Bad Gateway
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_6bc9c762f9d4427d95c881e6d04d7d4b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+[Analyze] unexpected error:
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 409, in normalize_port
+    port_as_int = int(port)
+ValueError: invalid literal for int() with base 10: ':1]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Main\Desktop\legallens_local_demo\main.py", line 360, in analyze
+    extracted = await run_in_threadpool(extract_text, temp_path)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\anyio\to_thread.py", line 61, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\anyio\_backends\_asyncio.py", line 2525, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "C:\Users\Main\Desktop\legallens_local_demo\document_analysis.py", line 82, in extract_text
+    client = LlamaCloud(api_key=key)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\llama_cloud\_client.py", line 146, in __init__
+    super().__init__(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\llama_cloud\_base_client.py", line 889, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\llama_cloud\_base_client.py", line 819, in __init__
+    super().__init__(**kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 697, in __init__
+    self._mounts: dict[URLPattern, BaseTransport | None] = {
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 698, in <dictcomp>
+    URLPattern(key): None
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_utils.py", line 172, in __init__
+    url = URL(pattern)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urls.py", line 117, in __init__
+    self._uri_reference = urlparse(url, **kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 321, in urlparse
+    parsed_port: int | None = normalize_port(port, scheme)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 411, in normalize_port
+    raise InvalidURL(f"Invalid port: {port!r}")
+httpx.InvalidURL: Invalid port: ':1]'
+
+INFO:     127.0.0.1:0 - "POST /api/analyze HTTP/1.1" 502 Bad Gateway
+[Legal] follow-up resolution skipped: InvalidURL: Invalid port: ':1]'
+[Chat] unexpected error:
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 409, in normalize_port
+    port_as_int = int(port)
+ValueError: invalid literal for int() with base 10: ':1]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Main\Desktop\legallens_local_demo\main.py", line 524, in _run_chat_step
+    result = ask_legal_agent(message, session.session_id)
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 1581, in ask_legal_agent
+    answer = generate_legal_answer(
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 1383, in generate_legal_answer
+    llm = get_llm()
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 264, in get_llm
+    _llm = get_groq_llm(max_tokens=MAX_OUTPUT_TOKENS, temperature=0)
+  File "C:\Users\Main\Desktop\legallens_local_demo\groq_utils.py", line 56, in get_groq_llm
+    client = ChatGroq(**kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\langchain_core\load\serializable.py", line 118, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\langchain_groq\chat_models.py", line 520, in validate_environment
+    self.client = groq.Groq(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_client.py", line 89, in __init__
+    super().__init__(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_base_client.py", line 862, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_base_client.py", line 792, in __init__
+    super().__init__(**kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 697, in __init__
+    self._mounts: dict[URLPattern, BaseTransport | None] = {
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 698, in <dictcomp>
+    URLPattern(key): None
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_utils.py", line 172, in __init__
+    url = URL(pattern)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urls.py", line 117, in __init__
+    self._uri_reference = urlparse(url, **kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 321, in urlparse
+    parsed_port: int | None = normalize_port(port, scheme)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 411, in normalize_port
+    raise InvalidURL(f"Invalid port: {port!r}")
+httpx.InvalidURL: Invalid port: ':1]'
+
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1e413934b92d45dd91f3d4baff8080f1 HTTP/1.1" 200 OK
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
 INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52970 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1e413934b92d45dd91f3d4baff8080f1 HTTP/1.1" 200 OK
 INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 404 Not Found
+[Legal] follow-up resolution skipped: InvalidURL: Invalid port: ':1]'
+[Chat] unexpected error:
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 409, in normalize_port
+    port_as_int = int(port)
+ValueError: invalid literal for int() with base 10: ':1]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Main\Desktop\legallens_local_demo\main.py", line 524, in _run_chat_step
+    result = ask_legal_agent(message, session.session_id)
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 1581, in ask_legal_agent
+    answer = generate_legal_answer(
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 1383, in generate_legal_answer
+    llm = get_llm()
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 264, in get_llm
+    _llm = get_groq_llm(max_tokens=MAX_OUTPUT_TOKENS, temperature=0)
+  File "C:\Users\Main\Desktop\legallens_local_demo\groq_utils.py", line 56, in get_groq_llm
+    client = ChatGroq(**kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\langchain_core\load\serializable.py", line 118, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\langchain_groq\chat_models.py", line 520, in validate_environment
+    self.client = groq.Groq(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_client.py", line 89, in __init__
+    super().__init__(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_base_client.py", line 862, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_base_client.py", line 792, in __init__
+    super().__init__(**kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 697, in __init__
+    self._mounts: dict[URLPattern, BaseTransport | None] = {
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 698, in <dictcomp>
+    URLPattern(key): None
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_utils.py", line 172, in __init__
+    url = URL(pattern)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urls.py", line 117, in __init__
+    self._uri_reference = urlparse(url, **kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 321, in urlparse
+    parsed_port: int | None = normalize_port(port, scheme)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 411, in normalize_port
+    raise InvalidURL(f"Invalid port: {port!r}")
+httpx.InvalidURL: Invalid port: ':1]'
+
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 500 Internal Server Error
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1e413934b92d45dd91f3d4baff8080f1 HTTP/1.1" 200 OK
 INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1e413934b92d45dd91f3d4baff8080f1 HTTP/1.1" 200 OK
 INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
+[Legal] follow-up resolution skipped: InvalidURL: Invalid port: ':1]'
+[Chat] unexpected error:
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 409, in normalize_port
+    port_as_int = int(port)
+ValueError: invalid literal for int() with base 10: ':1]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Main\Desktop\legallens_local_demo\main.py", line 524, in _run_chat_step
+    result = ask_legal_agent(message, session.session_id)
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 1581, in ask_legal_agent
+    answer = generate_legal_answer(
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 1383, in generate_legal_answer
+    llm = get_llm()
+  File "C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py", line 264, in get_llm
+    _llm = get_groq_llm(max_tokens=MAX_OUTPUT_TOKENS, temperature=0)
+  File "C:\Users\Main\Desktop\legallens_local_demo\groq_utils.py", line 56, in get_groq_llm
+    client = ChatGroq(**kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\langchain_core\load\serializable.py", line 118, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\langchain_groq\chat_models.py", line 520, in validate_environment
+    self.client = groq.Groq(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_client.py", line 89, in __init__
+    super().__init__(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_base_client.py", line 862, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\groq\_base_client.py", line 792, in __init__
+    super().__init__(**kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 697, in __init__
+    self._mounts: dict[URLPattern, BaseTransport | None] = {
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 698, in <dictcomp>
+    URLPattern(key): None
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_utils.py", line 172, in __init__
+    url = URL(pattern)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urls.py", line 117, in __init__
+    self._uri_reference = urlparse(url, **kwargs)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 321, in urlparse
+    parsed_port: int | None = normalize_port(port, scheme)
+  File "C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\httpx\_urlparse.py", line 411, in normalize_port
+    raise InvalidURL(f"Invalid port: {port!r}")
+httpx.InvalidURL: Invalid port: ':1]'
+
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 500 Internal Server Error
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1e413934b92d45dd91f3d4baff8080f1 HTTP/1.1" 200 OK
 INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_bcc244fbaf33439e96de0f7202cf783e HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_48ca0939a028401a8e556a4d80b5a696 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_499a696febe84c7e81b6f7e134e7707c HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_499a696febe84c7e81b6f7e134e7707c HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_48ca0939a028401a8e556a4d80b5a696 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_bcc244fbaf33439e96de0f7202cf783e HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_48ca0939a028401a8e556a4d80b5a696 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_499a696febe84c7e81b6f7e134e7707c HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_e536af0907ad413f9c42e6cc59583cc3 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_bcc244fbaf33439e96de0f7202cf783e HTTP/1.1" 200 OK
-INFO:     127.0.0.1:0 - "GET /api/sessions/case_499a696febe84c7e81b6f7e134e7707c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_03b9036448f34f2cb9486e9d605cc944 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 401 Unauthorized

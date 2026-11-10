@@ -52,8 +52,13 @@ export function isAuthenticated() {
 export function saveSession(data) {
   writeStorage(TOKEN_KEY, data.token || data.access_token || null);
   writeStorage(REFRESH_KEY, data.refresh_token || null);
-  writeStorage(USER_KEY, data.user ? JSON.stringify(data.user) : null);
-  return data.user || null;
+  return storeAuthUser(data.user);
+}
+
+/** Cache the account snapshot the sidebar and profile panel read from. */
+export function storeAuthUser(user) {
+  writeStorage(USER_KEY, user ? JSON.stringify(user) : null);
+  return user || null;
 }
 
 export function clearSession() {
@@ -108,6 +113,28 @@ export function logoutRequest() {
 
 export function fetchMe() {
   return request('/api/users/me');
+}
+
+/** Editable profile fields; the backend merges them into the user document. */
+export function updateProfile({ fullName, profile } = {}) {
+  const body = {};
+  if (fullName !== undefined) body.full_name = fullName;
+  if (profile !== undefined) body.profile = profile;
+  return request('/api/users/me', { method: 'PATCH', body: JSON.stringify(body) }).then((user) => {
+    storeAuthUser(user);
+    return user;
+  });
+}
+
+/**
+ * Rotate the password. The backend revokes every refresh token when it does, so
+ * the caller must sign the visitor out and send them back to the login page.
+ */
+export function changePassword({ currentPassword, newPassword }) {
+  return request('/api/users/me/password', {
+    method: 'POST',
+    body: JSON.stringify({ current_password: currentPassword, new_password: newPassword }),
+  });
 }
 
 /* ── Requests ──────────────────────────────────────────────────────────── */
@@ -283,6 +310,19 @@ export function cancelGeneration(caseId) {
 
 export function retryGeneration(caseId) {
   return request(`/api/sessions/${encodeURIComponent(caseId)}/generation/retry`, { method: 'POST' });
+}
+
+/** Word-style HTML for a completed draft, opened in the side editor. */
+export function getDraftDocument(caseId, generationId) {
+  return request(`/api/sessions/${encodeURIComponent(caseId)}/generation/${encodeURIComponent(generationId)}/document`);
+}
+
+/** Save the edited draft as a new DOCX revision on the server. */
+export function saveDraftDocument(caseId, generationId, html) {
+  return request(`/api/sessions/${encodeURIComponent(caseId)}/generation/${encodeURIComponent(generationId)}/document`, {
+    method: 'PUT',
+    body: JSON.stringify({ html }),
+  });
 }
 
 /* ── Generated files ───────────────────────────────────────────────────── */

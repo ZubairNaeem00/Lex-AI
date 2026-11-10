@@ -2,18 +2,20 @@ import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom';
 import {
   Send, Scale, Sparkles, FileText, Brain, LayoutTemplate,
-  Layers, ChevronRight, Bot, User,
+  Bot, User,
   Paperclip, Pencil, Loader2, LogOut, Mic, Square, Volume2, MoreVertical, Pin, Trash2,
 } from 'lucide-react';
 import {
   ensureCase, getCase, listCases, sendChat, analyzeDocument,
   cancelGeneration, retryGeneration,
-  clearSession, clearStoredCaseId, deleteCase, getAuthUser, logoutRequest,
+  clearSession, clearStoredCaseId, deleteCase, logoutRequest,
   resetCasePromise, storeCaseId, updateCase,
 } from '../api/client';
+import AccountSection from '../components/account/AccountSection';
 import AnalyzeModal from '../components/chat/AnalyzeModal';
 import AnalysisCard from '../components/chat/AnalysisCard';
 import ConfirmDialog from '../components/chat/ConfirmDialog';
+import DraftViewer from '../components/chat/DraftViewer';
 import GenerationCard from '../components/chat/GenerationCard';
 import ReviewFieldsModal from '../components/chat/ReviewFieldsModal';
 
@@ -73,15 +75,10 @@ export default function ChatPage() {
   const [renaming, setRenaming] = useState(null);
   const [signOutOpen, setSignOutOpen] = useState(false);
   const [signingOut, setSigningOut] = useState(false);
+  const [viewer, setViewer] = useState(null);
   const messagesEndRef = useRef(null);
   const recognitionRef = useRef(null);
   const micBufferRef = useRef('');
-
-  const account = getAuthUser();
-  const displayName = (account && account.full_name) || 'Guest';
-  const occupation = (account && account.profile && account.profile.occupation) || 'Advocate';
-  const initials = displayName.split(' ').filter(Boolean).slice(0, 2)
-    .map((part) => part[0].toUpperCase()).join('') || 'L';
 
   const handleSignOut = async () => {
     setSigningOut(true);
@@ -99,7 +96,7 @@ export default function ChatPage() {
     resetCasePromise();
     setSigningOut(false);
     setSignOutOpen(false);
-    navigate('/');
+    navigate('/login', { state: { notice: 'You are signed out. Sign in to continue.' } });
   };
 
   useEffect(() => () => {
@@ -591,20 +588,7 @@ export default function ChatPage() {
             </div>
           </div>
 
-          <button
-            onClick={() => setSignOutOpen(true)}
-            title="Sign out"
-            className="flex w-full items-center gap-3 rounded-xl px-1.5 py-1 text-left transition-colors hover:bg-slate-100"
-          >
-            <div className="w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-[11px] font-semibold text-slate-500 shrink-0">
-              {initials}
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-medium text-slate-900 truncate leading-none">{displayName}</p>
-              <p className="text-[11px] text-slate-500 mt-0.5">{occupation}</p>
-            </div>
-            <LogOut className="w-4 h-4 text-slate-400 shrink-0" />
-          </button>
+          <AccountSection onLogout={() => setSignOutOpen(true)} />
         </div>
       </aside>
 
@@ -658,6 +642,7 @@ export default function ChatPage() {
                       onEdit={(genId) => setReviewTarget({ id: genId })}
                       onCancel={handleCancel}
                       onRetry={handleRetry}
+                      onView={(draft) => setViewer(draft)}
                     />
                   </div>
                 );
@@ -824,126 +809,14 @@ export default function ChatPage() {
         </div>
       </main>
 
-      {/* ── Right column — case context ── */}
-      <aside className="w-[320px] flex-shrink-0 hidden xl:flex flex-col gap-5 overflow-y-auto scrollbar-light bg-white border-l border-slate-200 p-5">
-        <div className="flex items-center justify-between">
-          <p className="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Case context</p>
-          {generating && (
-            <span className="inline-flex items-center gap-1.5 text-xs text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-full px-2 py-0.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              Drafting
-            </span>
-          )}
-        </div>
-
-        <div className="rounded-2xl border border-slate-200 bg-slate-50/60 p-4">
-          <p className="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-2">Active case</p>
-          <h4 className="text-[15px] font-semibold tracking-tight text-slate-900 leading-snug break-words">
-            {session?.title || 'New case'}
-          </h4>
-          {gen && (
-            <div className="mt-3">
-              <div className="flex justify-between text-[11px] text-slate-500 mb-1.5">
-                <span className="truncate">{gen.template_label || 'Draft'}</span>
-                <span className="font-medium text-slate-700">{gen.progress?.completed ?? 0}/{gen.progress?.total ?? 0}</span>
-              </div>
-              <div className="h-1.5 w-full rounded-full bg-slate-200 overflow-hidden">
-                <div
-                  className="h-full rounded-full bg-green-600 transition-all duration-300"
-                  style={{ width: `${Math.min(100, ((gen.progress?.completed ?? 0) / Math.max(1, gen.progress?.total ?? 1)) * 100)}%` }}
-                />
-              </div>
-            </div>
-          )}
-          <p className="mt-3 text-[11px] font-mono text-slate-400">{caseId ? caseId.slice(0, 8) : '········'}</p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3">
-          {[
-            { label: 'Documents', value: caseDocuments.length, icon: FileText },
-            { label: 'Drafts', value: (session?.generations || []).length, icon: LayoutTemplate },
-          ].map(({ label, value, icon: StatIcon }) => (
-            <div key={label} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-              <div className="w-7 h-7 rounded-lg bg-green-50 text-green-600 flex items-center justify-center mb-3">
-                <StatIcon className="w-3.5 h-3.5" />
-              </div>
-              <p className="text-xl font-semibold tracking-tight text-slate-900">{value}</p>
-              <p className="text-[11px] text-slate-500">{label}</p>
-            </div>
-          ))}
-        </div>
-
-        <div>
-          <p className="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-3">Documents</p>
-          {caseDocuments.length === 0 ? (
-            <div className="rounded-2xl border border-slate-200 bg-slate-50/60 p-4 text-center">
-              <p className="text-[13px] text-slate-500">No documents analysed yet</p>
-            </div>
-          ) : (
-            <div className="flex flex-col gap-2.5">
-              {caseDocuments.map((doc) => (
-                <div key={doc.document_id} className="rounded-xl border border-slate-200 bg-slate-50/50 p-3 transition-all duration-200 hover:border-green-300 hover:bg-green-50/50">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-lg bg-green-50 border border-green-100 text-green-600 flex items-center justify-center shrink-0">
-                      <FileText className="w-4 h-4" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="text-[13px] font-medium text-slate-900 truncate">{doc.filename}</p>
-                      <p className="text-[11px] text-slate-400">{doc.characters?.toLocaleString?.() ?? doc.characters} chars</p>
-                    </div>
-                    {(doc.report?.has_corrections || (doc.edits || []).length > 0) && (
-                      <span className="shrink-0 inline-flex items-center text-[10px] font-medium text-amber-700 bg-amber-50 border border-amber-100 rounded-full px-1.5 py-0.5">Corrected</span>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-
-        <div className="flex flex-col gap-2.5">
-          <p className="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Quick actions</p>
-          <button
-            onClick={() => {
-              const el = document.getElementById('chat-messages');
-              el?.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="w-full flex items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-left shadow-sm transition-all duration-200 hover:border-green-300 hover:bg-green-50/50"
-          >
-            <div className="w-7 h-7 rounded-lg bg-green-50 text-green-600 flex items-center justify-center shrink-0">
-              <Layers className="w-3.5 h-3.5" />
-            </div>
-            <span className="min-w-0 flex-1">
-              <span className="block text-[13px] font-medium text-slate-900">View reports</span>
-              <span className="block text-[11px] text-slate-500">Scroll to analysis cards</span>
-            </span>
-            <ChevronRight className="w-4 h-4 text-slate-300 shrink-0" />
-          </button>
-          <button
-            onClick={() => setAnalyzeOpen(true)}
-            className="w-full flex items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-left shadow-sm transition-all duration-200 hover:border-green-300 hover:bg-green-50/50"
-          >
-            <div className="w-7 h-7 rounded-lg bg-green-50 text-green-600 flex items-center justify-center shrink-0">
-              <Pencil className="w-3.5 h-3.5" />
-            </div>
-            <span className="min-w-0 flex-1">
-              <span className="block text-[13px] font-medium text-slate-900">Document analysis</span>
-              <span className="block text-[11px] text-slate-500">Upload &amp; analyse a document</span>
-            </span>
-            <ChevronRight className="w-4 h-4 text-slate-300 shrink-0" />
-          </button>
-        </div>
-
-        <div className="mt-auto rounded-2xl border border-slate-200 bg-slate-50/60 p-4">
-          <div className="flex items-start gap-2.5">
-            <Brain className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
-            <div>
-              <p className="text-[13px] font-medium text-slate-900 mb-1">Context awareness</p>
-              <p className="text-[11px] text-slate-500 leading-relaxed">Corrections you save on any report feed every later answer and generated draft in this case.</p>
-            </div>
-          </div>
-        </div>
-      </aside>
+      {viewer && caseId && (
+        <DraftViewer
+          caseId={caseId}
+          draft={viewer}
+          onClose={() => setViewer(null)}
+          onSaved={() => refresh()}
+        />
+      )}
 
       <AnalyzeModal
         open={analyzeOpen}

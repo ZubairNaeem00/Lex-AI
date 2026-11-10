@@ -17,7 +17,9 @@ from context_budget import (
     MAX_GENERATION_ANSWER_CHARS,
     truncate_chars,
 )
+import doc_preview
 from doc_generation import (
+    GENERATED_FOLDER,
     TEMPLATE_FOLDER,
     _has_value,
     extract_fields_from_context,
@@ -28,6 +30,9 @@ from doc_generation import (
     normalize_field_answer,
 )
 from session_manager import CaseSession, new_id, utcnow
+
+
+GENERATED_DIR = Path(GENERATED_FOLDER).resolve()
 
 
 ACTION_RE = re.compile(
@@ -621,6 +626,105 @@ def update_generation_fields(
         gen["question"] = ""
     _store_and_event(session, gen)
     return _result(session, gen)
+
+
+class GenerationDocumentMissing(LookupError):
+    """Raised when the DOCX behind a completed draft can no longer be found."""
+
+
+def _draft_file(session: CaseSession, gen: Dict[str, Any]) -> Optional[Path]:
+    """The generated DOCX for a draft, verified to sit inside Generated/."""
+    result = gen.get("result") or {}
+    filename = str(result.get("filename") or "")
+    candidates = []
+    if result.get("file_path"):
+        candidates.append(Path(str(result["file_path"])))
+    if filename:
+        candidates.append(GENERATED_FOLDER / Path(filename).name)
+    for candidate in candidates:
+        try:
+            resolved = candidate.resolve()
+        except OSError:
+            continue
+        if GENERATED_DIR in resolved.parents and resolved.is_file():
+            return resolved
+    return None
+
+
+def read_generation_document(
+    session: CaseSession, generation_id: str
+) -> Dict[str, Any]:
+    """Editable HTML for a draft, read from the DOCX the lawyer will download."""
+    gen = session.generations.get(generation_id)
+    if gen is None:
+        return {}
+    path = _draft_file(session, gen)
+    if path is None:
+        raise GenerationDocumentMissing(
+            "The document file for this draft is no longer available."
+        )
+    preview = doc_preview.docx_to_html(path)
+    result = gen.get("result") or {}
+    return {
+        "case_id": session.session_id,
+        "generation_id": gen.get("id"),
+        "template_label": _template_label(gen.get("template_name", "")),
+        "filename": path.name,
+        "download_url": result.get("download_url", ""),
+        "is_revision": bool(result.get("is_revision")),
+        "updated_at": gen.get("updated_at"),
+        **preview,
+    }
+
+
+def save_generation_document(
+    session: CaseSession, generation_id: str, html_text: str
+) -> Dict[str, Any]:
+    """Write the edited HTML back as a new DOCX revision of this draft.
+
+    The revision is registered like any generated document, so the existing
+    ownership-checked download route serves it and the original stays on disk.
+    """
+    gen = session.generations.get(generation_id)
+    if gen is None:
+        return {}
+    if gen.get("status") == "generating":
+        raise GenerationConflict("This document is still being generated.")
+    path = _draft_file(session, gen)
+    if path is None:
+        raise GenerationDocumentMissing(
+            "The document file for this draft is no longer available."
+        )
+
+    revision = doc_preview.write_revision(
+        html_text, path, GENERATED_DIR, session.session_id, gen.get("template_name", "")
+    )
+    previous = gen.get("result") or {}
+    values = dict(previous.get("collected_values") or gen.get("values") or {})
+    session.add_generated_document(
+        gen.get("template_name", ""),
+        revision["file_path"],
+        revision["download_url"],
+        values,
+        generation_id=gen["id"],
+    )
+    gen["result"] = {
+        **previous,
+        "filename": revision["filename"],
+        "file_path": revision["file_path"],
+        "download_url": revision["download_url"],
+        "is_revision": True,
+        "revision_of": path.name,
+    }
+    gen["document_edited_at"] = utcnow()
+    _store_and_event(session, gen)
+    return {
+        "kind": "document",
+        "case_id": session.session_id,
+        "generation_id": gen["id"],
+        "document": read_generation_document(session, generation_id),
+        "generation": generation_snapshot(gen),
+    }
 
 
 def continue_generation(session: CaseSession, message: str) -> Optional[Dict[str, Any]]:

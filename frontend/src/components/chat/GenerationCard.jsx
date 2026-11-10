@@ -25,7 +25,7 @@ const STATUS_META = {
 
 /* Multi-turn document-generation card rendered inside the chat stream.
    Field values are never shown here; they are only visible in the review modal. */
-export default function GenerationCard({ caseId, generation, onEdit, onCancel, onRetry }) {
+export default function GenerationCard({ caseId, generation, onEdit, onCancel, onRetry, onView }) {
   const status = generation.status || 'collecting';
   const meta = STATUS_META[status] || STATUS_META.collecting;
   const result = generation.result || {};
@@ -34,6 +34,7 @@ export default function GenerationCard({ caseId, generation, onEdit, onCancel, o
   const missing = generation.missing_fields || [];
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState('');
+  const openable = status === 'completed' && !!result.filename && !!onView;
 
   const parseDownload = () => {
     const match = /\/sessions\/([^/]+)\/download\/(.+)$/.exec(result.download_url || '');
@@ -166,19 +167,30 @@ export default function GenerationCard({ caseId, generation, onEdit, onCancel, o
 
         {status === 'completed' && (
           <>
-            <div className="flex flex-wrap items-center gap-3 rounded-xl border border-green-200 bg-green-50/70 px-4 py-3">
-              <span className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center flex-shrink-0">
-                <Icon d={I.check} className="w-4 h-4" />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="text-[13px] font-semibold text-green-900">Document generated</p>
-                <p className="text-[11px] text-slate-500 break-all">{result.filename || 'document.docx'}</p>
-              </div>
+            <div className="flex flex-wrap items-center gap-3 rounded-xl border border-green-200 bg-green-50/70 p-1.5">
+              <button
+                type="button"
+                onClick={openable ? () => onView({ generationId: generation.id, templateLabel: generation.template_label, filename: result.filename }) : undefined}
+                disabled={!openable}
+                title={openable ? 'Open this draft in the side editor' : 'Download this draft to view it'}
+                className={`flex min-w-0 flex-1 items-center gap-3 rounded-lg px-2.5 py-2 text-left transition-all duration-200
+                  ${openable ? 'hover:bg-green-100/70' : 'cursor-default'}`}
+              >
+                <span className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center flex-shrink-0">
+                  <Icon d={I.check} className="w-4 h-4" />
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className="text-[13px] font-semibold text-green-900">
+                    {openable ? 'Document generated — click to view & edit' : 'Document generated'}
+                  </p>
+                  <p className="text-[11px] text-slate-500 break-all">{result.filename || 'document.docx'}</p>
+                </div>
+              </button>
               {result.download_url && (
                 <button
                   onClick={handleDownload}
                   disabled={saving}
-                  className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-3.5 py-2 text-[13px] font-medium text-white shadow-sm transition-all duration-200 hover:bg-green-700 hover:shadow-md active:scale-[0.98] disabled:opacity-60"
+                  className="mr-1.5 inline-flex items-center gap-2 rounded-xl bg-green-600 px-3.5 py-2 text-[13px] font-medium text-white shadow-sm transition-all duration-200 hover:bg-green-700 hover:shadow-md active:scale-[0.98] disabled:opacity-60"
                 >
                   <Icon d={I.download} className="w-4 h-4" />
                   {saving ? 'Preparing…' : 'Download DOCX'}
@@ -189,6 +201,7 @@ export default function GenerationCard({ caseId, generation, onEdit, onCancel, o
               <p className="mt-2 text-[12px] font-medium text-rose-600">{saveError}</p>
             )}
             <CardActions>
+              {openable && <ActionButton onClick={() => onView({ generationId: generation.id, templateLabel: generation.template_label, filename: result.filename })} icon={I.edit}>View &amp; edit</ActionButton>}
               {generation.can_edit !== false && <ActionButton onClick={() => onEdit(generation.id)} icon={I.edit}>Edit &amp; regenerate</ActionButton>}
             </CardActions>
             <p className="mt-3 text-[11px] leading-relaxed text-slate-400">

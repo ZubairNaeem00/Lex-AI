@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { getAuthUser } from '../api/client';
+import { LogOut } from 'lucide-react';
+import { clearSession, clearStoredCaseId, logoutRequest, resetCasePromise } from '../api/client';
+import AccountSection from './account/AccountSection';
+import ConfirmDialog from './chat/ConfirmDialog';
 
 const ITEMS = [
   {
@@ -31,11 +34,19 @@ const ITEMS = [
 
 export default function Sidebar() {
   const navigate = useNavigate();
-  const account = getAuthUser();
-  const displayName = (account && account.full_name) || 'Guest';
-  const occupation = (account && account.profile && account.profile.occupation) || 'Advocate';
-  const initials = displayName.split(' ').filter(Boolean).slice(0, 2)
-    .map((part) => part[0].toUpperCase()).join('') || 'L';
+  const [signOutOpen, setSignOutOpen] = useState(false);
+  const [signingOut, setSigningOut] = useState(false);
+
+  const handleSignOut = async () => {
+    setSigningOut(true);
+    await logoutRequest();
+    clearSession();
+    clearStoredCaseId();
+    resetCasePromise();
+    setSigningOut(false);
+    setSignOutOpen(false);
+    navigate('/login', { state: { notice: 'You are signed out. Sign in to continue.' } });
+  };
 
   return (
     <aside className="w-[220px] flex-shrink-0 border-r border-slate-200 bg-slate-50 flex flex-col overflow-y-auto">
@@ -90,16 +101,22 @@ export default function Sidebar() {
 
       {/* User strip */}
       <div className="border-t border-slate-200 p-3">
-        <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-xs font-bold text-white">
-            {initials}
-          </div>
-          <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-medium leading-none text-slate-900">{displayName}</p>
-            <p className="mt-0.5 truncate text-[10px] text-slate-400">{occupation}</p>
-          </div>
-        </div>
+        <AccountSection onLogout={() => setSignOutOpen(true)} />
       </div>
+
+      {signOutOpen && (
+        <ConfirmDialog
+          title="Sign out of LexAI?"
+          message="Conversations you have started stay in your account."
+          confirmLabel="Sign out"
+          cancelLabel="Stay signed in"
+          danger
+          busy={signingOut}
+          icon={<LogOut className="w-4 h-4" />}
+          onConfirm={handleSignOut}
+          onCancel={() => !signingOut && setSignOutOpen(false)}
+        />
+      )}
     </aside>
   );
 }

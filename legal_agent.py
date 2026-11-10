@@ -29,7 +29,6 @@ from dotenv import load_dotenv
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
-from langchain_core.tools import tool
 
 from case_context import build_case_context
 from context_budget import (
@@ -121,23 +120,8 @@ DECOMPOSE_OUTPUT_TOKENS = _env_int("DECOMPOSE_OUTPUT_TOKENS", 260, 60)
 LABEL_OVERHEAD_CHARS = 120
 
 
-@tool
-def greet(query: str = "") -> str:
-    """
-    Call this function whenever the user greets, says hello, hi, hey,
-    or asks the agent to greet or say hello.
-    """
-    for _ in range(10):
-        print("hello world")
-    return "Tool 'greet' executed: Printed 'hello world' 10 times to stdout."
-
-
-agent_tools = [greet]
-tools_by_name = {"greet": greet}
-
 _embeddings = None
 _llm = None
-_llm_with_tools = None
 _init_lock = threading.Lock()
 
 _stores: Dict[str, Any] = {KIND_LAW: None, KIND_CASES: None}
@@ -263,17 +247,6 @@ def get_llm():
     if _llm is None:
         _llm = get_groq_llm(max_tokens=MAX_OUTPUT_TOKENS, temperature=0)
     return _llm
-
-
-def get_llm_with_tools():
-    global _llm_with_tools
-    if _llm_with_tools is None:
-        base = get_llm()
-        try:
-            _llm_with_tools = base.bind_tools(agent_tools)
-        except Exception:
-            _llm_with_tools = base
-    return _llm_with_tools
 
 
 def _law_document_title(meta: Dict[str, Any]) -> str:
@@ -1437,16 +1410,6 @@ def generate_legal_answer(
     return friendly_llm_error(last_error or RuntimeError("unknown"), context="legal answer")
 
 
-def is_greeting(text: str) -> bool:
-    patterns = [
-        r"\b(hello|hi|hey|heyy|heya)\b",
-        r"\b(greet|greetings|say hello|say hi|say hey)\b",
-        r"\b(good morning|good afternoon|good evening)\b",
-        r"\b(salam|assalam|aoa)\b",
-    ]
-    return any(re.search(pattern, text.lower()) for pattern in patterns)
-
-
 def is_doc_generation_request(text: str) -> Tuple[bool, str]:
     """Compatibility helper retained for callers of the original module.
 
@@ -1469,30 +1432,19 @@ def is_doc_generation_request(text: str) -> Tuple[bool, str]:
     return False, "Bail Application.docx"
 
 
-GREETING_ANSWER = (
-    "Hello! I am your Pakistani Legal AI Assistant specializing in criminal law, "
-    "Pakistani court judgments, and legal document drafting.\n\n"
-    "I can help you:\n"
-    "• Analyze FIRs, judgments, and legal notices\n"
-    "• Research applicable PPC/CrPC provisions and court precedents\n"
-    "• Draft and download ready-to-file documents such as bail applications\n\n"
-    "How can I assist you with your case today?"
-)
-
-
 def ask_legal_agent(
     question: str,
     session_id: str = "default",
     force_generation: bool = False,
 ) -> Dict[str, Any]:
-    """Run greeting routing, retrieval, and grounded legal reasoning.
+    """Run retrieval and grounded legal reasoning.
 
     `force_generation` is retained for signature compatibility; live document
     generation is handled by generation_workflow.py before this function.
     """
     if not question or not question.strip():
         return {
-            "answer": "Please enter a legal query, greeting, or document drafting instruction.",
+            "answer": "Please enter a legal query or document drafting instruction.",
             "search_query": "",
             "sources": [],
             "scores": [],
@@ -1507,36 +1459,6 @@ def ask_legal_agent(
 
     with session.lock:
         history = list(session.history)
-        tool_called = None
-        is_greet = is_greeting(question)
-
-        if is_greet:
-            greet.invoke({})
-            tool_called = "greet"
-
-        clean = re.sub(r"[^\w\s]", "", question.lower()).strip()
-        legal_keywords = [
-            "law", "section", "bail", "case", "court", "fir", "theft", "murder",
-            "offence", "offense", "punishment", "act", "ppc", "crpc", "judge",
-            "crime", "police", "arrest", "rights", "statute", "appeal", "petition",
-            "draft", "generate", "quashment", "remand", "notice", "evidence",
-            "witness", "trial", "bailable", "cognizable", "sentence", "acquittal",
-        ]
-        has_substantive = any(keyword in clean for keyword in legal_keywords)
-
-        if is_greet and not has_substantive:
-            session.add_message("user", question)
-            session.add_message("assistant", GREETING_ANSWER, tool_called=tool_called)
-            return {
-                "answer": GREETING_ANSWER,
-                "search_query": "",
-                "sources": [],
-                "scores": [],
-                "tool_called": tool_called,
-                "is_document_generation": False,
-                "generation_result": None,
-                "context_stats": {"input_estimated": 0},
-            }
 
         case_context_text = build_case_context(
             session,
@@ -1594,7 +1516,6 @@ def ask_legal_agent(
             "assistant",
             answer,
             sources=sources,
-            tool_called=tool_called,
             extra={
                 "search_query": search_query,
                 "context_stats": stats,
@@ -1626,7 +1547,7 @@ def ask_legal_agent(
             "search_query": search_query,
             "sources": sources,
             "scores": [round(float(item.get("score") or 0.0), 4) for item in evidence],
-            "tool_called": tool_called,
+            "tool_called": None,
             "is_document_generation": False,
             "generation_result": None,
             "retrieval_status": retriever_status,

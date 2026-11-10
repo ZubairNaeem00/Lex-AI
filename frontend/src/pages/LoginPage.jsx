@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { login } from '../api/client';
 
 /* ── Presentational helpers (UI only, no logic) ── */
@@ -22,10 +22,14 @@ const Spinner = () => (
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [email, setEmail]       = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading]   = useState(false);
   const [error, setError]       = useState('');
+
+  /* The account menu lands here after signing out or rotating the password. */
+  const notice = (location.state && location.state.notice) || '';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,7 +56,7 @@ export default function LoginPage() {
       {/* ── Left panel (brand + bento) ── */}
       <aside className="hidden lg:flex flex-col justify-between bg-slate-50 border-r border-slate-200 p-12 xl:p-16 relative overflow-hidden">
         <div
-          className="pointer-events-none absolute inset-0"
+          className="theme-grid pointer-events-none absolute inset-0"
           style={{
             backgroundImage: 'linear-gradient(#e2e8f0 1px, transparent 1px), linear-gradient(90deg, #e2e8f0 1px, transparent 1px)',
             backgroundSize: '48px 48px',
@@ -135,6 +139,12 @@ export default function LoginPage() {
               </Link>
             </p>
           </div>
+
+          {notice && !error && (
+            <div className="mb-5 rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">
+              ✓ {notice}
+            </div>
+          )}
 
           <form onSubmit={handleSubmit}>
             <Field

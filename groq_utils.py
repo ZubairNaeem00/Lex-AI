@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import re
 import threading
 import time
 from typing import Any, Dict, Optional
@@ -15,6 +16,20 @@ load_dotenv(".env")
 GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 GROQ_REASONING_EFFORT = os.getenv("GROQ_REASONING_EFFORT", "low").strip().lower()
 LLM_RETRY_WAIT_SECONDS = float(os.getenv("LLM_RETRY_WAIT_SECONDS", "8"))
+
+_BRACKETED_HOST = re.compile(r"\[([^\[\]]+)\]")
+
+
+def _normalize_no_proxy() -> None:
+    """httpx, which the Groq SDK builds on, parses NO_PROXY entries as URLs, so a
+    bracketed IPv6 literal such as "[::1]" aborts every client with InvalidURL."""
+    for name in ("NO_PROXY", "no_proxy"):
+        value = os.getenv(name)
+        if value and "[" in value:
+            os.environ[name] = _BRACKETED_HOST.sub(r"\1", value)
+
+
+_normalize_no_proxy()
 
 _clients: Dict[tuple, ChatGroq] = {}
 _client_lock = threading.Lock()

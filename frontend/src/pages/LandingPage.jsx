@@ -55,7 +55,7 @@ export default function LandingPage() {
       <section className="relative overflow-hidden border-b border-slate-200">
         {/* faint grid */}
         <div
-          className="pointer-events-none absolute inset-0"
+          className="theme-grid pointer-events-none absolute inset-0"
           style={{
             backgroundImage: 'linear-gradient(#e2e8f0 1px, transparent 1px), linear-gradient(90deg, #e2e8f0 1px, transparent 1px)',
             backgroundSize: '56px 56px',
