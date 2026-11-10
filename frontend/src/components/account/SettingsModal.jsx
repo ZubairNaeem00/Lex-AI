@@ -17,6 +17,7 @@ function passwordProblem(value) {
   if (value.length < MIN_LENGTH) return `Password must be at least ${MIN_LENGTH} characters long.`;
   if (value.length > 128) return 'Password must be at most 128 characters long.';
   if (!/[A-Za-z]/.test(value) || !/\d/.test(value)) return 'Password must contain at least one letter and one number.';
+  if (!/[^A-Za-z0-9\s]/.test(value)) return 'Password must contain at least one special character, such as ! @ # $ % & *';
   if (value.length > 1 && /^(.)\1*$/.test(value)) return 'Password must not be a single repeated character.';
   return '';
 }
@@ -253,8 +254,9 @@ export default function SettingsModal({ open, onClose, onPasswordChanged }) {
             </div>
 
             <p className="mt-4 text-[12px] leading-relaxed text-slate-500">
-              Use at least {MIN_LENGTH} characters with one letter and one number. For your protection the
-              password is stored as an Argon2id hash — the server never keeps it in plain text.
+              Use at least {MIN_LENGTH} characters with one letter, one number and one special
+              character. For your protection the password is stored as an Argon2id hash — the server
+              never keeps it in plain text.
             </p>
 
             {error && (

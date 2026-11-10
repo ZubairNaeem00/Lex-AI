@@ -92,6 +92,15 @@ export function signup({ fullName, email, password, role }) {
   });
 }
 
+/** Step-1 probe so a taken email is reported before the role steps. */
+export function checkEmail(email) {
+  return request('/api/auth/check-email', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+    auth: false,
+  });
+}
+
 export function login({ email, password }) {
   return request('/api/auth/login', {
     method: 'POST',

@@ -32,6 +32,11 @@ def test_register_rejects_weak_password_and_bad_email(client, clean):
         "full_name": "Weak Person", "email": "weak2@example.com", "password": "lettersonly"})
     assert no_digit.status_code == 422
 
+    no_special = client.post("/api/auth/register", json={
+        "full_name": "Weak Person", "email": "weak3@example.com", "password": "LegalLens123"})
+    assert no_special.status_code == 422
+    assert "special character" in no_special.text
+
     bad_email = client.post("/api/auth/register", json={
         "full_name": "Bad Email", "email": "not-an-email", "password": PASSWORD})
     assert bad_email.status_code == 422
@@ -48,6 +53,26 @@ def test_duplicate_email_is_rejected(client, account_a):
     second = client.post("/api/auth/register", json={
         "full_name": "Impostor", "email": account_a["email"], "password": PASSWORD})
     assert second.status_code == 409
+
+
+def test_check_email_reports_availability_before_the_role_steps(client, account_a):
+    taken = client.post("/api/auth/check-email", json={"email": account_a["email"]})
+    assert taken.status_code == 200
+    assert taken.json()["available"] is False
+
+    uppercase = client.post("/api/auth/check-email",
+                            json={"email": account_a["email"].upper()})
+    assert uppercase.json()["available"] is False
+    assert uppercase.json()["email"] == account_a["email"]
+
+    free = client.post("/api/auth/check-email", json={"email": "fresh@example.com"})
+    assert free.status_code == 200
+    assert free.json()["available"] is True
+
+    invalid = client.post("/api/auth/check-email", json={"email": "not-an-email"})
+    assert invalid.status_code == 422
+
+    assert crud.users.count({}) == 1, "the probe must not create an account"
 
 
 def test_login_returns_token_pair_and_records_activity(client, account_a):
@@ -142,7 +167,7 @@ def test_password_reset_flow(client, account_a):
     token = link.split("token=")[-1]
 
     reset = client.post("/api/auth/reset-password",
-                        json={"token": token, "new_password": "RotatedPass9"})
+                        json={"token": token, "new_password": "RotatedPass9!"})
     assert reset.status_code == 200
     assert reset.json()["revoked_sessions"] >= 1
 
@@ -150,11 +175,11 @@ def test_password_reset_flow(client, account_a):
                       json={"email": account_a["email"], "password": PASSWORD})
     assert old.status_code == 401
     new = client.post("/api/auth/login",
-                      json={"email": account_a["email"], "password": "RotatedPass9"})
+                      json={"email": account_a["email"], "password": "RotatedPass9!"})
     assert new.status_code == 200
 
     replay = client.post("/api/auth/reset-password",
-                         json={"token": token, "new_password": "ThirdPass123"})
+                         json={"token": token, "new_password": "ThirdPass123!"})
     assert replay.status_code == 400
 
 
@@ -172,11 +197,11 @@ def test_change_password_requires_the_current_one(client, account_a):
     headers = auth_header(login.json()["token"])
 
     bad = client.post("/api/users/me/password", headers=headers,
-                      json={"current_password": "NotIt12345", "new_password": "FreshPass123"})
+                      json={"current_password": "NotIt12345", "new_password": "FreshPass123!"})
     assert bad.status_code == 400
 
     good = client.post("/api/users/me/password", headers=headers,
-                       json={"current_password": PASSWORD, "new_password": "FreshPass123"})
+                       json={"current_password": PASSWORD, "new_password": "FreshPass123!"})
     assert good.status_code == 200
     assert good.json()["revoked_sessions"] >= 1
     assert client.get("/api/users/me", headers=headers).status_code == 401

@@ -31,7 +31,7 @@ from auth.rate_limit import configure as configure_limiter  # noqa: E402
 from db import crud  # noqa: E402
 from db.config import database, ensure_indexes  # noqa: E402
 
-PASSWORD = "LegalLens123"
+PASSWORD = "LegalLens123!"
 
 
 def purge() -> None:

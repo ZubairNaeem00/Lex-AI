@@ -102,6 +102,11 @@ def _email_taken(email: str) -> bool:
     return crud.users.exists({"email": email})
 
 
+def email_available(email: str) -> bool:
+    """Early signup probe; register stays the authoritative uniqueness check."""
+    return not _email_taken(normalize_email(email))
+
+
 def signup(payload: SignupRequest, ip: str = "", user_agent: str = "") -> Dict[str, Any]:
     email = normalize_email(payload.email)
     if _email_taken(email):

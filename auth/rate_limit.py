@@ -17,6 +17,7 @@ limiter = Limiter(
 
 login_limit = limiter.limit(AUTH_SETTINGS.login_limit)
 register_limit = limiter.limit(AUTH_SETTINGS.register_limit)
+email_check_limit = limiter.limit(AUTH_SETTINGS.email_check_limit)
 refresh_limit = limiter.limit(AUTH_SETTINGS.refresh_limit)
 reset_limit = limiter.limit(AUTH_SETTINGS.reset_limit)
 

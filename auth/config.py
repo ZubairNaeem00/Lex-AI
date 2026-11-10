@@ -40,6 +40,7 @@ class AuthSettings:
     rate_limit_enabled: bool
     login_limit: str
     register_limit: str
+    email_check_limit: str
     refresh_limit: str
     reset_limit: str
 
@@ -69,6 +70,7 @@ class AuthSettings:
             rate_limit_enabled=_env_bool("RATE_LIMIT_ENABLED", True),
             login_limit=os.getenv("LOGIN_RATE_LIMIT", "10/minute").strip() or "10/minute",
             register_limit=os.getenv("REGISTER_RATE_LIMIT", "5/hour").strip() or "5/hour",
+            email_check_limit=os.getenv("EMAIL_CHECK_RATE_LIMIT", "30/hour").strip() or "30/hour",
             refresh_limit=os.getenv("REFRESH_RATE_LIMIT", "30/hour").strip() or "30/hour",
             reset_limit=os.getenv("RESET_RATE_LIMIT", "5/hour").strip() or "5/hour",
         )

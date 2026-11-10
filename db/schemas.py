@@ -39,6 +39,8 @@ def validate_password_strength(password: str) -> str:
         raise ValueError("Password must be at most 128 characters long.")
     if not re.search(r"[A-Za-z]", password) or not re.search(r"\d", password):
         raise ValueError("Password must contain at least one letter and one number.")
+    if not re.search(r"[^A-Za-z0-9\s]", password):
+        raise ValueError("Password must contain at least one special character, such as ! @ # $ % & *")
     if re.fullmatch(r"(.)\1*", password):
         raise ValueError("Password must not be a single repeated character.")
     return password

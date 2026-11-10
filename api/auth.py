@@ -2,6 +2,7 @@
 
 Endpoints:
     POST /api/auth/register        create an account (also /signup alias)
+    POST /api/auth/check-email     is this address still free to register?
     POST /api/auth/login           email + password -> access + refresh
     POST /api/auth/refresh         rotate the refresh token
     POST /api/auth/logout          revoke the presented session
@@ -19,10 +20,10 @@ from __future__ import annotations
 from typing import Any, Dict, Optional
 
 from fastapi import APIRouter, Depends, Request, Response, status
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, EmailStr, Field
 
 from auth.deps import client_ip, get_current_user
-from auth.rate_limit import login_limit, refresh_limit, register_limit, reset_limit
+from auth.rate_limit import email_check_limit, login_limit, refresh_limit, register_limit, reset_limit
 from auth.config import AUTH_SETTINGS
 from db.config import database
 from db.schemas import (
@@ -43,6 +44,10 @@ class LogoutRequest(BaseModel):
     refresh_token: Optional[str] = Field(default=None, max_length=4000)
 
 
+class EmailCheckRequest(BaseModel):
+    email: EmailStr = Field(max_length=254)
+
+
 def _meta(request: Request) -> Dict[str, str]:
     return {"ip": client_ip(request), "user_agent": request.headers.get("user-agent", "")}
 
@@ -52,6 +57,17 @@ def _meta(request: Request) -> Dict[str, str]:
 @register_limit
 def register(payload: SignupRequest, request: Request) -> Dict[str, Any]:
     return auth_service.signup(payload, **_meta(request))
+
+
+@router.post("/check-email", summary="Is this email free to register?")
+@email_check_limit
+def check_email(payload: EmailCheckRequest, request: Request) -> Dict[str, Any]:
+    """Lets the signup form report a taken address on its first step.
+
+    Rate limited because the answer reveals whether an address has an account.
+    """
+    email = auth_service.normalize_email(payload.email)
+    return {"email": email, "available": auth_service.email_available(email)}
 
 
 @router.post("/login", summary="Sign in")

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { signup } from '../api/client';
+import { checkEmail, signup } from '../api/client';
 
 const ROLES = [
   { label: 'Advocate / Lawyer', desc: 'Practice in courts of law' },
@@ -8,6 +8,15 @@ const ROLES = [
   { label: 'Law Student', desc: 'Learning the ropes' },
   { label: 'Judiciary Official', desc: 'Bench & court staff' },
   { label: 'Law Firm', desc: 'Firm-wide workspace' },
+];
+
+/* Mirrors validate_password_strength in db/schemas.py, so step 1 never passes a
+   password the server would reject at the end of step 3. */
+const PASSWORD_RULES = [
+  { label: 'At least 8 characters', test: (v) => v.length >= 8 },
+  { label: 'One letter', test: (v) => /[A-Za-z]/.test(v) },
+  { label: 'One number', test: (v) => /\d/.test(v) },
+  { label: 'One special character (! @ # $ %)', test: (v) => /[^A-Za-z0-9\s]/.test(v) },
 ];
 
 /* ── Presentational helpers (UI only, matches ChatPage / ReportsPage) ── */
@@ -23,6 +32,7 @@ const I = {
   mail: ['M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z', 'M22 6l-10 7L2 6'],
   lock: ['M5 11h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z', 'M7 11V7a5 5 0 0 1 10 0v4'],
   check: ['M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z', 'M8 12l3 3 5-6'],
+  circle: ['M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z'],
   scale: ['M12 3v18', 'M5 21h14', 'M12 6h-5l-3 6a3.5 3.5 0 0 0 6 0l-3-6', 'M17 6h5l-3 6a3.5 3.5 0 0 0 6 0l-3-6', 'M7 6h10'],
   shield: ['M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z', 'M9 12l2 2 4-4'],
 };
@@ -51,6 +61,20 @@ const Field = ({ label, type = 'text', placeholder, icon, value, onChange }) => 
   </label>
 );
 
+const PasswordRules = ({ value }) => (
+  <ul className="-mt-1 mb-4 grid grid-cols-1 gap-x-3 gap-y-1.5 sm:grid-cols-2">
+    {PASSWORD_RULES.map(rule => {
+      const met = rule.test(value);
+      return (
+        <li key={rule.label} className={`flex items-center gap-1.5 text-[11px] transition-colors duration-200 ${met ? 'text-green-700' : 'text-slate-500'}`}>
+          <Icon d={met ? I.check : I.circle} className={`w-3.5 h-3.5 shrink-0 ${met ? 'text-green-600' : 'text-slate-300'}`} />
+          {rule.label}
+        </li>
+      );
+    })}
+  </ul>
+);
+
 const StepDots = ({ step }) => (
   <div className="flex gap-2 mb-8">
     {[1, 2, 3].map(s => (
@@ -71,7 +95,10 @@ export default function SignupPage() {
   const [error, setError] = useState('');
   const [saving, setSaving] = useState(false);
 
-  const set = (field) => (e) => setForm(f => ({ ...f, [field]: e.target.value }));
+  const set = (field) => (e) => {
+    setForm(f => ({ ...f, [field]: e.target.value }));
+    setError('');
+  };
 
   const submitAccount = async () => {
     setError('');
@@ -87,19 +114,35 @@ export default function SignupPage() {
       navigate('/chat');
     } catch (err) {
       setSaving(false);
+      /* Someone claimed the address while the visitor finished the last steps. */
+      if (err.status === 409) setStep(1);
       setError(err.message || 'Could not create the account. Please try again.');
     }
   };
 
-  const goPastDetails = () => {
+  const goPastDetails = async () => {
+    if (saving) return;
     if (form.name.trim().length < 2) return setError('Please enter your full name.');
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email.trim())) return setError('Please enter a valid email address.');
-    if (form.password.length < 8) return setError('Password must be at least 8 characters.');
-    if (!/[A-Za-z]/.test(form.password) || !/\d/.test(form.password)) {
-      return setError('Password must contain at least one letter and one number.');
-    }
+    const email = form.email.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return setError('Please enter a valid email address.');
+    if (form.password.length > 128) return setError('Password must be at most 128 characters long.');
+    const unmet = PASSWORD_RULES.find(rule => !rule.test(form.password));
+    if (unmet) return setError(`Password needs ${unmet.label.toLowerCase()}.`);
+
     setError('');
-    setStep(2);
+    setSaving(true);
+    try {
+      const { available } = await checkEmail(email);
+      setSaving(false);
+      if (!available) {
+        return setError('An account with this email already exists. Sign in below, or use a different address.');
+      }
+      setStep(2);
+    } catch {
+      /* The probe is advisory — if it cannot run, register still refuses duplicates. */
+      setSaving(false);
+      setStep(2);
+    }
   };
 
   const goPastRole = () => {
@@ -164,11 +207,13 @@ export default function SignupPage() {
                 <Field label="Full Name"     placeholder="Your full name"    icon={I.user}  value={form.name}     onChange={set('name')} />
                 <Field label="Email Address" type="email" placeholder="your@email.com" icon={I.mail} value={form.email} onChange={set('email')} />
                 <Field label="Password"      type="password" placeholder="Strong password" icon={I.lock} value={form.password} onChange={set('password')} />
+                <PasswordRules value={form.password} />
                 <button
                   onClick={goPastDetails}
-                  className="w-full mt-2 rounded-xl bg-green-600 text-white text-sm font-medium py-2.5 shadow-sm transition-all duration-200 hover:bg-green-700 hover:shadow-md active:scale-[0.98]"
+                  disabled={saving}
+                  className="w-full mt-2 rounded-xl bg-green-600 text-white text-sm font-medium py-2.5 shadow-sm transition-all duration-200 hover:bg-green-700 hover:shadow-md active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
                 >
-                  Continue →
+                  {saving ? 'Checking your details…' : 'Continue →'}
                 </button>
               </div>
             )}
@@ -198,7 +243,7 @@ export default function SignupPage() {
                 </div>
                 <div className="flex gap-3">
                   <button
-                    onClick={() => setStep(1)}
+                    onClick={() => { setError(''); setStep(1); }}
                     className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition-all duration-200 hover:border-slate-300 hover:shadow-md"
                   >
                     <Icon d={I.back} className="w-4 h-4" />Back
