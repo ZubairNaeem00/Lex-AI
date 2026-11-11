@@ -116,10 +116,13 @@ def test_access_token_cannot_be_used_as_refresh(client, account_a):
 
 
 def test_refresh_rotates_and_reuse_revokes_the_family(client, account_a):
-    session_row = crud.user_sessions.find_one({"user_id": account_a["id"]})
+    from auth.tokens import hash_token
+
     login = client.post("/api/auth/login",
                         json={"email": account_a["email"], "password": PASSWORD})
     refresh_token = login.json()["refresh_token"]
+    # Registration opened its own family; reuse must revoke the presented one.
+    session_row = crud.user_sessions.find_one({"refresh_token_hash": hash_token(refresh_token)})
 
     rotated = client.post("/api/auth/refresh", json={"refresh_token": refresh_token})
     assert rotated.status_code == 200

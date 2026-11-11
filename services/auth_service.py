@@ -359,8 +359,9 @@ def request_password_reset(payload: ForgotPasswordRequest, ip: str = "") -> Dict
         email_service.send_email(
             email,
             "Reset your AI Law Agent password",
-            "Use the link below to choose a new password. It expires in "
-            f"{AUTH_SETTINGS.reset_ttl_minutes} minutes. If you did not request this, ignore it.",
+            "Use the link below to choose a new password. It works once and expires in "
+            f"{AUTH_SETTINGS.reset_ttl_minutes} minutes. If you did not request this, ignore it "
+            "and your password stays the same.",
             link,
         )
         activity_service.log(user_doc["_id"], "auth.password_reset_requested",

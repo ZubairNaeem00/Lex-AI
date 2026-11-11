@@ -32,7 +32,7 @@ export default function Navbar() {
     });
   };
 
-  const isAuthPage = ['/login', '/signup'].includes(location.pathname);
+  const isAuthPage = ['/login', '/signup', '/forgot-password', '/reset-password'].includes(location.pathname);
   if (isAuthPage) return null;
 
   return (

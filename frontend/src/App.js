@@ -8,12 +8,15 @@ import DashboardLayout from './components/DashboardLayout';
 import LandingPage  from './pages/LandingPage';
 import LoginPage    from './pages/LoginPage';
 import SignupPage   from './pages/SignupPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import ResetPasswordPage  from './pages/ResetPasswordPage';
 import DashboardPage from './pages/DashboardPage';
 import UploadPage   from './pages/UploadPage';
 import ChatPage     from './pages/ChatPage';
 import ReportsPage  from './pages/ReportsPage';
 
-/* Only the homepage is public: every app page needs a signed-in account. */
+/* Only the homepage and the sign-in/recovery pages are public: every app page
+   needs a signed-in account. */
 function RequireAuth({ children }) {
   return isAuthenticated() ? children : <Navigate to="/login" replace />;
 }
@@ -29,6 +32,8 @@ export default function App() {
         <Route path="/"       element={<LandingPage />} />
         <Route path="/login"  element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route path="/reset-password"  element={<ResetPasswordPage />} />
 
         {/* ── App routes (signed in, with sidebar) ── */}
         <Route element={<RequireAuth><DashboardLayout /></RequireAuth>}>

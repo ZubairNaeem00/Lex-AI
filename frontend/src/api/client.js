@@ -146,6 +146,30 @@ export function changePassword({ currentPassword, newPassword }) {
   });
 }
 
+/**
+ * Ask for a reset link. The answer is deliberately the same whether or not the
+ * address has an account; `reset_link` is only present in local demo mode.
+ */
+export function forgotPassword(email) {
+  return request('/api/auth/forgot-password', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+    auth: false,
+  });
+}
+
+/** Consume a reset link. The backend revokes every session, so drop the local one too. */
+export function resetPassword({ token, newPassword }) {
+  return request('/api/auth/reset-password', {
+    method: 'POST',
+    body: JSON.stringify({ token, new_password: newPassword }),
+    auth: false,
+  }).then((data) => {
+    clearSession();
+    return data;
+  });
+}
+
 /* ── Requests ──────────────────────────────────────────────────────────── */
 
 function describeError(data, status) {

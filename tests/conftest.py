@@ -21,6 +21,9 @@ os.environ["JWT_SECRET"] = "pytest-only-secret-not-for-production-use"
 os.environ["EXPOSE_AUTH_LINKS"] = "true"
 os.environ["REQUIRE_EMAIL_VERIFICATION"] = "false"
 os.environ["RATE_LIMIT_ENABLED"] = "false"
+# The suite must never reach a real mail provider.
+os.environ["RESEND_API_KEY"] = ""
+os.environ["SMTP_HOST"] = ""
 
 import pytest  # noqa: E402
 from fastapi import FastAPI  # noqa: E402
