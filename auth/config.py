@@ -65,7 +65,7 @@ class AuthSettings:
             argon2_parallelism=_env_int("ARGON2_PARALLELISM", 2),
             require_email_verification=_env_bool("REQUIRE_EMAIL_VERIFICATION", False),
             verification_ttl_hours=_env_int("EMAIL_VERIFICATION_TTL_HOURS", 48),
-            reset_ttl_minutes=_env_int("PASSWORD_RESET_TTL_MINUTES", 30),
+            reset_ttl_minutes=_env_int("PASSWORD_RESET_TTL_MINUTES", 20),
             auth_required=_env_bool("AUTH_REQUIRED", False),
             rate_limit_enabled=_env_bool("RATE_LIMIT_ENABLED", True),
             login_limit=os.getenv("LOGIN_RATE_LIMIT", "10/minute").strip() or "10/minute",

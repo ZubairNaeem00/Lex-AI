@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { to: '/upload',    label: 'Documents' },
   { to: '/chat',      label: 'AI Chat' },
   { to: '/reports',   label: 'Reports' },
+  { to: '/privacy-policy', label: 'Privacy' },
 ];
 
 export default function Navbar() {
@@ -32,8 +33,8 @@ export default function Navbar() {
     });
   };
 
-  const isAuthPage = ['/login', '/signup'].includes(location.pathname);
-  if (isAuthPage) return null;
+  const isNavbarHiddenPage = ['/login', '/signup', '/forgot-password', '/reset-password', '/chat'].includes(location.pathname);
+  if (isNavbarHiddenPage) return null;
 
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200">

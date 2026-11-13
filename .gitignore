@@ -3,3 +3,4 @@ frontend/node_modules/
 faiss_index_law/
 .env
 .env.example
+.venv/

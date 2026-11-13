@@ -1,8 +1,7 @@
 """Token counting and context-budget helpers.
 
-Groq's gpt-oss models are limited to a small per-minute token budget. Every
-LLM prompt in this project is assembled from explicitly bounded pieces so that
-retrieved passages, case context, and chat history cannot grow without limit.
+Every LLM prompt in this project is assembled from explicitly bounded pieces so
+that retrieved passages, case context, and chat history cannot grow without limit.
 Full documents and the complete conversation remain stored in the case
 session; only compact, relevant extracts are sent to the model.
 """
@@ -42,8 +41,7 @@ def _env_float(name: str, default: float, minimum: float = 0.0) -> float:
 
 CHARS_PER_TOKEN = _env_float("CHARS_PER_TOKEN_ESTIMATE", 4.0, 2.0)
 
-# Conservative defaults: ~3.6k input + ~1.2k completion = 4.8k tokens per
-# legal-chat request, well below Groq's 8k TPM ceiling. Override in .env.
+# Conservative defaults for bounded legal-chat requests. Override in .env.
 MAX_INPUT_TOKENS = _env_int("MAX_INPUT_TOKENS", 3600, 800)
 MAX_OUTPUT_TOKENS = _env_int("MAX_OUTPUT_TOKENS", 1200, 200)
 HISTORY_TOKEN_BUDGET = _env_int("HISTORY_TOKEN_BUDGET", 650, 100)

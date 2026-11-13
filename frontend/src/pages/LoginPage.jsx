@@ -169,9 +169,13 @@ export default function LoginPage() {
                 <input type="checkbox" className="w-4 h-4 rounded border-slate-300 accent-green-600" />
                 <span className="text-sm text-slate-600">Remember me</span>
               </label>
-              <button type="button" className="text-sm font-medium text-green-600 hover:text-green-700 transition-colors">
+              <Link
+                to="/forgot-password"
+                state={{ email }}
+                className="text-sm font-medium text-green-600 hover:text-green-700 transition-colors"
+              >
                 Forgot password?
-              </button>
+              </Link>
             </div>
 
             {error && (

@@ -3,8 +3,9 @@
 A local FastAPI + vanilla JavaScript demo that combines:
 
 - source-grounded legal RAG over two local FAISS indexes (Pakistani statutes and
-  court judgments) queried together for every legal question,
+  court judgments) using a local Ollama model,
 - LlamaParse document extraction with dynamic Groq analysis reports,
+- Groq-powered document generation,
 - editable analysis reports tied to a shared case session,
 - a dedicated multi-turn document-generation workflow with DOCX download.
 
@@ -25,7 +26,18 @@ Create a `.env` file in this folder (see `.env.example`):
 GROQ_API_KEY=your_groq_key
 LLAMA_CLOUD_API_KEY=your_llamacloud_key
 GROQ_MODEL=openai/gpt-oss-120b
+OLLAMA_MODEL=qwen3.5:9b
 ```
+
+Install Ollama, start its local service (run `ollama serve` if it is not already
+running), then download the model once:
+
+```sh
+ollama pull qwen3.5:9b
+```
+
+Keep the Ollama service running while using legal chat. The document analysis
+and document-generation features continue to use Groq.
 
 Start the server:
 
@@ -48,7 +60,7 @@ is missing or a search fails, the other still answers and the model is told whic
 retriever was unavailable (see `/api/health` → `retrievers`).
 
 A question that contains several parts ("what is X, its conditions, and the steps?") is
-split into up to `MAX_FACETS` focused sub-queries (by Groq, with a comma/conjunction
+split into up to `MAX_FACETS` focused sub-queries (by Ollama, with a comma/conjunction
 fallback). Every sub-query and the whole question are searched against **both** indexes;
 hits are de-duplicated, ordered so one part cannot crowd the others out, and filtered so
 a passage must either name the topic or stay close to the best hit of its own query.
@@ -68,7 +80,7 @@ Do not use `--reload` for a demo: every reload restarts the in-memory store.
 | `session_manager.py` | In-memory `CaseSession` + `SessionManager`, locks, messages, UI events |
 | `document_analysis.py` | LlamaParse extraction (Urdu/English OCR) and structured Groq analysis |
 | `case_context.py` | Compact case context, canonical facts, correction propagation, report edits |
-| `legal_agent.py` | Query rewrite, multi-part question split, bounded dual-index FAISS retrieval (statutes + judgments), grounded prompt, Groq retries |
+| `legal_agent.py` | Ollama-powered query rewrite and question splitting, bounded dual-index FAISS retrieval (statutes + judgments), grounded prompt |
 | `generation_workflow.py` | Drafting state machine: answer normalization, review, field editing, DOCX generation |
 | `doc_generation.py` | Template schema, field extraction, DOCX rendering |
 | `context_budget.py` | Token counting, truncation, history/context/retrieval budgets |
@@ -97,7 +109,7 @@ values.
 
 ## Token-budget strategy
 
-Defaults are deliberately below Groq's 8,000 TPM limit for `openai/gpt-oss-120b`:
+Legal-chat context is bounded before it is sent to the local Ollama model:
 
 | Budget | Default |
 | --- | --- |
@@ -112,9 +124,11 @@ Defaults are deliberately below Groq's 8,000 TPM limit for `openai/gpt-oss-120b`
 
 Every chat and generation value can be overridden in `.env`; see the variable names in
 `context_budget.py`. Full documents, reports, and history stay in the session. Only
-recent turns, selected excerpts, and capped retrieval passages are sent to Groq. On a
-token/rate error the legal answer is retried with 60% and then 40% of the context. If
-all retries fail, the user gets a recoverable error message; case data is not deleted.
+recent turns, selected excerpts, and capped retrieval passages are sent to Ollama for
+legal answers. Document analysis and generation continue to use Groq. If Ollama rejects
+the legal-answer context size, the request is retried with 60% and then 40% of the
+context. If all retries fail, the user gets a recoverable error message; case data is
+not deleted.
 
 ## Document generation workflow
 
@@ -192,8 +206,8 @@ The following were actually run locally with the browser and/or HTTP API:
   without the alleged-offence description, FIR 245/2026, IO, and Sessions Court;
 - a legal question asked after generation returned to the RAG path and answered with
   the corrected name and sections;
-- two uploaded documents and two consecutive legal questions stayed under the 8,000
-  TPM budget (observed request totals roughly 2.1k–3.4k tokens);
+- before the RAG provider switch, two uploaded documents and two legal questions stayed
+  under Groq's 8,000 TPM budget (observed request totals roughly 2.1k–3.4k tokens);
 - unsupported “legal notice” and “divorce application” requests returned a clear
   refusal instead of an invented document;
 - cancel and retry were exercised (including a temporary missing-template failure,
@@ -279,8 +293,9 @@ for direct `:3000` ↔ `:8000` calls (the CRA proxy covers same-origin use).
 - Only the bail application is fillable. Other DOCX files need schemas/placeholders.
 - The first embedding load is slow on CPU and needs internet access for the model
   download the first time.
-- LlamaParse and Groq require internet access and API keys; provider retention policies
-  apply. Use anonymized test documents.
+- Ollama must be running locally with `qwen3.5:9b` downloaded. LlamaParse and Groq
+  require internet access and API keys; provider retention policies apply. Use
+  anonymized test documents.
 - Document analysis sends the full extracted text in one structured Groq call. Very long
   documents can exceed the model's context or token-per-minute limit; split or shorten
   such documents before analysis.

@@ -33,7 +33,7 @@
       },
       {
         "name": "police_station_investigation_officer",
-        "description": "Name of the investigating officer, or the police station if the officer's name is unavailable.",
+        "description": "Name of the investigating officer",
         "required": true
       },
       {

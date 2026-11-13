@@ -20,3 +20,4 @@ To create a production build, use npm run build.
 
 webpack compiled [1m[32msuccessfully[39m[22m
 (node:15500) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+^CTerminate batch job (Y/N)? 

@@ -1,13 +1,13 @@
 """Legal RAG agent for Pakistani criminal law.
 
 The full case history, documents, and reports live in the shared session.
-Each Groq request receives only:
+Each Ollama request receives only:
 - a few recent, length-limited conversation turns,
 - compact case facts/summaries plus lexically relevant excerpts,
 - a deduplicated, length-limited set of retrieved authorities.
 
 Prompts are trimmed to a token budget and retried with tighter budgets when
-Groq reports a TPM/token-limit error.
+Ollama reports a context-size error.
 """
 
 from __future__ import annotations
@@ -29,6 +29,7 @@ from dotenv import load_dotenv
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
+from ollama import chat as ollama_chat
 
 from case_context import build_case_context
 from context_budget import (
@@ -52,11 +53,7 @@ from context_budget import (
     truncate_to_tokens,
 )
 from groq_utils import (
-    friendly_llm_error,
-    get_groq_llm,
-    invoke_llm,
-    is_retryable_llm_error,
-    log_usage,
+    is_token_limit_error,
 )
 from session_manager import session_manager
 
@@ -68,7 +65,7 @@ LAW_INDEX_PATH = os.getenv("LAW_INDEX_PATH", str(BASE_DIR / "faiss_index_law"))
 JUDGMENTS_INDEX_PATH = os.getenv("JUDGMENTS_INDEX_PATH", str(BASE_DIR / "judgments_faiss_index"))
 
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "BAAI/bge-base-en-v1.5")
-GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3.5:9b")
 
 # The two retrievers share one embedding model; both indexes are 768-dim
 # bge-base vectors, so scores stay comparable across sources.
@@ -121,7 +118,6 @@ LABEL_OVERHEAD_CHARS = 120
 
 
 _embeddings = None
-_llm = None
 _init_lock = threading.Lock()
 
 _stores: Dict[str, Any] = {KIND_LAW: None, KIND_CASES: None}
@@ -242,11 +238,56 @@ def retrieval_status() -> Dict[str, Any]:
     }
 
 
-def get_llm():
-    global _llm
-    if _llm is None:
-        _llm = get_groq_llm(max_tokens=MAX_OUTPUT_TOKENS, temperature=0)
-    return _llm
+def _ollama_messages(payload: Any) -> List[Dict[str, str]]:
+    if isinstance(payload, str):
+        return [{"role": "user", "content": payload}]
+
+    role_names = {"system": "system", "human": "user", "ai": "assistant"}
+    messages = []
+    for message in payload:
+        message_type = getattr(message, "type", None)
+        role = role_names.get(message_type)
+        if role is None:
+            raise TypeError(f"Unsupported Ollama message type: {message_type!r}")
+        messages.append({"role": role, "content": str(message.content)})
+    return messages
+
+
+def _ollama_content(response: Any) -> str:
+    message = getattr(response, "message", None)
+    return str(getattr(message, "content", "") or "")
+
+
+def _ollama_usage(response: Any) -> Dict[str, int]:
+    input_tokens = int(getattr(response, "prompt_eval_count", 0) or 0)
+    output_tokens = int(getattr(response, "eval_count", 0) or 0)
+    return {
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
+        "total_tokens": input_tokens + output_tokens,
+    }
+
+
+def _log_ollama_usage(label: str, response: Any) -> Dict[str, int]:
+    usage = _ollama_usage(response)
+    print(
+        f"[Ollama] {label}: input={usage['input_tokens']} "
+        f"output={usage['output_tokens']} "
+        f"total={usage['total_tokens']}",
+        flush=True,
+    )
+    return usage
+
+
+def _invoke_ollama(payload: Any, *, label: str, max_tokens: int) -> Any:
+    response = ollama_chat(
+        model=OLLAMA_MODEL,
+        messages=_ollama_messages(payload),
+        think=False,
+        options={"temperature": 0, "num_predict": max_tokens},
+    )
+    _log_ollama_usage(label, response)
+    return response
 
 
 def _law_document_title(meta: Dict[str, Any]) -> str:
@@ -729,12 +770,17 @@ CASE CONTEXT:
 {context_text}
 """
     try:
-        llm = get_groq_llm(max_tokens=DECOMPOSE_OUTPUT_TOKENS, temperature=0)
-        response = invoke_llm(llm, prompt, label="question decomposition")
-        raw = str(getattr(response, "content", "") or "")
-        parsed = _finalize_facets(_parse_facets(raw), _subject_of(search_query) or _subject_of(question))
+        response = _invoke_ollama(
+            prompt,
+            label="question decomposition",
+            max_tokens=DECOMPOSE_OUTPUT_TOKENS,
+        )
+        raw = _ollama_content(response)
+        parsed = _finalize_facets(
+            _parse_facets(raw), _subject_of(search_query) or _subject_of(question)
+        )
         if parsed:
-            return parsed, "groq"
+            return parsed, "ollama"
     except Exception as exc:
         print(
             f"[Legal] decomposition skipped, using heuristic split: "
@@ -1137,9 +1183,12 @@ LATEST QUESTION:
 {question_text}
 """
     try:
-        llm = get_groq_llm(max_tokens=RESOLVE_OUTPUT_TOKENS, temperature=0)
-        response = invoke_llm(llm, prompt, label="follow-up resolution")
-        rewritten = str(getattr(response, "content", "") or "").strip()
+        response = _invoke_ollama(
+            prompt,
+            label="follow-up resolution",
+            max_tokens=RESOLVE_OUTPUT_TOKENS,
+        )
+        rewritten = _ollama_content(response).strip()
         rewritten = re.sub(r"^(rewritten query|query)\s*:\s*", "", rewritten, flags=re.I)
         rewritten = rewritten.strip().strip('"').strip("'").split("\n")[0].strip()
         if not rewritten:
@@ -1353,7 +1402,6 @@ def generate_legal_answer(
     parts_checklist: str = "",
 ) -> str:
     """Generate a grounded answer, retrying with tighter context on token errors."""
-    llm = get_llm()
     last_error: Optional[BaseException] = None
 
     for attempt, factor in enumerate((1.0, 0.6, 0.4)):
@@ -1370,9 +1418,13 @@ def generate_legal_answer(
             stats.clear()
             stats.update(context_stats)
         try:
-            response = llm.invoke(messages)
-            usage = log_usage("legal answer", response)
-            content = str(getattr(response, "content", "") or "").strip()
+            response = _invoke_ollama(
+                messages,
+                label="legal answer",
+                max_tokens=MAX_OUTPUT_TOKENS,
+            )
+            usage = _ollama_usage(response)
+            content = _ollama_content(response).strip()
             if not content:
                 last_error = RuntimeError("The model returned an empty answer.")
                 continue
@@ -1384,30 +1436,29 @@ def generate_legal_answer(
             return content
         except Exception as exc:
             last_error = exc
-            if not is_retryable_llm_error(exc):
+            if not is_token_limit_error(exc):
                 break
             if attempt == 0:
-                wait = 6.0 if "rate" in str(exc).lower() else 0.0
-                if wait:
-                    print(
-                        f"[Legal] Groq token/rate limit reached; retrying with 60% context "
-                        f"in {wait:.0f}s.",
-                        flush=True,
-                    )
-                    import time
-
-                    time.sleep(wait)
-                else:
-                    print(
-                        "[Legal] Groq rejected the context size; retrying with tighter context.",
-                        flush=True,
-                    )
+                print(
+                    "[Legal] Ollama rejected the context size; retrying with tighter context.",
+                    flush=True,
+                )
             else:
-                print("[Legal] Token/rate limit again; retrying with minimum context.", flush=True)
+                print("[Legal] Ollama rejected the reduced context; retrying with minimum context.", flush=True)
 
     if stats is not None:
         stats["error"] = type(last_error).__name__ if last_error else "unknown"
-    return friendly_llm_error(last_error or RuntimeError("unknown"), context="legal answer")
+    if last_error:
+        print(f"[Ollama] legal answer failed: {type(last_error).__name__}: {last_error}", flush=True)
+    if last_error and is_token_limit_error(last_error):
+        return (
+            "The Ollama model could not process the request size after the context was "
+            "trimmed. Please retry with a narrower question."
+        )
+    return (
+        f"The local Ollama request failed. Ensure Ollama is running and "
+        f"'{OLLAMA_MODEL}' is available (run `ollama pull {OLLAMA_MODEL}` if needed)."
+    )
 
 
 def is_doc_generation_request(text: str) -> Tuple[bool, str]:

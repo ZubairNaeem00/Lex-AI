@@ -2,3 +2,72 @@ INFO:     Started server process [5096]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53643 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53647 - "POST /api/auth/check-email HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53648 - "POST /api/auth/check-email HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53649 - "POST /api/auth/check-email HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53650 - "POST /api/auth/check-email HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:53678 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_177262b3526b439d8b33e6073acca416 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_177262b3526b439d8b33e6073acca416 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_177262b3526b439d8b33e6073acca416 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_177262b3526b439d8b33e6073acca416 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_177262b3526b439d8b33e6073acca416 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_177262b3526b439d8b33e6073acca416 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c19641a5a2448958af184ccfdee87bf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/check-email HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_177262b3526b439d8b33e6073acca416 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_177262b3526b439d8b33e6073acca416 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56658 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     Started server process [9148]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:57054 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57125 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57126 - "POST /api/auth/login HTTP/1.1" 200 OK
+[Email] failed to=theme.check@example.com subject='Reset your AI Law Agent password' link=http://localhost:3000/reset-password?token=UGDut6ZBND8m--G31NREodImGLa6Vwzjx3QwjHmLRD8
+[Email] Resend 422: {"message":"Invalid `to` field. Please use our testing email address instead of domains like `example.com`. See our documentation for more information.","name":"validation_error","statusCode":422}
+INFO:     127.0.0.1:57127 - "POST /api/auth/forgot-password HTTP/1.1" 200 OK
+[Email] failed to=theme.check@example.com subject='Your password was changed' link=
+[Email] Resend 422: {"message":"Invalid `to` field. Please use our testing email address instead of domains like `example.com`. See our documentation for more information.","name":"validation_error","statusCode":422}
+INFO:     127.0.0.1:57129 - "POST /api/auth/reset-password HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57131 - "GET /api/users/me HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57132 - "POST /api/auth/refresh HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57133 - "GET /api/users/me HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57134 - "POST /api/auth/refresh HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57135 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57136 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57137 - "POST /api/auth/reset-password HTTP/1.1" 400 Bad Request
+[Email] resend to=zubiarnaeem00@gmail.com subject='Reset your AI Law Agent password' link=http://localhost:3000/reset-password?token=dtEpsEkoFQvjxsMwxy_PXOSdtx6moLGXmVL8EaJRjPc
+INFO:     127.0.0.1:0 - "POST /api/auth/forgot-password HTTP/1.1" 200 OK
+[Email] resend to=zubiarnaeem00@gmail.com subject='Your password was changed' link=
+INFO:     127.0.0.1:0 - "POST /api/auth/reset-password HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:0 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c19641a5a2448958af184ccfdee87bf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_3c19641a5a2448958af184ccfdee87bf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK

@@ -206,32 +206,35 @@ export default function ChatPage() {
 
   const items = useMemo(() => {
     if (!session) return [];
-    const byDoc = new Map();
-    const gens = new Map();
-    const others = [];
+    const list = [];
+    const analysisPositions = new Map();
+    const generationPositions = new Map();
     for (const ev of session.events || []) {
       if (ev.type === 'message') {
         if (ev.hidden) continue;
-        others.push({
+        list.push({
           kind: 'message',
           role: ev.role === 'user' ? 'user' : 'ai',
           text: ev.content || '',
           sources: ev.sources || [],
           time: fmtTime(ev.ts || ev.timestamp),
-          key: `m-${ev.ts || ev.timestamp}-${others.length}`,
+          key: `m-${ev.ts || ev.timestamp}-${list.length}`,
         });
       } else if (ev.type === 'analysis' || ev.type === 'analysis_edited') {
-        byDoc.set(ev.document_id, { kind: 'analysis', docId: ev.document_id, key: `a-${ev.document_id}` });
-      } else if (ev.type === 'generation') {
-        const existing = gens.get(ev.generation.id);
-        gens.set(ev.generation.id, { kind: 'generation', gen: ev.generation, key: `g-${ev.generation.id}`, firstAt: existing?.firstAt ?? (ev.ts || ev.timestamp) });
+        if (!analysisPositions.has(ev.document_id)) {
+          analysisPositions.set(ev.document_id, list.length);
+          list.push({ kind: 'analysis', docId: ev.document_id, key: `a-${ev.document_id}` });
+        }
+      } else if (ev.type === 'generation' && ev.generation?.id) {
+        const item = { kind: 'generation', gen: ev.generation, key: `g-${ev.generation.id}` };
+        const position = generationPositions.get(ev.generation.id);
+        if (position === undefined) {
+          generationPositions.set(ev.generation.id, list.length);
+          list.push(item);
+        } else {
+          list[position] = item;
+        }
       }
-    }
-    const list = [...others];
-    for (const item of byDoc.values()) list.push(item);
-    for (const item of gens.values()) {
-      const idx = list.findIndex((o) => o.kind === 'message' && o.time && item.firstAt && fmtTime(item.firstAt) <= o.time);
-      list.splice(idx === -1 ? list.length : idx, 0, item);
     }
     return list.length ? list : GREETING_EVENTS.map((g, i) => ({ ...g, key: `greet-${i}` }));
   }, [session]);

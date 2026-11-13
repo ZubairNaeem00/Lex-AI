@@ -69,6 +69,7 @@ from generation_workflow import (
 from legal_agent import (
     CASES_INDEX_PATH,
     LAW_INDEX_PATH,
+    OLLAMA_MODEL,
     ask_legal_agent,
     retrieval_status,
 )
@@ -229,6 +230,7 @@ def health():
         "groq_configured": groq_ok,
         "llama_configured": llama_ok,
         "model": GROQ_MODEL,
+        "legal_model": OLLAMA_MODEL,
         "index_present": cases_present,
         "cases_index_present": cases_present,
         "law_index_present": law_present,
