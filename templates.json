@@ -1,0 +1,23 @@
+[
+  {
+    "id": "bail_application",
+    "name": "Bail Application",
+    "description": "Application requesting bail for an accused person in a criminal case. Uses applicant details, FIR information, police station, legal sections, and case facts.",
+    "document_type": "criminal",
+    "path": "Bail Application.docx"
+  },
+  {
+    "id": "dissolution_of_marriage",
+    "name": "Dissolution of Marriage Application",
+    "description": "Family-court petition for dissolution of marriage. The DOCX is available but not yet parameterized with fillable fields.",
+    "document_type": "family",
+    "path": "Dissolution Of Marriage Application.docx"
+  },
+  {
+    "id": "employment_contract",
+    "name": "Employment Contract",
+    "description": "Employment contract template. The DOCX is available but not yet parameterized with fillable fields.",
+    "document_type": "general",
+    "path": "Employment Contract.docx"
+  }
+]

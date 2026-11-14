@@ -1,0 +1,7 @@
+faiss_index_cases/
+frontend/node_modules/
+faiss_index_law/
+faiss_case_retrieval/
+.env
+.env.example
+.venv/

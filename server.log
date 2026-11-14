@@ -1,0 +1,82 @@
+INFO:     Started server process [4600]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51203 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51204 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51211 - "GET /?v=20261025a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51211 - "GET /static/app.js?v=20261025a HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51211 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51212 - "GET /api/sessions/case_aba421da5ac047d48ec0463d2a7661fb HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51212 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51488 - "GET /?v=20261025a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51488 - "GET /static/app.js?v=20261025a HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51488 - "GET /api/sessions/case_6eed5233405a484a92f0a05866024110 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51489 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51552 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51552 - "GET /static/styles.css?v=20261025a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51553 - "GET /static/app.js?v=20261025a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51553 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51553 - "GET /api/sessions/case_b245591faadc4076bc8f1e537ee33a36 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51553 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51552 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51561 - "POST /api/analyze HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51561 - "GET /api/sessions/case_87dcf679af1c492787c58a9cc523acb0 HTTP/1.1" 200 OK
+[LLM] follow-up resolution: input=459 output=100 reasoning=98 total=559
+Loading FAISS cases index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_cases'...
+Loading embedding model 'BAAI/bge-base-en-v1.5' on 'cpu'...
+C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py:120: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the `langchain-huggingface package and should be used instead. To use it run `pip install -U `langchain-huggingface` and import as `from `langchain_huggingface import HuggingFaceEmbeddings``.
+  _embeddings = HuggingFaceEmbeddings(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792928525.013409   11552 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792928535.313292   11552 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+Embedding model ready.
+FAISS cases index ready (209,168 vectors).
+[LLM] legal answer: input=2465 output=246 reasoning=110 total=2711
+INFO:     127.0.0.1:51600 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51600 - "GET /api/sessions/case_87dcf679af1c492787c58a9cc523acb0 HTTP/1.1" 200 OK
+[LLM] generation field extraction: input=? output=? reasoning=? total=?
+INFO:     127.0.0.1:51642 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51642 - "GET /api/sessions/case_87dcf679af1c492787c58a9cc523acb0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51650 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51650 - "GET /api/sessions/case_87dcf679af1c492787c58a9cc523acb0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51653 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51653 - "GET /api/sessions/case_87dcf679af1c492787c58a9cc523acb0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51657 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51657 - "GET /api/sessions/case_87dcf679af1c492787c58a9cc523acb0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51658 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51658 - "GET /api/sessions/case_87dcf679af1c492787c58a9cc523acb0 HTTP/1.1" 200 OK
+[LLM] follow-up resolution: input=524 output=100 reasoning=79 total=624
+[LLM] legal answer: input=2925 output=103 reasoning=28 total=3028
+INFO:     127.0.0.1:51690 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51690 - "GET /api/sessions/case_87dcf679af1c492787c58a9cc523acb0 HTTP/1.1" 200 OK
+[LLM] follow-up resolution: input=587 output=100 reasoning=67 total=687
+[LLM] legal answer: input=2754 output=76 reasoning=15 total=2830
+INFO:     127.0.0.1:51695 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51695 - "GET /api/sessions/case_87dcf679af1c492787c58a9cc523acb0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51701 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51701 - "GET /api/sessions/case_87dcf679af1c492787c58a9cc523acb0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51704 - "POST /api/sessions HTTP/1.1" 200 OK
+[LLM] generation field extraction: input=? output=? reasoning=? total=?
+INFO:     127.0.0.1:51707 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51707 - "GET /api/sessions/case_ca665ef40cf2452693aed616369ffe51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/sessions/case_ca665ef40cf2452693aed616369ffe51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/sessions/case_ca665ef40cf2452693aed616369ffe51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/sessions/case_ca665ef40cf2452693aed616369ffe51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/sessions/case_ca665ef40cf2452693aed616369ffe51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/sessions/case_ca665ef40cf2452693aed616369ffe51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/sessions/case_ca665ef40cf2452693aed616369ffe51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/sessions/case_ca665ef40cf2452693aed616369ffe51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/sessions/case_ca665ef40cf2452693aed616369ffe51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51713 - "GET /sessions/case_ca665ef40cf2452693aed616369ffe51/download/Bail_Application_case_ca665ef40cf2452693aed616369ffe51_20261025_164814_800644.docx HTTP/1.1" 200 OK

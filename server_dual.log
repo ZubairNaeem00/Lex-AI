@@ -1,0 +1,76 @@
+INFO:     Started server process [9728]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63335 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63340 - "POST /api/sessions HTTP/1.1" 200 OK
+[LLM] question decomposition: input=259 output=158 reasoning=36 total=417
+Loading law FAISS index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_law'...
+Loading embedding model 'BAAI/bge-base-en-v1.5' on 'cpu'...
+C:\Users\Main\Desktop\legallens_local_demo\legal_agent.py:169: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the `langchain-huggingface package and should be used instead. To use it run `pip install -U `langchain-huggingface` and import as `from `langchain_huggingface import HuggingFaceEmbeddings``.
+  _embeddings = HuggingFaceEmbeddings(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793379154.849811   11208 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793379163.119070   11208 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Main\AppData\Roaming\Python\Python310\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+Embedding model ready.
+Law FAISS index ready (51,475 vectors).
+Loading cases FAISS index from 'C:\Users\Main\Desktop\legallens_local_demo\faiss_index_cases'...
+Cases FAISS index ready (209,168 vectors).
+[LLM] legal answer: input=3131 output=586 reasoning=40 total=3717
+INFO:     127.0.0.1:63341 - "POST /api/chat HTTP/1.1" 200 OK
+[LLM] follow-up resolution: input=240 output=81 reasoning=50 total=321
+[LLM] question decomposition: input=315 output=200 reasoning=73 total=515
+[LLM] legal answer: input=3314 output=754 reasoning=47 total=4068
+INFO:     127.0.0.1:63367 - "POST /api/chat HTTP/1.1" 200 OK
+[LLM] generation field extraction: input=? output=? reasoning=? total=?
+INFO:     127.0.0.1:63370 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63374 - "GET /api/sessions/case_83688e117d1840ea9b6a1cbf898947a9 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63375 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63404 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_ee7c270d6b88466d8193598344c5b869 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+[LLM] question decomposition: input=239 output=169 reasoning=48 total=408
+[LLM] legal answer: input=3176 output=594 reasoning=42 total=3770
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+[LLM] follow-up resolution: input=240 output=98 reasoning=60 total=338
+[LLM] question decomposition: input=320 output=221 reasoning=107 total=541
+[LLM] legal answer: input=2513 output=292 reasoning=34 total=2805
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+[LLM] legal answer: input=3297 output=241 reasoning=40 total=3538
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+[LLM] follow-up resolution: input=328 output=100 reasoning=98 total=428
+[LLM] legal answer: input=3474 output=224 reasoning=54 total=3698
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+[LLM] legal answer: input=3396 output=211 reasoning=36 total=3607
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+[LLM] legal answer: input=3595 output=257 reasoning=45 total=3852
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+[LLM] follow-up resolution: input=269 output=89 reasoning=60 total=358
+[LLM] question decomposition: input=293 output=260 reasoning=137 total=553
+[LLM] legal answer: input=3582 output=418 reasoning=86 total=4000
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+[LLM] legal answer: input=2888 output=831 reasoning=68 total=3719
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+[LLM] follow-up resolution: input=293 output=85 reasoning=57 total=378
+[LLM] question decomposition: input=283 output=236 reasoning=85 total=519
+[LLM] legal answer: input=3218 output=220 reasoning=39 total=3438
+INFO:     127.0.0.1:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:0 - "GET /api/sessions/case_1afa7266b0464e3b95a2ffa90d7972f6 HTTP/1.1" 200 OK
