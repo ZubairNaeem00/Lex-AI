@@ -99,7 +99,7 @@ export default function ReportsPage() {
   };
 
   return (
-    <div className="flex h-full overflow-hidden bg-slate-50 text-slate-800 antialiased">
+    <div className="flex h-full overflow-hidden bg-page text-slate-800 antialiased">
 
       <AppSidebar
         activeCaseId={null}

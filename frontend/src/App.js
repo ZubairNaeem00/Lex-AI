@@ -11,6 +11,7 @@ import SignupPage   from './pages/SignupPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage  from './pages/ResetPasswordPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import AboutPage    from './pages/AboutPage';
 import DashboardPage from './pages/DashboardPage';
 import UploadPage   from './pages/UploadPage';
 import ChatPage     from './pages/ChatPage';
@@ -24,7 +25,7 @@ function RequireAuth({ children }) {
 export default function App() {
   return (
     <BrowserRouter>
-      {/* Global navbar (hides itself on /login and /signup) */}
+      {/* Global navbar (only on home, privacy and about pages) */}
       <Navbar />
 
       <Routes>
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password"  element={<ResetPasswordPage />} />
         <Route path="/privacy-policy"  element={<PrivacyPolicyPage />} />
+        <Route path="/about"  element={<AboutPage />} />
 
         {/* ── App routes (signed in, with sidebar) ── */}
         <Route element={<RequireAuth><DashboardLayout /></RequireAuth>}>

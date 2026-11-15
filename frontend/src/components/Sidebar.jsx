@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { LogOut } from 'lucide-react';
+import { LogOut, Home, Folder, MessageSquare, ClipboardList, ScrollText, Scale, Landmark, CircleDot, CircleCheck } from 'lucide-react';
 import { clearSession, clearStoredCaseId, logoutRequest, resetCasePromise } from '../api/client';
 import AccountSection from './account/AccountSection';
 import ConfirmDialog from './chat/ConfirmDialog';
@@ -9,25 +9,25 @@ const ITEMS = [
   {
     group: 'Workspace',
     links: [
-      { to: '/dashboard', label: 'Overview',   icon: '🏠', exact: true },
-      { to: '/upload',    label: 'Documents',  icon: '📁', badge: '4', badgeColor: 'gold' },
-      { to: '/chat',      label: 'AI Chat',    icon: '💬', badge: '1', badgeColor: 'gold' },
-      { to: '/reports',   label: 'Reports',    icon: '📋', badge: '3' },
+      { to: '/dashboard', label: 'Overview',   icon: Home, exact: true },
+      { to: '/upload',    label: 'Documents',  icon: Folder, badge: '4', badgeColor: 'gold' },
+      { to: '/chat',      label: 'AI Chat',    icon: MessageSquare, badge: '1', badgeColor: 'gold' },
+      { to: '/reports',   label: 'Reports',    icon: ClipboardList, badge: '3' },
     ],
   },
   {
     group: 'Legal Database',
     links: [
-      { to: '/dashboard/ppc',       label: 'PPC Statutes',  icon: '📜' },
-      { to: '/dashboard/crpc',      label: 'CrPC Sections', icon: '⚖️' },
-      { to: '/dashboard/precedents',label: 'Precedents',    icon: '🏛️', badge: '2.4k' },
+      { to: '/dashboard/ppc',       label: 'PPC Statutes',  icon: ScrollText },
+      { to: '/dashboard/crpc',      label: 'CrPC Sections', icon: Scale },
+      { to: '/dashboard/precedents',label: 'Precedents',    icon: Landmark, badge: '2.4k' },
     ],
   },
   {
     group: 'Cases',
     links: [
-      { to: '/dashboard/active', label: 'Active Cases', icon: '🔴', badge: '2', badgeColor: 'gold' },
-      { to: '/dashboard/closed', label: 'Closed Cases', icon: '✅', badge: '11' },
+      { to: '/dashboard/active', label: 'Active Cases', icon: CircleDot, badge: '2', badgeColor: 'gold' },
+      { to: '/dashboard/closed', label: 'Closed Cases', icon: CircleCheck, badge: '11' },
     ],
   },
 ];
@@ -55,8 +55,8 @@ export default function Sidebar() {
         onClick={() => navigate('/')}
         className="flex items-center gap-3 border-b border-slate-200 px-5 py-4 transition-colors hover:bg-white"
       >
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600 text-sm text-white shadow-sm shadow-green-600/30">
-          ⚖️
+        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600 text-white shadow-sm shadow-green-600/30">
+          <Scale className="h-4 w-4" />
         </div>
         <span className="text-lg font-semibold text-slate-900">LexAI</span>
       </button>
@@ -81,7 +81,7 @@ export default function Sidebar() {
                     : 'text-slate-500 hover:bg-white hover:text-slate-900'}
                 `}
               >
-                <span className="w-5 text-center text-base">{item.icon}</span>
+                <span className="flex w-5 justify-center text-green-600"><item.icon className="h-4 w-4" /></span>
                 <span className="flex-1 leading-none">{item.label}</span>
                 {item.badge && (
                   <span className={`

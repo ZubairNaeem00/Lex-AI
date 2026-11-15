@@ -10,6 +10,7 @@ import CaseSlider from '../components/chat/CaseSlider';
 
 const WORKSPACE_KEY = 'lexai.upload_case';
 const ALLOWED = ['.pdf', '.png', '.jpg', '.jpeg', '.webp', '.tif', '.tiff'];
+const MAX_FILE_MB = 10;
 
 const Icon = ({ d, className = 'w-4 h-4' }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -126,6 +127,10 @@ export default function UploadPage() {
         setNotice(`“${file.name}” is not supported. Upload PDF, JPG, PNG, WEBP or TIFF files.`);
         continue;
       }
+      if (file.size > MAX_FILE_MB * 1024 * 1024) {
+        setNotice(`“${file.name}” is ${fmtSize(file.size)}. The maximum file size is ${MAX_FILE_MB} MB.`);
+        continue;
+      }
       added.push({
         key: `${file.name}-${Date.now()}-${added.length}`, filename: file.name,
         type: typeOf(file.name), size: fmtSize(file.size), status: 'ready', progress: 100, file,
@@ -219,7 +224,7 @@ export default function UploadPage() {
   };
 
   return (
-    <div className="flex h-full overflow-hidden bg-slate-50 text-slate-800 antialiased">
+    <div className="flex h-full overflow-hidden bg-page text-slate-800 antialiased">
 
       <AppSidebar
         activeCaseId={workspaceId}
@@ -269,11 +274,12 @@ export default function UploadPage() {
                 <p className="text-slate-500 text-sm mb-5 leading-relaxed">
                   Drop FIRs, court orders, witness statements,<br />or scanned images here
                 </p>
-                <div className="flex gap-2 justify-center flex-wrap mb-6">
+                <div className="flex gap-2 justify-center flex-wrap mb-2">
                   {['.pdf', '.jpg/.png', '.webp', '.tiff'].map(t => (
                     <span key={t} className="text-[11px] font-medium bg-slate-50 border border-slate-200 px-3 py-1 rounded-lg text-slate-500">{t}</span>
                   ))}
                 </div>
+                <p className="text-[11px] text-slate-400 mb-6">Up to {MAX_FILE_MB} MB per file</p>
                 <button
                   onClick={e => { e.stopPropagation(); inputRef.current?.click(); }}
                   className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:bg-green-700 hover:shadow-md active:scale-[0.98]"

@@ -14,7 +14,7 @@ const BulletList = ({ children }) => (
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 antialiased">
+    <div className="min-h-screen bg-page text-slate-800 antialiased">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-4xl px-6 py-12 sm:px-8">
           <Link to="/" className="text-sm font-medium text-green-700 hover:text-green-800">

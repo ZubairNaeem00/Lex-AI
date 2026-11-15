@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { Scale, Lock, Landmark, Star, UserRound, Mail, TriangleAlert, Check } from 'lucide-react';
 import { login } from '../api/client';
 
 /* ── Presentational helpers (UI only, no logic) ── */
-const Field = ({ label, icon, ...props }) => (
+const Field = ({ label, icon: Icon, ...props }) => (
   <label className="block mb-4">
     <span className="block mb-1.5 text-sm font-medium text-slate-700">{label}</span>
     <div className="relative">
-      <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm opacity-60">{icon}</span>
+      <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2">
+        {Icon && <Icon className="w-4 h-4 text-green-600" />}
+      </span>
       <input
         {...props}
         className="w-full rounded-xl border border-slate-200 bg-white py-2.5 pl-10 pr-3.5 text-sm text-slate-800 placeholder:text-slate-400 shadow-sm outline-none transition-all duration-200 hover:border-slate-300 focus:border-green-500 focus:ring-4 focus:ring-green-100"
@@ -68,8 +71,8 @@ export default function LoginPage() {
 
         {/* Logo */}
         <button onClick={() => navigate('/')} className="relative flex items-center gap-2.5 w-fit group">
-          <div className="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center text-base shadow-sm transition-transform duration-200 group-hover:scale-105">
-            ⚖️
+          <div className="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center text-white shadow-sm transition-transform duration-200 group-hover:scale-105">
+            <Scale className="w-4 h-4" />
           </div>
           <span className="text-lg font-semibold tracking-tight text-slate-900">LexAI</span>
         </button>
@@ -91,11 +94,15 @@ export default function LoginPage() {
           {/* Trust bento */}
           <div className="grid grid-cols-2 gap-3 mt-8 max-w-sm">
             <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-              <span className="text-lg">🔒</span>
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-green-100 bg-green-50 text-green-600">
+                <Lock className="h-4 w-4" />
+              </span>
               <p className="mt-2 text-sm font-medium text-slate-900">End-to-end encrypted</p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-              <span className="text-lg">🇵🇰</span>
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-green-100 bg-green-50 text-green-600">
+                <Landmark className="h-4 w-4" />
+              </span>
               <p className="mt-2 text-sm font-medium text-slate-900">Pakistani statutes</p>
             </div>
           </div>
@@ -105,13 +112,17 @@ export default function LoginPage() {
         <figure className="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md">
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-medium text-green-600">Trusted by counsel</span>
-            <span className="text-xs tracking-widest text-amber-400">★★★★★</span>
+            <span className="flex items-center gap-0.5 text-green-600">
+              {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-3 w-3 fill-current" />)}
+            </span>
           </div>
           <blockquote className="text-sm leading-relaxed text-slate-600 mb-5">
             "LexAI reduced our case preparation from days to hours. The statute matching is remarkably accurate for Pakistani law."
           </blockquote>
           <figcaption className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full border border-slate-200 bg-slate-50 flex items-center justify-center text-lg">👨‍⚖️</div>
+            <div className="w-9 h-9 rounded-full border border-green-100 bg-green-50 text-green-600 flex items-center justify-center">
+              <UserRound className="h-4 w-4" />
+            </div>
             <div>
               <p className="text-sm font-semibold text-slate-900">Adv. Fahad Mirza</p>
               <p className="text-xs text-slate-500">Lahore High Court</p>
@@ -126,7 +137,7 @@ export default function LoginPage() {
 
           {/* Mobile logo */}
           <button onClick={() => navigate('/')} className="flex items-center gap-2 mb-10 lg:hidden">
-            <div className="w-8 h-8 rounded-lg bg-green-600 flex items-center justify-center text-sm">⚖️</div>
+            <div className="w-8 h-8 rounded-lg bg-green-600 flex items-center justify-center text-white"><Scale className="w-4 h-4" /></div>
             <span className="text-lg font-semibold tracking-tight text-slate-900">LexAI</span>
           </button>
 
@@ -141,8 +152,9 @@ export default function LoginPage() {
           </div>
 
           {notice && !error && (
-            <div className="mb-5 rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">
-              ✓ {notice}
+            <div className="mb-5 flex items-start gap-2 rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">
+              <Check className="mt-0.5 h-4 w-4 flex-shrink-0" />
+              <span>{notice}</span>
             </div>
           )}
 
@@ -151,7 +163,7 @@ export default function LoginPage() {
               label="Email Address"
               type="email"
               placeholder="you@example.com"
-              icon="📧"
+              icon={Mail}
               value={email}
               onChange={e => setEmail(e.target.value)}
             />
@@ -159,7 +171,7 @@ export default function LoginPage() {
               label="Password"
               type="password"
               placeholder="••••••••"
-              icon="🔒"
+              icon={Lock}
               value={password}
               onChange={e => setPassword(e.target.value)}
             />
@@ -179,8 +191,9 @@ export default function LoginPage() {
             </div>
 
             {error && (
-              <div className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
-                ⚠️ {error}
+              <div className="mb-4 flex items-start gap-2 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                <TriangleAlert className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                <span>{error}</span>
               </div>
             )}
 

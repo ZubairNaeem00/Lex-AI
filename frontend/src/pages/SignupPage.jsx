@@ -47,7 +47,7 @@ const Field = ({ label, type = 'text', placeholder, icon, value, onChange }) => 
   <label className="block mb-4">
     <span className="mb-1.5 block text-xs font-medium text-slate-500">{label}</span>
     <span className="relative block">
-      <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400">
+      <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-green-600">
         <Icon d={icon} className="w-4 h-4" />
       </span>
       <input

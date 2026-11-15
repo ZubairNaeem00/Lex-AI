@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import {
-  Scale, Sparkles, FileText, Brain, LayoutTemplate, MessageSquare, BarChart3, Upload,
+  Scale, Sparkles, FileText, LayoutTemplate, MessageSquare, BarChart3,
   Pencil, MoreVertical, Pin, Trash2, LogOut,
 } from 'lucide-react';
 import {
@@ -26,7 +26,6 @@ const MenuItem = ({ icon: RowIcon, label, onClick, danger }) => (
 const WORKSPACE_NAV = [
   { label: 'Assistant', icon: MessageSquare, to: '/chat' },
   { label: 'Reports', icon: BarChart3, to: '/reports' },
-  { label: 'Upload', icon: Upload, to: '/upload' },
 ];
 
 /* The single application sidebar, shared by the chat, upload and reports pages.
@@ -155,6 +154,22 @@ const AppSidebar = forwardRef(function AppSidebar({
         })}
       </div>
 
+      <div className="px-3 pb-2 shrink-0">
+        <p className="px-2 mb-1 text-[11px] font-medium text-slate-400">Quick actions</p>
+        <button
+          onClick={() => navigate('/upload')}
+          className={`w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm transition-colors duration-150
+            ${pathname === '/upload' ? 'bg-slate-100 text-slate-900 font-medium' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
+        >
+          <FileText className={`w-4 h-4 ${pathname === '/upload' ? 'text-green-600' : 'text-slate-400'}`} />
+          Document Analysis
+        </button>
+        <button className="w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150">
+          <LayoutTemplate className="w-4 h-4 text-slate-400" />
+          Draft Studio
+        </button>
+      </div>
+
       <div className="flex-1 min-h-0 overflow-y-auto scrollbar-light px-3 pt-2 pb-4">
         <p className="px-2 mb-1 text-[11px] font-medium text-slate-400">Recent conversations</p>
         <div className="space-y-0.5">
@@ -266,23 +281,6 @@ const AppSidebar = forwardRef(function AppSidebar({
             );
           })}
         </div>
-
-        <p className="px-2 mt-4 mb-1 text-[11px] font-medium text-slate-400">Quick actions</p>
-        <button
-          onClick={() => navigate('/upload')}
-          className="w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150"
-        >
-          <FileText className="w-4 h-4 text-slate-400" />
-          Document Analysis
-        </button>
-        <button className="w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150">
-          <Brain className="w-4 h-4 text-slate-400" />
-          Research Assistant
-        </button>
-        <button className="w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150">
-          <LayoutTemplate className="w-4 h-4 text-slate-400" />
-          Draft Studio
-        </button>
       </div>
 
       <div className="p-4 border-t border-slate-200 shrink-0 space-y-3">

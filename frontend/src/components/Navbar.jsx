@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { Scale, Menu, X } from 'lucide-react';
 import { clearSession, clearStoredCaseId, isAuthenticated, logoutRequest, resetCasePromise } from '../api/client';
 
 const NAV_LINKS = [
   { to: '/',          label: 'Home' },
-  { to: '/dashboard', label: 'Dashboard' },
-  { to: '/upload',    label: 'Documents' },
   { to: '/chat',      label: 'AI Chat' },
   { to: '/reports',   label: 'Reports' },
   { to: '/privacy-policy', label: 'Privacy' },
+  { to: '/about',     label: 'About Us' },
 ];
 
 export default function Navbar() {
@@ -33,16 +33,17 @@ export default function Navbar() {
     });
   };
 
-  const isNavbarHiddenPage = ['/login', '/signup', '/forgot-password', '/reset-password', '/chat', '/upload'].includes(location.pathname);
-  if (isNavbarHiddenPage) return null;
+  // The top header is only for the public informational pages; app pages use the sidebar.
+  const showNavbar = ['/', '/privacy-policy', '/about'].includes(location.pathname);
+  if (!showNavbar) return null;
 
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <button onClick={() => navigate('/')} className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-green-600 text-lg text-white shadow-sm shadow-green-600/30">
-            ⚖️
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-green-600 text-white shadow-sm shadow-green-600/30">
+            <Scale className="h-4 w-4" />
           </div>
           <div className="text-left">
             <div className="text-lg font-semibold leading-none text-slate-900">LexAI</div>
@@ -103,7 +104,7 @@ export default function Navbar() {
           onClick={() => setMobileOpen(o => !o)}
           className="p-2 text-slate-500 transition-colors hover:text-green-600 md:hidden"
         >
-          {mobileOpen ? '✕' : '☰'}
+          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 

@@ -1,13 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Search, FolderSearch, ScanLine, Mic, PenLine, Scale, FileText, Image, Upload, Brain, ClipboardList } from 'lucide-react';
 
 const FEATURES = [
-  { icon: '🔍', title: 'Smart NLP Extraction',    desc: 'Identifies accused, victims, dates, locations, and applicable law sections from FIRs and court documents automatically.' },
-  { icon: '🗂️', title: 'RAG Precedent Retrieval', desc: 'Semantic FAISS vector search across thousands of Pakistani court judgments — relevant precedents surfaced in milliseconds.' },
-  { icon: '📸', title: 'OCR for Scanned Docs',    desc: 'EasyOCR + Tesseract converts scanned FIRs, handwritten notes, and court stamps into fully processable text.' },
-  { icon: '🎙️', title: 'Voice Input',             desc: 'Dictate case details directly. Google Speech-to-Text converts spoken input into structured legal context instantly.' },
-  { icon: '📝', title: 'Auto Draft Generation',   desc: 'Professional bail applications, case summaries, and legal briefs generated in proper Pakistani court format.' },
-  { icon: '⚖️', title: 'PPC / CrPC Matching',     desc: 'Real-time cross-referencing against Pakistan Penal Code and Code of Criminal Procedure with full section descriptions.' },
+  { icon: Search, title: 'Smart NLP Extraction',    desc: 'Identifies accused, victims, dates, locations, and applicable law sections from FIRs and court documents automatically.' },
+  { icon: FolderSearch, title: 'RAG Precedent Retrieval', desc: 'Semantic FAISS vector search across thousands of Pakistani court judgments — relevant precedents surfaced in milliseconds.' },
+  { icon: ScanLine, title: 'OCR for Scanned Docs',    desc: 'EasyOCR + Tesseract converts scanned FIRs, handwritten notes, and court stamps into fully processable text.' },
+  { icon: Mic, title: 'Voice Input',             desc: 'Dictate case details directly. Google Speech-to-Text converts spoken input into structured legal context instantly.' },
+  { icon: PenLine, title: 'Auto Draft Generation',   desc: 'Professional bail applications, case summaries, and legal briefs generated in proper Pakistani court format.' },
+  { icon: Scale, title: 'PPC / CrPC Matching',     desc: 'Real-time cross-referencing against Pakistan Penal Code and Code of Criminal Procedure with full section descriptions.' },
 ];
 
 const STATS = [
@@ -115,15 +116,15 @@ export default function LandingPage() {
               {/* Document rows */}
               <div className="flex flex-col gap-2.5">
                 {[
-                  { icon: '📄', name: 'FIR_0234_Lahore.pdf',  meta: 'Criminal · 3 pages',   status: 'Analysed' },
-                  { icon: '🖼️', name: 'WitnessStatement.jpg', meta: 'OCR complete · 1.2MB', status: 'OCR Done' },
+                  { icon: FileText, name: 'FIR_0234_Lahore.pdf',  meta: 'Criminal · 3 pages',   status: 'Analysed' },
+                  { icon: Image, name: 'WitnessStatement.jpg', meta: 'OCR complete · 1.2MB', status: 'OCR Done' },
                 ].map(doc => (
                   <div
                     key={doc.name}
                     className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50/60 p-3 transition-all duration-200 hover:border-slate-300 hover:bg-white hover:shadow-sm"
                   >
-                    <div className="w-10 h-10 flex-shrink-0 rounded-lg border border-slate-200 bg-white flex items-center justify-center text-lg">
-                      {doc.icon}
+                    <div className="w-10 h-10 flex-shrink-0 rounded-lg border border-green-100 bg-green-50 text-green-600 flex items-center justify-center">
+                      <doc.icon className="w-5 h-5" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-slate-900 truncate">{doc.name}</p>
@@ -185,8 +186,8 @@ export default function LandingPage() {
                 className={`group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-green-200 hover:shadow-md
                   ${i === 0 ? 'lg:col-span-2' : ''} ${i === 5 ? 'lg:col-span-2' : ''}`}
               >
-                <div className="w-11 h-11 rounded-xl border border-green-100 bg-green-50 flex items-center justify-center text-xl mb-5 transition-transform duration-200 group-hover:scale-105">
-                  {f.icon}
+                <div className="w-11 h-11 rounded-xl border border-green-100 bg-green-50 text-green-600 flex items-center justify-center mb-5 transition-transform duration-200 group-hover:scale-105">
+                  <f.icon className="w-5 h-5" />
                 </div>
                 <h3 className="text-[16px] font-semibold tracking-tight text-slate-900 mb-2">{f.title}</h3>
                 <p className="text-sm leading-relaxed text-slate-500 max-w-md">{f.desc}</p>
@@ -206,14 +207,14 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-3 gap-4">
             {[
-              { step: '01', icon: '📤', title: 'Upload Document', desc: 'Upload a FIR, scanned image, or dictate via voice.' },
-              { step: '02', icon: '🔬', title: 'AI Analyses',     desc: 'NLP extracts entities, RAG retrieves precedents, statutes are matched.' },
-              { step: '03', icon: '📋', title: 'Download Report', desc: 'Get a professional bail application, case summary, or brief.' },
+              { step: '01', icon: Upload, title: 'Upload Document', desc: 'Upload a FIR, scanned image, or dictate via voice.' },
+              { step: '02', icon: Brain, title: 'AI Analyses',     desc: 'NLP extracts entities, RAG retrieves precedents, statutes are matched.' },
+              { step: '03', icon: ClipboardList, title: 'Download Report', desc: 'Get a professional bail application, case summary, or brief.' },
             ].map(s => (
               <div key={s.step} className="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-200 hover:shadow-md">
                 <div className="flex items-center justify-between mb-8">
-                  <span className="w-12 h-12 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-center text-2xl transition-transform duration-200 group-hover:-translate-y-0.5">
-                    {s.icon}
+                  <span className="w-12 h-12 rounded-xl border border-green-100 bg-green-50 text-green-600 flex items-center justify-center transition-transform duration-200 group-hover:-translate-y-0.5">
+                    <s.icon className="w-5 h-5" />
                   </span>
                   <span className="font-mono text-xs font-medium text-slate-300 group-hover:text-green-600 transition-colors">{s.step}</span>
                 </div>

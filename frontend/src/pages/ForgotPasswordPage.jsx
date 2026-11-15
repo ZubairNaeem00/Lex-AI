@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Mail, Check } from 'lucide-react';
 import { forgotPassword } from '../api/client';
 import AuthCard, { AuthError, AuthField, AuthSpinner, submitClass } from '../components/auth/AuthCard';
 
@@ -38,9 +39,10 @@ export default function ForgotPasswordPage() {
         subtitle={sent.detail || 'If that email is registered, a reset link has been sent.'}
         footer={<Link to="/login" className="font-medium text-green-600 transition-colors hover:text-green-700">← Back to sign in</Link>}
       >
-        <div className="mb-5 rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm leading-relaxed text-green-800">
-          ✓ If <span className="font-medium">{email.trim()}</span> has an account, the link is on its way.
-          It works once and expires automatically, so use it soon. Check spam if it has not arrived.
+        <div className="mb-5 flex items-start gap-2 rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm leading-relaxed text-green-800">
+          <Check className="mt-0.5 h-4 w-4 flex-shrink-0" />
+          <span>If <span className="font-medium">{email.trim()}</span> has an account, the link is on its way.
+          It works once and expires automatically, so use it soon. Check spam if it has not arrived.</span>
         </div>
 
         {/* Resend's test sender only delivers to the account owner, so the local
@@ -76,7 +78,7 @@ export default function ForgotPasswordPage() {
           label="Email Address"
           type="email"
           placeholder="you@example.com"
-          icon="📧"
+          icon={Mail}
           value={email}
           autoComplete="email"
           onChange={(e) => { setEmail(e.target.value); setError(''); }}

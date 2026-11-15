@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { Lock, Check, Circle } from 'lucide-react';
 import { resetPassword } from '../api/client';
 import AuthCard, { AuthError, AuthField, AuthSpinner, submitClass } from '../components/auth/AuthCard';
 
@@ -17,7 +18,7 @@ const PasswordRules = ({ value }) => (
       const met = rule.test(value);
       return (
         <li key={rule.label} className={`flex items-center gap-1.5 text-[11px] transition-colors duration-200 ${met ? 'text-green-700' : 'text-slate-500'}`}>
-          <span aria-hidden="true" className={met ? 'text-green-600' : 'text-slate-300'}>{met ? '✓' : '○'}</span>
+          {met ? <Check aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-green-600" /> : <Circle aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-slate-300" />}
           {rule.label}
         </li>
       );
@@ -88,7 +89,7 @@ export default function ResetPasswordPage() {
           label="New Password"
           type="password"
           placeholder="••••••••"
-          icon="🔒"
+          icon={Lock}
           value={password}
           autoComplete="new-password"
           onChange={(e) => { setPassword(e.target.value); setError(''); }}
@@ -98,7 +99,7 @@ export default function ResetPasswordPage() {
           label="Confirm New Password"
           type="password"
           placeholder="••••••••"
-          icon="🔒"
+          icon={Lock}
           value={confirm}
           autoComplete="new-password"
           onChange={(e) => { setConfirm(e.target.value); setError(''); }}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Scale, TriangleAlert } from 'lucide-react';
 
 /* Shared frame for the password-recovery pages, styled like the sign-in form. */
 export default function AuthCard({ title, subtitle, children, footer }) {
@@ -18,8 +19,8 @@ export default function AuthCard({ title, subtitle, children, footer }) {
 
       <div className="relative w-full max-w-[420px]">
         <Link to="/" className="group mb-8 flex w-fit items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-green-600 text-base shadow-sm transition-transform duration-200 group-hover:scale-105">
-            ⚖️
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-green-600 text-white shadow-sm transition-transform duration-200 group-hover:scale-105">
+            <Scale className="h-4 w-4" />
           </span>
           <span className="text-lg font-semibold tracking-tight text-slate-900">LexAI</span>
         </Link>
@@ -36,11 +37,13 @@ export default function AuthCard({ title, subtitle, children, footer }) {
   );
 }
 
-export const AuthField = ({ label, icon, ...props }) => (
+export const AuthField = ({ label, icon: Icon, ...props }) => (
   <label className="mb-4 block">
     <span className="mb-1.5 block text-sm font-medium text-slate-700">{label}</span>
     <span className="relative block">
-      <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm opacity-60">{icon}</span>
+      <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2">
+        {Icon && <Icon className="h-4 w-4 text-green-600" />}
+      </span>
       <input
         {...props}
         className="w-full rounded-xl border border-slate-200 bg-white py-2.5 pl-10 pr-3.5 text-sm text-slate-800 shadow-sm outline-none transition-all duration-200 placeholder:text-slate-400 hover:border-slate-300 focus:border-green-500 focus:ring-4 focus:ring-green-100"
@@ -54,8 +57,9 @@ export const AuthSpinner = () => (
 );
 
 export const AuthError = ({ children }) => (
-  <div className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
-    ⚠️ {children}
+  <div className="mb-4 flex items-start gap-2 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+    <TriangleAlert className="mt-0.5 h-4 w-4 flex-shrink-0" />
+    <span>{children}</span>
   </div>
 );
 

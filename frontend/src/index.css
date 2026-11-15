@@ -23,6 +23,9 @@ body {
 .scrollbar-light::-webkit-scrollbar-track { background: transparent; }
 .scrollbar-light::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
 
+/* Page canvas: white in light theme; the dark override below keeps dark mode layered. */
+.bg-page { background-color: #ffffff; }
+
 /* ── Focus ring ── */
 :focus-visible { outline: 2px solid rgba(200,168,75,.6); outline-offset: 2px; }
 
@@ -130,6 +133,7 @@ body {
 [data-theme='dark'] .bg-slate-50\/50,
 [data-theme='dark'] .bg-slate-50\/60,
 [data-theme='dark'] .bg-slate-50\/80 { background-color: var(--d-page); }
+[data-theme='dark'] .bg-page { background-color: var(--d-page); }
 [data-theme='dark'] .hover\:bg-slate-50:hover { background-color: #151e2e; }
 [data-theme='dark'] .bg-slate-100 { background-color: var(--d-raised); }
 [data-theme='dark'] .hover\:bg-slate-100:hover { background-color: #212c40; }

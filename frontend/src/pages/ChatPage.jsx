@@ -366,7 +366,7 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="flex-1 flex h-full min-h-0 overflow-hidden bg-slate-50 text-slate-800 antialiased">
+    <div className="flex-1 flex h-full min-h-0 overflow-hidden bg-page text-slate-800 antialiased">
 
       {/* ── Shared application sidebar ── */}
       <AppSidebar
@@ -525,7 +525,7 @@ export default function ChatPage() {
           </div>
         </div>
 
-        <div className="px-6 md:px-8 pb-6 pt-2 shrink-0 bg-slate-50">
+        <div className="px-6 md:px-8 pb-6 pt-2 shrink-0 bg-page">
           <div className="max-w-3xl mx-auto flex flex-col gap-3">
             <div className="flex gap-2 flex-wrap">
               {QUICK_PROMPTS.map((prompt) => (

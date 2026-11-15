@@ -99,7 +99,7 @@ STATIC_DIR = BASE_DIR / "static"
 GENERATED_DIR = Path(GENERATED_FOLDER).resolve()
 
 ALLOWED_SUFFIXES = {".pdf", ".png", ".jpg", ".jpeg", ".webp", ".tif", ".tiff"}
-MAX_UPLOAD_MB = int(os.getenv("MAX_UPLOAD_MB", "25"))
+MAX_UPLOAD_MB = int(os.getenv("MAX_UPLOAD_MB", "10"))
 MAX_UPLOAD_BYTES = MAX_UPLOAD_MB * 1024 * 1024
 GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 
@@ -603,6 +603,8 @@ def _run_chat_step(session: CaseSession, message: str, provider: Optional[str] =
 
         tool = _case_tool_call(message, session.history)
         if tool:
+            if EXPLANATION_INTENT_RE.search(message):
+                return _run_answer_then_cases(session, message, tool, provider)
             return _run_case_search(session, message, tool)
 
         result = ask_legal_agent(message, session.session_id, provider=provider)
@@ -620,6 +622,11 @@ def _run_chat_step(session: CaseSession, message: str, provider: Optional[str] =
 
 CASE_INTENT_RE = re.compile(
     r"\b(similar|relevant|related|precedents?|case law|judgments?|judgements?|rulings?|cases)\b",
+    re.I,
+)
+# Compound asks ("what is X and give 5 cases") get the answer first, then the slider.
+EXPLANATION_INTENT_RE = re.compile(
+    r"\b(?:what\s+(?:is|are|was|were)|what's|explain|define|definition|meaning\s+of|describe|tell\s+me\s+about|understand|how\s+(?:does|do|is|are|can|to|would))\b",
     re.I,
 )
 STATUTE_CITE_RE = re.compile(
@@ -706,23 +713,41 @@ USER MESSAGE:
     return {"query": _grounded_query(query, message, history), "k": max(1, min(k, MAX_K))}
 
 
-def _run_case_search(session: CaseSession, message: str, tool: Dict[str, Any]) -> dict:
-    try:
-        result = retrieve_similar_cases(tool["query"], tool["k"])
-    except CaseRetrievalError as exc:
-        raise HTTPException(503, str(exc)) from exc
+def _case_retrieval_event(session: CaseSession, result: Dict[str, Any]) -> None:
     listing = "\n".join(
         f"{number}. {case['case_name']} — {case['citation']}"
         for number, case in enumerate(result["cases"], start=1)
     )
-    session.add_message("user", message)
     # Verbatim index values only: the slider renders them, no LLM text is stored.
     session.add_message(
         "assistant",
         f'Similar cases for "{result["query"]}" ({result["count"]}):\n{listing}',
         extra={"kind": "case_retrieval", "retrieval": result},
     )
+
+
+def _run_case_search(session: CaseSession, message: str, tool: Dict[str, Any]) -> dict:
+    try:
+        result = retrieve_similar_cases(tool["query"], tool["k"])
+    except CaseRetrievalError as exc:
+        raise HTTPException(503, str(exc)) from exc
+    session.add_message("user", message)
+    _case_retrieval_event(session, result)
     return {"kind": "case_retrieval", "case_id": session.session_id, "retrieval": result}
+
+
+def _run_answer_then_cases(
+    session: CaseSession, message: str, tool: Dict[str, Any], provider: Optional[str]
+) -> dict:
+    # Retrieve first so a missing index fails before any message is stored; the
+    # answer is still persisted before the case event so the UI shows it first.
+    try:
+        retrieval = retrieve_similar_cases(tool["query"], tool["k"])
+    except CaseRetrievalError as exc:
+        raise HTTPException(503, str(exc)) from exc
+    result = ask_legal_agent(message, session.session_id, provider=provider)
+    _case_retrieval_event(session, retrieval)
+    return {"kind": "legal", "case_id": session.session_id, **result, "retrieval": retrieval}
 
 
 @app.post("/api/cases/retrieve")
