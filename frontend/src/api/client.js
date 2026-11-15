@@ -325,6 +325,20 @@ export function getDocumentText(caseId, documentId) {
   return request(`/api/sessions/${encodeURIComponent(caseId)}/documents/${encodeURIComponent(documentId)}/text`);
 }
 
+/** Build a Word version of the analysis report; the result is registered for download. */
+export function generateAnalysisDocx(caseId, documentId) {
+  return request(`/api/sessions/${encodeURIComponent(caseId)}/documents/${encodeURIComponent(documentId)}/docx`, {
+    method: 'POST',
+  });
+}
+
+/** Start a new conversation that carries this document and its analysis. */
+export function discussDocument(caseId, documentId) {
+  return request(`/api/sessions/${encodeURIComponent(caseId)}/documents/${encodeURIComponent(documentId)}/discuss`, {
+    method: 'POST',
+  });
+}
+
 /* ── Document generation ───────────────────────────────────────────────── */
 
 export function getGenerationState(caseId) {

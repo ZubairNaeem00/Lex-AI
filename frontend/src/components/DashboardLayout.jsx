@@ -3,7 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 export default function DashboardLayout() {
   const { pathname } = useLocation();
-  const height = pathname === '/chat' ? 'h-screen' : 'h-[calc(100vh-65px)]';
+  const height = pathname === '/chat' || pathname === '/upload' ? 'h-screen' : 'h-[calc(100vh-65px)]';
 
   return (
     <div className={`flex ${height} overflow-hidden`}>

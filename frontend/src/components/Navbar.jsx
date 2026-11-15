@@ -33,7 +33,7 @@ export default function Navbar() {
     });
   };
 
-  const isNavbarHiddenPage = ['/login', '/signup', '/forgot-password', '/reset-password', '/chat'].includes(location.pathname);
+  const isNavbarHiddenPage = ['/login', '/signup', '/forgot-password', '/reset-password', '/chat', '/upload'].includes(location.pathname);
   if (isNavbarHiddenPage) return null;
 
   return (

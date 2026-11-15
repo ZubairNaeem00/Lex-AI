@@ -592,3 +592,58 @@ def write_revision(
         "paragraphs_written": written,
         "paragraphs_added": added,
     }
+
+
+# ---------------------------------------------------------------------------
+# Writing an analysis report as a Word document
+# ---------------------------------------------------------------------------
+
+def build_report_docx(report: Dict[str, Any], filename: str) -> Document:
+    """Render an annotated analysis report as a plain, filing-ready DOCX."""
+    doc = Document()
+    normal = doc.styles["Normal"]
+    normal.font.name = "Calibri"
+    normal.font.size = Pt(11)
+
+    doc.add_heading(str(report.get("title") or "Document analysis"), level=0)
+    subtitle = doc.add_paragraph()
+    subtitle.add_run(
+        f"{report.get('document_type') or 'Legal document'} · {filename}"
+    ).italic = True
+
+    if report.get("summary"):
+        doc.add_heading("Summary", level=1)
+        doc.add_paragraph(str(report["summary"]))
+
+    for section in report.get("sections") or []:
+        doc.add_heading(str(section.get("title") or "Section"), level=1)
+        if section.get("summary"):
+            doc.add_paragraph(str(section["summary"]))
+        fields = section.get("fields") or []
+        if fields:
+            table = doc.add_table(rows=0, cols=2)
+            table.style = "Table Grid"
+            for field in fields:
+                cells = table.add_row().cells
+                cells[0].text = str(field.get("label") or "")
+                cells[1].text = str(field.get("value") or "")
+        source_table = section.get("table") or {}
+        columns = source_table.get("columns") or []
+        if columns:
+            table = doc.add_table(rows=1, cols=len(columns))
+            table.style = "Table Grid"
+            for index, column in enumerate(columns):
+                table.rows[0].cells[index].text = str(column)
+            for row in source_table.get("rows") or []:
+                cells = table.add_row().cells
+                for index, cell in enumerate(row[:len(cells)]):
+                    cells[index].text = str(cell)
+        for bullet in section.get("bullets") or []:
+            doc.add_paragraph(str(bullet), style="List Bullet")
+
+    unclear = report.get("unclear_information") or []
+    if unclear:
+        doc.add_heading("Unclear or missing information", level=1)
+        for item in unclear:
+            doc.add_paragraph(str(item), style="List Bullet")
+    return doc

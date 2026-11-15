@@ -51,6 +51,7 @@ from doc_generation import (
     get_supported_templates,
     get_template_catalog,
 )
+from doc_preview import build_report_docx
 from document_analysis import (
     AnalysisConfigError,
     DocumentAnalysis,
@@ -481,6 +482,59 @@ def get_document_text(case_id: str, document_id: str,
         "current_report": annotate_report(document.report, document.edits),
         "edits": copy.deepcopy(document.edits),
         "uploaded_at": document.uploaded_at,
+    }
+
+
+@app.post("/api/sessions/{case_id}/documents/{document_id}/docx")
+def export_report_docx(case_id: str, document_id: str,
+                       user: Optional[AuthenticatedUser] = Depends(get_optional_user)):
+    """Build a Word version of the (corrected) analysis report and register it for download."""
+    session = _runtime_session(case_id, user)
+    document = session.get_document(document_id)
+    if document is None:
+        raise HTTPException(404, "Document not found in this case.")
+
+    report = annotate_report(document.report, document.edits)
+    stem = re.sub(r"[^\w.-]+", "_", Path(document.filename).stem)[:60] or "document"
+    filename = f"{stem}_analysis_{document_id[-6:]}.docx"
+    build_report_docx(report, document.filename).save(str(GENERATED_DIR / filename))
+
+    metadata = session.find_generated_document(filename)
+    if metadata is None:
+        metadata = session.add_generated_document(
+            "Analysis report",
+            str(GENERATED_DIR / filename),
+            f"/sessions/{case_id}/download/{filename}",
+            {},
+            document_id=document_id,
+        )
+    persistence.sync_session(session)
+    return {"case_id": case_id, "document_id": document_id, **metadata}
+
+
+@app.post("/api/sessions/{case_id}/documents/{document_id}/discuss")
+def discuss_document(case_id: str, document_id: str,
+                     user: Optional[AuthenticatedUser] = Depends(get_optional_user)):
+    """Open a fresh conversation carrying this document, its report and corrections."""
+    source = _runtime_session(case_id, user)
+    document = source.get_document(document_id)
+    if document is None:
+        raise HTTPException(404, "Document not found in this case.")
+
+    session = session_manager.create_session()
+    persistence.bind(session, user)
+    copied = session.add_document(
+        filename=document.filename,
+        extracted_text=document.extracted_text,
+        report=document.report,
+    )
+    if document.edits:
+        session.update_document_report(copied.document_id, document.report, document.edits)
+    persistence.sync_session(session)
+    return {
+        "case_id": session.session_id,
+        "document_id": copied.document_id,
+        "title": session.title,
     }
 
 

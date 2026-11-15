@@ -1,21 +1,20 @@
 import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import {
-  Send, Scale, Sparkles, FileText, Brain, LayoutTemplate,
+  Send, Scale, Brain,
   Bot, User,
-  Paperclip, Pencil, Loader2, LogOut, Mic, Square, Volume2, MoreVertical, Pin, Trash2,
+  Paperclip, Loader2, Mic, Square, Volume2,
 } from 'lucide-react';
 import {
-  ensureCase, getCase, listCases, sendChat, analyzeDocument,
+  ensureCase, getCase, sendChat, analyzeDocument,
   cancelGeneration, retryGeneration,
-  clearSession, clearStoredCaseId, deleteCase, logoutRequest,
-  resetCasePromise, storeCaseId, updateCase,
+  clearStoredCaseId, deleteCase,
+  resetCasePromise, storeCaseId,
 } from '../api/client';
-import AccountSection from '../components/account/AccountSection';
+import AppSidebar from '../components/AppSidebar';
 import AnalyzeModal from '../components/chat/AnalyzeModal';
 import AnalysisCard from '../components/chat/AnalysisCard';
 import CaseSlider from '../components/chat/CaseSlider';
-import ConfirmDialog from '../components/chat/ConfirmDialog';
 import DraftViewer from '../components/chat/DraftViewer';
 import GenerationCard from '../components/chat/GenerationCard';
 import ReviewFieldsModal from '../components/chat/ReviewFieldsModal';
@@ -36,18 +35,6 @@ const GREETING = {
 
 const GREETING_EVENTS = [{ type: 'message', role: 'ai', text: GREETING.text, time: 'Just now', _greeting: true }];
 
-const MenuItem = ({ icon: RowIcon, label, onClick, danger }) => (
-  <button
-    onClick={onClick}
-    className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-left text-[13px] transition-colors ${danger
-      ? 'text-rose-600 hover:bg-rose-50'
-      : 'text-slate-700 hover:bg-slate-100'}`}
-  >
-    <RowIcon className="w-3.5 h-3.5 shrink-0" />
-    {label}
-  </button>
-);
-
 function fmtTime(iso) {
   try {
     return new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -57,10 +44,9 @@ function fmtTime(iso) {
 }
 
 export default function ChatPage() {
-  const navigate = useNavigate();
+  const location = useLocation();
   const [session, setSession] = useState(null);
   const [caseId, setCaseId] = useState(null);
-  const [casesList, setCasesList] = useState([]);
   const [input, setInput] = useState('');
   const [provider, setProviderChoice] = useState(getProvider);
   const [sending, setSending] = useState(false);
@@ -73,33 +59,17 @@ export default function ChatPage() {
   const [micInterim, setMicInterim] = useState('');
   const [micError, setMicError] = useState('');
   const [speakingKey, setSpeakingKey] = useState(null);
-  const [menuFor, setMenuFor] = useState(null);
-  const [confirmDelete, setConfirmDelete] = useState(null);
-  const [renaming, setRenaming] = useState(null);
-  const [signOutOpen, setSignOutOpen] = useState(false);
-  const [signingOut, setSigningOut] = useState(false);
   const [viewer, setViewer] = useState(null);
   const messagesEndRef = useRef(null);
   const recognitionRef = useRef(null);
   const micBufferRef = useRef('');
+  const sidebarRef = useRef(null);
 
-  const handleSignOut = async () => {
-    setSigningOut(true);
-    // A conversation the lawyer never wrote in should not outlive the session.
+  /* A conversation the lawyer never wrote in should not outlive the session. */
+  const reclaimBlankActive = async () => {
     if (caseId && isBlankSession(session)) {
       await deleteCase(caseId, true).catch(() => {});
     }
-    try {
-      await logoutRequest();
-    } catch (e) {
-      /* the tokens are cleared either way */
-    }
-    clearSession();
-    clearStoredCaseId();
-    resetCasePromise();
-    setSigningOut(false);
-    setSignOutOpen(false);
-    navigate('/login', { state: { notice: 'You are signed out. Sign in to continue.' } });
   };
 
   useEffect(() => () => {
@@ -195,11 +165,11 @@ export default function ChatPage() {
         setCaseId(id);
         const snap = await getCase(id);
         if (!cancelled) setSession(snap);
+        if (!cancelled && location.state?.prefill) setInput(location.state.prefill);
       } catch (e) {
         if (!cancelled) setSessionError(e.message || 'Could not reach the LegalLens backend. Start it with: uvicorn main:app --port 8000');
       }
     })();
-    listCases().then((r) => setCasesList(r.sessions || [])).catch(() => {});
     return () => { cancelled = true; };
   }, []);
 
@@ -267,7 +237,7 @@ export default function ChatPage() {
     try {
       const res = await sendChat(id, message, provider);
       await getCase(id).then(setSession).catch(() => {});
-      reloadCases();
+      sidebarRef.current?.reload();
       if (res?.kind === 'generation') {
         const g = res.generation;
         if (g?.status === 'review') setReviewTarget(g);
@@ -287,7 +257,7 @@ export default function ChatPage() {
       const res = await analyzeDocument(caseId, file);
       setCaseId(res.case_id);
       await refresh(res.case_id);
-      reloadCases();
+      sidebarRef.current?.reload();
     } catch (e) {
       setChatError(e.message || 'Analysis failed. Your case data is intact — please try again.');
     } finally {
@@ -322,10 +292,6 @@ export default function ChatPage() {
     refresh();
   };
 
-  const reloadCases = useCallback(() => {
-    listCases().then((r) => setCasesList(r.sessions || [])).catch(() => {});
-  }, []);
-
   /** A conversation the user never wrote in — safe to reclaim on "New Conversation". */
   const isBlankSession = (snap) => {
     if (!snap) return false;
@@ -337,9 +303,6 @@ export default function ChatPage() {
 
   const newConversation = async () => {
     const stale = caseId;
-    setMenuFor(null);
-    setConfirmDelete(null);
-    setRenaming(null);
     try {
       if (stale && isBlankSession(session)) {
         // The server refuses this call if anything was recorded in the meantime.
@@ -350,7 +313,6 @@ export default function ChatPage() {
       const snap = await getCase(id);
       setSession(snap);
       setChatError(null);
-      reloadCases();
     } catch (e) {
       setChatError(e.message || 'Could not start a new conversation.');
     }
@@ -358,8 +320,6 @@ export default function ChatPage() {
 
   const openCase = async (id) => {
     if (!id || id === caseId) return;
-    setMenuFor(null);
-    setConfirmDelete(null);
     try {
       const snap = await getCase(id);
       setSession(snap);
@@ -371,49 +331,18 @@ export default function ChatPage() {
     }
   };
 
-  const commitRename = async () => {
-    if (!renaming) return;
-    const { id } = renaming;
-    const name = renaming.value.trim();
-    setRenaming(null);
-    if (!name) return;
-    try {
-      await updateCase(id, { name });
-      if (id === caseId) setSession((prev) => (prev ? { ...prev, title: name } : prev));
-      reloadCases();
-    } catch (e) {
-      setChatError(e.message || 'Could not rename this conversation.');
-    }
+  const handleActiveCaseRemoved = async () => {
+    resetCasePromise();
+    clearStoredCaseId();
+    setCaseId(null);
+    setSession(null);
+    const id = await ensureCase(true);
+    setCaseId(id);
+    setSession(await getCase(id));
   };
 
-  const togglePin = async (conversation) => {
-    setMenuFor(null);
-    try {
-      await updateCase(conversation.case_id, { pinned: !conversation.pinned });
-      reloadCases();
-    } catch (e) {
-      setChatError(e.message || 'Could not update this conversation.');
-    }
-  };
-
-  const removeCase = async (conversation) => {
-    setMenuFor(null);
-    setConfirmDelete(null);
-    try {
-      await deleteCase(conversation.case_id);
-      if (conversation.case_id === caseId) {
-        resetCasePromise();
-        clearStoredCaseId();
-        setCaseId(null);
-        setSession(null);
-        const id = await ensureCase(true);
-        setCaseId(id);
-        setSession(await getCase(id));
-      }
-      reloadCases();
-    } catch (e) {
-      setChatError(e.message || 'Could not delete this conversation.');
-    }
+  const handleActiveCaseRenamed = (name) => {
+    setSession((prev) => (prev ? { ...prev, title: name } : prev));
   };
 
   const gen = session?.generation;
@@ -439,170 +368,16 @@ export default function ChatPage() {
   return (
     <div className="flex-1 flex h-full min-h-0 overflow-hidden bg-slate-50 text-slate-800 antialiased">
 
-      {/* ── Sidebar navigation ── */}
-      <aside className="w-[260px] flex-shrink-0 bg-white border-r border-slate-200 flex flex-col min-h-0">
-        <div className="flex items-center gap-2.5 px-5 h-16 border-b border-slate-200 shrink-0">
-          <div className="w-7 h-7 rounded-lg bg-green-600 text-white flex items-center justify-center text-xs font-bold">
-            <Scale className="w-4 h-4" />
-          </div>
-          <span className="text-[15px] font-semibold tracking-tight text-slate-900">LexAI</span>
-          <span className="ml-auto text-[10px] font-medium text-green-600 bg-green-50 border border-green-100 rounded-md px-1.5 py-0.5">Beta</span>
-        </div>
-
-        <div className="p-4 shrink-0">
-          <button
-            onClick={newConversation}
-            className="w-full flex items-center justify-center gap-2 rounded-xl bg-green-600 text-white text-sm font-medium py-2.5 shadow-sm transition-all duration-200 hover:bg-green-700 hover:shadow-md active:scale-[0.98]"
-          >
-            <Sparkles className="w-4 h-4" />
-            New Conversation
-          </button>
-        </div>
-
-        <div className="px-3 pb-2 shrink-0">
-          <p className="px-2 mb-1 text-[11px] font-medium text-slate-400">Recent conversations</p>
-          <div className="space-y-0.5">
-            {casesList.length === 0 && <p className="px-2.5 py-1.5 text-[13px] text-slate-400">No conversations yet</p>}
-            {casesList.slice(0, 8).map((c) => {
-              const active = c.case_id === caseId;
-              const rowTone = active
-                ? 'bg-green-50 text-green-700 font-medium'
-                : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900';
-
-              if (renaming && renaming.id === c.case_id) {
-                return (
-                  <div key={c.case_id} className="py-1">
-                    <input
-                      autoFocus
-                      value={renaming.value}
-                      maxLength={80}
-                      onChange={(e) => setRenaming({ ...renaming, value: e.target.value })}
-                      onBlur={commitRename}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter') commitRename();
-                        if (e.key === 'Escape') setRenaming(null);
-                      }}
-                      className="w-full rounded-lg border border-green-300 bg-white px-2.5 py-1.5 text-sm text-slate-900 outline-none focus:ring-2 focus:ring-green-100"
-                    />
-                  </div>
-                );
-              }
-
-              const menuOpen = menuFor === c.case_id;
-              return (
-                <div key={c.case_id} className="relative group">
-                  <button
-                    onClick={() => openCase(c.case_id)}
-                    className={`w-full text-left flex items-center gap-1.5 px-2.5 py-2 pr-8 rounded-lg text-sm transition-colors duration-150 ${rowTone}`}
-                  >
-                    {c.pinned && <Pin className="w-3 h-3 shrink-0 opacity-80" />}
-                    <span className="block truncate">{c.title || 'Untitled case'}</span>
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setConfirmDelete(null);
-                      setMenuFor(menuOpen ? null : c.case_id);
-                    }}
-                    aria-label={`Options for ${c.title || 'conversation'}`}
-                    className={`absolute right-1 top-1/2 -translate-y-1/2 rounded-md p-1 text-slate-400 transition-opacity hover:bg-slate-200/70 hover:text-slate-600 ${menuOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
-                  >
-                    <MoreVertical className="w-4 h-4" />
-                  </button>
-
-                  {menuOpen && (
-                    <>
-                      <button
-                        type="button"
-                        tabIndex={-1}
-                        aria-hidden="true"
-                        onClick={() => { setMenuFor(null); setConfirmDelete(null); }}
-                        className="fixed inset-0 z-10 cursor-default"
-                      />
-                      <div className="absolute right-0 top-full mt-1 z-20 w-48 rounded-xl border border-slate-200 bg-white p-1 shadow-lg shadow-slate-200/70">
-                        {confirmDelete === c.case_id ? (
-                          <div className="p-2">
-                            <p className="text-[12px] leading-snug text-slate-600">
-                              Delete this conversation and everything in it?
-                            </p>
-                            <div className="mt-2.5 flex gap-2">
-                              <button
-                                onClick={() => setConfirmDelete(null)}
-                                className="flex-1 rounded-lg border border-slate-200 px-2 py-1 text-[12px] font-medium text-slate-600 hover:bg-slate-50"
-                              >
-                                Cancel
-                              </button>
-                              <button
-                                onClick={() => removeCase(c)}
-                                className="flex-1 rounded-lg bg-rose-600 px-2 py-1 text-[12px] font-medium text-white hover:bg-rose-700"
-                              >
-                                Delete
-                              </button>
-                            </div>
-                          </div>
-                        ) : (
-                          <>
-                            <MenuItem
-                              icon={Pencil}
-                              label="Rename"
-                              onClick={() => {
-                                setMenuFor(null);
-                                setRenaming({ id: c.case_id, value: c.title || '' });
-                              }}
-                            />
-                            <MenuItem
-                              icon={Pin}
-                              label={c.pinned ? 'Unpin' : 'Pin to top'}
-                              onClick={() => togglePin(c)}
-                            />
-                            <MenuItem
-                              icon={Trash2}
-                              label="Delete"
-                              danger
-                              onClick={() => setConfirmDelete(c.case_id)}
-                            />
-                          </>
-                        )}
-                      </div>
-                    </>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="px-3 pt-3 pb-4 flex-1 min-h-0 overflow-y-auto scrollbar-light">
-          <p className="px-2 mb-1 text-[11px] font-medium text-slate-400">Quick actions</p>
-          <button
-            onClick={() => setAnalyzeOpen(true)}
-            className="w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150"
-          >
-            <FileText className="w-4 h-4 text-slate-400" />
-            Document Analysis
-          </button>
-          <button className="w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150">
-            <Brain className="w-4 h-4 text-slate-400" />
-            Research Assistant
-          </button>
-          <button className="w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150">
-            <LayoutTemplate className="w-4 h-4 text-slate-400" />
-            Draft Studio
-          </button>
-        </div>
-
-        <div className="p-4 border-t border-slate-200 shrink-0 space-y-3">
-          <div className="flex items-start gap-2.5 rounded-xl bg-slate-50 border border-slate-100 p-3">
-            <Sparkles className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
-            <div className="min-w-0">
-              <p className="text-[13px] font-medium text-slate-900 leading-tight">Premium Access</p>
-              <p className="text-[11px] text-slate-500 mt-0.5">Unlimited cases &amp; exports</p>
-            </div>
-          </div>
-
-          <AccountSection onLogout={() => setSignOutOpen(true)} />
-        </div>
-      </aside>
+      {/* ── Shared application sidebar ── */}
+      <AppSidebar
+        ref={sidebarRef}
+        activeCaseId={caseId}
+        onOpenCase={openCase}
+        onNewConversation={newConversation}
+        onActiveCaseRemoved={handleActiveCaseRemoved}
+        onActiveCaseRenamed={handleActiveCaseRenamed}
+        onBeforeSignOut={reclaimBlankActive}
+      />
 
       {/* ── Main chat ── */}
       <main className="flex-1 flex flex-col min-w-0 min-h-0">
@@ -863,20 +638,6 @@ export default function ChatPage() {
         onClose={() => !analyzing && setAnalyzeOpen(false)}
         onAnalyze={runAnalysis}
       />
-
-      {signOutOpen && (
-        <ConfirmDialog
-          title="Sign out of LexAI?"
-          message="Conversations you have started stay in your account. An empty one will be discarded."
-          confirmLabel="Sign out"
-          cancelLabel="Stay signed in"
-          danger
-          busy={signingOut}
-          icon={<LogOut className="w-4 h-4" />}
-          onConfirm={handleSignOut}
-          onCancel={() => !signingOut && setSignOutOpen(false)}
-        />
-      )}
 
       {reviewTarget && (
         <ReviewFieldsModal
