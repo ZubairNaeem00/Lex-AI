@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'rea
 import { useLocation, useNavigate } from 'react-router-dom';
 import {
   Scale, Sparkles, FileText, LayoutTemplate, MessageSquare, BarChart3,
-  Pencil, MoreVertical, Pin, Trash2, LogOut,
+  Pencil, MoreVertical, Pin, Trash2, LogOut, Bookmark,
 } from 'lucide-react';
 import {
   listCases, updateCase, deleteCase, logoutRequest,
@@ -10,6 +10,8 @@ import {
 } from '../api/client';
 import AccountSection from './account/AccountSection';
 import ConfirmDialog from './chat/ConfirmDialog';
+import SavedCasesModal from './chat/SavedCasesModal';
+import { useSavedCases } from '../savedCases';
 
 const MenuItem = ({ icon: RowIcon, label, onClick, danger }) => (
   <button
@@ -47,6 +49,8 @@ const AppSidebar = forwardRef(function AppSidebar({
   const [renaming, setRenaming] = useState(null);
   const [signOutOpen, setSignOutOpen] = useState(false);
   const [signingOut, setSigningOut] = useState(false);
+  const [savedOpen, setSavedOpen] = useState(false);
+  const savedCount = useSavedCases().length;
 
   const reload = () => {
     listCases().then((r) => setCasesList(r.sessions || [])).catch(() => {});
@@ -155,7 +159,19 @@ const AppSidebar = forwardRef(function AppSidebar({
       </div>
 
       <div className="px-3 pb-2 shrink-0">
-        <p className="px-2 mb-1 text-[11px] font-medium text-slate-400">Quick actions</p>
+        <button
+          onClick={() => setSavedOpen(true)}
+          className={`w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm transition-colors duration-150
+            ${savedOpen ? 'bg-slate-100 text-slate-900 font-medium' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
+        >
+          <Bookmark className={`w-4 h-4 ${savedOpen ? 'text-green-600' : 'text-slate-400'}`} />
+          Saved cases
+          {savedCount > 0 && (
+            <span className="ml-auto rounded-md bg-green-100 px-1.5 py-0.5 text-[10px] font-semibold text-green-700">
+              {savedCount}
+            </span>
+          )}
+        </button>
         <button
           onClick={() => navigate('/upload')}
           className={`w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm transition-colors duration-150
@@ -308,6 +324,8 @@ const AppSidebar = forwardRef(function AppSidebar({
           onCancel={() => !signingOut && setSignOutOpen(false)}
         />
       )}
+
+      <SavedCasesModal open={savedOpen} onClose={() => setSavedOpen(false)} />
     </aside>
   );
 });

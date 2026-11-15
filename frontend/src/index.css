@@ -163,7 +163,8 @@ body {
 [data-theme='dark'] .border-white\/40 { border-color: rgba(255, 255, 255, .16); }
 [data-theme='dark'] .ring-slate-200 { --tw-ring-color: var(--d-line); }
 [data-theme='dark'] .shadow-slate-200\/70,
-[data-theme='dark'] .shadow-slate-200\/60 { --tw-shadow-color: rgba(0, 0, 0, .5); --tw-shadow: var(--tw-shadow-colored); }
+[data-theme='dark'] .shadow-slate-200\/60,
+[data-theme='dark'] .shadow-slate-300\/60 { --tw-shadow-color: rgba(0, 0, 0, .5); --tw-shadow: var(--tw-shadow-colored); }
 
 /* Brand green / emerald */
 [data-theme='dark'] .bg-green-600 { background-color: var(--d-brand-solid); }
