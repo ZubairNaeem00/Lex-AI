@@ -186,6 +186,33 @@ class SessionUpdateRequest(BaseModel):
     pinned: Optional[bool] = None
 
 
+class CaseAnalyzeRequest(BaseModel):
+    text: str = Field(min_length=1, max_length=60_000)
+    title: Optional[str] = Field(default=None, max_length=300)
+    citation: Optional[str] = Field(default=None, max_length=400)
+
+
+class PrecedentRecord(BaseModel):
+    case_id: Optional[int] = None
+    citation: str = Field(default="", max_length=400)
+    case_name: str = Field(default="", max_length=400)
+    summary: str = Field(default="", max_length=12_000)
+    description: str = Field(default="", max_length=60_000)
+    matched_section: str = Field(default="", max_length=200)
+    chunk_count: int = Field(default=0, ge=0)
+    score: float = Field(default=0.0, ge=0.0, le=1.0)
+
+
+class CaseExportRequest(BaseModel):
+    case_id: str = Field(min_length=1, max_length=200)
+    precedent: PrecedentRecord
+    report: Optional[Dict[str, Any]] = None
+
+
+class AddPrecedentRequest(BaseModel):
+    precedent: PrecedentRecord
+
+
 def _session_payload(session: CaseSession) -> dict:
     snapshot = session.snapshot()
     document_map = {doc.document_id: doc for doc in session.documents.values()}
@@ -536,6 +563,97 @@ def discuss_document(case_id: str, document_id: str,
         "document_id": copied.document_id,
         "title": session.title,
     }
+
+
+@app.post("/api/cases/analyze")
+def analyze_case_text(payload: CaseAnalyzeRequest,
+                      user: Optional[AuthenticatedUser] = Depends(get_optional_user)):
+    """Run the document-analysis agent over a precedent's text (stateless).
+
+    Reuses analyze_document unchanged; the result is a report only and is never
+    stored as a case document, so it cannot become current-case facts.
+    """
+    _user_or_401(user)
+    text = payload.text.strip()
+    if not text:
+        raise HTTPException(400, "There is no case text to analyze.")
+    # gpt-oss occasionally emits bullets as objects, which Groq's tool-schema
+    # validation rejects. That output varies between calls, so retry just those
+    # failures a few times rather than surfacing a transient error to the user.
+    last_exc: Optional[DocumentAnalysisError] = None
+    for attempt in range(3):
+        try:
+            return {"report": analyze_document(text)}
+        except (AnalysisConfigError, DocumentAnalysisError) as exc:
+            cause = str(getattr(exc, "__cause__", "") or "")
+            schema_failure = any(
+                marker in cause
+                for marker in ("tool_use_failed", "did not match schema", "tool call validation")
+            )
+            if isinstance(exc, DocumentAnalysisError) and schema_failure and attempt < 2:
+                last_exc = exc
+                continue
+            raise HTTPException(exc.status_code, str(exc)) from exc
+        except Exception as exc:
+            print("[CaseAnalyze] unexpected error:\n" + traceback.format_exc(), flush=True)
+            raise HTTPException(
+                502,
+                f"Analysis failed ({type(exc).__name__}). Check the server terminal and API keys.",
+            ) from exc
+    raise HTTPException(last_exc.status_code, str(last_exc)) from last_exc
+
+
+@app.post("/api/cases/export")
+def export_case_docx(payload: CaseExportRequest,
+                     user: Optional[AuthenticatedUser] = Depends(get_optional_user)):
+    """Export a precedent's text and, when present, its AI analysis as one DOCX."""
+    from docx import Document
+
+    session = _runtime_session(payload.case_id, user)
+    record = payload.precedent
+    citation = re.sub(r"\s+", " ", re.sub(r"bookmark this case", "", record.citation, flags=re.IGNORECASE)).strip()
+
+    doc = Document()
+    doc.add_heading(record.case_name or "Case precedent", 0)
+    if citation:
+        doc.add_paragraph(citation)
+    doc.add_heading("Summary", 1)
+    doc.add_paragraph(record.summary or "No summary was provided in the source record.")
+    doc.add_heading("Full description", 1)
+    doc.add_paragraph(record.description or "No description was provided in the source record.")
+
+    if payload.report:
+        report_doc = build_report_docx(payload.report, record.case_name or "precedent")
+        for child in list(report_doc.element.body):
+            if child.tag.endswith("}sectPr"):
+                continue
+            doc.element.body.append(child)
+
+    stem = re.sub(r"[^\w.-]+", "_", record.case_name or "precedent")[:60] or "precedent"
+    suffix = "_precedent_analysis.docx" if payload.report else "_precedent.docx"
+    filename = f"{stem}{suffix}"
+    doc.save(str(GENERATED_DIR / filename))
+
+    metadata = session.find_generated_document(filename)
+    if metadata is None:
+        metadata = session.add_generated_document(
+            "Case precedent",
+            str(GENERATED_DIR / filename),
+            f"/sessions/{payload.case_id}/download/{filename}",
+            {},
+        )
+    persistence.sync_session(session)
+    return {"case_id": payload.case_id, **metadata}
+
+
+@app.post("/api/sessions/{case_id}/precedents")
+def add_case_precedent(case_id: str, payload: AddPrecedentRequest,
+                       user: Optional[AuthenticatedUser] = Depends(get_optional_user)):
+    """Attach a past judgement to this case as reference precedent only."""
+    session = _runtime_session(case_id, user)
+    stored = session.add_precedent(payload.precedent.model_dump())
+    persistence.sync_session(session)
+    return {"case_id": case_id, "precedent": stored, "precedents": session.precedents}
 
 
 @app.post("/api/chat")

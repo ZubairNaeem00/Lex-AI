@@ -32,7 +32,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from ollama import chat as ollama_chat
 
-from case_context import build_case_context
+from case_context import build_case_context, build_precedent_context
 from context_budget import (
     CASE_CONTEXT_TOKEN_BUDGET,
     HISTORY_TOKEN_BUDGET,
@@ -1590,6 +1590,9 @@ def ask_legal_agent(
             max_tokens=CASE_CONTEXT_TOKEN_BUDGET,
             include_excerpts=True,
         )
+        precedent_context = build_precedent_context(session, question, max_tokens=360)
+        if precedent_context:
+            case_context_text = (case_context_text + "\n\n" + precedent_context).strip()
         resolve_context = build_case_context(
             session,
             question,

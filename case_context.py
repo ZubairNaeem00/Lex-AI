@@ -570,6 +570,54 @@ def build_case_context(
     return facts_text
 
 
+def build_precedent_context(
+    session: Any,
+    question: str = "",
+    *,
+    max_tokens: int = 400,
+) -> str:
+    """Frame attached past judgements as reference precedent, not the current case.
+
+    These come from session.precedents (never session.documents), so they cannot
+    leak into current-case facts or drafting. The block tells the model to cite
+    them as authority only and to keep the user's own case facts separate.
+    """
+    precedents = list(getattr(session, "precedents", None) or [])
+    if not precedents:
+        return ""
+
+    per_chars = max(220, int((max_tokens * CHARS_PER_TOKEN) / max(1, len(precedents))))
+    blocks: List[str] = []
+    for index, record in enumerate(precedents, start=1):
+        name = str(record.get("case_name") or "Unnamed precedent").strip()
+        citation = re.sub(r"bookmark this case", "", str(record.get("citation") or ""), flags=re.IGNORECASE)
+        citation = re.sub(r"\s+", " ", citation).strip()
+        header = f"[PRECEDENT-{index}] {name}"
+        if citation:
+            header += f" — {citation}"
+        summary = truncate_chars(str(record.get("summary") or ""), max(160, per_chars // 2))
+        excerpt = relevant_excerpts(
+            str(record.get("description") or record.get("summary") or ""),
+            question,
+            max_chars=max(160, per_chars // 2),
+        )
+        parts = [header]
+        if summary:
+            parts.append(f"Holding/summary: {summary}")
+        if excerpt:
+            parts.append(f"Relevant passage: {excerpt}")
+        blocks.append("\n".join(parts))
+
+    body = truncate_to_tokens("\n\n".join(blocks), max_tokens, suffix=" …[precedents trimmed]")
+    return (
+        "REFERENCE PRECEDENTS (past judgements the user attached for authority). "
+        "These are NOT the current case and NOT the user's own facts: never treat "
+        "their parties, dates, or outcomes as the matter being advised on, and "
+        "never copy them into a draft as the current case. Cite them only as "
+        "supporting precedent when relevant.\n" + body
+    )
+
+
 def build_generation_context(session: Any, request: str, max_tokens: int = 500) -> str:
     """Compact case description for field extraction (facts are passed separately)."""
     documents = list(session.documents.values())

@@ -208,6 +208,7 @@ def _sync_messages(user: Any, session: CaseSession, conversation: Dict[str, Any]
                 "ts": event.get("ts", ""),
                 "generation_id": event.get("generation_id"),
                 "retrieval": event.get("retrieval"),
+                "precedent": event.get("precedent"),
             },
             created_at=to_dt(event.get("ts")) or crud.utc_now(),
         )
@@ -529,6 +530,7 @@ def _restore_messages(user: Any, session: CaseSession,
                               sort=[("created_at", 1)])
     session.ui_events = []
     session.history = []
+    session.precedents = []
     for row in rows:
         role = str(row.get("role") or MessageRole.ASSISTANT.value)
         content = str(row.get("content") or "")
@@ -549,6 +551,9 @@ def _restore_messages(user: Any, session: CaseSession,
             event["kind"] = row["kind"]
         if (row.get("meta") or {}).get("retrieval"):
             event["retrieval"] = row["meta"]["retrieval"]
+        if (row.get("meta") or {}).get("precedent"):
+            event["precedent"] = row["meta"]["precedent"]
+            session.precedents.append(row["meta"]["precedent"])
         session.ui_events.append(event)
         if event["in_history"] and content:
             session.history.append(

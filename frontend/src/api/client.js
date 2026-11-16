@@ -305,6 +305,29 @@ export function retrieveCases(query, k = 5) {
   return request('/api/cases/retrieve', { method: 'POST', body: JSON.stringify({ query, k }) });
 }
 
+/* ── Precedent (past judgement) analysis, export and context ───────────── */
+
+/** Run the document-analysis agent over a precedent's text; returns a report only. */
+export function analyzeCaseText(text, meta = {}) {
+  return request('/api/cases/analyze', { method: 'POST', body: JSON.stringify({ text, ...meta }) });
+}
+
+/** Export a precedent's text (+ optional analysis report) as one downloadable DOCX. */
+export function exportCaseDocx(caseId, precedent, report) {
+  return request('/api/cases/export', {
+    method: 'POST',
+    body: JSON.stringify({ case_id: caseId, precedent, report: report || null }),
+  });
+}
+
+/** Attach a past judgement to the current case as reference precedent, never as the case itself. */
+export function addPrecedent(caseId, precedent) {
+  return request(`/api/sessions/${encodeURIComponent(caseId)}/precedents`, {
+    method: 'POST',
+    body: JSON.stringify({ precedent }),
+  });
+}
+
 /* ── Document analysis ─────────────────────────────────────────────────── */
 
 export function analyzeDocument(caseId, file) {

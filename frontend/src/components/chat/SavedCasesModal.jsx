@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Bookmark, X } from 'lucide-react';
 import { useSavedCases } from '../../savedCases';
 import CaseCard from './CaseCard';
@@ -7,6 +7,12 @@ import CaseDetailModal from './CaseDetailModal';
 export default function SavedCasesModal({ open, onClose }) {
   const saved = useSavedCases();
   const [selected, setSelected] = useState(null);
+  useEffect(() => {
+    if (!open) return undefined;
+    const close = () => onClose();
+    window.addEventListener('lexai:precedent-added', close);
+    return () => window.removeEventListener('lexai:precedent-added', close);
+  }, [open, onClose]);
   if (!open) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true"

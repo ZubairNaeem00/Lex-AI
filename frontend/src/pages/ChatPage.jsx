@@ -15,6 +15,8 @@ import AppSidebar from '../components/AppSidebar';
 import AnalyzeModal from '../components/chat/AnalyzeModal';
 import AnalysisCard from '../components/chat/AnalysisCard';
 import CaseSlider from '../components/chat/CaseSlider';
+import PrecedentCard from '../components/chat/PrecedentCard';
+import MarkdownAnswer from '../components/chat/MarkdownAnswer';
 import DraftViewer from '../components/chat/DraftViewer';
 import GenerationCard from '../components/chat/GenerationCard';
 import ReviewFieldsModal from '../components/chat/ReviewFieldsModal';
@@ -174,6 +176,12 @@ export default function ChatPage() {
   }, []);
 
   useEffect(() => {
+    const onRefresh = () => refresh();
+    window.addEventListener('lexai:refresh-chat', onRefresh);
+    return () => window.removeEventListener('lexai:refresh-chat', onRefresh);
+  }, [refresh]);
+
+  useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }, [session, sending, analyzing]);
 
@@ -187,6 +195,10 @@ export default function ChatPage() {
         if (ev.hidden) continue;
         if (ev.kind === 'case_retrieval' && ev.retrieval) {
           list.push({ kind: 'cases', retrieval: ev.retrieval, key: `c-${ev.ts}-${list.length}` });
+          continue;
+        }
+        if (ev.kind === 'precedent' && ev.precedent) {
+          list.push({ kind: 'precedent', precedent: ev.precedent, key: `p-${ev.ts}-${list.length}` });
           continue;
         }
         list.push({
@@ -441,6 +453,13 @@ export default function ChatPage() {
                   </div>
                 );
               }
+              if (item.kind === 'precedent') {
+                return (
+                  <div key={item.key}>
+                    <PrecedentCard precedent={item.precedent} />
+                  </div>
+                );
+              }
               const isUser = item.role === 'user';
               return (
                 <div key={item.key} className={`flex gap-3 ${isUser ? 'flex-row-reverse' : ''}`}>
@@ -453,7 +472,7 @@ export default function ChatPage() {
                       ${isUser
                         ? 'bg-green-600 text-white rounded-tr-md shadow-sm'
                         : 'bg-white text-slate-700 rounded-tl-md border border-slate-200 shadow-sm'}`}>
-                      {renderContent(item.text)}
+                      {isUser ? renderContent(item.text) : <MarkdownAnswer text={item.text} />}
                     </div>
                     {!isUser && (item.sources || []).length > 0 && (
                       <details className="mt-2 group text-left">

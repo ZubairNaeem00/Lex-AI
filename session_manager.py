@@ -70,6 +70,9 @@ class CaseSession:
     generations: Dict[str, Dict[str, Any]] = field(default_factory=dict)
     active_generation_id: Optional[str] = None
     generated_documents: List[Dict[str, Any]] = field(default_factory=list)
+    # Past judgements the user attached as reference. Kept apart from documents
+    # so they never become current-case facts, change the title, or seed drafts.
+    precedents: List[Dict[str, Any]] = field(default_factory=list)
     # Owning account (str ObjectId) once a token is presented; empty = anonymous demo.
     user_id: Optional[str] = None
     # Mongo mirror bookkeeping: cursors and ObjectIds, never user-visible content.
@@ -220,6 +223,28 @@ class CaseSession:
                 return item
         return None
 
+    def add_precedent(self, record: Dict[str, Any]) -> Dict[str, Any]:
+        """Attach a past judgement as reference, never as the current case.
+
+        It is stored on its own channel (not documents), does not rename the
+        case, and is recorded as a non-conversational UI event so the agent sees
+        it as precedent context rather than a new user turn.
+        """
+        stored = copy.deepcopy(record)
+        with self.lock:
+            case_id = stored.get("case_id")
+            if case_id is not None and any(p.get("case_id") == case_id for p in self.precedents):
+                return stored
+            self.precedents.append(stored)
+            name = str(stored.get("case_name") or "Precedent").strip() or "Precedent"
+            self.add_message(
+                "assistant",
+                f"Added precedent to this case: {name}",
+                extra={"kind": "precedent", "precedent": stored},
+                record_history=False,
+            )
+            return stored
+
     def get_active_generation(self) -> Optional[Dict[str, Any]]:
         if not self.active_generation_id:
             return None
@@ -238,6 +263,7 @@ class CaseSession:
                 "generation": copy.deepcopy(active) if active else None,
                 "generations": copy.deepcopy(list(self.generations.values())),
                 "generated_documents": copy.deepcopy(self.generated_documents),
+                "precedents": copy.deepcopy(self.precedents),
                 "message_count": len(self.history),
                 "storage": "in-memory",
             }
