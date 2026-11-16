@@ -1266,7 +1266,7 @@ LATEST QUESTION:
         return question
 
 
-SYSTEM_PROMPT = """You are a source-grounded legal information assistant for Pakistani criminal law.
+SYSTEM_PROMPT = """You are a source-grounded legal information assistant for Pakistani law.
 You explain the supplied case record and the retrieved Pakistani authorities. You do not
 state legal rules, offence classifications, or procedure from memory.
 
