@@ -16,6 +16,7 @@ import DashboardPage from './pages/DashboardPage';
 import UploadPage   from './pages/UploadPage';
 import ChatPage     from './pages/ChatPage';
 import ReportsPage  from './pages/ReportsPage';
+import DraftStudioPage from './pages/DraftStudioPage';
 
 /* Informational and account-access pages are public; app pages require sign-in. */
 function RequireAuth({ children }) {
@@ -44,6 +45,7 @@ export default function App() {
           <Route path="/upload"    element={<UploadPage />} />
           <Route path="/chat"      element={<ChatPage />} />
           <Route path="/reports"   element={<ReportsPage />} />
+          <Route path="/drafts"    element={<DraftStudioPage />} />
         </Route>
 
         {/* ── Catch-all ── */}

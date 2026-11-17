@@ -180,8 +180,12 @@ const AppSidebar = forwardRef(function AppSidebar({
           <FileText className={`w-4 h-4 ${pathname === '/upload' ? 'text-green-600' : 'text-slate-400'}`} />
           Document Analysis
         </button>
-        <button className="w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150">
-          <LayoutTemplate className="w-4 h-4 text-slate-400" />
+        <button
+          onClick={() => navigate('/drafts')}
+          className={`w-full flex items-center gap-3 px-2.5 py-2 rounded-lg text-sm transition-colors duration-150
+            ${pathname === '/drafts' ? 'bg-slate-100 text-slate-900 font-medium' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
+        >
+          <LayoutTemplate className={`w-4 h-4 ${pathname === '/drafts' ? 'text-green-600' : 'text-slate-400'}`} />
           Draft Studio
         </button>
       </div>

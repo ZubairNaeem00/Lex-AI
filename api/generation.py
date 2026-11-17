@@ -8,6 +8,7 @@ caller.
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any, Dict, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -15,16 +16,38 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from auth.deps import AuthenticatedUser, get_current_user
 from db import crud
 from db.schemas import GenerationSessionRead
-from doc_generation import get_supported_templates, get_template_catalog
+from doc_generation import TEMPLATE_FOLDER, get_supported_templates, get_template_catalog
 from fastapi.responses import FileResponse
 from services import case_service, generation_service
 
 router = APIRouter(prefix="/api/generation", tags=["generation"])
 
+DOCX_MEDIA = ("application/vnd.openxmlformats-officedocument"
+              ".wordprocessingml.document")
+
 
 @router.get("/templates", summary="Templates the drafting workflow can fill")
 def templates() -> Dict[str, Any]:
     return {"supported": get_supported_templates(), "catalog": get_template_catalog()}
+
+
+@router.get("/templates/{template_name}/download", summary="Download a blank template DOCX")
+def download_template(template_name: str):
+    """Serve the untouched template so a lawyer can fill it by hand.
+
+    `template_name` is matched case-insensitively against the real files in the
+    Templates folder, so a client can never read outside it or by guess.
+    """
+    wanted = str(template_name or "").strip().lower()
+    match = next((p for p in Path(TEMPLATE_FOLDER).glob("*.docx") if p.name.lower() == wanted), None)
+    if match is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Template not found.")
+    return FileResponse(str(match), filename=match.name, media_type=DOCX_MEDIA)
+
+
+@router.get("/reports", summary="Finished drafts and open drafts for the reports page")
+def reports(user: AuthenticatedUser = Depends(get_current_user)) -> Dict[str, Any]:
+    return generation_service.list_reports(user)
 
 
 @router.get("/sessions", summary="My drafting sessions")

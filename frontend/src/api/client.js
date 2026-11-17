@@ -387,6 +387,14 @@ export function retryGeneration(caseId) {
   return request(`/api/sessions/${encodeURIComponent(caseId)}/generation/retry`, { method: 'POST' });
 }
 
+/** Open a new editable draft seeded from a blank template (no field Q&A). */
+export function openTemplateDraft(caseId, templateName) {
+  return request(`/api/sessions/${encodeURIComponent(caseId)}/generation/template`, {
+    method: 'POST',
+    body: JSON.stringify({ template_name: templateName }),
+  });
+}
+
 /** Word-style HTML for a completed draft, opened in the side editor. */
 export function getDraftDocument(caseId, generationId) {
   return request(`/api/sessions/${encodeURIComponent(caseId)}/generation/${encodeURIComponent(generationId)}/document`);
@@ -409,6 +417,43 @@ export function downloadGeneratedDocument(caseId, filename) {
     `/sessions/${encodeURIComponent(caseId)}/download/${encodeURIComponent(filename)}`,
     { headers: token ? { Authorization: `Bearer ${token}` } : {} },
   ).then(async (response) => {
+    if (!response.ok) {
+      throw new Error(`Download failed (${response.status}). Please sign in again.`);
+    }
+    return response.blob();
+  });
+}
+
+/* ── Reports page: finished drafts + open drafting sessions ───────────── */
+
+export function listReports() {
+  return request('/api/generation/reports');
+}
+
+/** All templates in the Templates folder, with catalogue labels. */
+export function listTemplates() {
+  return request('/api/generation/templates');
+}
+
+/** Download an untouched template DOCX so it can be filled by hand. */
+export function downloadBlankTemplate(templateName) {
+  const token = getToken();
+  return fetch(`/api/generation/templates/${encodeURIComponent(templateName)}/download`, {
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+  }).then(async (response) => {
+    if (!response.ok) {
+      throw new Error(`Download failed (${response.status}). Please sign in again.`);
+    }
+    return response.blob();
+  });
+}
+
+/** Download a finished draft DOCX by its document id; the server scopes it to this user. */
+export function downloadGeneratedDocumentById(documentId) {
+  const token = getToken();
+  return fetch(`/api/generation/documents/${encodeURIComponent(documentId)}/download`, {
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+  }).then(async (response) => {
     if (!response.ok) {
       throw new Error(`Download failed (${response.status}). Please sign in again.`);
     }

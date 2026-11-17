@@ -9,8 +9,12 @@ clean values, and pauses at a review stage before rendering the document.
 from __future__ import annotations
 
 import re
+import shutil
+import uuid
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+from urllib.parse import quote
 
 from context_budget import (
     GENERATION_CONTEXT_TOKEN_BUDGET,
@@ -725,6 +729,58 @@ def save_generation_document(
         "document": read_generation_document(session, generation_id),
         "generation": generation_snapshot(gen),
     }
+
+
+def start_template_draft(session: CaseSession, template_name: str) -> Dict[str, Any]:
+    """Open a blank copy of a template as an editable draft, with no field Q&A.
+
+    The copy is written into Generated/ and registered like any draft, so the
+    shared side editor reads, saves and downloads it unchanged — the lawyer fills
+    the template directly in the document instead of answering prompts.
+    """
+    wanted = str(template_name or "").strip().lower()
+    match = next((p for p in Path(TEMPLATE_FOLDER).glob("*.docx") if p.name.lower() == wanted), None)
+    if match is None:
+        raise GenerationDocumentMissing("That template is not available in the Templates folder.")
+
+    stem = match.stem.replace(" ", "_")
+    safe_session = "".join(
+        char for char in session.session_id if char.isalnum() or char in ("-", "_")
+    )[:60] or "case"
+    filename = (
+        f"{stem[:60]}_template_{safe_session}_"
+        f"{datetime.now():%Y%m%d_%H%M%S}_{uuid.uuid4().hex[:6]}.docx"
+    )
+    GENERATED_DIR.mkdir(parents=True, exist_ok=True)
+    dest = GENERATED_DIR / filename
+    shutil.copyfile(match, dest)
+    download_url = f"/sessions/{quote(safe_session)}/download/{quote(filename)}"
+
+    gen: Dict[str, Any] = {
+        "id": new_id("gen_"),
+        "session_id": session.session_id,
+        "template_name": match.name,
+        "user_request": f"Draft {match.stem}",
+        "status": "completed",
+        "values": {},
+        "value_sources": {},
+        "locked_fields": [],
+        "field_edits": [],
+        "answers": [],
+        "pending_field": None,
+        "question": "",
+        "error": None,
+        "result": {"filename": filename, "file_path": str(dest), "download_url": download_url},
+        "reviewed_at": utcnow(),
+        "created_at": utcnow(),
+        "updated_at": utcnow(),
+    }
+    session.generations[gen["id"]] = gen
+    session.active_generation_id = gen["id"]
+    session.add_generated_document(
+        match.name, str(dest), download_url, {}, generation_id=gen["id"]
+    )
+    return gen
 
 
 def continue_generation(session: CaseSession, message: str) -> Optional[Dict[str, Any]]:

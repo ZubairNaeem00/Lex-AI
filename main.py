@@ -73,6 +73,7 @@ from generation_workflow import (
     retry_word_requested,
     save_generation_document,
     start_generation,
+    start_template_draft,
     update_generation_fields,
 )
 from groq_utils import get_groq_llm, invoke_llm
@@ -179,6 +180,10 @@ class GenerationFieldsRequest(BaseModel):
 
 class GenerationDocumentRequest(BaseModel):
     html: str = Field(default="", max_length=600_000)
+
+
+class TemplateDraftRequest(BaseModel):
+    template_name: str = Field(min_length=1, max_length=200)
 
 
 class SessionUpdateRequest(BaseModel):
@@ -1011,6 +1016,25 @@ def retry_document_generation(case_id: str,
         persistence.sync_session(session)
         result.setdefault("case_id", case_id)
         return result
+
+
+@app.post("/api/sessions/{case_id}/generation/template")
+def open_template_draft(case_id: str, payload: TemplateDraftRequest,
+                        user: Optional[AuthenticatedUser] = Depends(get_optional_user)):
+    """Seed a new editable draft from a blank template for this case."""
+    session = _runtime_session(case_id, user)
+    with session.lock:
+        try:
+            gen = start_template_draft(session, payload.template_name)
+        except GenerationDocumentMissing as exc:
+            raise HTTPException(404, str(exc)) from exc
+        persistence.sync_session(session)
+        return {
+            "kind": "template_draft",
+            "case_id": session.session_id,
+            "generation_id": gen["id"],
+            "generation": generation_snapshot(gen),
+        }
 
 
 @app.get("/sessions/{case_id}/download/{filename}")

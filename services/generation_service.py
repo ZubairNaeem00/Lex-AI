@@ -9,6 +9,7 @@ demand — never re-derived from guessed data.
 
 from __future__ import annotations
 
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -18,7 +19,7 @@ from fastapi import HTTPException, status
 from db import crud
 from db.models import GeneratedDocument, GenerationSession, GenerationStatus
 from db.schemas import GeneratedDocumentRead, GenerationSessionRead
-from doc_generation import GENERATED_FOLDER
+from doc_generation import GENERATED_FOLDER, MISSING_SENTINELS
 
 GENERATED_ROOT = Path(GENERATED_FOLDER).resolve()
 NOT_FOUND = "Document generation not found."
@@ -181,6 +182,193 @@ def list_generated_documents(user: Any, *, case_id: Any = None, page: int = 1,
         for item in result["items"]
     ]
     return result
+
+
+DOC_READY = {"generated", "downloaded", "superseded"}
+DOC_LABELS = {"generated": "Ready", "downloaded": "Downloaded",
+              "superseded": "Superseded", "missing_file": "File missing"}
+GEN_LABELS = {"collecting": "Draft", "review": "Draft", "generating": "Preparing",
+              "error": "Needs attention"}
+# A completed/cancelled session is already represented by its generated document (or
+# was abandoned), so it never appears as a separate report row.
+GEN_REPORT_STATUSES = {"collecting", "review", "generating", "error"}
+
+SUMMARY_KEYS = ("fir_number", "police_station", "list_relevant_sections", "court_name_location")
+
+
+def _template_labels() -> Dict[str, str]:
+    """Map a template file name to its friendly catalogue label."""
+    from doc_generation import load_template_catalog
+
+    labels: Dict[str, str] = {}
+    for entry in load_template_catalog():
+        path = str(entry.get("path") or "")
+        if path:
+            labels[path.lower()] = str(entry.get("name") or Path(path).stem)
+    return labels
+
+
+def _friendly_type(template_name: str, labels: Dict[str, str]) -> str:
+    key = str(template_name or "").strip()
+    if not key:
+        return "Document"
+    return labels.get(key.lower()) or Path(key).stem
+
+
+_TITLE_SUFFIX = re.compile(r"(?:_?(?:precedent|analysis|report|docx))+$", re.IGNORECASE)
+_HEX_TAIL = re.compile(r"_?[0-9a-f]{4,}$", re.IGNORECASE)
+_STAMP_TAIL = re.compile(r"_(?:\d{8}_\d{6}|\d+)$")
+
+
+def _title_from_filename(filename: str) -> str:
+    stem = Path(str(filename or "")).stem
+    stem = _TITLE_SUFFIX.sub("", stem)
+    for _ in range(3):
+        shortened = _HEX_TAIL.sub("", stem)
+        shortened = _STAMP_TAIL.sub("", shortened)
+        if shortened == stem:
+            break
+        stem = shortened
+    return re.sub(r"[_\s]+", " ", stem).strip(" -")[:80]
+
+
+def _report_title(type_label: str, values: Dict[str, Any], filename: str = "") -> str:
+    name = str(values.get("applicants_full_name") or "").strip()
+    if name:
+        return f"{name} — {type_label}"
+    stem = _title_from_filename(filename)
+    if stem and stem.lower() != type_label.lower():
+        return stem
+    return type_label
+
+
+def _report_snippet(values: Dict[str, Any]) -> str:
+    parts: List[str] = []
+    for key in SUMMARY_KEYS:
+        text = str(values.get(key) or "").strip()
+        if text and text.lower() not in MISSING_SENTINELS:
+            parts.append(text)
+    return " · ".join(parts[:4])
+
+
+def _days_ago(value: Any) -> bool:
+    moment = _parse_ts(value)
+    if moment is None:
+        return False
+    return (datetime.now(timezone.utc) - moment).days <= 7
+
+
+def _document_report(document: Dict[str, Any], labels: Dict[str, str],
+                     case_cache: Dict[str, Any],
+                     gen_cache: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    values = document.get("values") or {}
+    type_label = _friendly_type(document.get("template_name") or document.get("document_type"), labels)
+    status_code = str(document.get("status") or "generated")
+    case_oid = str(document.get("case_id") or "")
+    runtime_case_id = ""
+    if case_oid:
+        if case_oid not in case_cache:
+            row = crud.cases.get(case_oid)
+            case_cache[case_oid] = str((row or {}).get("runtime_case_id") or f"case_{case_oid}") if row else ""
+        runtime_case_id = case_cache[case_oid]
+    # The side editor opens a draft by its generation key, which is the linked
+    # session's key (the document row only stores a separate file id).
+    gen_session_oid = str(document.get("generation_session_id") or "")
+    generation_id = ""
+    if gen_session_oid:
+        if gen_cache is not None and gen_session_oid in gen_cache:
+            generation_id = gen_cache[gen_session_oid]
+        else:
+            row = crud.generation_sessions.get(gen_session_oid)
+            generation_id = str((row or {}).get("session_key") or "")
+            if gen_cache is not None:
+                gen_cache[gen_session_oid] = generation_id
+    filename = str(document.get("filename") or "")
+    has_file = bool(filename) and (GENERATED_ROOT / filename).is_file()
+    downloadable = status_code in DOC_READY and has_file
+    return {
+        "id": str(document.get("_id") or ""),
+        "kind": "document",
+        "type": type_label,
+        "title": _report_title(type_label, values, filename),
+        "status": "Ready" if status_code in DOC_READY else DOC_LABELS.get(status_code, "Ready"),
+        "status_code": status_code,
+        "case_number": str(values.get("fir_number") or "").strip(),
+        "court": str(values.get("court_name_location") or "").strip(),
+        "snippet": _report_snippet(values),
+        "date": _parse_ts(document.get("created_at")),
+        "runtime_case_id": runtime_case_id,
+        "generation_id": generation_id,
+        "filename": filename,
+        "downloadable": downloadable,
+        "openable": bool(downloadable and runtime_case_id and generation_id),
+        "days_ago": _days_ago(document.get("created_at")),
+    }
+
+
+def _session_report(session: Dict[str, Any], labels: Dict[str, str],
+                    case_cache: Dict[str, Any]) -> Dict[str, Any]:
+    values = session.get("collected_information") or {}
+    type_label = _friendly_type(session.get("template_name") or session.get("document_type"), labels)
+    status_code = str(session.get("status") or "collecting")
+    case_oid = str(session.get("case_id") or "")
+    runtime_case_id = ""
+    if case_oid:
+        if case_oid not in case_cache:
+            row = crud.cases.get(case_oid)
+            case_cache[case_oid] = str((row or {}).get("runtime_case_id") or f"case_{case_oid}") if row else ""
+        runtime_case_id = case_cache[case_oid]
+    missing = session.get("missing_fields") or []
+    snippet = f"Still needed: {', '.join(str(m).replace('_', ' ') for m in missing[:3])}" if missing else ""
+    return {
+        "id": str(session.get("session_key") or ""),
+        "kind": "session",
+        "type": type_label,
+        "title": _report_title(type_label, values),
+        "status": GEN_LABELS.get(status_code, "Draft"),
+        "status_code": status_code,
+        "case_number": str(values.get("fir_number") or "").strip(),
+        "court": str(values.get("court_name_location") or "").strip(),
+        "snippet": snippet,
+        "date": _parse_ts(session.get("updated_at")),
+        "runtime_case_id": runtime_case_id,
+        "filename": "",
+        "downloadable": False,
+        "days_ago": _days_ago(session.get("updated_at")),
+    }
+
+
+def list_reports(user: Any, *, limit: int = 100) -> Dict[str, Any]:
+    """Everything the Reports page shows, as one render-ready list.
+
+    Finished drafts (generated documents) read as Ready; open drafting sessions
+    that have not produced a file yet read as Draft. Both are keyed by the durable
+    case id, so the runtime conversation id is resolved here for the chat links.
+    """
+    owner = _oid(user)
+    labels = _template_labels()
+    case_cache: Dict[str, Any] = {}
+    gen_cache: Dict[str, Any] = {}
+    reports: List[Dict[str, Any]] = []
+    for document in crud.generated_documents.find(crud.user_query(user), sort=[("created_at", -1)],
+                                                  limit=limit):
+        reports.append(_document_report(document, labels, case_cache, gen_cache))
+    for session in crud.generation_sessions.find(crud.user_query(user, status={"$in": sorted(GEN_REPORT_STATUSES)}),
+                                                 sort=[("updated_at", -1)], limit=limit):
+        reports.append(_session_report(session, labels, case_cache))
+
+    reports.sort(key=lambda item: item["date"] or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
+    ready = sum(1 for item in reports if item["status"] == "Ready")
+    drafts = sum(1 for item in reports if item["status_code"] in GEN_REPORT_STATUSES)
+    this_week = sum(1 for item in reports if item["days_ago"])
+    for item in reports:
+        item["date"] = item["date"].isoformat() if item["date"] else ""
+        item.pop("days_ago", None)
+    return {
+        "reports": reports,
+        "summary": {"total": len(reports), "ready": ready, "drafts": drafts, "this_week": this_week},
+        "storage": "mongodb" if owner and crud.generated_documents.available() else "in-memory",
+    }
 
 
 def mark_downloaded(user: Any, document_id: Any) -> Dict[str, Any]:
