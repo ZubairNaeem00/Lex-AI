@@ -5,3 +5,4 @@ faiss_case_retrieval/
 .env
 .env.example
 .venv/
+*.log
