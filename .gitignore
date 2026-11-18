@@ -6,3 +6,6 @@ faiss_case_retrieval/
 .env.example
 .venv/
 *.log
+web_cache/
+
+bm25_cache/
