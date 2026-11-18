@@ -7,5 +7,4 @@ faiss_case_retrieval/
 .venv/
 *.log
 web_cache/
-
 bm25_cache/
