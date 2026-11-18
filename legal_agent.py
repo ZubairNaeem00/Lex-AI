@@ -32,10 +32,14 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from ollama import chat as ollama_chat
 
+import hybrid_retrieval
+import pakistancode_web
 from case_context import build_case_context, build_precedent_context
 from context_budget import (
     CASE_CONTEXT_TOKEN_BUDGET,
+    EARLY_MEMORY_TOKEN_BUDGET,
     HISTORY_TOKEN_BUDGET,
+    MAX_EARLY_MEMORY_CHARS,
     MAX_HISTORY_MESSAGE_CHARS,
     MAX_HISTORY_TURNS,
     MAX_INPUT_TOKENS,
@@ -47,6 +51,7 @@ from context_budget import (
     RESOLVE_OUTPUT_TOKENS,
     RETRIEVAL_TOKEN_BUDGET,
     build_bounded_history,
+    build_early_memory,
     count_message_tokens,
     count_tokens,
     history_as_text,
@@ -418,11 +423,22 @@ def unique_documents(documents: List[Any]) -> List[Any]:
     return unique
 
 
+def _act_family(meta: Dict[str, Any]) -> str:
+    """Normalize an Act title so duplicate file copies of one law collapse."""
+    title = _law_document_title(meta)
+    title = re.sub(r"\([^)]*\)", " ", title)
+    title = re.sub(r"^the\s+", " ", title.strip(), flags=re.I)
+    title = re.sub(r"^\d+\s*", " ", title.strip())
+    return re.sub(r"[^a-z]", "", title.lower())[:20]
+
+
 def _dedupe_hits(law_hits: List[Dict[str, Any]], cases_hits: List[Dict[str, Any]]) -> Tuple[List[Any], List[Any]]:
     law_unique: List[Any] = []
     cases_unique: List[Any] = []
     seen = set()
     seen_prefixes = set()
+    seen_pages = set()
+    seen_cases = set()
     for hit in list(law_hits) + list(cases_hits):
         doc = hit["doc"]
         key = (doc.page_content or "", str(doc.metadata or {}))
@@ -432,8 +448,34 @@ def _dedupe_hits(law_hits: List[Dict[str, Any]], cases_hits: List[Dict[str, Any]
         prefix = re.sub(r"\W+", "", (doc.page_content or "").lower())[:240]
         if prefix and prefix in seen_prefixes:
             continue
+        meta = doc.metadata or {}
+        if hit["kind"] == KIND_LAW:
+            page = str(meta.get("page_label") or meta.get("page_number") or meta.get("page") or "")
+            family = _act_family(meta)
+            if page and family and (family, page) in seen_pages:
+                continue  # second copy of the same Act page under another filename
+        else:
+            case_key = re.sub(
+                r"\W+",
+                "",
+                str(meta.get("citation") or meta.get("case_name") or meta.get("title") or ""),
+            ).lower()
+            if case_key and case_key in seen_cases:
+                continue  # keep one excerpt per judgment, not three chunks
         seen.add(key)
         seen_prefixes.add(prefix)
+        if hit["kind"] == KIND_LAW:
+            page = str(meta.get("page_label") or meta.get("page_number") or meta.get("page") or "")
+            if page:
+                seen_pages.add((_act_family(meta), page))
+        else:
+            case_key = re.sub(
+                r"\W+",
+                "",
+                str(meta.get("citation") or meta.get("case_name") or meta.get("title") or ""),
+            ).lower()
+            if case_key:
+                seen_cases.add(case_key)
         (law_unique if hit["kind"] == KIND_LAW else cases_unique).append(hit)
     return law_unique, cases_unique
 
@@ -492,28 +534,26 @@ def evidence_labels(evidence: List[Dict[str, Any]]) -> List[str]:
 
 
 LAW_SECTION_HEADING = (
-    "STATUTORY / SUBORDINATE LAW PASSAGES (retrieved from the Pakistani Acts index "
-    "`faiss_index_law`; these give the text of the law):"
+    "STATUTORY / SUBORDINATE LAW PROVISIONS (text of Pakistani Acts and ordinances):"
 )
 CASE_SECTION_HEADING = (
-    "CASE-LAW PRECEDENTS (retrieved from the Pakistani judgments index "
-    "`faiss_index_cases`; these give how courts applied the law):"
+    "CASE-LAW PRECEDENTS (reported Pakistani judgments showing how courts applied the law):"
 )
 
 
 def format_evidence(evidence: List[Dict[str, Any]]) -> str:
     """Render the selected passages as two clearly separated groups."""
     if not evidence:
-        return "No specific authorities were retrieved from either local legal index."
+        return "No specific statutory or case-law authorities are available for this question."
 
     blocks: Dict[str, List[str]] = {KIND_LAW: [], KIND_CASES: []}
     for item in evidence:
-        blocks[item["kind"]].append(
-            "[{0}]\nContent:\n{1}".format(
-                get_source_label(item["doc"], item["source_index"], item["kind"]),
-                item["content"],
-            )
-        )
+        label = get_source_label(item["doc"], item["source_index"], item["kind"])
+        # Lead with the compact [SOURCE-n] bracket so the model copies only that
+        # token inline; the descriptive remainder follows outside the brackets.
+        short, _, rest = label.partition(" ")
+        header = "[{0}] {1}".format(short, rest).rstrip()
+        blocks[item["kind"]].append("{0}\nContent:\n{1}".format(header, item["content"]))
 
     sections = []
     for kind, heading in ((KIND_LAW, LAW_SECTION_HEADING), (KIND_CASES, CASE_SECTION_HEADING)):
@@ -539,34 +579,210 @@ def format_documents(documents: List[Any]) -> str:
 
 
 def retrieval_unavailable_notice(status: Dict[str, Any]) -> str:
-    """Tell the model which retriever failed, instead of leaving it unsaid."""
+    """Tell the model which authority group is unavailable, in client-facing terms."""
     problems = []
     for kind, info in status.items():
         state = info.get("state")
         if state == "ready":
             continue
-        label = "statutes/Acts index" if kind == KIND_LAW else "court judgments index"
-        if state == "missing":
+        group = "Statutory texts (Acts and ordinances)" if kind == KIND_LAW else "Reported court judgments"
+        if state in ("missing", "error"):
             problems.append(
-                f"- The {label} (`{info.get('path')}`) is not present, so no "
-                f"{'statutory' if kind == KIND_LAW else 'precedent'} passages could be retrieved."
-            )
-        elif state == "error":
-            problems.append(
-                f"- The {label} failed to load ({info.get('error')}), so no "
-                f"{'statutory' if kind == KIND_LAW else 'precedent'} passages could be retrieved."
+                f"- {group} are unavailable in this session, so the answer cannot rely on "
+                f"{'statutory text' if kind == KIND_LAW else 'precedent'}."
             )
     for kind, info in status.items():
         if info.get("last_query_error"):
-            label = "statutes/Acts index" if kind == KIND_LAW else "court judgments index"
-            problems.append(f"- A search against the {label} failed: {info['last_query_error']}")
+            group = "statutory texts" if kind == KIND_LAW else "reported judgments"
+            problems.append(f"- The search of {group} did not complete for this question.")
 
     if not problems:
         return ""
     return (
-        "RETRIEVER LIMITATIONS (state these plainly in the answer; do not replace the "
-        "missing evidence with knowledge from memory):\n" + "\n".join(problems)
+        "SOURCE AVAILABILITY NOTE (internal; convey the substance briefly and professionally, "
+        "without mentioning indexes, retrieval, or system errors; do not replace the missing "
+        "authorities with knowledge from memory):\n" + "\n".join(problems)
     )
+
+
+_SECTION_MENTION = re.compile(r"\bsection\s*(?:no\.?\s*)?(\d{1,4}[A-Z]?)\b", re.I)
+_YEAR_TOKEN = re.compile(r"(18|19|20)\d{2}")
+_SECTION_START = re.compile(r"(?m)^\s*(\d{1,4}[A-Z]?)\s*[.\u00b7]")
+_NEXT_SECTION = re.compile(r"(?m)^\s*\d{1,4}[A-Z]?\s*[.\u00b7]")
+
+
+def _section_numbers(query: str) -> List[str]:
+    numbers = _SECTION_MENTION.findall(query or "")
+    if not numbers:
+        numbers = [
+            token
+            for token in re.findall(r"\b\d{2,4}[A-Z]?\b", query or "")
+            if not _YEAR_TOKEN.fullmatch(token)
+        ]
+    return list(dict.fromkeys(numbers))[:2]
+
+
+_section_maps: Dict[str, Tuple[int, Dict[str, List[str]]]] = {}
+
+
+def _get_section_map(kind: str, store: Any) -> Dict[str, List[str]]:
+    """section number -> chunk ids, built once per index size."""
+    docstore = store.docstore._dict
+    cached = _section_maps.get(kind)
+    if cached and cached[0] == len(docstore):
+        return cached[1]
+    mapping: Dict[str, List[str]] = {}
+    for doc_id, doc in docstore.items():
+        for num in set(_SECTION_START.findall(doc.page_content or "")):
+            mapping.setdefault(num, []).append(doc_id)
+    _section_maps[kind] = (len(docstore), mapping)
+    return mapping
+
+
+def _anchor_query_words(query: str) -> set:
+    expanded = (query or "").lower()
+    for short, full in pakistancode_web._ALIASES.items():
+        expanded = re.sub(r"\b" + short + r"\b", full, expanded)
+    return {
+        word
+        for word in _query_words(expanded)
+        if word not in _QUERY_STOPWORDS and not word.isdigit()
+    }
+
+
+def _citation_boost(
+    kind: str, query: str, hits: List[Dict[str, Any]]
+) -> List[Dict[str, Any]]:
+    """Guarantee the chunk where the asked section starts reaches retrieval.
+
+    Embeddings rank citation queries poorly and BM25 prefers contents pages and
+    other Acts' tables, so the provision itself can miss the fused top-k entirely.
+    Anchoring on the literal "379." line keeps the text in the evidence pool with
+    its true distance so every downstream threshold still applies.
+    """
+    numbers = _section_numbers(query)
+    store = get_store(kind)
+    if not numbers or store is None:
+        return hits
+    try:
+        import numpy as np
+
+        mapping = _get_section_map(kind, store)
+        docstore = store.docstore._dict
+        _, _, docid_to_row = hybrid_retrieval._get_entry(kind, store)
+        embed = store.embedding_function
+        embed_query = getattr(embed, "embed_query", None) or embed
+        qvec = np.asarray(embed_query(query), dtype=np.float32)
+    except Exception:
+        return hits
+    anchor_words = _anchor_query_words(query)
+    have = {(h["doc"].page_content or "", str(h["doc"].metadata or {})) for h in hits}
+    extra: List[Dict[str, Any]] = []
+    for num in numbers:
+        start = re.compile(r"(?mi)^\s*" + re.escape(num) + r"\s*[.\u00b7]\s*")
+        for doc_id in mapping.get(num, []):
+            doc = docstore[doc_id]
+            meta = doc.metadata or {}
+            text = doc.page_content or ""
+            title_match = (
+                len(anchor_words & set(_query_words(_law_document_title(meta)))) >= 2
+            )
+            text_match = not anchor_words or any(w in text.lower() for w in anchor_words)
+            if not title_match and not text_match:
+                continue
+            m = start.search(text)
+            if not m:
+                continue
+            key = (text, str(meta))
+            if key in have:
+                continue
+            nxt = _NEXT_SECTION.search(text, m.end())
+            if (nxt.start() if nxt else len(text)) - m.end() < 80:
+                continue  # a contents-page listing, not the provision itself
+            row = docid_to_row.get(doc_id)
+            distance = (
+                hybrid_retrieval._l2_distance(store, qvec, row)
+                if row is not None
+                else WEB_TRIGGER_DISTANCE
+            )
+            extra.append(
+                {
+                    "kind": kind,
+                    "doc": doc,
+                    "score": float(distance),
+                    "facet": -1,
+                    "query": query,
+                    "_citation_title_match": title_match,
+                }
+            )
+    if any(item["_citation_title_match"] for item in extra):
+        # When the query names the Act, chunks from other Acts are noise.
+        extra = [item for item in extra if item["_citation_title_match"]]
+    extra.sort(key=lambda item: (not item["_citation_title_match"], item["score"]))
+    boosted = extra[:3]
+    for hit in boosted:
+        hit.pop("_citation_title_match", None)
+    return boosted + hits
+
+
+def _local_statutes_on_topic(query: str, law_hits: List[Dict[str, Any]]) -> bool:
+    """A weak distance can still point at the wrong Act; require the top statute
+    hits to actually name the question's most distinctive terms — and, when the
+    question cites a section number, to contain that number."""
+    numbers = _section_numbers(query)
+    terms = sorted(
+        (
+            word
+            for word in _query_words(query)
+            if word not in _QUERY_STOPWORDS and not word.isdigit()
+        ),
+        key=len,
+        reverse=True,
+    )[:2]
+    for hit in law_hits[:3]:
+        text = (hit["doc"].page_content or "").lower()
+        terms_ok = all(term in text for term in terms) if terms else True
+        number_ok = not numbers or any(
+            re.search(r"(?<!\d)" + re.escape(num) + r"(?!\d)", text) for num in numbers
+        )
+        if terms_ok and number_ok:
+            return True
+    return False
+
+
+def _repeated_question(session: Any, search_query: str) -> bool:
+    """True when this resolved question was already answered in the session."""
+    norm = re.sub(r"\W+", " ", (search_query or "").lower()).strip()
+    if not norm:
+        return False
+    for event in getattr(session, "ui_events", []):
+        if event.get("type") == "message" and event.get("role") == "assistant":
+            prior = re.sub(
+                r"\W+", " ", str(event.get("search_query") or "").lower()
+            ).strip()
+            if prior == norm:
+                return True
+    return False
+
+
+def _prewarm() -> None:
+    """Build the lazily-created retrieval structures while the server idles."""
+    for kind in (KIND_LAW, KIND_CASES):
+        store = get_store(kind)
+        if store is None:
+            continue
+        try:
+            hybrid_retrieval._get_entry(kind, store)
+        except Exception:
+            pass
+        if kind == KIND_LAW:
+            try:
+                _get_section_map(kind, store)
+            except Exception:
+                pass
+
+
+threading.Thread(target=_prewarm, daemon=True, name="legal-prewarm").start()
 
 
 def _search_store(
@@ -579,7 +795,9 @@ def _search_store(
     if store is None or not query.strip() or top_k <= 0:
         return []
     try:
-        pairs = store.similarity_search_with_score(query, k=top_k)
+        pairs = hybrid_retrieval.hybrid_search(kind, store, query, top_k)
+        if pairs is None:
+            pairs = store.similarity_search_with_score(query, k=top_k)
     except Exception as exc:
         message = f"{type(exc).__name__}: {exc}"
         _store_status[kind]["last_query_error"] = message
@@ -598,7 +816,7 @@ def retrieve_dual_documents(
     top_k_cases: int = TOP_K_CASES,
 ) -> Dict[str, Any]:
     """Query both indexes for the same question and return them separately."""
-    law_hits = _search_store(KIND_LAW, query, top_k_law)
+    law_hits = _citation_boost(KIND_LAW, query, _search_store(KIND_LAW, query, top_k_law))
     cases_hits = _search_store(KIND_CASES, query, top_k_cases)
     return {
         "law": law_hits,
@@ -624,6 +842,8 @@ MAX_EVIDENCE_CASES_MULTI = _env_int("MAX_EVIDENCE_CASES_MULTI", 7)
 LAW_RELATIVE_MARGIN = _env_float("LAW_RELATIVE_MARGIN", 0.25, 0.05, 1.0)
 CASES_RELATIVE_MARGIN = _env_float("CASES_RELATIVE_MARGIN", 0.40, 0.05, 1.0)
 RELEVANCE_SCORE_FLOOR = _env_float("RELEVANCE_SCORE_FLOOR", 0.60, 0.0, 1.5)
+# Best statute distance above this means the local match is too weak to answer alone.
+WEB_TRIGGER_DISTANCE = _env_float("WEB_TRIGGER_DISTANCE", 0.70, 0.3, 1.5)
 
 _QUERY_STOPWORDS = frozenset(
     """
@@ -678,10 +898,21 @@ def _content_terms(text: str) -> List[str]:
 _FACET_SIGNAL_RE = re.compile(
     r"\b(defini\w*|mean\w*|condition\w*|requirement\w*| ground\w*|procedure|"
     r"process|steps?|step\w*|effect\w*|consequence\w*|right\w*|liabilit\w*|"
-    r"obligation\w*|penal\w*|punish\w*|validity|principle\w*|provision\w*|"
+    r"obligation\w*|penalt\w*|punish\w*|validity|principle\w*|provision\w*|"
     r"api\w*|remedy|remedies|differen\w*|eligible|eligibility|how to|how does)\b",
     re.IGNORECASE,
 )
+
+
+def _is_citation_lookup(text: str) -> bool:
+    """A lone "section 379 of PPC" request names one provision, not several
+    facets; decomposing it only fragments retrieval below the boosted chunk."""
+    if not _section_numbers(text):
+        return False
+    signals = {
+        match.group(0).lower() for match in _FACET_SIGNAL_RE.finditer(text or "")
+    }
+    return len(signals) <= 1
 
 
 def _is_multi_part(text: str) -> bool:
@@ -1072,7 +1303,9 @@ def retrieve_multi_part(
 ) -> Dict[str, Any]:
     """Search both indexes for the whole question and for each part, then re-try gaps."""
     subject_terms = _subject_terms(base_query, *(facet["query"] for facet in facets))
-    law_pool = _search_store(KIND_LAW, base_query, TOP_K_LAW)
+    law_pool = _citation_boost(
+        KIND_LAW, base_query, _search_store(KIND_LAW, base_query, TOP_K_LAW)
+    )
     cases_pool = _search_store(KIND_CASES, base_query, MAX_EVIDENCE_CASES_MULTI)
     for index, facet in enumerate(facets):
         law_pool += _search_store(KIND_LAW, facet["query"], FACET_TOP_K_LAW, facet=index)
@@ -1167,13 +1400,13 @@ def build_parts_checklist(facets: List[Dict[str, str]], coverage: List[Dict[str,
             lines.append(f"{number}. {item['part']} — supported by: {labels}")
         elif item.get("weak_only"):
             lines.append(
-                f"{number}. {item['part']} — only loosely related passages ({labels}); "
+                f"{number}. {item['part']} — only loosely related excerpts ({labels}); "
                 "they do not state this aspect, so do not present them as authority for it"
             )
         else:
             lines.append(
-                f"{number}. {item['part']} — NO supporting passage was retrieved"
-                f" (searched: \"{truncate_chars(item['query'], 120)}\")"
+                f"{number}. {item['part']} — no supporting authority is available"
+                f" (query: \"{truncate_chars(item['query'], 120)}\")"
             )
     unsupported = sum(1 for item in coverage if not item["supported"])
     return (
@@ -1266,33 +1499,54 @@ LATEST QUESTION:
         return question
 
 
-SYSTEM_PROMPT = """You are a source-grounded legal information assistant for Pakistani law.
-You explain the supplied case record and the retrieved Pakistani authorities. You do not
-state legal rules, offence classifications, or procedure from memory.
+SYSTEM_PROMPT = """You are LegalLens, a professional legal assistant specializing in Pakistani law.
+You advise users by applying their case record and the legal authorities made available
+to you in this session. You do not state legal rules, offence classifications, or
+procedure from memory.
 
 You are an educational assistant, not a substitute for an enrolled Pakistani advocate.
 Do not guarantee outcomes.
 
-SOURCE PRIORITY:
+PROFESSIONAL VOICE:
+- Speak as a composed, client-facing legal professional: direct answers first, then
+  reasoning and authority. Never narrate how you work.
+- Never mention retrieval, searches, indexes, databases, embeddings, or any system
+  mechanics, and never describe how authorities reached you. Do not say you "cannot
+  retrieve" anything or that nothing "was found"; speak only of the law and the
+  materials before you.
+- When the authorities available to you do not settle a point, say so professionally.
+  Good example: "Section 302 PPC is not reproduced in the materials before me; the
+  judgments cited show how courts have sentenced under it. For the exact statutory
+  penalty, the full text of the Pakistan Penal Code should be consulted."
+  Never dress the gap up as a technical failure, and never fill it from memory.
+- Refer to the material you rely on as "the authorities", "the statute", "the judgment",
+  "the materials before me", or by name (Act, section, case title) — never as something
+  handed to you by the system.
+
+AUTHORITY PRIORITY:
 1. Uploaded case material is labeled [DOC-n]. It is the case record, not legal authority.
-2. Retrieved authorities arrive in two clearly separated groups under
-   "RETRIEVED LEGAL SOURCES":
-   a. STATUTORY / SUBORDINATE LAW PASSAGES - the text of Pakistani Acts and
-      ordinances (PPC, CrPC, and other statutes), from the statutes index.
-   b. CASE-LAW PRECEDENTS - reported Pakistani judgments, from the judgments index.
-   Each passage carries its own [SOURCE-i] label and a [STATUTE] or [CASE LAW] tag.
-   Cite them only with their exact [SOURCE-i] label when the supplied content
-   supports the statement.
+2. Legal authorities are provided in two clearly separated groups under
+   "LEGAL AUTHORITIES":
+   a. STATUTORY / SUBORDINATE LAW PROVISIONS - the text of Pakistani Acts and
+      ordinances (PPC, CrPC, and other statutes).
+   b. CASE-LAW PRECEDENTS - reported Pakistani judgments.
+   c. ONLINE FEDERAL LAW TEXTS - live copies from the official Pakistan Code
+      website (pakistancode.gov.pk), identified by that citation. Treat them as
+      statutory text; when you rely on one, note that the Pakistan Code website
+      was consulted.
+   Each excerpt carries its own [SOURCE-i] label and a [STATUTE] or [CASE LAW] tag.
+   Cite them only with their exact [SOURCE-i] label when the content supports the
+   statement.
 3. General knowledge may explain a background concept only when it is explicitly
-   labeled "General reference (not from the supplied sources)". It must not supply
+   labeled "General reference (not legal authority)". It must not supply
    statutory numbers, offence classifications, bail rules, or procedure.
 
 HOW TO USE BOTH GROUPS TOGETHER:
-- State the rule from a [STATUTE] passage (name the Act and the section number only
-  when both appear in that passage's content or label), then show how a [CASE LAW]
-  passage applies, interprets, or limits it, and then apply both to the user's facts.
+- State the rule from a [STATUTE] excerpt (name the Act and the section number only
+  when both appear in that excerpt's content or label), then show how a [CASE LAW]
+  excerpt applies, interprets, or limits it, and then apply both to the user's facts.
 - If only one group answers part of the question, say which part rests on the statute
-  and which part has no retrieved precedent (or no retrieved statutory text) instead
+  and which part lacks supporting precedent (or statutory text) instead
   of inventing the missing half.
 - Never attribute wording of a judgment to a statute, or wording of a statute to a
   judgment. Keep the two kinds of authority distinct in the answer.
@@ -1300,61 +1554,61 @@ HOW TO USE BOTH GROUPS TOGETHER:
 RULES:
 - Never cite a [DOC-n] case excerpt as [SOURCE-i]. Mention case material only as
   "the case record (DOC-n)" or by document type.
-- A retrieved judgment name (for example, "Inayat vs State") is a legal authority
+- A judgment name (for example, "Inayat vs State") is a legal authority
   [SOURCE-i], never the case record. Refer to it as "[SOURCE-4] Inayat vs State".
 - The user's question is not the case record. Never attribute a fact from the
-  question to the case record. If no documents were uploaded, begin by saying
-  "No case documents are uploaded" and do not use "the case record" for anything
-  else.
+  question to the case record. If no documents were uploaded, never refer to "the case
+  record"; note the absence of case documents naturally, and only when it matters to
+  the answer.
 - A value marked [user-corrected], or listed under USER-CORRECTED VALUES
   (AUTHORITATIVE), replaces the original extraction in every summary and excerpt.
   Always use the corrected value; never revert to the original text.
-- Use only [SOURCE-i] labels that appear in RETRIEVED LEGAL SOURCES.
+- Use only [SOURCE-i] labels that appear under LEGAL AUTHORITIES.
 - Never fabricate section numbers, case titles, citations, quotations, or holdings.
 - Every statement about what a statutory provision requires, or whether an offence
   is bailable/non-bailable or cognizable/non-cognizable, must be supported by a
-  supplied [SOURCE-i] or stated in the case record. If no supplied material
-  establishes it, say so instead of relying on memory.
-- If a supplied source states a classification or rule, follow that source exactly;
+  cited [SOURCE-i] or stated in the case record. If the available authorities do not
+  establish it, say so professionally instead of relying on memory.
+- If an authority states a classification or rule, follow that authority exactly;
   never override it with general knowledge.
 - Do not state what a statutory section says, what its legal test is, or how a
-  procedure works unless that description appears in the supplied sources or case
+  procedure works unless that description appears in the cited authorities or case
   record. Never fill a gap with a general explanation of bail or criminal procedure.
 - A numbered list of steps, requirements or documents may only repeat the items the
-  cited passage itself lists. If a passage names an Act, section or right without
+  cited excerpt itself lists. If an excerpt names an Act, section or right without
   enumerating steps, state exactly that and stop; do not expand the citation into a
   filing procedure from general knowledge.
-- If the supplied sources do not identify the offence section or its bail status,
+- If the available authorities do not identify the offence section or its bail status,
   say that plainly. Do not offer possible section numbers as examples or guesses
   (not even in phrases like "e.g., section ...").
 - When the question has several parts, treat each part separately. A gap in one part
-  never excuses the others: answer every part that the supplied sources support, and
+  never excuses the others: answer every part the authorities support, and
   state the limitation only for the unsupported part.
-- If the supplied sources do not establish one requested rule, do not fill that gap and
-  do not give practical next steps for it. For that part, return only: (1) one short
-  statement that the supplied material does not establish it, and (2) the specific
-  document or material that would be needed. Do not include examples, general law, or
-  advice to look up particular section numbers.
+- If the available authorities do not establish one requested rule, do not fill that gap
+  and do not give practical next steps for it. For that part, return only: (1) one short
+  professional statement that the point is not established by the authorities available
+  in this session, and (2) the specific document or material that would be needed.
+  Do not include examples, general law, or advice to look up particular section numbers.
 - Never add a "practical next steps" section that supplies unsourced legal procedure.
 - Do not introduce any statutory section number that is not present in the case
-  record or supplied sources, even as an example. Do not describe a section by
+  record or cited authorities, even as an example. Do not describe a section by
   relying on memory.
 - This assistant covers Pakistani law. Do not import Indian CrPC 1973 numbering or
   treat non-Pakistani authorities as binding.
-- If a retrieved authority is from another jurisdiction, label it as non-Pakistani
+- If an authority is from another jurisdiction, label it as non-Pakistani
   and do not present it as binding Pakistani law.
 - Distinguish FIR allegations from facts established by a court.
 - Apply the law to the known facts and explicitly state missing facts or limitations.
-- If retrieved material does not address part of the question, say so for that part
-  only and continue answering the parts it does address.
+- If the available authorities do not address part of the question, say so for that part
+  only and continue answering the parts they do address.
 - Use clear, structured, professional English with short headings and bullet lists
   or compact tables. Be concise and do not repeat the case context.
 
-Suggested structure when the sources answer the question: direct answer, case facts
-used, law supported by supplied sources, limitations. Give one heading per requested
-part. When the sources do not answer a part, use a short source-limitation statement for
+Suggested structure when the authorities answer the question: direct answer, case facts
+used, law supported by cited authorities, limitations. Give one heading per requested
+part. When a part is not covered, use a short, professional limitation statement for
 that part only. Omit any section or citation that would require unsourced legal rules or
-procedure, but still answer the parts the sources do support.
+procedure, but still answer the parts the authorities do support.
 """
 
 
@@ -1374,6 +1628,12 @@ def _build_messages(
         max_turns=MAX_HISTORY_TURNS,
         max_message_chars=MAX_HISTORY_MESSAGE_CHARS,
     )
+    early_memory_text = build_early_memory(
+        history,
+        max_tokens=int(EARLY_MEMORY_TOKEN_BUDGET * factor),
+        skip_recent=MAX_HISTORY_TURNS * 2,
+        max_message_chars=MAX_EARLY_MEMORY_CHARS,
+    )
     question_text = truncate_chars(question, MAX_QUESTION_CHARS)
     case_text = truncate_to_tokens(
         document_context or "No case documents have been uploaded in this session.",
@@ -1391,26 +1651,37 @@ def _build_messages(
     def assemble() -> List[Any]:
         note_block = f"\n\n{note_text}" if note_text else ""
         parts_block = f"\n\n{parts_text}\n" if parts_text else ""
+        memory_block = (
+            f"\n\nEARLIER CONVERSATION MEMORY (older user statements; background only, "
+            f"not a legal source, may be trimmed):\n{early_memory_text}"
+            if early_memory_text
+            else ""
+        )
         user_prompt = f"""LATEST USER QUESTION:
 {question_text}
 
 COMPACT CASE CONTEXT (full documents are stored separately; excerpts only):
-{case_text}
+{case_text}{memory_block}
 
-RETRIEVED LEGAL SOURCES:
+LEGAL AUTHORITIES:
 {sources_text}{note_block}{parts_block}
 INSTRUCTIONS:
-- Answer the specific question using the case facts above.
+- Answer the specific question using the case facts above, as a professional legal
+  assistant. Never mention retrieval, indexes, or system mechanics.
 - If a PARTS REQUESTED list is given, answer each listed part that has supporting
-  sources, under its own heading, and flag only the parts whose evidence is missing.
-- Cite retrieved authorities with their exact [SOURCE-i] labels only where they support a claim.
-- Use [STATUTE] passages for the wording of the law and [CASE LAW] passages for how the
+  authorities, under its own heading, and flag only the parts whose evidence is missing.
+- Cite authorities with their exact [SOURCE-i] labels only where they support a claim.
+- Use [STATUTE] excerpts for the wording of the law and [CASE LAW] excerpts for how the
   courts applied it; keep the two kinds of authority separate and never quote one as the other.
 - Treat USER-CORRECTED VALUES as authoritative over any conflicting summary or excerpt.
 - Refer to uploaded documents as DOC-n; never label a case excerpt as SOURCE-i.
-- If the RETRIEVER LIMITATIONS block says a group of sources was unavailable, say so.
-- Do not repeat the case context verbatim. If the sources do not answer a part of the
-  question, say so for that part only; do not suggest legal steps or section numbers.
+- Sources citing pakistancode.gov.pk are live online copies of federal laws; treat
+  them as statutory text and mention the Pakistan Code website when you rely on them.
+- If a SOURCE AVAILABILITY NOTE is present, reflect its substance briefly and
+  professionally; do not quote it or describe technical details.
+- Do not repeat the case context verbatim. If the authorities do not answer a part of the
+  question, say so professionally for that part only; do not suggest legal steps or
+  section numbers.
 """
         return [SystemMessage(content=SYSTEM_PROMPT), *history_messages, HumanMessage(content=user_prompt)]
 
@@ -1419,7 +1690,7 @@ INSTRUCTIONS:
         total = count_message_tokens(messages)
         if total <= input_budget:
             break
-        # Drop the least critical content first: sources, then case facts, then old turns.
+        # Drop the least critical content first: sources, case facts, early memory, then old turns.
         if count_tokens(sources_text) > 120:
             sources_text = truncate_to_tokens(
                 sources_text,
@@ -1430,6 +1701,12 @@ INSTRUCTIONS:
             case_text = truncate_to_tokens(
                 case_text,
                 max(110, int(count_tokens(case_text) * 0.7)),
+                suffix=" …",
+            )
+        elif count_tokens(early_memory_text) > 60:
+            early_memory_text = truncate_to_tokens(
+                early_memory_text,
+                max(50, int(count_tokens(early_memory_text) * 0.7)),
                 suffix=" …",
             )
         elif history_messages:
@@ -1449,6 +1726,7 @@ INSTRUCTIONS:
         "input_estimated": count_message_tokens(messages),
         "system_tokens": count_tokens(SYSTEM_PROMPT),
         "history_tokens": count_message_tokens(history_messages),
+        "early_memory_tokens": count_tokens(early_memory_text),
         "case_context_tokens": count_tokens(case_text),
         "retrieval_tokens": count_tokens(sources_text),
         "output_limit": MAX_OUTPUT_TOKENS,
@@ -1607,7 +1885,9 @@ def ask_legal_agent(
         retried_parts: List[str] = []
         parts_checklist = ""
 
-        if _is_multi_part(search_query) or _is_multi_part(question):
+        if (
+            _is_multi_part(search_query) or _is_multi_part(question)
+        ) and not _is_citation_lookup(search_query) and not _is_citation_lookup(question):
             facets, decompose_method = decompose_question(
                 question, search_query, history, resolve_context, provider=provider
             )
@@ -1621,6 +1901,47 @@ def ask_legal_agent(
         else:
             retrieval = retrieve_dual_documents(search_query)
             evidence = select_evidence(retrieval["law"], retrieval["cases"])
+
+        # Web fallback: only when the local indexes leave the question (or a part
+        # of it) without authority. Web passages join the same evidence list, so
+        # labeling, dedupe and the token budget apply unchanged.
+        law_scores = [h["score"] for h in retrieval["law"] if h.get("score") is not None]
+        weak_local = (
+            not evidence
+            or (coverage and any(not item["supported"] for item in coverage))
+            or (
+                not facets
+                and (
+                    not law_scores
+                    or min(law_scores) > WEB_TRIGGER_DISTANCE
+                    or not _local_statutes_on_topic(search_query, retrieval["law"])
+                )
+            )
+        )
+        if not weak_local and _repeated_question(session, search_query):
+            # The user came back to a question already answered from these
+            # authorities: treat it as unsatisfactory and widen the net.
+            weak_local = True
+        if pakistancode_web.WEB_FALLBACK_ENABLED and weak_local:
+            web_queries = [search_query] + [
+                facets[i]["query"]
+                for i, item in enumerate(coverage)
+                if not item["supported"]
+            ]
+            web_hits = pakistancode_web.search_web_laws(web_queries)
+            if web_hits:
+                evidence = select_evidence(
+                    web_hits + retrieval["law"],
+                    retrieval["cases"],
+                    max_law=MAX_EVIDENCE_LAW_MULTI if facets else None,
+                    max_cases=MAX_EVIDENCE_CASES_MULTI if facets else None,
+                )
+                if facets:
+                    subject_terms = _subject_terms(
+                        search_query, *(facet["query"] for facet in facets)
+                    )
+                    coverage = _facet_coverage(facets, evidence, subject_terms)
+                    parts_checklist = build_parts_checklist(facets, coverage)
 
         retrieved_context = format_evidence(evidence)
         retriever_status = retrieval["status"]
@@ -1658,6 +1979,9 @@ def ask_legal_agent(
             {
                 "document_count": len(session.documents),
                 "retrieved_count": len(evidence),
+                "web_passages": sum(
+                    1 for item in evidence if (item["doc"].metadata or {}).get("_web_source")
+                ),
                 "retrieved_law_count": law_count,
                 "retrieved_case_count": case_count,
                 "law_candidates": len(retrieval["law"]),

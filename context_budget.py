@@ -57,6 +57,8 @@ MAX_PASSAGE_CHARS = _env_int("MAX_CHARS_PER_PASSAGE", 1200, 200)
 MAX_TOTAL_RETRIEVAL_CHARS = _env_int("MAX_TOTAL_RETRIEVAL_CHARS", 6000, 500)
 MAX_HISTORY_TURNS = _env_int("MAX_HISTORY_TURNS", 3, 1)
 MAX_HISTORY_MESSAGE_CHARS = _env_int("MAX_HISTORY_MESSAGE_CHARS", 600, 100)
+EARLY_MEMORY_TOKEN_BUDGET = _env_int("EARLY_MEMORY_TOKEN_BUDGET", 300, 0)
+MAX_EARLY_MEMORY_CHARS = _env_int("MAX_EARLY_MEMORY_CHARS", 220, 60)
 MAX_QUESTION_CHARS = _env_int("MAX_QUESTION_CHARS", 1800, 200)
 MAX_GENERATION_ANSWER_CHARS = _env_int("MAX_GENERATION_ANSWER_CHARS", 500, 60)
 
@@ -187,6 +189,43 @@ def build_bounded_history(
 
     chosen.reverse()
     return chosen
+
+
+def build_early_memory(
+    history: Sequence[BaseMessage],
+    max_tokens: int = EARLY_MEMORY_TOKEN_BUDGET,
+    skip_recent: int = MAX_HISTORY_TURNS * 2,
+    max_message_chars: int = MAX_EARLY_MEMORY_CHARS,
+) -> str:
+    """Recap older USER statements that fall outside the recent history window.
+
+    build_bounded_history already sends the newest few turns verbatim; this keeps
+    facts the user stated earlier in a long chat (turn 1 when now on turn 20)
+    without sending the whole transcript. Oldest first, bounded by token budget.
+    The full history is never modified.
+    """
+    if max_tokens <= 0:
+        return ""
+    messages = list(history)
+    if skip_recent > 0 and len(messages) > skip_recent:
+        older = messages[:-skip_recent]
+    else:
+        older = []
+    lines: List[str] = []
+    remaining = max_tokens
+    for message in older:
+        if not isinstance(message, HumanMessage):
+            continue
+        content = " ".join(str(message.content or "").split())
+        if not content:
+            continue
+        line = "- " + truncate_chars(content, max_message_chars)
+        line_tokens = count_tokens(line) + 1
+        if line_tokens > remaining:
+            break
+        lines.append(line)
+        remaining -= line_tokens
+    return "\n".join(lines)
 
 
 def history_as_text(

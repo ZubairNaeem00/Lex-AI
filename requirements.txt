@@ -26,9 +26,16 @@ ollama>=0.6.0
 faiss-cpu>=1.8.0
 sentence-transformers>=2.6.0
 torch>=2.2.0
+bm25s>=0.3.0
 
 # Token budgeting (falls back to character estimates if unavailable)
 tiktoken>=0.7.0
+
+# Pakistan Code web fallback (pakistancode.gov.pk)
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+pymupdf>=1.24.0
 
 # Document extraction (LlamaParse only) and DOCX rendering
 llama-cloud>=2.0.0

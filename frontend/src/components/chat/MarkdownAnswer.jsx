@@ -15,6 +15,7 @@ function stripSourceMarkers(text) {
     .replace(/\[\s*\*{0,2}(?:SOURCE|PRECEDENT)[ \t\u2011\u2013-]+\d+[^\]]*\]/g, '')
     .replace(/\[?\s*\*{0,2}(?:SOURCE|PRECEDENT)[ \t\u2011\u2013-]+\d+\*{0,2}\s*\]?/g, '')
     .replace(/\[\s*(?:[,;]\s*)*\]/g, '')
+    .replace(/[([{]\s*(?:(?:and|or|then|,|;|:|—|–|-)\s*)*[)\]}]/gi, '')
     .replace(/\*\*\s*\*\*/g, '')
     .replace(/[ \t]{2,}/g, ' ')
     .replace(/[ \t]+([.,;:!?)])/g, '$1')
