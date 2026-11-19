@@ -1,0 +1,130 @@
+
+########## DENSE (FAISS only)  |  faiss_index_law (Qwen3)  ##########
+=== Setup ===
+Vectors 63355  dim 1024  metric L2 (cos = 1 - d/2)
+Statute sections 31007  | gold rows 472  FETCH_K/TOP_K 100/10
+Gold sections 186  in index 177 (95.2%)
+
+=== Retrieval: all answerable ===
+
+All answerable  (n=372)
+  Recall@1   0.349   95% CI [0.301, 0.398]
+  Recall@5   0.567   95% CI [0.522, 0.616]
+  Recall@10  0.661   95% CI [0.610, 0.707]
+  MRR@10     0.440   95% CI [0.398, 0.483]
+  nDCG@10    0.493   95% CI [0.451, 0.536]
+
+=== Retrieval: ceiling (gold section in index) ===
+
+Gold in index  (n=354)
+  Recall@1   0.367   95% CI [0.316, 0.418]
+  Recall@5   0.596   95% CI [0.548, 0.644]
+  Recall@10  0.695   95% CI [0.647, 0.740]
+  MRR@10     0.462   95% CI [0.417, 0.508]
+  nDCG@10    0.518   95% CI [0.474, 0.559]
+
+=== By query type (gold in index) ===
+
+direct  (n=177)
+  Recall@1   0.390   95% CI [0.322, 0.458]
+  Recall@5   0.616   95% CI [0.542, 0.689]
+  Recall@10  0.695   95% CI [0.633, 0.763]
+  MRR@10     0.482   95% CI [0.416, 0.545]
+  nDCG@10    0.533   95% CI [0.472, 0.596]
+
+paraphrase  (n=177)
+  Recall@1   0.345   95% CI [0.271, 0.412]
+  Recall@5   0.576   95% CI [0.508, 0.650]
+  Recall@10  0.695   95% CI [0.627, 0.757]
+  MRR@10     0.443   95% CI [0.381, 0.509]
+  nDCG@10    0.502   95% CI [0.445, 0.563]
+
+=== Unanswerable gate ===
+AUC 0.884  (0.5 chance, 1.0 perfect)
+dev-chosen thr 0.67 -> test TPR 0.776 (n=196)  TNR 0.820 (n=50)  balanced 0.798
+top-score p10/50/90 answerable   [0.642 0.708 0.783]
+top-score p10/50/90 unanswerable [0.53  0.625 0.683]
+
+########## HYBRID (FAISS + BM25, app RRF)  |  faiss_index_law (Qwen3)  ##########
+=== Setup ===
+Vectors 63355  dim 1024  metric L2 (cos = 1 - d/2)
+Statute sections 31007  | gold rows 472  FETCH_K/TOP_K 100/10
+Gold sections 186  in index 177 (95.2%)
+
+=== Retrieval: all answerable ===
+
+All answerable  (n=372)
+  Recall@1   0.272   95% CI [0.226, 0.317]
+  Recall@5   0.516   95% CI [0.465, 0.567]
+  Recall@10  0.640   95% CI [0.589, 0.688]
+  MRR@10     0.380   95% CI [0.340, 0.422]
+  nDCG@10    0.442   95% CI [0.404, 0.483]
+
+=== Retrieval: ceiling (gold section in index) ===
+
+Gold in index  (n=354)
+  Recall@1   0.285   95% CI [0.240, 0.333]
+  Recall@5   0.542   95% CI [0.492, 0.593]
+  Recall@10  0.672   95% CI [0.621, 0.723]
+  MRR@10     0.399   95% CI [0.355, 0.443]
+  nDCG@10    0.464   95% CI [0.422, 0.506]
+
+=== By query type (gold in index) ===
+
+direct  (n=177)
+  Recall@1   0.322   95% CI [0.254, 0.390]
+  Recall@5   0.593   95% CI [0.514, 0.667]
+  Recall@10  0.701   95% CI [0.633, 0.763]
+  MRR@10     0.440   95% CI [0.380, 0.505]
+  nDCG@10    0.502   95% CI [0.444, 0.560]
+
+paraphrase  (n=177)
+  Recall@1   0.249   95% CI [0.186, 0.311]
+  Recall@5   0.492   95% CI [0.418, 0.565]
+  Recall@10  0.644   95% CI [0.576, 0.712]
+  MRR@10     0.359   95% CI [0.303, 0.418]
+  nDCG@10    0.426   95% CI [0.373, 0.481]
+
+=== Unanswerable gate ===
+AUC 0.877  (0.5 chance, 1.0 perfect)
+dev-chosen thr 0.64 -> test TPR 0.750 (n=196)  TNR 0.800 (n=50)  balanced 0.775
+top-score p10/50/90 answerable   [0.601 0.686 0.773]
+top-score p10/50/90 unanswerable [0.5   0.586 0.655]
+
+########## SIDE-BY-SIDE  (law Qwen index, same gold) ##########
+metric                      dense     hybrid
+Recall@1                    0.367      0.285
+Recall@5                    0.596      0.542
+Recall@10                   0.695      0.672
+MRR@10                      0.462      0.399
+nDCG@10                     0.518      0.464
+gate AUC                    0.884      0.877
+gate TPR (test)             0.776      0.750
+gate TNR (test)             0.820      0.800
+
+Recall@10 by type (ceiling):
+type                dense     hybrid
+direct              0.695      0.701
+paraphrase          0.695      0.644
+
+=== Unanswerable review list (hybrid top-score >= answerable p10) ===
+42 of 100 unanswerable queries score at/above answerable p10 (0.601); top 15:
+  0.732  How does the State Bank of Pakistan address issues related to digital payment systems?
+  0.712  How can I obtain a copy of the procedural rules for the Sindh High Court?
+  0.699  Are there any exemptions available for withholding tax on payments to foreign contractors in Pakistan?
+  0.688  How can I find the latest stamp duty rates for various document types in Pakistan?
+  0.687  Are there any special tariffs for bulk freight shipments in Pakistan Railways?
+  0.682  Are there additional fees for filing urgent applications in court?
+  0.678  How does the PTA handle disputes related to telecom licence fees or spectrum auction results?
+  0.676  Are there any recent changes to the freight tariff for bulk cargo in Pakistan Railways?
+  0.660  How does the municipal authority in Islamabad handle illegal encroachments?
+  0.658  Can I get a refund on court fees if my case is dismissed?
+  0.655  How can I find the latest court fee schedule for small claims in Peshawar?
+  0.652  How do I request a change of venue in a case before the Lahore High Court?
+  0.648  Are there any specific practice directions for family law cases in the Sindh High Court?
+  0.644  Can I appeal a fare revision decision made by Pakistan Railways?
+  0.644  Are there any recent amendments to the election procedures for political parties in Pakistan?
+
+Note: dense = FAISS only; hybrid = app hybrid_retrieval (BM25 + dense, weighted RRF, same weights
+as production). Gold matched by (pakistan_code_id, section_no) -> case_id; 9 gold sections are not
+in the index (coverage gap), so ceiling metrics exclude them. Scores are cosine = 1 - L2/2.

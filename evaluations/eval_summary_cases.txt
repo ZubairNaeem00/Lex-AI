@@ -1,0 +1,51 @@
+=== Setup ===
+Index folder     : ../faiss_index_cases
+Vectors          : 209168   dim 768   metric L2
+Vector 0 norm    : 1.0000  (should be about 1.0)
+Distinct cases   : 15627
+Model            : BAAI/bge-base-en-v1.5  device cpu
+FETCH_K / TOP_K  : 200 / 10
+Golden file      : golden_queries.jsonl  sha256 b7392a91b65b2e95...  rows 439
+Gold cases       : 200   found in index: 54 (27.0%)
+WARNING: many gold citations are missing from the index. Check citation format before trusting the scores.
+
+=== Retrieval: all answerable queries ===
+
+All answerable  (n=400)
+  Recall@1   0.018   95% CI [0.005, 0.033]
+  Recall@5   0.030   95% CI [0.015, 0.048]
+  Recall@10  0.045   95% CI [0.028, 0.068]
+  MRR@10     0.025   95% CI [0.012, 0.039]
+  nDCG@10    0.029   95% CI [0.015, 0.044]
+
+=== Retrieval: ceiling (gold case is in the index) ===
+
+Answerable, gold in index  (n=108)
+  Recall@1   0.065   95% CI [0.028, 0.111]
+  Recall@5   0.111   95% CI [0.056, 0.176]
+  Recall@10  0.167   95% CI [0.102, 0.241]
+  MRR@10     0.091   95% CI [0.047, 0.143]
+  nDCG@10    0.108   95% CI [0.061, 0.163]
+
+=== By query type (gold in index) ===
+
+paraphrase  (n=54)
+  Recall@1   0.056   95% CI [0.000, 0.130]
+  Recall@5   0.111   95% CI [0.037, 0.204]
+  Recall@10  0.167   95% CI [0.074, 0.259]
+  MRR@10     0.086   95% CI [0.030, 0.156]
+  nDCG@10    0.105   95% CI [0.043, 0.184]
+
+direct  (n=54)
+  Recall@1   0.074   95% CI [0.019, 0.148]
+  Recall@5   0.111   95% CI [0.037, 0.204]
+  Recall@10  0.167   95% CI [0.074, 0.259]
+  MRR@10     0.096   95% CI [0.030, 0.175]
+  nDCG@10    0.112   95% CI [0.041, 0.190]
+
+=== Unanswerable gate ===
+Score separation, all queries: AUC = 0.825  (0.5 = no separation, 1.0 = perfect)
+Threshold chosen on dev half: 0.72
+Test half: answered 0.540 of answerable (n=200), refused 0.950 of unanswerable (n=20), balanced 0.745
+Top-score percentiles (10/50/90)  answerable:   [0.676 0.72  0.769]
+Top-score percentiles (10/50/90)  unanswerable: [0.648 0.675 0.713]

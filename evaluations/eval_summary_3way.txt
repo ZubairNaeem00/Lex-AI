@@ -1,0 +1,153 @@
+Loading bge store (faiss_index_cases) ...
+store ready: 209168 vectors, 15627 cases, cit_map 15627 citation keys
+  100/480 queries  (137s)
+  200/480 queries  (223s)
+  300/480 queries  (338s)
+  400/480 queries  (416s)
+search done in 474s
+
+########## DENSE  (ceiling n=450, coverage 100%) ##########
+
+All answerable  (n=450)
+  Recall@1   0.164   95% CI [0.131, 0.198]
+  Recall@5   0.213   95% CI [0.176, 0.251]
+  Recall@10  0.238   95% CI [0.198, 0.280]
+  MRR@10     0.185   95% CI [0.152, 0.218]
+  nDCG@10    0.197   95% CI [0.163, 0.232]
+
+case_name  (n=150)
+  Recall@1   0.067   95% CI [0.033, 0.107]
+  Recall@5   0.100   95% CI [0.060, 0.153]
+  Recall@10  0.113   95% CI [0.067, 0.167]
+  MRR@10     0.077   95% CI [0.039, 0.121]
+  nDCG@10    0.086   95% CI [0.045, 0.128]
+
+citation  (n=150)
+  Recall@1   0.013   95% CI [0.000, 0.033]
+  Recall@5   0.020   95% CI [0.000, 0.047]
+  Recall@10  0.040   95% CI [0.013, 0.073]
+  MRR@10     0.018   95% CI [0.002, 0.039]
+  nDCG@10    0.023   95% CI [0.007, 0.046]
+
+issue  (n=150)
+  Recall@1   0.413   95% CI [0.340, 0.487]
+  Recall@5   0.520   95% CI [0.440, 0.600]
+  Recall@10  0.560   95% CI [0.480, 0.647]
+  MRR@10     0.460   95% CI [0.388, 0.536]
+  nDCG@10    0.484   95% CI [0.408, 0.560]
+
+gate AUC 0.846
+
+########## HYBRID  (ceiling n=450, coverage 100%) ##########
+
+All answerable  (n=450)
+  Recall@1   0.182   95% CI [0.147, 0.218]
+  Recall@5   0.238   95% CI [0.200, 0.276]
+  Recall@10  0.262   95% CI [0.222, 0.304]
+  MRR@10     0.210   95% CI [0.176, 0.246]
+  nDCG@10    0.222   95% CI [0.188, 0.257]
+
+case_name  (n=150)
+  Recall@1   0.087   95% CI [0.047, 0.133]
+  Recall@5   0.113   95% CI [0.067, 0.167]
+  Recall@10  0.127   95% CI [0.073, 0.180]
+  MRR@10     0.101   95% CI [0.057, 0.153]
+  nDCG@10    0.107   95% CI [0.063, 0.156]
+
+citation  (n=150)
+  Recall@1   0.020   95% CI [0.000, 0.047]
+  Recall@5   0.027   95% CI [0.007, 0.053]
+  Recall@10  0.040   95% CI [0.013, 0.073]
+  MRR@10     0.025   95% CI [0.004, 0.050]
+  nDCG@10    0.028   95% CI [0.007, 0.054]
+
+issue  (n=150)
+  Recall@1   0.440   95% CI [0.360, 0.513]
+  Recall@5   0.573   95% CI [0.487, 0.653]
+  Recall@10  0.620   95% CI [0.547, 0.693]
+  MRR@10     0.503   95% CI [0.426, 0.578]
+  nDCG@10    0.532   95% CI [0.457, 0.604]
+
+gate AUC 0.852
+
+########## CITATION  (ceiling n=450, coverage 100%) ##########
+
+All answerable  (n=450)
+  Recall@1   0.509   95% CI [0.464, 0.556]
+  Recall@5   0.562   95% CI [0.516, 0.609]
+  Recall@10  0.582   95% CI [0.536, 0.631]
+  MRR@10     0.535   95% CI [0.490, 0.579]
+  nDCG@10    0.546   95% CI [0.499, 0.589]
+
+case_name  (n=150)
+  Recall@1   0.087   95% CI [0.047, 0.133]
+  Recall@5   0.113   95% CI [0.067, 0.167]
+  Recall@10  0.127   95% CI [0.073, 0.180]
+  MRR@10     0.101   95% CI [0.058, 0.148]
+  nDCG@10    0.107   95% CI [0.063, 0.156]
+
+citation  (n=150)
+  Recall@1   1.000   95% CI [1.000, 1.000]
+  Recall@5   1.000   95% CI [1.000, 1.000]
+  Recall@10  1.000   95% CI [1.000, 1.000]
+  MRR@10     1.000   95% CI [1.000, 1.000]
+  nDCG@10    1.000   95% CI [1.000, 1.000]
+
+issue  (n=150)
+  Recall@1   0.440   95% CI [0.360, 0.520]
+  Recall@5   0.573   95% CI [0.500, 0.647]
+  Recall@10  0.620   95% CI [0.540, 0.693]
+  MRR@10     0.503   95% CI [0.430, 0.579]
+  nDCG@10    0.532   95% CI [0.463, 0.604]
+
+gate AUC 0.678
+
+########## 3-WAY COMPARISON  (bge faiss_index_cases, grounded gold) ##########
+metric                     dense    hybrid  hybrid+cit
+Recall@1                   0.164     0.182       0.509
+Recall@5                   0.213     0.238       0.562
+Recall@10                  0.238     0.262       0.582
+MRR@10                     0.185     0.210       0.535
+nDCG@10                    0.197     0.222       0.546
+gate AUC                   0.846     0.852       0.678
+
+Recall@10 by query type:
+type               dense    hybrid  hybrid+cit
+citation           0.040     0.040       1.000
+case_name          0.113     0.127       0.127
+issue              0.560     0.620       0.620
+
+Recall@1 by query type:
+type               dense    hybrid  hybrid+cit
+citation           0.013     0.020       1.000
+case_name          0.067     0.087       0.087
+issue              0.413     0.440       0.440
+
+Stages: dense=FAISS only | hybrid=app BM25+dense RRF | hybrid+cit=hybrid+exact citation anchor
+Citation anchor fires only on the 150 citation-type queries; others unchanged from hybrid.
+
+Saved: eval_results_dense.json, eval_results_hybrid.json, eval_results_citation.json, eval_summary_3way.txt
+
+########## 3-WAY COMPARISON  (bge faiss_index_cases, grounded gold) ##########
+metric                     dense    hybrid  hybrid+cit
+Recall@1                   0.164     0.182       0.509
+Recall@5                   0.213     0.238       0.562
+Recall@10                  0.238     0.262       0.582
+MRR@10                     0.185     0.210       0.535
+nDCG@10                    0.197     0.222       0.546
+gate AUC                   0.846     0.852       0.678
+
+Recall@10 by query type:
+type               dense    hybrid  hybrid+cit
+citation           0.040     0.040       1.000
+case_name          0.113     0.127       0.127
+issue              0.560     0.620       0.620
+
+Recall@1 by query type:
+type               dense    hybrid  hybrid+cit
+citation           0.013     0.020       1.000
+case_name          0.067     0.087       0.087
+issue              0.413     0.440       0.440
+
+Stages: dense=FAISS only | hybrid=app BM25+dense RRF | hybrid+cit=hybrid+exact citation anchor
+Citation anchor fires only on the 150 citation-type queries; others unchanged from hybrid.

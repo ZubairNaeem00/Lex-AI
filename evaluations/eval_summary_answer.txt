@@ -1,0 +1,109 @@
+########## END-TO-END RAG ANSWER QUALITY (Groq, cases channel) ##########
+sample n=75  answered=13  refused=38  errors=24
+judge=openai/gpt-oss-120b  provider=groq  web_fallback=off  law_index=error
+
+=== Faithfulness / groundedness (LLM judge vs exact retrieved context) ===
+  mean 0.979  95% CI [0.956, 0.996]  (n=51)
+  fully grounded (==1.0): 47/51
+  mean unsupported claims per answer: 0.10
+  citation     mean 0.990 (n=20)
+  case_name    mean 0.987 (n=19)
+  issue        mean 0.945 (n=11)
+  unanswerable mean 1.000 (n=1)
+
+=== Answer relevance (offline bge cosine answer vs query) ===
+  citation     mean 0.769 (n=1)
+  case_name    mean 0.739 (n=4)
+  issue        mean 0.859 (n=8)
+  overall      mean 0.815 (n=13)
+
+=== Citation correctness ===
+  source citations valid in corpus: 1.000 (n=51)
+  answers with dangling [SOURCE-n] markers: 0/1
+  gold case in retrieved sources (context recall): 0.160 (n=50)
+  gold case actually cited in answer: 0.020 (n=50)
+    citation     gold-in-sources 0.050 (n=20)
+    case_name    gold-in-sources 0.105 (n=19)
+    issue        gold-in-sources 0.455 (n=11)
+
+=== Refusal accuracy (judge-classified) ===
+  unanswerable refused (TNR): 1.000 (n=1)
+  answerable answered (TPR):  0.260 (n=50)
+  balanced: 0.630
+
+=== Latency ===  mean generation 22.27s  (n=75)
+
+=== Worked examples ===
+
+[issue] what is the ruling on west pakistan industrial and commercial employment (standing orders) ordinance 1968 -- s. o. 15(3)(b)--dismissal for misconduct of theft and dishonesty in connection with property of employer-charged only for not exercising due care which allowing a truck to pass from main gate of the mills allegedly carrying stolen property-not to exercise due care, held, quite different from theft , fraud or dishonesty - dismissal for misconduct of theft etc. in circumstances, held, bad in law.
+
+full judgment:
+1982 p cr. l j 218
+
+ 
+
+[karachi]
+
+ 
+
+before z. c. valliani, j
+
+ 
+
+khushi muhammad and 4 others‑applicants
+
+ 
+
+versus
+
+ 
+
+abdul haf1rez and another‑‑respondents
+
+ 
+
+criminal miscellaneous application no. 1155 of 1980, decided on 2nd november, 1981.
+
+ 
+
+criminal procedure code (v of 1898)‑‑
+  status=refused faithfulness=1.0 relevance=None
+  sources: SOURCE-1 [CASE LAW]: MUSLIM COMMERCIAL BANK LTD. VS FATEH MUHAMMAD SHAH | Citation: Citation Name:2007  PLC  75   KARACHI-HIGH-COURT-SINDHBookmark this Case; SOURCE-2 [CASE LAW]: GENERAL MANAGER, ADAM SUGAR MILLS LIMITED, CHISHTIAN VS Rana 
+  answer: **Ruling on the application of S.O. 15(3)(b) of the West Pakistan Industrial and Commercial Employment (Standing Orders) Ordinance, 1968**
+
+The authorities available in this session do not contain the statutory wording of S.O. 15(3)(b) nor a reported judgment that directly addresses dismissal for “misconduct of theft and dishonesty” where the alleged misconduct is limited to “failure to exercise due care in allowing 
+  judge: The answer correctly states that none of the provided case excerpts address the specific issue, so it faithfully declines to answer.
+
+[citation] 2020 PLD 719 KARACHI-HIGH-COURT-SINDH
+  status=refused faithfulness=1.0 relevance=None
+  sources: SOURCE-1 [CASE LAW]: MANZAR ABBAS VS DISTRICT POLICE OFFICER, SARGODHA | Citation: Citation Name:2024  PLC(CS)  45   SUPREME-COURTBookmark this Case; SOURCE-2 [CASE LAW]: Syed SAKHAWAT HUSSAIN VS State | Citation: Citation Name:2024  SCMR  
+  answer: **Answer**
+
+The authorities available in this session do not contain the judgment or any substantive discussion of **2020 PLD 719 (Karachi High Court, Sindh)**. Consequently, I am unable to provide a legal analysis or answer any specific question concerning that case based on the material before me.  
+
+*The required source would be the reported judgment itself (2020 PLD 719) or a statutory provision directly relevant
+  judge: The answer correctly notes that the requested judgment is not present in the provided context and therefore declines to answer.
+
+[case_name] ARIF SAEED VS HUMAIRA QAZI
+  status=refused faithfulness=1.0 relevance=None
+  sources: SOURCE-1 [CASE LAW]: MUHAMMAD AMAN ULLAH BABAR  VS HUSSAIN BIBI | Citation: Citation Name:2000  YLR  2829   LAHORE-HIGH-COURT-LAHOREBookmark this Case; SOURCE-2 [CASE LAW]: MUHAMMAD ZAHIR VS SHAH SAEED | Citation: Citation Name:2016  PCrLJ 
+  answer: **Answer**
+
+The authorities provided in this session do not contain any judgment, statutory provision, or other legal material that addresses the dispute between **Arif Saeed and Humaira Qazi**. Consequently, I am unable to offer a legal analysis of that specific case based on the materials before me.  
+
+*The case record for “Arif Saeed vs Humaira Qazi” has not been supplied, and none of the cited judgments or statut
+  judge: The answer correctly states that none of the provided judgments mention Arif Saeed or Humaira Qazi, so it faithfully declines to answer.
+
+[unanswerable] what is the punishment for theft under the Japanese Penal Code
+  status=refused faithfulness=1.0 relevance=None
+  sources: SOURCE-1 [CASE LAW]: MUHAMMAD ILYAS  VS THE STATE | Citation: Citation Name:2001  PCRLJ  1982   PESHAWAR-HIGH-COURTBookmark this Case; SOURCE-2 [CASE LAW]: ABDUL JALIL  VS STATE | Citation: Citation Name:1999  PCRLJ  1811   FEDERAL-SHARIAT-
+  answer: **Punishment for theft under the Japanese Penal Code**
+
+The authorities available in this session do not contain the text of the Japanese Penal Code nor any Pakistani judgment interpreting it. Consequently, the specific punishment prescribed for theft under the Japanese Penal Code cannot be provided based on the material before me.  
+
+*The material needed:* the relevant provision of the Japanese Penal Code (or an aut
+  judge: The answer correctly states that the provided Pakistani judgments do not contain Japanese Penal Code provisions, and thus declines to give a substantive answer.
+
+Limitations: cases channel isolated (law statute index not loaded in eval process; RAM shared with
+running backend); gold is case-centric; web fallback disabled; stratified sample n=75, not full 450;
+faithfulness/refusal via LLM judge (openai/gpt-oss-120b) - a scalable proxy, not human-annotated gold.

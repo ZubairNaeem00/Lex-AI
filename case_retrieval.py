@@ -36,12 +36,14 @@ def _resources() -> Dict[str, Any]:
             return _state
         try:
             import faiss
-            from sentence_transformers import SentenceTransformer
+            from qwen_embeddings import get_qwen_model
 
             info = json.loads((INDEX_DIR / "run_info.json").read_text(encoding="utf-8"))
             index = faiss.read_index(str(INDEX_DIR / "index.faiss"))
-            model = SentenceTransformer(info["model_name"], device="cpu")
-            model.max_seq_length = int(info.get("max_seq_length", 2048))
+            model = get_qwen_model(
+                info["model_name"], device="cpu",
+                max_seq_length=int(info.get("max_seq_length", 2048)),
+            )
         except Exception as exc:
             raise CaseRetrievalError(
                 f"Case index unavailable ({type(exc).__name__}: {exc}). "

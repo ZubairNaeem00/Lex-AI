@@ -35,6 +35,7 @@ from ollama import chat as ollama_chat
 import hybrid_retrieval
 import pakistancode_web
 from case_context import build_case_context, build_precedent_context
+from law_index_store import build_law_store
 from context_budget import (
     CASE_CONTEXT_TOKEN_BUDGET,
     EARLY_MEMORY_TOKEN_BUDGET,
@@ -131,7 +132,7 @@ TOP_K = _env_int("TOP_K", 4)
 # Judgment candidates are over-fetched because identical statutory pages and
 # repeated headnotes are dropped before the passages reach the model.
 TOP_K_CASES = _env_int("TOP_K_CASES", 8)
-TOP_K_LAW = _env_int("TOP_K_LAW", TOP_K)
+TOP_K_LAW = _env_int("TOP_K_LAW", 5)
 MAX_EVIDENCE_CASES = _env_int("MAX_EVIDENCE_CASES", 6)
 MAX_EVIDENCE_LAW = _env_int("MAX_EVIDENCE_LAW", TOP_K_LAW)
 # Statute passages and judgment passages share the same overall retrieval
@@ -230,7 +231,7 @@ def get_store(kind: str) -> Optional[Any]:
         path = available[0]
         try:
             print(f"Loading {kind} FAISS index from '{path}'...", flush=True)
-            store = _load_faiss(path)
+            store = build_law_store(path) if kind == KIND_LAW else _load_faiss(path)
             _stores[kind] = store
             status.update(
                 {"state": "ready", "path": path, "vectors": int(store.index.ntotal), "error": None}

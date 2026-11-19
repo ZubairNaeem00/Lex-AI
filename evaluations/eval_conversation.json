@@ -1,0 +1,96 @@
+[
+  {
+    "query": "what section 379 of pakistan penal code says",
+    "markers": [
+      "379",
+      "theft"
+    ],
+    "pass": false,
+    "answer": "The language model request failed. Check the server terminal, your GROQ_API_KEY, and the configured GROQ_MODEL, then retry.",
+    "sources": [
+      "SOURCE-1 [STATUTE]: Pakistan Penal Code (PPC),1860 (Under Review) | Page 137 | Of 179 pages",
+      "SOURCE-2 [STATUTE]: Conciliation Courts Ordinance, 1961 | Page 11 | Of 11 pages",
+      "SOURCE-3 [STATUTE]: West Pakistan Control of Goondas Ordinance, 1959 | Page 14 | Of 15 pages",
+      "SOURCE-4 [STATUTE]: Code of Criminal Procedure (CrPC), 1898 (Under Review) | Page 295 | Of 307 pages",
+      "SOURCE-5 [CASE LAW]: KHUSHI MUHAMMAD VS STATION HOUSE OFFICER, SHARAQPUR | Citation: Citation Name:1997  PCRLJ  1959   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-6 [CASE LAW]: Mst. Saira Fatima VS State | Citation: Citation Name:2024  PCrLJ  1289   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-7 [CASE LAW]: SARDAR KHAN  VS ABDUL GHANI | Citation: Citation Name:1989  PCRLJ  944   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-8 [CASE LAW]: SYED BAHAWAL SHAH VS CROWN | Citation: Citation Name:1951  PLD  57   BAGHDAD-UL-JADIDBookmark this Case"
+    ]
+  },
+  {
+    "query": "what is theft",
+    "markers": [
+      "378"
+    ],
+    "pass": false,
+    "answer": "The language model request failed. Check the server terminal, your GROQ_API_KEY, and the configured GROQ_MODEL, then retry.",
+    "sources": [
+      "SOURCE-1 [STATUTE]: Pakistan Penal Code (PPC),1860 (Under Review) | Page 139 | Of 179 pages",
+      "SOURCE-2 [STATUTE]: Pakistan Penal Code (PPC),1860 (Under Review) | Page 137 | Of 179 pages",
+      "SOURCE-3 [CASE LAW]: MUHAMMAD ZAMAN VS ADDITIONAL SESSIONS JUDGE | Citation: Citation Name:2023  PCrLJ  834   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-4 [CASE LAW]: KHUSHI MUHAMMAD VS STATION HOUSE OFFICER, SHARAQPUR | Citation: Citation Name:1997  PCRLJ  1959   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-5 [CASE LAW]: MUHAMMAD USMAN VS State | Citation: Citation Name:2010  YLR  3108   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-6 [CASE LAW]: IMAMUDDIN VS State | Citation: Citation Name:2022  YLR  963   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+      "SOURCE-7 [CASE LAW]: IQBAL alias MALANG VS State | Citation: Citation Name:2015  YLR  203   FEDERAL-SHARIAT-COURTBookmark this Case",
+      "SOURCE-8 [CASE LAW]: MUHAMMAD RAMZAN-CONVICT VS THE STATE | Citation: Citation Name:1958  PLD  655   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+    ]
+  },
+  {
+    "query": "what is punishment for theft",
+    "markers": [
+      "three years"
+    ],
+    "pass": false,
+    "answer": "The language model request failed. Check the server terminal, your GROQ_API_KEY, and the configured GROQ_MODEL, then retry.",
+    "sources": [
+      "SOURCE-1 [STATUTE]: Anti-Money Laundering (AML) Act, 2010 | Page 38 | Of 44 pages",
+      "SOURCE-2 [STATUTE]: Pakistan Penal Code (PPC),1860 (Under Review) | Page 137 | Of 179 pages",
+      "SOURCE-3 [STATUTE]: Offences Against Property (Enforcement of Hudood) Ordinance, 1979 | Page 7 | Of 10 pages",
+      "SOURCE-4 [CASE LAW]: MUHAMMAD ILYAS  VS THE STATE | Citation: Citation Name:2001  PCRLJ  1982   PESHAWAR-HIGH-COURTBookmark this Case",
+      "SOURCE-5 [CASE LAW]: KHURSHID ALAM VS THE STATE | Citation: Citation Name:1982  PCRLJ  57   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-6 [CASE LAW]: SALAMULLAH VS THE STATE | Citation: Citation Name:1984  PLD  73   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+      "SOURCE-7 [CASE LAW]: THE OFFICIAL ASSIGNEE OF HIGH COURT OF SIND VS THE CONTROLLER OF ESTATE DUTY, LAHORE | Citation: Citation Name:1988  PTD  425   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+      "SOURCE-8 [CASE LAW]: MUHAMMAD MITHAL VS THE STATE | Citation: Citation Name:1996  PCRLJ  927   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+      "SOURCE-9 [CASE LAW]: IMAMUDDIN VS State | Citation: Citation Name:2022  YLR  963   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+    ]
+  },
+  {
+    "query": "what is section 379 of pakistan penal code",
+    "markers": [
+      "379",
+      "three years"
+    ],
+    "pass": false,
+    "answer": "The language model request failed. Check the server terminal, your GROQ_API_KEY, and the configured GROQ_MODEL, then retry.",
+    "sources": [
+      "SOURCE-1 [STATUTE]: Pakistan Penal Code (PPC),1860 (Under Review) | Page 137 | Of 179 pages",
+      "SOURCE-2 [STATUTE]: Conciliation Courts Ordinance, 1961 | Page 11 | Of 11 pages",
+      "SOURCE-3 [STATUTE]: West Pakistan Control of Goondas Ordinance, 1959 | Page 14 | Of 15 pages",
+      "SOURCE-4 [STATUTE]: Code of Criminal Procedure (CrPC), 1898 (Under Review) | Page 109 | Of 307 pages",
+      "SOURCE-5 [CASE LAW]: KHUSHI MUHAMMAD VS STATION HOUSE OFFICER, SHARAQPUR | Citation: Citation Name:1997  PCRLJ  1959   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-6 [CASE LAW]: Mst. Saira Fatima VS State | Citation: Citation Name:2024  PCrLJ  1289   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-7 [CASE LAW]: SARDAR KHAN  VS ABDUL GHANI | Citation: Citation Name:1989  PCRLJ  944   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+    ]
+  },
+  {
+    "query": "PPC section 379",
+    "markers": [
+      "three years"
+    ],
+    "pass": false,
+    "answer": "The language model request failed. Check the server terminal, your GROQ_API_KEY, and the configured GROQ_MODEL, then retry.",
+    "sources": [
+      "SOURCE-1 [STATUTE]: Pakistan Penal Code (PPC),1860 (Under Review) | Page 137 | Of 179 pages",
+      "SOURCE-2 [STATUTE]: Estacode | Page 980 | Of 1044 pages",
+      "SOURCE-3 [STATUTE]: Pakistan Commissions of Inquiry Act, 2017 | Page 3 | Of 7 pages",
+      "SOURCE-4 [STATUTE]: Companies Ordinance, 1984 (Repealed by Act XIX of 2017) | Page 349 | Of 376 pages",
+      "SOURCE-5 [CASE LAW]: MUHAMMAD SALEEM-UL-HASSAN VS State | Citation: Citation Name:2007  YLR  3185   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-6 [CASE LAW]: MUHAMMAD BASHIR ALIAS FERI  VS STATE | Citation: Citation Name:1991  MLD  1399   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-7 [CASE LAW]: EXIDE PAKISTAN LIMITED VS FEDERATION OF PAKISTAN through Secretary Revenue | Citation: Citation Name:2026  PTD  140   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+      "SOURCE-8 [CASE LAW]: KHUSHI MUHAMMAD VS STATION HOUSE OFFICER, SHARAQPUR | Citation: Citation Name:1997  PCRLJ  1959   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+      "SOURCE-9 [CASE LAW]: MOHABAT VS State | Citation: Citation Name:2019  YLRN  51   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+      "SOURCE-10 [CASE LAW]: JAVAID IQBAL BUTT VS RIFFAT MAHMOOD GHAURI | Citation: Citation Name:2024  MLD  485   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+    ]
+  }
+]

@@ -1,0 +1,145 @@
+
+########## bge-base  |  faiss_index_cases  |  grounded gold ##########
+=== Setup ===
+Vectors 209168  dim 768  metric L2  vec0 norm 1.0000
+Distinct cases 15627  | model BAAI/bge-base-en-v1.5  device cpu
+Gold golden_queries_bge.jsonl  rows 480  FETCH_K/TOP_K 200/10
+Gold cases 150  found 150 (100.0%)
+
+=== Retrieval: all answerable ===
+
+All answerable  (n=450)
+  Recall@1   0.169   95% CI [0.133, 0.202]
+  Recall@5   0.224   95% CI [0.184, 0.264]
+  Recall@10  0.247   95% CI [0.207, 0.289]
+  MRR@10     0.194   95% CI [0.160, 0.228]
+  nDCG@10    0.206   95% CI [0.170, 0.243]
+
+=== Retrieval: ceiling (gold in index) ===
+
+Gold in index  (n=450)
+  Recall@1   0.169   95% CI [0.136, 0.202]
+  Recall@5   0.224   95% CI [0.187, 0.267]
+  Recall@10  0.247   95% CI [0.209, 0.284]
+  MRR@10     0.194   95% CI [0.160, 0.229]
+  nDCG@10    0.206   95% CI [0.173, 0.241]
+
+=== By query type (gold in index) ===
+
+case_name  (n=150)
+  Recall@1   0.067   95% CI [0.033, 0.107]
+  Recall@5   0.093   95% CI [0.053, 0.140]
+  Recall@10  0.120   95% CI [0.073, 0.173]
+  MRR@10     0.082   95% CI [0.045, 0.126]
+  nDCG@10    0.090   95% CI [0.052, 0.133]
+
+citation  (n=150)
+  Recall@1   0.020   95% CI [0.000, 0.047]
+  Recall@5   0.027   95% CI [0.007, 0.053]
+  Recall@10  0.040   95% CI [0.013, 0.073]
+  MRR@10     0.025   95% CI [0.005, 0.052]
+  nDCG@10    0.029   95% CI [0.007, 0.056]
+
+issue  (n=150)
+  Recall@1   0.420   95% CI [0.347, 0.500]
+  Recall@5   0.553   95% CI [0.480, 0.633]
+  Recall@10  0.580   95% CI [0.500, 0.647]
+  MRR@10     0.474   95% CI [0.398, 0.547]
+  nDCG@10    0.500   95% CI [0.426, 0.572]
+
+=== Unanswerable gate ===
+AUC 0.773  (0.5 chance, 1.0 perfect)
+threshold sweep (TPR=answerable accepted, TNR=unanswerable refused):
+  thr 0.60  TPR 0.978  TNR 0.167  balanced 0.572
+  thr 0.65  TPR 0.824  TNR 0.500  balanced 0.662
+  thr 0.70  TPR 0.502  TNR 0.900  balanced 0.701
+  thr 0.72  TPR 0.404  TNR 1.000  balanced 0.702
+  thr 0.75  TPR 0.282  TNR 1.000  balanced 0.641
+  thr 0.80  TPR 0.124  TNR 1.000  balanced 0.562
+dev-chosen thr 0.69 -> test TPR 0.560 (n=225)  TNR 0.800 (n=15)  balanced 0.680
+top-score p10/50/90 answerable   [0.633 0.701 0.816]
+top-score p10/50/90 unanswerable [0.575 0.652 0.692]
+
+=== FETCH_K sweep (ceiling Recall@10) ===
+  FETCH_K  100  Recall@10 0.247  (n=450)
+  FETCH_K  200  Recall@10 0.247  (n=450)
+  FETCH_K  400  Recall@10 0.247  (n=450)
+
+########## Qwen3  |  faiss_case_retrieval  |  original gold ##########
+=== Setup ===
+Vectors 124561  dim 1024  metric L2  vec0 norm 1.0000
+Distinct cases 43960  | model Qwen/Qwen3-Embedding-0.6B  device cpu
+Gold golden_queries.jsonl  rows 439  FETCH_K/TOP_K 200/10
+Gold cases 200  found 200 (100.0%)
+
+=== Retrieval: all answerable ===
+
+All answerable  (n=400)
+  Recall@1   0.170   95% CI [0.135, 0.210]
+  Recall@5   0.307   95% CI [0.263, 0.352]
+  Recall@10  0.383   95% CI [0.338, 0.432]
+  MRR@10     0.229   95% CI [0.195, 0.266]
+  nDCG@10    0.265   95% CI [0.229, 0.302]
+
+=== Retrieval: ceiling (gold in index) ===
+
+Gold in index  (n=400)
+  Recall@1   0.170   95% CI [0.135, 0.207]
+  Recall@5   0.307   95% CI [0.263, 0.352]
+  Recall@10  0.383   95% CI [0.333, 0.430]
+  MRR@10     0.229   95% CI [0.192, 0.266]
+  nDCG@10    0.265   95% CI [0.227, 0.303]
+
+=== By query type (gold in index) ===
+
+direct  (n=200)
+  Recall@1   0.195   95% CI [0.140, 0.255]
+  Recall@5   0.335   95% CI [0.270, 0.405]
+  Recall@10  0.410   95% CI [0.345, 0.480]
+  MRR@10     0.252   95% CI [0.201, 0.306]
+  nDCG@10    0.289   95% CI [0.237, 0.343]
+
+paraphrase  (n=200)
+  Recall@1   0.145   95% CI [0.100, 0.195]
+  Recall@5   0.280   95% CI [0.220, 0.340]
+  Recall@10  0.355   95% CI [0.290, 0.420]
+  MRR@10     0.205   95% CI [0.157, 0.256]
+  nDCG@10    0.240   95% CI [0.193, 0.293]
+
+=== Unanswerable gate ===
+AUC 0.569  (0.5 chance, 1.0 perfect)
+threshold sweep (TPR=answerable accepted, TNR=unanswerable refused):
+  thr 0.60  TPR 0.920  TNR 0.154  balanced 0.537
+  thr 0.65  TPR 0.690  TNR 0.462  balanced 0.576
+  thr 0.70  TPR 0.345  TNR 0.692  balanced 0.519
+  thr 0.72  TPR 0.220  TNR 0.795  balanced 0.507
+  thr 0.75  TPR 0.085  TNR 0.923  balanced 0.504
+  thr 0.80  TPR 0.013  TNR 1.000  balanced 0.506
+dev-chosen thr 0.67 -> test TPR 0.605 (n=200)  TNR 0.550 (n=20)  balanced 0.578
+top-score p10/50/90 answerable   [0.606 0.677 0.745]
+top-score p10/50/90 unanswerable [0.587 0.664 0.733]
+
+=== FETCH_K sweep (ceiling Recall@10) ===
+  FETCH_K  100  Recall@10 0.383  (n=400)
+  FETCH_K  200  Recall@10 0.383  (n=400)
+  FETCH_K  400  Recall@10 0.383  (n=400)
+
+########## SIDE-BY-SIDE (each retriever on its own grounded gold) ##########
+metric                       bge/cases   Qwen/case_retr
+vectors                         209168           124561
+distinct cases                   15627            43960
+gold rows                          480              439
+gold coverage %                  100.0            100.0
+ceiling n                          450              400
+ceiling Recall@1                 0.169             0.17
+ceiling Recall@5                 0.224            0.308
+ceiling Recall@10                0.247            0.382
+ceiling MRR@10                   0.194            0.229
+gate AUC                         0.773            0.569
+gate thr (dev)                    0.69             0.67
+gate TPR (test)                   0.56            0.605
+gate TNR (test)                    0.8             0.55
+
+Note: different corpora + gold sets, so each retriever is measured fairly on its
+own corpus, NOT an identical-query head-to-head. bge corpus has ~30% cross-case
+chunk contamination, which caps its precision.

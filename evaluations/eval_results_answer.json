@@ -1,0 +1,2957 @@
+[
+ {
+  "id": "b0085",
+  "query": "2020 PLD 719 KARACHI-HIGH-COURT-SINDH",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2020pld719karachihighcourtsindh"
+  ],
+  "gen_s": 7.24,
+  "answer": "**Answer**\n\nThe authorities available in this session do not contain the judgment or any substantive discussion of **2020 PLD 719 (Karachi High Court, Sindh)**. Consequently, I am unable to provide a legal analysis or answer any specific question concerning that case based on the material before me.  \n\n*The required source would be the reported judgment itself (2020 PLD 719) or a statutory provision directly relevant to the issue raised.*",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MANZAR ABBAS VS DISTRICT POLICE OFFICER, SARGODHA | Citation: Citation Name:2024  PLC(CS)  45   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: Syed SAKHAWAT HUSSAIN VS State | Citation: Citation Name:2024  SCMR  1103   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ASKARI BANK LIMITED VS TARA CHAND | Citation: Citation Name:2022  MLD  1657   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: SINDH REVENUE BOARD through Secretary Government of Sindh, Karachi  VS QUICK FOOD INDUSTRIES (PVT.) LIMITED | Citation: Citation Name:2023  PTD  1419   SUPREME-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: GUJRANWALA ELECTRIC POWER COMPANY VS AHSAN | Citation: Citation Name:2026  PLC  1   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-6 [CASE LAW]: HAWA BEGUM VS NAIK BAKHT | Citation: Citation Name:2019  PLD  85   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case"
+  ],
+  "scores": [
+   0.5319,
+   0.5485,
+   0.5442,
+   0.5081,
+   0.5085,
+   0.5163
+  ],
+  "search_query": "2020 PLD 719 KARACHI-HIGH-COURT-SINDH",
+  "context_chars": 3849,
+  "source_citations": [
+   "2024plccs45supremecourt",
+   "2024scmr1103supremecourt",
+   "2022mld1657karachihighcourtsindh",
+   "2023ptd1419supremecourt",
+   "2026plc1lahorehighcourtlahore",
+   "2019pld85quettahighcourtbalochistan"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly notes that the requested judgment is not present in the provided context and therefore declines to answer.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0019",
+  "query": "2025 PLC(CS) 287 SUPREME-COURT",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2025plccs287supremecourt"
+  ],
+  "gen_s": 1.48,
+  "answer": "**Response**\n\nNo specific question has been presented for analysis. Please provide the particular legal issue or query you wish to address, and I will respond using the authorities cited above.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: Mst. TAHIRA BEGUM  VS FEDERATION OF PAKISTAN through Secretary Ministry of Religious Affairs and Interfaith Harmony, Government of Pakistan | Citation: Citation Name:2025  SCMR  1887   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: ISHFAQ AHMED VS MUSHTAQ AHMED | Citation: Citation Name:2025  PLD  582   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: RAB NAWAZ VS SHEHZAD HASSAN | Citation: Citation Name:2025  SCMR  1357   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.4891,
+   0.4898,
+   0.5013
+  ],
+  "search_query": "2025 PLC(CS) 287 SUPREME-COURT",
+  "context_chars": 1888,
+  "source_citations": [
+   "2025scmr1887supremecourt",
+   "2025pld582supremecourt",
+   "2025scmr1357supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The reply only states that no question was provided and asks for clarification, which is fully supported by the lack of a query in the prompt.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0211",
+  "query": "2007 MLD 258 LAHORE-HIGH-COURT-LAHORE",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2007mld258lahorehighcourtlahore"
+  ],
+  "gen_s": 28.8,
+  "answer": "**Answer**\n\nThe citation “2007 MLD 258 (Lahore High Court, Lahore)” is not present among the case law excerpts provided in this session. Consequently, the materials before me do not contain the judgment text, the legal issues addressed, or the court’s reasoning for that particular report.  \n\n**Limitation**\n\nTo determine the substantive holdings, the factual background, or the legal principles applied in *2007 MLD 258* (Lahore High Court, Lahore), the full judgment or a reliable report of that case would be required. The authorities currently available do not include this decision, and therefore no analysis can be offered based on the present material.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD MUSHTAQ VS Malik MUMTAZ | Citation: Citation Name:2026  SCMR  54   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD QAISER VS State | Citation: Citation Name:2011  PCrLJ  55   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ALMAS AHMAD FIAZ VS SECRETARY GOVERNMENT OF THE PUNJAB HOUSING AND PHYSICAL PLANNING DEVELOPMENT, LAHORE | Citation: Citation Name:2007  PLC  64   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: Dr. ALTAF AHMAD VS Mst. NEELOFAR NAZNEEN | Citation: Citation Name:2007  MLD  829   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: Mst. KANEEZ FATIMA VS JUDGE FAMILY COURT, RAWALPINDI | Citation: Citation Name:2008  YLR  2267   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-6 [CASE LAW]: SALEEM AHMED JAN VS DEPUTY COMMISSIONER, ISLAMABAD | Citation: Citation Name:2024  CLC  953   ISLAMABADBookmark this Case"
+  ],
+  "scores": [
+   0.5374,
+   0.5178,
+   0.5786,
+   0.5716,
+   0.5827,
+   0.5208
+  ],
+  "search_query": "2007 MLD 258 LAHORE-HIGH-COURT-LAHORE",
+  "context_chars": 3067,
+  "source_citations": [
+   "2026scmr54supremecourt",
+   "2011pcrlj55karachihighcourtsindh",
+   "2007plc64supremecourt",
+   "2007mld829lahorehighcourtlahore",
+   "2008ylr2267lahorehighcourtlahore",
+   "2024clc953islamabad"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the requested citation is absent from the provided context and therefore declines to give a substantive analysis.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0187",
+  "query": "2003 YLR 369 LAHORE-HIGH-COURT-LAHORE",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2003ylr369lahorehighcourtlahore"
+  ],
+  "gen_s": 30.99,
+  "answer": "**Answer**\n\nThe materials provided do not contain any excerpt or judgment bearing the citation 2003 YLR 369 of the Lahore High Court, Lahore. Consequently, the authorities available in this session do not enable a substantive analysis of that decision.  \n\n**Limitation** – To address the query, the full text of the judgment (or a reliable excerpt thereof) would be required. Without it, no factual or legal conclusions can be drawn.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: PARVEEN UMAR VS SARDAR HUSSAIN | Citation: Citation Name:2003  YLR  3097   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: SABA RIAZ VS NAZIM/CHAIRMAN, ARBITRATION COUNCIL, GULBERG, LAHORE | Citation: Citation Name:2003  YLR  3189   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: FARZANA YASMIN VS MUHAMMAD SARFRAZ | Citation: Citation Name:2003  YLR  2529   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: Mst. FOUZIA FARID VS S.H.O., POLICE STATION SADDAR, CHICHAWATNI | Citation: Citation Name:2003  MLD  1702   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: Mst. SAKINA VS S.S.P. | Citation: Citation Name:2003  YLR  672   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-6 [CASE LAW]: MUHAMMAD RAMZAN VS THE STATE | Citation: Citation Name:2003  PCRLJ  1922   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.5492,
+   0.4882,
+   0.4988,
+   0.505,
+   0.5332,
+   0.5397
+  ],
+  "search_query": "2003 YLR 369 LAHORE-HIGH-COURT-LAHORE",
+  "context_chars": 2959,
+  "source_citations": [
+   "2003ylr3097peshawarhighcourt",
+   "2003ylr3189lahorehighcourtlahore",
+   "2003ylr2529lahorehighcourtlahore",
+   "2003mld1702lahorehighcourtlahore",
+   "2003ylr672lahorehighcourtlahore",
+   "2003pcrlj1922lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the requested citation is not present in the provided context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0172",
+  "query": "2021 CLD 825 CUSTOMS-APPELLATE-TRIBUNAL-LAHORE",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2021cld825customsappellatetribunallahore"
+  ],
+  "gen_s": 29.47,
+  "answer": "**Answer**\n\nThe materials provided do not contain the judgment text or any excerpt from **2021 CLD 825 CUSTOMS‑APPELLATE‑TRIBUNAL‑LAHORE**. Consequently, I am unable to address the specific issues or questions you may have regarding that decision. Access to the full judgment or a relevant excerpt would be required to give a substantive response.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: COLLECTOR OF CUSTOMS, MCC-PORT MUHAMMAD BIN QASIM, KARACHI  VS LUCKY COMMODITIES (PVT.) LTD., KARACHI | Citation: Citation Name:2023  PTD  1836   CUSTOMS-APPELLATE-TRIBUNAL-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD ABBASI VS S.H.O. BHARA KAHU | Citation: Citation Name:2010  PLD  969   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: HOUSE BUILDING FINANCE COMPANY LIMITED VS MUHAMMAD IRFAN KHAN | Citation: Citation Name:2020  SCMR  98   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD ZUBAIR VS CUSTOMS APPELLATE TRIBUNAL, ISLAMABAD | Citation: Citation Name:2020  PTD  1843   ISLAMABADBookmark this Case",
+   "SOURCE-5 [CASE LAW]: FORTUNE SECURITIES LIMITED VS COMMISSIONER (SMD), SECP, ISLAMABAD | Citation: Citation Name:2021  CLD  127   SECURITIES-AND-EXCHANGE-COMMISSION-OF-PAKISTANBookmark this Case",
+   "SOURCE-6 [CASE LAW]: PAKISTAN MOBILE COMMUNICATIONS LIMITED VS MUBASHER SAEED SADOZAI, DIRECTOR/HEAD OF DEPARTMENT (CCD), SECP | Citation: Citation Name:2020  CLD  86   SECURITIES-AND-EXCHANGE-COMMISSION-OF-PAKISTANBookmark this Case"
+  ],
+  "scores": [
+   0.4692,
+   0.4989,
+   0.4814,
+   0.4715,
+   0.5076,
+   0.4982
+  ],
+  "search_query": "2021 CLD 825 CUSTOMS-APPELLATE-TRIBUNAL-LAHORE",
+  "context_chars": 3208,
+  "source_citations": [
+   "2023ptd1836customsappellatetribunallahore",
+   "2010pld969supremecourt",
+   "2020scmr98supremecourt",
+   "2020ptd1843islamabad",
+   "2021cld127securitiesandexchangecommissionofpakistan",
+   "2020cld86securitiesandexchangecommissionofpakistan"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the requested judgment is not present in the provided context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0106",
+  "query": "2004 PLD 471 LAHORE-HIGH-COURT-LAHORE",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2004pld471lahorehighcourtlahore"
+  ],
+  "gen_s": 14.09,
+  "answer": "**Answer**\n\nThe authorities provided in this session do not contain any excerpt or judgment relating to *2004 PLD 471* of the Lahore High Court. Consequently, I am unable to comment on the facts, legal issues, or holdings of that specific case.\n\n**Limitation**\n\nTo address the query, the judgment or a reliable excerpt of *2004 PLD 471* (Lahore High Court) would be required. Without that material, no analysis can be offered.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: CHAIRMAN, SARHAD DEVELOPMENT AUTHORITY PIA, PESHAWAR  VS TAFOOR-UR-REHMAN | Citation: Citation Name:2023  SCMR  2142   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: Amaan Knitwear's VS Sui Northern Gas Pipe Line | Citation: Citation Name:2025  YLR  405   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Muhammad Azeem VS Noor Muhammad | Citation: Citation Name:2024  MLD  1550   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: KARIM BAKHSH VS ZAHIR SHAH, SUBEDAR MALAKAND LEVIES | Citation: Citation Name:2022  PLD  237   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: I.T.As. Nos.5531/LB of 1996, 45/LB, 46/LB, 6362/LB, 88/LB, 89/LB, 6054/LB to 6057/LB of 2004, decided on 28th June, 2005. VS I.T.As. Nos.5531/LB of 1996, 45/LB, 46/LB, 6362/LB, 88/LB, 89/LB, 6054/LB to 6057/LB of 2004, decided on 28th June, 2005. | Citation: Citation Name:2006  PTD  1800   INCOME-TAX-APPELLATE-TRIBUNAL-PAKISTANBookmark this Case",
+   "SOURCE-6 [CASE LAW]: MARBLE INTERNATIONAL (PVT.) LTD. VS KARACHI ELECTRICAL SUPPLY CORPORATION | Citation: Citation Name:2004  PLD  40   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.5886,
+   0.5629,
+   0.5686,
+   0.5694,
+   0.5723,
+   0.5724
+  ],
+  "search_query": "2004 PLD 471 LAHORE-HIGH-COURT-LAHORE",
+  "context_chars": 3465,
+  "source_citations": [
+   "2023scmr2142supremecourt",
+   "2025ylr405lahorehighcourtlahore",
+   "2024mld1550lahorehighcourtlahore",
+   "2022pld237peshawarhighcourt",
+   "2006ptd1800incometaxappellatetribunalpakistan",
+   "2004pld40karachihighcourtsindh"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided sources do not contain the requested case and therefore declines to give a substantive analysis.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0079",
+  "query": "2020 PCrLJ 1543 PESHAWAR-HIGH-COURT",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2020pcrlj1543peshawarhighcourt"
+  ],
+  "gen_s": 24.03,
+  "answer": "**Answer**\n\nThe authorities available in this session do not contain the judgment 2020 PCrLJ 1543 of the Peshawar High Court, nor any statutory provision or case‑law precedent that directly discusses its facts, legal issues, or outcome. Consequently, I am unable to provide a substantive analysis of that specific decision. The material needed would be the text of the judgment itself (or a reliable report thereof) and any relevant statutory provisions that the court applied.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: KHUSH RANG VS State | Citation: Citation Name:2020  SCMR  1675   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: HAYAT MUHAMMAD VS MUHAMMAD RIAZ | Citation: Citation Name:2023  SCMR  2012   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MUHAMMAD IRFAN VS ADDITIONAL DISTRICT JUDGE, FEROZWALA, DISTRICT SHEIKHUPURA | Citation: Citation Name:2025  PLD  367   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: Mst. ASIYA VS State | Citation: Citation Name:2023  SCMR  383   SUPREME-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: ZAMURAD KHAN VS GHULAM RABANI | Citation: Citation Name:2023  MLD  733   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: HAMEED KHAN VS State | Citation: Citation Name:2022  PCrLJ  1291   PESHAWAR-HIGH-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.4834,
+   0.4807,
+   0.4576,
+   0.4591,
+   0.4615,
+   0.4662
+  ],
+  "search_query": "2020 PCrLJ 1543 PESHAWAR-HIGH-COURT",
+  "context_chars": 3181,
+  "source_citations": [
+   "2020scmr1675supremecourt",
+   "2023scmr2012supremecourt",
+   "2025pld367supremecourt",
+   "2023scmr383supremecourt",
+   "2023mld733peshawarhighcourt",
+   "2022pcrlj1291peshawarhighcourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided context does not contain the cited judgment, so it faithfully declines to give a substantive analysis.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0418",
+  "query": "2016 YLR 2212 PESHAWAR-HIGH-COURT",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2016ylr2212peshawarhighcourt"
+  ],
+  "gen_s": 30.48,
+  "answer": "**Answer**\n\nThe judgment reported as **2016 YLR 2212 (Peshawar High Court)** is not among the authorities provided in this session. Consequently, I am unable to comment on its facts, legal issues, or the court’s reasoning.\n\n**Limitation**\n\nTo address any specific query regarding that case—such as its holding, the statutory provisions applied, or its relevance to a particular legal question—the full text of the judgment or a citation to a reported source containing the judgment would be required.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: IHSANULLAH VS State | Citation: Citation Name:2018  YLRN  242   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: BAHAR SHAH  VS MANZOOR AHMAD | Citation: Citation Name:2022  SCMR  284   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: HAMEED KHAN VS State | Citation: Citation Name:2022  PCrLJ  1291   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: KHURSHID VS ALTAF HUSSAIN | Citation: Citation Name:2021  YLR  1901   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: HASEEB AHMAD VS Mst. WAJIHA WAKEEL | Citation: Citation Name:2018  YLR  20   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: MUHAMMAD IRFAN VS ADDITIONAL DISTRICT JUDGE, FEROZWALA, DISTRICT SHEIKHUPURA | Citation: Citation Name:2025  PLD  367   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.46,
+   0.4673,
+   0.4729,
+   0.474,
+   0.4781,
+   0.4796
+  ],
+  "search_query": "2016 YLR 2212 PESHAWAR-HIGH-COURT",
+  "context_chars": 3095,
+  "source_citations": [
+   "2018ylrn242peshawarhighcourt",
+   "2022scmr284supremecourt",
+   "2022pcrlj1291peshawarhighcourt",
+   "2021ylr1901peshawarhighcourt",
+   "2018ylr20peshawarhighcourt",
+   "2025pld367supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the cited judgment is not present in the provided context and does not make any unsupported factual claims.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0067",
+  "query": "2021 YLR 296 PESHAWAR-HIGH-COURT",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2021ylr296peshawarhighcourt"
+  ],
+  "gen_s": 16.3,
+  "answer": "**Answer**\n\nThe authorities available in this session do not contain any material relating to the 2021 YLR 296 decision of the Peshawar High Court. Consequently, I am unable to provide a substantive analysis of that judgment. The case law excerpts supplied ([SOURCE‑1] through [SOURCE‑6]) concern other matters and do not address the issues, holdings, or legal principles of the 2021 YLR 296 case.  \n\n**Limitation**\n\nTo answer the question, the text of the 2021 YLR 296 judgment or a citation to a reported decision containing its reasoning would be required. Without such material, a legal analysis cannot be rendered.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: State VS SAQIB HUSSAIN | Citation: Citation Name:2025  PLD  657   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: YAR MUHAMMAD KHAN VS State | Citation: Citation Name:2024  SCMR  1738   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MUHAMMAD IRFAN VS ADDITIONAL DISTRICT JUDGE, FEROZWALA, DISTRICT SHEIKHUPURA | Citation: Citation Name:2025  PLD  367   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD ASHRAF ANJUM VS SABIR HUSSAIN | Citation: Citation Name:2026  SCMR  36   SUPREME-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: GENERAL POST OFFICE, ISLAMABAD VS MUHAMMAD JALAL | Citation: Citation Name:2024  PLD  1276   SUPREME-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: NASEER AHMAD VS Mst. SUMAIRA REHMAN | Citation: Citation Name:2024  CLC  2110   PESHAWAR-HIGH-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.4792,
+   0.4524,
+   0.4577,
+   0.4623,
+   0.4691,
+   0.4707
+  ],
+  "search_query": "2021 YLR 296 PESHAWAR-HIGH-COURT",
+  "context_chars": 3332,
+  "source_citations": [
+   "2025pld657lahorehighcourtlahore",
+   "2024scmr1738supremecourt",
+   "2025pld367supremecourt",
+   "2026scmr36supremecourt",
+   "2024pld1276supremecourt",
+   "2024clc2110peshawarhighcourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that none of the provided sources cover the 2021 YLR 296 decision, so it faithfully declines to give a substantive analysis.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0325",
+  "query": "1980 PLC(CS) 667 FEDERAL-SERVICE-TRIBUNAL",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "1980plccs667federalservicetribunal"
+  ],
+  "gen_s": 23.27,
+  "answer": "**Answer – Summary of the reported judgment (1980 PLC(CS) 667)**  \n\nThe judgment reported at 1980 PLC(CS) 667 was delivered by the Federal Service Tribunal (Islamabad) in the matter of **S. A. Razvi v. Pakistan Atomic Energy Commission** (Appeal No. 447 (K) of 1974). The key points established by the Tribunal, as reflected in the excerpt, are:\n\n| Issue | Holding / Observation of the Tribunal |\n|-------|----------------------------------------|\n| **Jurisdiction of the Service Tribunal** | The Tribunal’s jurisdiction under **Section 5 read with the Service Tribunals Act, 1973** is limited to employees of corporations and companies who are covered by the **Corporation Employees (Special Powers) Ordinance, 1978**. Actions not falling within that Ordinance are outside the Tribunal’s remedial scope. ([SOURCE‑2]) |\n| **Statutory framework governing the respondent** | The Pakistan Atomic Energy Commission (PAEC) is a corporate body created by the **Pakistan Atomic Energy Commission Ordinance, 1965**. Its employees are governed by the rules framed or adopted by the Commission, and in certain matters the direction of the Government is binding on the Commission, distinguishing the corporate body from its personnel. ([SOURCE‑2]) |\n| **Result of the appeal** | The Tribunal affirmed the position that the PAEC, as a corporate entity, is subject to its own rules and the specific statutory provisions cited; consequently, the Tribunal did not entertain the service‑related grievance presented. |\n\n**Legal context drawn from the authorities**\n\n- The **Service Tribunals Act, 1973** (as interpreted in the judgment) confines the Tribunal’s jurisdiction to matters covered by the **Corporation Employees (Special Powers) Ordinance, 1978**. This limitation is reiterated in the judgment’s discussion of the scope of service‑tribunal review. ([SOURCE‑2])\n- The **Pakistan Atomic Energy Commission Ordinance, 1965** defines the PAEC as a corporate body with its own rule‑making authority, which the Tribunal recognized as the governing framework for the Commission’s employees. ([SOURCE‑2])\n\n**Limitations**\n\n- No statutory text (the full wording of the Service Tribunals Act or the PAEC Ordinance) is available in the materials before me; the analysis relies solely on the case excerpts provided.  \n- The excerpt does not contain the Tribunal’s detailed reasoning on any procedural orders, relief granted, or further legal principles beyond the jurisdictional scope described. Additional statutory provisions or full judgment text would be required for a more comprehensive analysis.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: The DIRECTOR GENERAL, INTELLIGENCE BUREAU GOVERNMENT OF PAKISTAN VS BABAR ALI SOLANGI | Citation: Citation Name:2025  SCMR  353   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: ZULFIQAR VS PAKISTAN STEEL MILLS CORPORATION | Citation: Citation Name:1980  PLC(CS)  510   FEDERAL-SERVICE-TRIBUNALBookmark this Case",
+   "SOURCE-3 [CASE LAW]: The DISTRICT POLICE OFFICER, MIANWALI VS AMIR ABDUL MAJID | Citation: Citation Name:2021  PLC(CS)  587   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.5797,
+   0.6227,
+   0.594
+  ],
+  "search_query": "1980 PLC(CS) 667 FEDERAL-SERVICE-TRIBUNAL",
+  "context_chars": 2944,
+  "source_citations": [
+   "2025scmr353supremecourt",
+   "1980plccs510federalservicetribunal",
+   "2021plccs587supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 0.8,
+  "refused": false,
+  "unsupported": [
+   "The Tribunal did not entertain the service‑related grievance presented."
+  ],
+  "judge_reason": "Most claims are supported by the excerpts, but the statement about the Tribunal refusing to hear the grievance is not directly found in the provided context.",
+  "status": "answered",
+  "relevance": 0.7694613933563232
+ },
+ {
+  "id": "b0025",
+  "query": "2015 MLD 708 PESHAWAR-HIGH-COURT",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2015mld708peshawarhighcourt"
+  ],
+  "gen_s": 30.45,
+  "answer": "**Answer**\n\nThe authorities available in this session do not contain the reported judgment “2015 MLD 708 (Peshawar High Court).” Consequently, no factual or legal holdings from that decision can be cited or relied upon here.  \n\n**Limitation** – To obtain the reasoning, holdings, or applicable legal principles of 2015 MLD 708, the full text of that judgment would need to be consulted. The materials presently before me do not include it.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD KAMRAN VS Mst. SAMERA MAJEED | Citation: Citation Name:2018  YLR  1251   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: DEPUTY DIRECTOR/COLLECTOR CUSTOMS INTELLIGENCE AND INVESTIGATION, PESHAWAR VS FARMAN ALI | Citation: Citation Name:2015  SCMR  1052   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: KHURRAM NASEER VS JUDGE FAMILY COURT (WEST) | Citation: Citation Name:2016  MLD  1183   ISLAMABADBookmark this Case",
+   "SOURCE-4 [CASE LAW]: GHULAM HUSSAIN  VS State | Citation: Citation Name:2020  PLD  61   SUPREME-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: IHSANULLAH VS The STATE | Citation: Citation Name:2015  YLR  2480   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: MOMIN KHAN VS UMAR WAHID | Citation: Citation Name:2016  YLR  658   FEDERAL-SHARIAT-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.5266,
+   0.5009,
+   0.534,
+   0.4963,
+   0.5052,
+   0.5263
+  ],
+  "search_query": "2015 MLD 708 PESHAWAR-HIGH-COURT",
+  "context_chars": 3031,
+  "source_citations": [
+   "2018ylr1251lahorehighcourtlahore",
+   "2015scmr1052supremecourt",
+   "2016mld1183islamabad",
+   "2020pld61supremecourt",
+   "2015ylr2480peshawarhighcourt",
+   "2016ylr658federalshariatcourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the requested judgment is not present in the provided context and therefore does not provide substantive legal content.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0022",
+  "query": "1985 SCMR 1659 SUPREME-COURT",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "1985scmr1659supremecourt"
+  ],
+  "gen_s": 15.71,
+  "answer": "**Answer**\n\nThe authorities provided in this session do not contain any excerpt or judgment relating to *1985 SCMR 1659* of the Supreme Court of Pakistan. Consequently, I am unable to comment on the facts, legal issues, or holdings of that decision.\n\n**Limitation**\n\nTo address the question, the text of the Supreme Court judgment (or a cited excerpt thereof) would be required. Without such material, no analysis can be offered.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: AYESHA VS ADDITIONAL SESSIONS JUDGE, SIALKOT | Citation: Citation Name:2022  CLC  327   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD ASHRAF  VS SHAMO MAI | Citation: Citation Name:1999  YLR  670   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MUHAMMAD RASHID-UR-REHMAN VS MULTAN ELEOTRIC POWER COMPANY, MULTAN through Chief Executive | Citation: Citation Name:2010  PLC  156   PUNJAB LABOUR APPELLATE TRIBUNALBookmark this Case",
+   "SOURCE-4 [CASE LAW]: ABBAS  VS STATE | Citation: Citation Name:1981  PCRLJ  541   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: BILAWAL GULL BUILDERS VS GOVERNMENT OF PUNJAB | Citation: Citation Name:2025  PLD  293   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.5784,
+   0.5873,
+   0.5975,
+   0.5985,
+   0.6071
+  ],
+  "search_query": "1985 SCMR 1659 SUPREME-COURT",
+  "context_chars": 2395,
+  "source_citations": [
+   "2022clc327lahorehighcourtlahore",
+   "1999ylr670lahorehighcourtlahore",
+   "2010plc156punjablabourappellatetribunal",
+   "1981pcrlj541lahorehighcourtlahore",
+   "2025pld293lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided context contains no reference to 1985 SCMR 1659, so its claim is fully supported.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0070",
+  "query": "1993 CLC 1374 LAHORE-HIGH-COURT-LAHORE",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "1993clc1374lahorehighcourtlahore"
+  ],
+  "gen_s": 25.54,
+  "answer": "**Answer**\n\nThe authorities provided in this session do not contain the judgment or any excerpt from *1993 CLC 1374* of the Lahore High Court. Consequently, I am unable to comment on the facts, legal issues, or holdings of that specific case.  \n\n**Limitation**  \nTo address the question, the full text of the *1993 CLC 1374* judgment (or a reliable excerpt thereof) would be required. Without it, no analysis can be offered.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD SHER  VS SALMA BIBI | Citation: Citation Name:1994  SCMR  1124   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: Malik Touqeer Abbas Khokhar VS Malik Saif-ul-Malook Khokhar | Citation: Citation Name:2025  MLD  2010   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: M.C.B. LTD VS MUHAMMAD UMAR MALIK | Citation: Citation Name:1993  PLD  281   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: SHAUKAT ALI alias TAYYAB ALI VS THE STATE | Citation: Citation Name:2003  YLR  184   FEDERAL-SHARIAT-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: AZHAR MEHMOOD alias MOODI VS State | Citation: Citation Name:2014  PCrLJ  1635   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-6 [CASE LAW]: CIVIL AVIATION AUTHORITY VS UNION OF CIVIL AVIATION EMPLOYEES | Citation: Citation Name:1997  PLD  781   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.5745,
+   0.5206,
+   0.5344,
+   0.5503,
+   0.5588,
+   0.567
+  ],
+  "search_query": "1993 CLC 1374 LAHORE-HIGH-COURT-LAHORE",
+  "context_chars": 3016,
+  "source_citations": [
+   "1994scmr1124supremecourt",
+   "2025mld2010lahorehighcourtlahore",
+   "1993pld281lahorehighcourtlahore",
+   "2003ylr184federalshariatcourt",
+   "2014pcrlj1635lahorehighcourtlahore",
+   "1997pld781supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the requested judgment is not present in the provided context and declines to answer.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0166",
+  "query": "2003 SCMR 1063 SUPREME-COURT",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2003scmr1063supremecourt"
+  ],
+  "gen_s": 18.51,
+  "answer": "**Answer**\n\nThe authorities available in this session do not contain any material relating to the Supreme Court judgment reported at 2003 SCMR 1063. Consequently, I am unable to provide a legal analysis of that decision. The documents that are present ([SOURCE‑1] through [SOURCE‑4]) discuss other cases and do not address the facts, holdings, or legal principles of the cited 2003 SCMR 1063 judgment.  \n\nTo obtain a substantive response, the text of the 2003 SCMR 1063 decision or a citation to a reported judgment containing its reasoning would be required.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: BINYAMEEN VS State | Citation: Citation Name:2026  SCMR  99   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: DIRECTOR-GENERAL L.D.A. VS TAHIR RASHID | Citation: Citation Name:2007  PLC  199   NATIONAL-INDUSTRIAL-RELATIONS-COMMISSIONBookmark this Case",
+   "SOURCE-3 [CASE LAW]: AYESHA VS ADDITIONAL SESSIONS JUDGE, SIALKOT | Citation: Citation Name:2022  CLC  327   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: Mir Zaman alias Muhammad Alam VS State | Citation: Citation Name:2026  PCrLJ  486   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case"
+  ],
+  "scores": [
+   0.6396,
+   0.5945,
+   0.5985,
+   0.6187
+  ],
+  "search_query": "2003 SCMR 1063 SUPREME-COURT",
+  "context_chars": 1298,
+  "source_citations": [
+   "2026scmr99supremecourt",
+   "2007plc199nationalindustrialrelationscommission",
+   "2022clc327lahorehighcourtlahore",
+   "2026pcrlj486quettahighcourtbalochistan"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided sources do not contain the requested 2003 SCMR 1063 judgment, so the claim is fully supported.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0178",
+  "query": "2023 MLD 1372 LAHORE-HIGH-COURT-LAHORE",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2023mld1372lahorehighcourtlahore"
+  ],
+  "gen_s": 25.29,
+  "answer": "**Answer**\n\nThe authorities provided in this session do not contain the judgment of *2023 MLD 1372* of the Lahore High Court. Consequently, I am unable to comment on the facts, legal reasoning, or outcome of that specific decision. Access to the text of the Lahore High Court judgment itself would be required to give a substantive answer.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD IJAZ VS State | Citation: Citation Name:2023  SCMR  1375   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: ALLAH DEWAYO SHAHANI VS State | Citation: Citation Name:2023  SCMR  1724   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: State VS Arif Hussain | Citation: Citation Name:2025  MLD  1740   Gilgit-Baltistan Chief CourtBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD AZEEM VS State | Citation: Citation Name:2023  MLD  823   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MUHAMMAD NAWAZ  VS State | Citation: Citation Name:2022  PLD  523   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.497,
+   0.5425,
+   0.5457,
+   0.5012,
+   0.525
+  ],
+  "search_query": "2023 MLD 1372 LAHORE-HIGH-COURT-LAHORE",
+  "context_chars": 3086,
+  "source_citations": [
+   "2023scmr1375supremecourt",
+   "2023scmr1724supremecourt",
+   "2025mld1740gilgitbaltistanchiefcourt",
+   "2023mld823karachihighcourtsindh",
+   "2022pld523supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the requested judgment is not present in the provided context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0388",
+  "query": "2019 CLD 1202 SECURITIES-AND-EXCHANGE-COMMISSION-OF-PAKISTAN",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2019cld1202securitiesandexchangecommissionofpakistan"
+  ],
+  "gen_s": 21.22,
+  "answer": "**Holding of 2019 CLD 1202 (Securities‑and‑Exchange‑Commission‑of‑Pakistan)**  \n\nThe authorities provided contain only the citation of the judgment ([SOURCE‑1]) and the parties involved. The excerpt does not include the substantive reasoning, the court’s decision, or the legal principles applied. Consequently, the material before me does not establish what the Supreme Court ruled on the appeal of the Chief Executive of PERAC against the Commissioner (Corporatization and Compliance Department) of the SECP.  \n\n*Limitation*: To determine the precise outcome and the legal reasoning of 2019 CLD 1202, the full text of the judgment would be required. The present excerpts do not contain that information.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: VS | Citation: Citation Name:2019  SCMR  1   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: ISAM JAN (widow) VS AFTAB AHMED | Citation: Citation Name:2020  YLR  2069   SUPREME-COURT-AZAD-KASHMIRBookmark this Case",
+   "SOURCE-3 [CASE LAW]: NAUMAN MEHMOOD VS EXECUTIVE DIRECTOR, CORPORATE SUPERIVISION DEPARTMENT | Citation: Citation Name:2019  CLD  1234   SECURITIES-AND-EXCHANGE-COMMISSION-OF-PAKISTANBookmark this Case",
+   "SOURCE-4 [CASE LAW]: SHAHBAZ GARMENTS (PVT.) LTD. VS GOVERNMENT OF SINDH through Secretary Labour and Human Resource Department, Karachi | Citation: Citation Name:2021  SCMR  1088   SUPREME-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MUNIR HUSSAIN BHATTI VS FEDERATION OF PAKISTAN | Citation: Citation Name:2011  PLD  407   SUPREME-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: PROVINCE OF PUNJAB through District Coordination Officer, Okara VS MARKET COMMITTEE, OKARA through Chairman/Secretary | Citation: Citation Name:2011  SCMR  1856   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.4183,
+   0.4386,
+   0.4742,
+   0.4861,
+   0.503,
+   0.533
+  ],
+  "search_query": "2019 CLD 1202 SECURITIES-AND-EXCHANGE-COMMISSION-OF-PAKISTAN",
+  "context_chars": 3751,
+  "source_citations": [
+   "2019scmr1supremecourt",
+   "2020ylr2069supremecourtazadkashmir",
+   "2019cld1234securitiesandexchangecommissionofpakistan",
+   "2021scmr1088supremecourt",
+   "2011pld407supremecourt",
+   "2011scmr1856supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided excerpts lack substantive reasoning, matching the limited information in the context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0430",
+  "query": "2022 PLD 46 PESHAWAR-HIGH-COURT",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2022pld46peshawarhighcourt"
+  ],
+  "gen_s": 30.32,
+  "answer": "I note that no specific question has been posed. If you have a particular issue or query regarding **2022 PLD 46 Peshawar High Court**, please provide the details so I can address it directly using the authorities available.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: ABDUL WAHID VS State | Citation: Citation Name:2022  SCMR  1954   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: ZER AJAM KHAN VS GOVERNMENT OF KHYBER PAKHTUNKHWA | Citation: Citation Name:2024  PLC(CS)  283   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Mst. ANITA ANAM VS GENERAL PUBLIC | Citation: Citation Name:2025  SCMR  579   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: KAUSER PARVEEN VS KASB BANK | Citation: Citation Name:2023  SCMR  890   SUPREME-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: HAMEED KHAN VS State | Citation: Citation Name:2022  PCrLJ  1291   PESHAWAR-HIGH-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.4767,
+   0.4748,
+   0.4938,
+   0.4549,
+   0.4587
+  ],
+  "search_query": "2022 PLD 46 PESHAWAR-HIGH-COURT",
+  "context_chars": 2830,
+  "source_citations": [
+   "2022scmr1954supremecourt",
+   "2024plccs283peshawarhighcourt",
+   "2025scmr579supremecourt",
+   "2023scmr890supremecourt",
+   "2022pcrlj1291peshawarhighcourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The reply only requests clarification and does not make any factual or legal claims unsupported by the provided context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0151",
+  "query": "1984 PCRLJ 3045 LAHORE-HIGH-COURT-LAHORE",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "1984pcrlj3045lahorehighcourtlahore"
+  ],
+  "gen_s": 21.3,
+  "answer": "**Answer**\n\nNo specific question has been posed. If you provide the particular issue or query you wish to address concerning *Bashir Ahmad v. Liaqat Ali* (1984 PCRLJ 3045) or any related point of law, I will respond directly, applying the authorities that are available.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: RAB NAWAZ VS SHEHZAD HASSAN | Citation: Citation Name:2025  SCMR  1357   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD ZAFFAR KHAN  VS Syed SHUMAILA ZAIDI | Citation: Citation Name:2025  SCMR  1961   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MUDASSAR KHURSHEED VS State | Citation: Citation Name:2025  SCMR  1613   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: BASHIR AHMAD  VS LIAQAT ALI | Citation: Citation Name:1984  PCRLJ  3045   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: ATIQ-UR-REHMAN VS SAEED ULLAH GONDAL | Citation: Citation Name:2011  PLD  336   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.5128,
+   0.528,
+   0.5377,
+   0.5388,
+   0.54
+  ],
+  "search_query": "1984 PCRLJ 3045 LAHORE-HIGH-COURT-LAHORE",
+  "context_chars": 2852,
+  "source_citations": [
+   "2025scmr1357supremecourt",
+   "2025scmr1961supremecourt",
+   "2025scmr1613supremecourt",
+   "1984pcrlj3045lahorehighcourtlahore",
+   "2011pld336lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": true,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer makes no factual/legal claims and simply requests a specific question, thus fully faithful but it refuses substantive answering.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0322",
+  "query": "1994 SCMR 1720 SUPREME-COURT",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "1994scmr1720supremecourt"
+  ],
+  "gen_s": 19.66,
+  "answer": "**Answer**\n\nThe authorities provided in this session do not contain any judgment or excerpt identified as “1994 SCMR 1720” of the Supreme Court of Pakistan. Consequently, I am unable to comment on the facts, holdings, or legal principles of that specific case.\n\n**Limitation**\n\nTo address the question, the full text of the Supreme Court judgment reported at 1994 SCMR 1720 would be required. Without that material, no analysis can be offered.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: LIAQAT ALI VS ARSHAD MAHMOOD LODHI, ADVOCATE | Citation: Citation Name:1996  CLC  1562   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD IQBAL CHAUDHRY VS CIVIL AVIATION AUTHORITY | Citation: Citation Name:1995  PLC(CS)  421   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: PAKISTAN INTERNATIONAL AIRLINES CORPORATION VS ZAEEM AZIZ QURESHI | Citation: Citation Name:2019  PLC(CS)  194   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: ZULFIQAR VS State | Citation: Citation Name:2007  SCMR  138   SUPREME-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: GULFAM VS State | Citation: Citation Name:2017  SCMR  1189   SUPREME-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: Mst. AILA NAWAZ VS JUDGE FAMILY COURT, KHANEWAL | Citation: Citation Name:2018  CLC  241   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.6054,
+   0.6125,
+   0.6291,
+   0.6356,
+   0.6375,
+   0.6379
+  ],
+  "search_query": "1994 SCMR 1720 SUPREME-COURT",
+  "context_chars": 2768,
+  "source_citations": [
+   "1996clc1562peshawarhighcourt",
+   "1995plccs421karachihighcourtsindh",
+   "2019plccs194supremecourt",
+   "2007scmr138supremecourt",
+   "2017scmr1189supremecourt",
+   "2018clc241lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the requested 1994 SCMR 1720 judgment is not present in the provided context and therefore declines to give a substantive analysis.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0169",
+  "query": "2009 YLR 1500 LAHORE-HIGH-COURT-LAHORE",
+  "query_type": "citation",
+  "answerable": true,
+  "gold": [
+   "2009ylr1500lahorehighcourtlahore"
+  ],
+  "gen_s": 19.4,
+  "answer": "**Response**\n\nYou have not posed a specific legal question for analysis. If you provide the issue or query you wish to address (e.g., interpretation of a provision, bail eligibility, procedural step, etc.), I can apply the case law excerpts listed above to that question.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: NATIONAL BANK OF PAKISTAN VS PARADISE TRADING COMPANY | Citation: Citation Name:2015  CLD  366   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: ABDUL GHAFOOR VS State | Citation: Citation Name:2019  YLRN  33   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Wing Commander TIPU SULTAN KHAN VS RUBINA SAIRA ZAFFER | Citation: Citation Name:2009  YLR  1021   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: Mian MUHAMMAD NAWAZ SHARIF VS State | Citation: Citation Name:2009  PLD  814   SUPREME-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: ABDULLAH VS State | Citation: Citation Name:2011  PCrLJ  1000   FEDERAL-SHARIAT-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.5067,
+   0.5077,
+   0.5086,
+   0.5121,
+   0.5146
+  ],
+  "search_query": "2009 YLR 1500 LAHORE-HIGH-COURT-LAHORE",
+  "context_chars": 2942,
+  "source_citations": [
+   "2015cld366supremecourt",
+   "2019ylrn33lahorehighcourtlahore",
+   "2009ylr1021lahorehighcourtlahore",
+   "2009pld814supremecourt",
+   "2011pcrlj1000federalshariatcourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The reply only requests clarification and makes no factual/legal claims, thus fully faithful but it refuses to provide a substantive answer.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0344",
+  "query": "ARIF SAEED VS HUMAIRA QAZI",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2012clc759peshawarhighcourt"
+  ],
+  "gen_s": 20.27,
+  "answer": "**Answer**\n\nThe authorities provided in this session do not contain any judgment, statutory provision, or other legal material that addresses the dispute between **Arif Saeed and Humaira Qazi**. Consequently, I am unable to offer a legal analysis of that specific case based on the materials before me.  \n\n*The case record for “Arif Saeed vs Humaira Qazi” has not been supplied, and none of the cited judgments or statutes discuss the parties, facts, or legal issues involved.*",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD AMAN ULLAH BABAR  VS HUSSAIN BIBI | Citation: Citation Name:2000  YLR  2829   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD ZAHIR VS SHAH SAEED | Citation: Citation Name:2016  PCrLJ  1821   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Malik GHULAM NABI JILANI VS Mst. PIRZADA JAMILA | Citation: Citation Name:2004  PLD  129   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: SHAHZAD HAMEED VS State | Citation: Citation Name:2018  PCrLJN  147   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: HAKIM-UL-DIN JOKHIO VS State | Citation: Citation Name:2022  MLD  1933   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.6956,
+   0.655,
+   0.6693,
+   0.6712,
+   0.6763
+  ],
+  "search_query": "ARIF SAEED VS HUMAIRA QAZI",
+  "context_chars": 3489,
+  "source_citations": [
+   "2000ylr2829lahorehighcourtlahore",
+   "2016pcrlj1821karachihighcourtsindh",
+   "2004pld129supremecourt",
+   "2018pcrljn147lahorehighcourtlahore",
+   "2022mld1933karachihighcourtsindh"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that none of the provided judgments mention Arif Saeed or Humaira Qazi, so it faithfully declines to answer.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0215",
+  "query": "PROVINCE OF WEST PAKISTAN THROUGH CHAIRMAN OF P. W. R., LAHORE AND ANOTHER- VS MALIK AMAN",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "1971pld117quettahighcourtbalochistan"
+  ],
+  "gen_s": 21.53,
+  "answer": "**Answer**\n\nThe authorities available in this session do not contain any statutory provision or reported judgment that directly addresses the legal issues raised in *Province of West Pakistan through Chairman of P.W.R., Lahore and another v. Malik Aman*. Consequently, I am unable to provide a substantive legal analysis of the matter.  \n\n**Limitation of the response**  \n- No statutory text (e.g., the West Pakistan Act, the Constitution, or any relevant procedural code) is present in the materials before me.  \n- None of the cited case‑law excerpts ([SOURCE‑1] through [SOURCE‑5]) discuss the parties, facts, or legal questions of the present case.  \n\nTo obtain a reasoned answer, the relevant statutory provisions and any reported judgments that specifically deal with the dispute would need to be consulted.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: ZAKIR HUSSAIN SAMO VS The PROVINCE OF SINDH | Citation: Citation Name:2025  PLC(CS)  634   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD TARIQ KHAN VS MUHAMMAD SHARIF KHAN SHINWARI | Citation: Citation Name:1995  SCMR  1153   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: BAKHT SIDDIQUE VS FEDERATION OF PAKISTAN | Citation: Citation Name:2017  PLC(CS)  1192   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: PAKISTAN REFUGEE AND REHABILITATION\n\nFINANCE CORPORATION, LAHORE\n VS SYED KARAMAT HUSSAIN | Citation: Citation Name:1966  PLD  442   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: WAHAB SADIN  VS THE STATE | Citation: Citation Name:1971  PLD  135   PESHAWAR-HIGH-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.5693,
+   0.5516,
+   0.5542,
+   0.5546,
+   0.5687
+  ],
+  "search_query": "PROVINCE OF WEST PAKISTAN THROUGH CHAIRMAN OF P. W. R., LAHORE AND ANOTHER- VS MALIK AMAN",
+  "context_chars": 3609,
+  "source_citations": [
+   "2025plccs634karachihighcourtsindh",
+   "1995scmr1153supremecourt",
+   "2017plccs1192karachihighcourtsindh",
+   "1966pld442lahorehighcourtlahore",
+   "1971pld135peshawarhighcourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that none of the provided case excerpts address the queried case, so it faithfully declines to give a substantive analysis.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0005",
+  "query": "MUHAMMAD AFTAB VS State",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2013ylr1680karachihighcourtsindh"
+  ],
+  "gen_s": 21.4,
+  "answer": "**Answer**\n\nThe authorities provided in this session do not contain any judgment, statutory provision, or other legal material that addresses the case *Muhammad Aftab v. State*. Consequently, I am unable to offer a legal analysis of that matter based on the sources available here.  \n\n*The case record (DOC‑n) for *Muhammad Aftab v. State* has not been uploaded, and none of the cited judgments ([SOURCE‑1] through [SOURCE‑6]) discuss the facts, issues, or legal rulings of that case.*  \n\nTo obtain a substantive response, the full text of the judgment or the relevant statutory provisions would need to be made available.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: Mir FAIZ MUHAMMAD alias Mir FAIZULLAH VS State | Citation: Citation Name:2013  YLR  1758   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: NISAR KHAN  VS THE STATE | Citation: Citation Name:2001  PCRLJ  1645   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ASGHAR alias GHORO VS State | Citation: Citation Name:2013  PCrLJ  1203   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MAQBOOL HASSAN VS MASOOD BUTT | Citation: Citation Name:1985  PCRLJ  2876   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MUHAMMAD TARIQ AJMAL VS State | Citation: Citation Name:2021  PCrLJ  40   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-6 [CASE LAW]: RAJESH alias RAJU VS State | Citation: Citation Name:2022  YLR  1855   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.6121,
+   0.5741,
+   0.584,
+   0.5857,
+   0.5888,
+   0.5897
+  ],
+  "search_query": "MUHAMMAD AFTAB VS State",
+  "context_chars": 3315,
+  "source_citations": [
+   "2013ylr1758karachihighcourtsindh",
+   "2001pcrlj1645peshawarhighcourt",
+   "2013pcrlj1203karachihighcourtsindh",
+   "1985pcrlj2876lahorehighcourtlahore",
+   "2021pcrlj40lahorehighcourtlahore",
+   "2022ylr1855karachihighcourtsindh"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that none of the provided sources address Muhammad Aftab v. State, and thus declines to give a substantive analysis.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0122",
+  "query": "ABDUL MAJEED VS STATE",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2001ylr540lahorehighcourtlahore"
+  ],
+  "gen_s": 15.58,
+  "answer": "**Answer**\n\nThe authorities available in this session contain only brief citations to the judgment of **Abdul Majeed v. State** and a reference to the **Control of Narcotic Substances Act, 1997**. No substantive facts, legal issues, or holdings are reproduced in the excerpts.\n\n- The citation of the case appears in **[SOURCE‑1]** (Abdul Majeed v. State 2011 SCMR 941 rel.) and again in **[SOURCE‑2]**, where the appeal is noted to arise under the **Control of Narcotic Substances Act (XXV of 1997)**.  \n- No statutory text of that Act is provided in the session, and the excerpts do not contain the court’s reasoning, the specific provision applied, or the final decision.\n\n**Conclusion**\n\nThe material before me does not contain the factual background, the legal issue(s) addressed, or the judgment’s outcome in *Abdul Majeed v. State*. To obtain a complete analysis, the full text of the judgment and the relevant provisions of the Control of Narcotic Substances Act would be required.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: TASCO VS FRANZEN LANDBOUW C.V. | Citation: Citation Name:2026  PLD  96   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: FEROZ BARI VS Syed AYAZ HUSSAIN | Citation: Citation Name:2023  PLD  263   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MUHAMMAD IFTIKHAR JAVED VS MUHAMMAD ASHRAF | Citation: Citation Name:2020  YLR  2239   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.3834,
+   0.5063,
+   0.4909
+  ],
+  "search_query": "ABDUL MAJEED VS STATE",
+  "context_chars": 1056,
+  "source_citations": [
+   "2026pld96karachihighcourtsindh",
+   "2023pld263karachihighcourtsindh",
+   "2020ylr2239lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer accurately reflects that the provided excerpts contain only citations without substantive facts or holdings.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0326",
+  "query": "S. A. RAZVI VS PAKISTAN ATOMIC ENERGY COMMISSION",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "1980plccs667federalservicetribunal"
+  ],
+  "gen_s": 13.81,
+  "answer": "**Answer**\n\nThe Service Tribunal could not entertain the appeal of S. A. Razvi against the Pakistan Atomic Energy Commission because the Tribunal’s jurisdiction under the Service Tribunes Act, 1973, is confined to matters covered by the *Corporation Employees (Special Powers) Ordinance, 1978*. The dispute in Razvi concerned the Pakistan Atomic Energy Commission Ordinance, 1965, which falls outside that statutory remit. Consequently, the Tribunal lacked jurisdiction to grant the relief sought.  \n\n**Authorities relied on**\n\n| Point | Authority |\n|------|-----------|\n| The Service Tribunal’s jurisdiction is limited to matters covered by the *Corporation Employees (Special Powers) Ordinance, 1978* and does not extend to actions arising under other statutes. | **[SOURCE‑1]** – *Zulfiqar vs Pakistan Steel Mills Corporation* (excerpt noting “Service Tribunal has no jurisdiction for remedy against actions not covered by Ordinance”). |\n| The Pakistan Atomic Energy Commission was created under the *Pakistan Atomic Energy Commission Ordinance, 1965*. | **[SOURCE‑2]** – *WAPDA vs Zulfiqar Ali* (excerpt confirming the Commission’s creation under the 1965 Ordinance). |\n| The appeal by Razvi was filed before the Federal Service Tribunal (Appeal No. 447 (K) 1974, decided 14 Nov 1977). | **[SOURCE‑1]** – Full judgment heading for *S. A. Razvi vs Pakistan Atomic Energy Commission*. |\n\n**Limitations**\n\n- The statutory text of the Service Tribunes Act, 1973, and the Pakistan Atomic Energy Commission Ordinance, 1965, is not available in the materials before me; the analysis is based solely on the case excerpts provided.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: ZULFIQAR VS PAKISTAN STEEL MILLS CORPORATION | Citation: Citation Name:1980  PLC(CS)  510   FEDERAL-SERVICE-TRIBUNALBookmark this Case",
+   "SOURCE-2 [CASE LAW]: WAPDA VS ZULFIQAR ALI | Citation: Citation Name:2002  PLC(CS)  128   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ABDUL HAMID VS THE STATE | Citation: Citation Name:1980  PLD  25   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MESSRS WAHEED BROTHERS (PAKISTAN) LTD., LAHORE VS MESSRS IZHAR (PVT.) LTD., LAHORE | Citation: Citation Name:2002  SCMR  366   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.5432,
+   0.4981,
+   0.5746,
+   0.5505
+  ],
+  "search_query": "S. A. RAZVI VS PAKISTAN ATOMIC ENERGY COMMISSION",
+  "context_chars": 3388,
+  "source_citations": [
+   "1980plccs510federalservicetribunal",
+   "2002plccs128supremecourt",
+   "1980pld25peshawarhighcourt",
+   "2002scmr366supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 0.75,
+  "refused": false,
+  "unsupported": [
+   "the dispute in Razvi concerned the Pakistan Atomic Energy Commission Ordinance, 1965"
+  ],
+  "judge_reason": "Most claims are backed by the provided case excerpts, but the specific link between Razvi's dispute and the 1965 ordinance is not stated in the context.",
+  "status": "answered",
+  "relevance": 0.7609391808509827
+ },
+ {
+  "id": "b0263",
+  "query": "MUHAMMAD JAHANZAIB VS State",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2019ylrn32shariatappellatebenchazadjammuandkashmir"
+  ],
+  "gen_s": 23.27,
+  "answer": "**Answer**\n\nThe authorities provided in this session do not contain any judgment, statutory provision, or other legal material that addresses the case *Muhammad Jahanzaib v. State*. Consequently, I am unable to comment on the facts, legal issues, or outcome of that specific matter.  \n\n**Limitation** – To obtain a substantive analysis, the judgment or relevant statutory excerpts pertaining to *Muhammad Jahanzaib v. State* would need to be made available.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: HAROON RASHEED VS State | Citation: Citation Name:2016  PCrLJ  56   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: Mst. ZUHRA BIBI VS THE STATE | Citation: Citation Name:2003  PCRLJ  1909   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Syed ZAFAR ABBAS VS GLAXO WELLCOME PAKISTAN LIMITED | Citation: Citation Name:2002  PLC  172   NATIONAL-INDUSTRIAL-RELATIONS-COMMISSIONBookmark this Case",
+   "SOURCE-4 [CASE LAW]: BILAWAL VS State | Citation: Citation Name:2019  PCrLJ  238   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: KASHIF HAIDER CHOHAN (SALAWIT) VS State | Citation: Citation Name:2006  PCRLJ  292   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-6 [CASE LAW]: ZAKIR HUSSAIN VS State | Citation: Citation Name:2017  PCrLJ  757   Gilgit-Baltistan Chief CourtBookmark this Case"
+  ],
+  "scores": [
+   0.6471,
+   0.6549,
+   0.655,
+   0.6581,
+   0.6704,
+   0.6735
+  ],
+  "search_query": "MUHAMMAD JAHANZAIB VS State",
+  "context_chars": 3158,
+  "source_citations": [
+   "2016pcrlj56lahorehighcourtlahore",
+   "2003pcrlj1909karachihighcourtsindh",
+   "2002plc172nationalindustrialrelationscommission",
+   "2019pcrlj238karachihighcourtsindh",
+   "2006pcrlj292karachihighcourtsindh",
+   "2017pcrlj757gilgitbaltistanchiefcourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that none of the provided judgments address the cited case, which is fully supported by the context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0119",
+  "query": "Mst. RASHIDA BEGUM VS ABDUL MALIK",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2007mld369lahorehighcourtlahore"
+  ],
+  "gen_s": 15.31,
+  "answer": "**Answer**\n\nThe authorities available in this session do not contain any judgment, statutory provision, or other legal material that addresses a dispute titled **Mst. Rashida Begum v. Abdul Malik**. Consequently, I am unable to provide a legal analysis or conclusion on that specific case.  \n\n*The material needed to answer the question would be the judgment (or other adjudicative record) of “Mst. Rashida Begum v. Abdul Malik,” or a statutory provision that the parties relied upon.*",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: ABDUL HAMID VS KHURSHID BEGUM | Citation: Citation Name:1965  PLD  197   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: TAHIRA ZAIB VS GHAFFAR AHMED | Citation: Citation Name:2015  MLD  1853   SHARIAT-COURT-AZAD-KASHMIRBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MANZOOR AHMAD VS NARGIS MIRZA | Citation: Citation Name:2004  PLD  132   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: Raja HAFEEZ UR REHMAN VS GENERAL RICE TRADERS ASSOCIATIONS | Citation: Citation Name:2023  CLD  175   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: GHULAM MUHAMMAD VS MST. NOOR ILAHI | Citation: Citation Name:1959  PLD  90   WEST-PAKISTAN-BOARD-OF-REVENUEBookmark this Case"
+  ],
+  "scores": [
+   0.5994,
+   0.6633,
+   0.6823,
+   0.6474,
+   0.6574
+  ],
+  "search_query": "Mst. RASHIDA BEGUM VS ABDUL MALIK",
+  "context_chars": 3556,
+  "source_citations": [
+   "1965pld197lahorehighcourtlahore",
+   "2015mld1853shariatcourtazadkashmir",
+   "2004pld132supremecourt",
+   "2023cld175lahorehighcourtlahore",
+   "1959pld90westpakistanboardofrevenue"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that none of the provided judgments mention the case Mst. Rashina Begum v. Abdul Malik, so it faithfully declines to answer.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0167",
+  "query": "Haji ABDULLAH JAN VS THE STATE",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2003scmr1063supremecourt"
+  ],
+  "gen_s": 23.57,
+  "answer": "**Haji Abdullah Jan v. State – Summary of the material available**\n\n| Aspect | Authority | Substance derived from the authority |\n|--------|-----------|--------------------------------------|\n| **Factual background** | **[SOURCE‑1]** | The record notes that a statement of the deceased, Abdullah Jan, was taken either by P.W. Naushad or P.W. Gaubar Zaman and later re‑recorded by a magistrate (P.W. 14 Mr. Lal Badshah Khan) under **section 164 of the Code of Criminal Procedure** on 14 February 1970 at a hospital. The accused were arrested the same night; no material was recovered from them, and only empty containers were found at the scene. A weapon was seized but not sent for ballistic examination. |\n| **Legal issue addressed** | **[SOURCE‑1]** | The excerpt does not contain a judicial holding; it merely reports procedural steps (statement‑taking under s. 164 CrPC) and the fact that evidence (the weapon) was not forwarded to a ballistic expert. |\n| **Other citations mentioning “Abdullah”** | **[SOURCE‑2]**, **[SOURCE‑4]** | These judgments refer to different persons named Abdullah (e.g., “Haji Sahib”, “Abdullah” as a victim) and do not discuss the Haji Abdullah Jan case. They therefore provide no additional factual or legal guidance for the present matter. |\n| **Statutory text** | *Not available in this session* | No statutory excerpts (e.g., the text of section 164 CrPC) are present, so the precise statutory requirements cannot be reproduced here. |\n\n### What can be concluded from the authorities?\n\n1. **Procedural record** – The case record indicates that a statement of the deceased was taken in compliance with **section 164 CrPC**, as noted in **[SOURCE‑1]**.  \n2. **Evidence handling** – The seized weapon was not sent for ballistic analysis, which may be relevant to questions of evidentiary sufficiency, but the excerpt does not contain any judicial analysis of that omission.  \n3. **Absence of judicial holding** – None of the provided judgments contain a decision, reasoning, or precedent that directly resolves a legal issue in the Haji Abdullah Jan case. Consequently, the authorities do not establish how the court interpreted the procedural steps or the evidentiary gaps.\n\n### Limitations\n\n- The materials do not include the **statutory text** of section 164 CrPC or any other provision that might be central to the case.  \n- No judgment excerpt provides a **court’s ruling** on the merits, bail, sentencing, or any other substantive legal question concerning Haji Abdullah Jan.  \n- The other case excerpts (**[SOURCE‑2]**, **[SOURCE‑4]**) involve different factual scenarios and do not illuminate the legal position of the Haji Abdullah Jan matter.  \n\n**Therefore, based solely on the authorities before me, only the procedural fact that a statement was recorded under section 164 CrPC can be confirmed. No further legal conclusions or precedent can be drawn from the available material.**",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: JAFFAR VS THE STATE | Citation: Citation Name:1975  PCRLJ  893   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD KABIR VS PAKISTAN TOURIST DEVELOPMENT CORPORATION | Citation: Citation Name:1978  PLC  492   LABOUR-APPELLATE-TRIBUNAL-PUNJABBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Mst. SHAFEEN AKHTAR VS Malik MUMRAIZ | Citation: Citation Name:2014  PCrLJ  1415   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD YOUSIF VS State | Citation: Citation Name:2019  YLR  2128   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: KARACHI COOPERATIVE HOUSING SOCIETIES UNION LTD. VS BETTER HOMES | Citation: Citation Name:1992  CLC  2261   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.5438,
+   0.5295,
+   0.5404,
+   0.5439,
+   0.5757
+  ],
+  "search_query": "Haji ABDULLAH JAN VS THE STATE",
+  "context_chars": 3668,
+  "source_citations": [
+   "1975pcrlj893karachihighcourtsindh",
+   "1978plc492labourappellatetribunalpunjab",
+   "2014pcrlj1415peshawarhighcourt",
+   "2019ylr2128karachihighcourtsindh",
+   "1992clc2261karachihighcourtsindh"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": false,
+  "unsupported": [],
+  "judge_reason": "All statements in the answer are directly supported by the provided case excerpts.",
+  "status": "answered",
+  "relevance": 0.8045096397399902
+ },
+ {
+  "id": "b0260",
+  "query": "TELENOR MICROFINANCE BANK LIMITED VS FEDERATION OF PAKISTAN",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2023ylr1938karachihighcourtsindh"
+  ],
+  "gen_s": 23.35,
+  "answer": "**Response**\n\nNo specific question has been posed regarding *Telenor Microfinance Bank Limited v. Federation of Pakistan*. If you have a particular issue—such as the legal basis of the petition, the court’s reasoning, the applicability of the Microfinance Institutions Ordinance, or any other point—please provide the details so that I can address it directly using the authorities listed above.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: TELENOR MICROFINANCE BANK LIMITED VS FEDERATION OF PAKISTAN | Citation: Citation Name:2023  YLR  1938   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: TELENOR MICROFINANCE BANK LIMITED VS SHAMIM BANO | Citation: Citation Name:2023  CLD  1148   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MIRPURKHAS SUGAR MILLS LIMITED VS FEDERATION OF PAKISTAN through Secretary Ministry of Law and Justice | Citation: Citation Name:2022  CLD  352   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: 5H INSAAT VE TICARET ANONIM SIRKETI VS SECRETARY | Citation: Citation Name:2025  CLD  813   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MURID ABBAS  VS STATE | Citation: Citation Name:1992  SCMR  338   SUPREME-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: MUHAMMAD IRSHAD VS FULL BENCH NATIONAL INDUSTRIAL RELATIONS COMMISSION (NIRC) ISLAMABAD BENCH, LAHORE | Citation: Citation Name:2023  PLC  22   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.4022,
+   0.4052,
+   0.5112,
+   0.498,
+   0.5071,
+   0.5087
+  ],
+  "search_query": "TELENOR MICROFINANCE BANK LIMITED VS FEDERATION OF PAKISTAN",
+  "context_chars": 3511,
+  "source_citations": [
+   "2023ylr1938karachihighcourtsindh",
+   "2023cld1148supremecourt",
+   "2022cld352karachihighcourtsindh",
+   "2025cld813lahorehighcourtlahore",
+   "1992scmr338supremecourt",
+   "2023plc22lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": true,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The reply makes no factual/legal claims and simply requests clarification, which is faithful to the provided context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0080",
+  "query": "AHMAD SULTAN VS State",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2020pcrlj1543peshawarhighcourt"
+  ],
+  "gen_s": 17.03,
+  "answer": "**Answer**\n\nThe authorities provided in this session do not contain any judgment, statutory provision, or other legal material that addresses the case *Ahmad Sultan v. State*. Consequently, I am unable to offer a legal analysis of that matter based on the materials before me.  \n\n**Limitation** – To respond to the query, a judgment or statutory excerpt specifically relating to *Ahmad Sultan v. State* would be required.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD SALEEM VS State | Citation: Citation Name:2008  MLD  422   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: State VS WARIS KHAN | Citation: Citation Name:2016  MLD  920   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: NASIR MAHMOOD, REGIONAL OPERATIONS' CHIEF, HBL VS KAMRAN KHAN | Citation: Citation Name:2025  PLD  120   PESHAWAR-HIGH-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.5667,
+   0.5845,
+   0.5922
+  ],
+  "search_query": "AHMAD SULTAN VS State",
+  "context_chars": 2136,
+  "source_citations": [
+   "2008mld422karachihighcourtsindh",
+   "2016mld920peshawarhighcourt",
+   "2025pld120peshawarhighcourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided context contains no relevant authority for Ahmad Sultan v. State.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0071",
+  "query": "NIAZ ALI VS MUHAMMAD DIN",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "1993clc1374lahorehighcourtlahore"
+  ],
+  "gen_s": 23.85,
+  "answer": "**Answer**\n\nThe authorities available in this session do not contain a reported judgment titled *Niaz Ali v. Muhammad Din* or any excerpt that discusses the facts, legal issues, or outcome of such a case. Consequently, I am unable to provide a substantive analysis of that matter based on the material before me.  \n\n*The case record (DOC‑n) for *Niaz Ali v. Muhammad Din* has not been uploaded, and none of the cited judgments ([SOURCE‑1] through [SOURCE‑5]) address it.*  \n\nTo obtain a detailed legal assessment, the full text of the judgment or the relevant case file would be required.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: WAQAR-UL-MOHSIN  VS SUPERINTENDENT OF POLICE, CITY LAHORE | Citation: Citation Name:2000  PCRLJ  97   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: NASEER AHMED alias MULLAN VS State | Citation: Citation Name:2024  PCrLJ  196   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: GHULAM MUHAMMAD VS State | Citation: Citation Name:2020  PCrLJ  1464   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: VS | Citation: Citation Name:2009  PTD  820   INCOME-TAX-APPELLATE-TRIBUNAL-PAKISTANBookmark this Case",
+   "SOURCE-5 [CASE LAW]: GOHAR MAJID NOSHAHI VS THE STATE | Citation: Citation Name:1991  PLD  391   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.6113,
+   0.7221,
+   0.6296,
+   0.6411,
+   0.6549
+  ],
+  "search_query": "NIAZ ALI VS MUHAMMAD DIN",
+  "context_chars": 3175,
+  "source_citations": [
+   "2000pcrlj97lahorehighcourtlahore",
+   "2024pcrlj196karachihighcourtsindh",
+   "2020pcrlj1464lahorehighcourtlahore",
+   "2009ptd820incometaxappellatetribunalpakistan",
+   "1991pld391lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that none of the provided sources contain the requested case, which is supported by the context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0293",
+  "query": "AKBLAQ AHMAD  VS KISHWITR SULTANA",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "1984mld464lahorehighcourtlahore"
+  ],
+  "gen_s": 19.84,
+  "answer": "**Answer – Status of *Akblaq Ahmad v. Kishwitr Sultana***  \n\nThe only authority that directly mentions the parties is the reported judgment cited as **[SOURCE‑1]**. That judgment records that a petition for leave to appeal was filed by the former husband (“ex‑male partner”) against the affirmation of a dissolution of the marriage on the ground of **khulʿā** in writ jurisdiction. The excerpt does not provide the final decision of the appellate court, nor the substantive reasoning of the trial court.\n\n**What the authorities establish**\n\n| Point | Authority |\n|------|------------|\n| The case *Akblaq Ahmad v. Kishwitr Sultana* was litigated before the High Court of Peshawar (1991) and involved a claim for dissolution of marriage by khulʿā. | **[SOURCE‑1]** |\n| An appeal was sought by the husband against the lower‑court decree granting dissolution. | **[SOURCE‑1]** |\n\n**Limitations of the available material**\n\n- The excerpt from **[SOURCE‑1]** does not disclose the appellate court’s ruling, the legal test applied, or any precedent that the court relied upon.  \n- No statutory provisions (e.g., the Muslim Family Laws Ordinance, 1961) are reproduced in the materials before me, so the statutory framework for khulʿā cannot be quoted.  \n- No other case law in the session addresses the same parties or provides further analysis of the merits.\n\n**Conclusion**\n\nBased on the authorities before me, *Akblaq Ahmad v. Kishwitr Sultana* is a khulʿā case in which the husband appealed a decree of dissolution. The final appellate outcome and the detailed legal reasoning are not contained in the excerpt provided. To determine the ultimate decision and its implications, the full text of **[SOURCE‑1]** would need to be consulted.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: SAID RASOOL KHAN  VS ADDITIONAL DISTRICT JUDGE, LAKKI MARWAT,  DISTRICT BANNU | Citation: Citation Name:1991  MLD  1732   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: IMDAD HUSSAIN VS THE STATE | Citation: Citation Name:1988  PCRLJ  1074   FEDERAL-SHARIAT-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ZULFIQAR VS THE STATE | Citation: Citation Name:1997  PCRLJ  1517   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: WAHEED KALHORO VS State | Citation: Citation Name:2014  PCrLJ  1405   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: SARA NOOR VS ADDITIONAL DISTRICT JUDGE | Citation: Citation Name:2014  CLC  528   ISLAMABADBookmark this Case",
+   "SOURCE-6 [CASE LAW]: Syed KAUSAR ALI SHAH  VS Syed FARHAT HUSSAIN SHAH | Citation: Citation Name:2022  SCMR  1558   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.671,
+   0.7313,
+   0.6781,
+   0.683,
+   0.6899,
+   0.6952
+  ],
+  "search_query": "AKBLAQ AHMAD  VS KISHWITR SULTANA",
+  "context_chars": 3599,
+  "source_citations": [
+   "1991mld1732peshawarhighcourt",
+   "1988pcrlj1074federalshariatcourt",
+   "1997pcrlj1517lahorehighcourtlahore",
+   "2014pcrlj1405karachihighcourtsindh",
+   "2014clc528islamabad",
+   "2022scmr1558supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": false,
+  "unsupported": [],
+  "judge_reason": "All factual claims in the answer are directly supported by the provided source and the answer does not decline to answer the question.",
+  "status": "answered",
+  "relevance": 0.6653567552566528
+ },
+ {
+  "id": "b0074",
+  "query": "Syed SHABBIR HUSSAIN  VS QUDSIYA BATOOL",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2022mld1794gilgitbaltistanchiefcourt"
+  ],
+  "gen_s": 19.88,
+  "answer": "**Answer**\n\nNo specific question has been posed regarding *Syed Shabbir Hussain v. Qudsiya Batool*. If you can clarify the issue you wish to address—such as the applicable legal principle, relief sought, procedural posture, or any other point—I will be able to apply the authorities listed above to your query.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: GOHAR AMAN VS SHAH NAZIM | Citation: Citation Name:2022  MLD  1583   Gilgit-Baltistan Chief CourtBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD ASHRAF alias NIKKA VS State | Citation: Citation Name:2022  SCMR  1328   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Mst. ZEENAT BIBI VS MUHAMMAD HAYAT | Citation: Citation Name:2012  CLC  837   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: FAHAD AKRAM BHATTI VS FEDERATION OF PAKISTAN | Citation: Citation Name:2026  PLD  262   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: Mst. Mariyam VS State | Citation: Citation Name:2025  MLD  1945   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.6167,
+   0.6152,
+   0.6283,
+   0.6586,
+   0.6676
+  ],
+  "search_query": "Syed SHABBIR HUSSAIN  VS QUDSIYA BATOOL",
+  "context_chars": 3005,
+  "source_citations": [
+   "2022mld1583gilgitbaltistanchiefcourt",
+   "2022scmr1328supremecourt",
+   "2012clc837lahorehighcourtlahore",
+   "2026pld262lahorehighcourtlahore",
+   "2025mld1945lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The reply only requests clarification and does not make any factual or legal claims requiring support from the provided context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0275",
+  "query": "TAHIR MEHMOOD AFRIDI VS MUHAMMAD DAYAR",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2011ylr615peshawarhighcourt"
+  ],
+  "gen_s": 18.56,
+  "answer": "**Answer – Summary of the case “Tahir Mehmood Afridi vs Muhammad Dayar”**\n\n| Issue | Finding based on the authorities |\n|-------|-----------------------------------|\n| Parties & nature of suit | The plaintiff — Muhammad Dayar — filed a civil suit against the defendant — Tahir Mehmood Afridi — seeking recovery of an outstanding amount of **Rs 7,45,000**. The claim arose because the defendant allegedly failed to return the sum within the time stipulated by a Jirga award.  [**SOURCE‑1**] |\n| Jirga award & partial payment | The Jirga, held on **17‑02‑2005**, recorded that the defendant acknowledged payment of **Rs 4,90,000** but disputed the balance, stating that the remaining amount was “without any justification, not payable by the defendant.”  [**SOURCE‑1**] |\n| Court proceedings | The trial court issued a summons to the defendant on **27‑06‑2005**.  [**SOURCE‑1**] |\n| Defendant’s whereabouts | The bailiff reported that the defendant had left Pakistan and was in **Sri Lanka** in connection with his employment.  [**SOURCE‑1**] |\n| Status of the suit | The material does not contain a judgment on the merits, nor does it indicate whether the plaintiff obtained a decree for recovery, whether any execution proceedings were instituted, or the final amount (if any) awarded.  [**SOURCE‑1**] |\n\n**Limitations of the available authorities**\n\n- No statutory provisions (e.g., sections of the Civil Procedure Code) are reproduced in the materials before me; therefore, the precise procedural requirements for execution of a decree, attachment of assets abroad, or service of summons on a person residing outside Pakistan cannot be detailed here.  \n- No subsequent judgment or appellate decision concerning this suit is provided in the authorities; consequently, the ultimate resolution of the dispute remains unknown.  \n\n**Conclusion**\n\nThe authorities confirm that the case involved a civil recovery claim for Rs 7,45,000, a Jirga‑mediated partial acknowledgment of payment, issuance of a court summons, and the defendant’s departure to Sri Lanka. Further factual or procedural details (e.g., final decree, enforcement measures) are not available in the excerpts provided.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: WAJIHA alias KHAN SHEERIN VS MUHAMMAD NIAZ KHAN 17 | Citation: Citation Name:2011  MLD  1548   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: ABID ALI VS IBRAR MUHAMMAD | Citation: Citation Name:2018  PLD  147   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: GHULAM MUHAMMAD VS State | Citation: Citation Name:2020  PCrLJ  1464   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: SAMI ULLAH BALOCH  VS ABDUL KARIM NOUSHERWANI | Citation: Citation Name:2018  PLD  405   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.5781,
+   0.6602,
+   0.6715,
+   0.6737
+  ],
+  "search_query": "TAHIR MEHMOOD AFRIDI VS MUHAMMAD DAYAR",
+  "context_chars": 3077,
+  "source_citations": [
+   "2011mld1548peshawarhighcourt",
+   "2018pld147peshawarhighcourt",
+   "2020pcrlj1464lahorehighcourtlahore",
+   "2018pld405supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": false,
+  "unsupported": [],
+  "judge_reason": "All factual claims in the answer are directly supported by the provided case excerpt.",
+  "status": "answered",
+  "relevance": 0.724126935005188
+ },
+ {
+  "id": "b0266",
+  "query": "MUHAMMAD HUSSAIN LARIK and others VS MUSLIM COMMERCIAL BANK LTD.",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2006scmr386supremecourt"
+  ],
+  "gen_s": 28.89,
+  "answer": "**Answer**\n\nThe materials available in this session contain only citations to reported judgments in which *Muslim Commercial Bank Ltd.* (MCB) is a party. No factual record of *Muhammad Hussain Larik and others v. Muslim Commercial Bank Ltd.* has been provided, and no statutory provisions are present in the authorities. Consequently, the specific issues raised in the present matter cannot be addressed on the basis of the authorities before me.  \n\n**Limitation of the response**  \n- The case record (DOC‑n) for *Muhammad Hussain Larik and others v. Muslim Commercial Bank Ltd.* is not present, so the factual background and the relief sought are unknown.  \n- No statutory text (e.g., the Banking Companies Ordinance, the Companies Act, or the Code of Civil Procedure) is available in the session; therefore, any analysis that depends on statutory provisions cannot be supplied.  \n\n**What would be required to answer the question**  \n- The full pleadings, pleadings‑in‑fact, or a judgment of *Muhammad Hussain Larik and others v. Muslim Commercial Bank Ltd.* (DOC‑n) to identify the cause of action, the relief claimed, and the court’s reasoning.  \n- The relevant statutory provisions (e.g., sections of the Banking Companies Ordinance 1962, the Companies Act 2017, or the Code of Civil Procedure 1908) to determine the applicable legal framework.  \n\nWithout those materials, a substantive legal opinion cannot be rendered.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: TOWN COMMITTEE, KHARIAN VS YOUNIS MASIH | Citation: Citation Name:2007  PLC  491   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD ASIF NAWAZ VS ADDITIONAL SESSIONS JUDGE/JUSTICE OF PEACE MULTAN | Citation: Citation Name:2014  CLD  45   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Mst. ALIA SHAMEEM VS NATIONAL BANK OF PAKISTAN | Citation: Citation Name:2023  CLD  359   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: A.M. CONSTRUCTION COMPANY (PRIVATE) LIMITED VS TAISEI CORPORATION | Citation: Citation Name:2025  CLD  474   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: AISHA RAHMAN VS ALLIED BANK LIMITED | Citation: Citation Name:2022  CLD  981   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.4595,
+   0.4442,
+   0.4673,
+   0.4588,
+   0.4763
+  ],
+  "search_query": "MUHAMMAD HUSSAIN LARIK and others VS MUSLIM COMMERCIAL BANK LTD.",
+  "context_chars": 3448,
+  "source_citations": [
+   "2007plc491lahorehighcourtlahore",
+   "2014cld45lahorehighcourtlahore",
+   "2023cld359lahorehighcourtlahore",
+   "2025cld474lahorehighcourtlahore",
+   "2022cld981lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the required case and statutes are absent from the provided context, so it declines to give a substantive opinion.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0203",
+  "query": "MESSRS SHAHEEN FOUNDATION VS MESSRS CAPITAL F.M. (PVT.) LIMITED",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2002cld188karachihighcourtsindh"
+  ],
+  "gen_s": 23.65,
+  "answer": "**Available Authority on the Matter**\n\nThe only reported judgment that directly involves the parties you have identified is:\n\n- **[SOURCE‑2]** – *Messrs Shaheen Foundation v. Messrs Capital F.M. (Pvt.) Limited and others*, 2002 CLD 188 (Lahore High Court).\n\nNo statutory provisions or additional case law concerning the same dispute are present in the materials before me. Consequently, the answer can be limited to the existence of this precedent and the fact that the judgment is cited in the list of authorities.  \n\n**Implication**\n\n- The citation indicates that the Lahore High Court has previously adjudicated a dispute between Shaheen Foundation and Capital F.M. (Pvt.) Limited.  \n- The substantive holdings, reasoning, and outcome of that case are not reproduced in the excerpts provided, so they cannot be summarized or applied here.  \n\n**Limitation**\n\nFor a detailed analysis of the legal issues, factual findings, and the court’s reasoning in *Shaheen Foundation v. Capital F.M. (Pvt.) Limited*, the full text of the 2002 CLD 188 judgment would need to be consulted. No other statutory or case‑law authority in the current session addresses the specific questions you may have regarding this dispute.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: NIAZ AKBAR VS PAKISTAN ATOMIC ENERGY COMMISSION through Chairman | Citation: Citation Name:2002  SCMR  992   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: Ahsan Idrees VS Judge Banking Court No.V, Lahore | Citation: Citation Name:2025  CLD  1095   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Ghulam Muhammad VS Rashidan Bibi | Citation: Citation Name:2026  YLR  20   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: NOOR HAYAT COTTON GINNERS  VS The BANK OF PUNJAB | Citation: Citation Name:2026  CLD  68   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: Raja HAFEEZ UR REHMAN VS GENERAL RICE TRADERS ASSOCIATIONS | Citation: Citation Name:2023  CLD  175   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.5309,
+   0.5594,
+   0.5752,
+   0.5367,
+   0.5443
+  ],
+  "search_query": "MESSRS SHAHEEN FOUNDATION VS MESSRS CAPITAL F.M. (PVT.) LIMITED",
+  "context_chars": 3361,
+  "source_citations": [
+   "2002scmr992supremecourt",
+   "2025cld1095lahorehighcourtlahore",
+   "2026ylr20lahorehighcourtlahore",
+   "2026cld68lahorehighcourtlahore",
+   "2023cld175lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "All factual claims are directly supported by the provided context, and the answer declines to give substantive analysis due to lack of detailed authority.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0035",
+  "query": "TAJ MUHAMMAD VS State",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2022pcrlj126lahorehighcourtlahore"
+  ],
+  "gen_s": 23.27,
+  "answer": "**TAJ MUHAMMAD alias TAJO RIND v. State** – Summary of Available Authority  \n\n| Aspect | What the authorities provide | What cannot be determined from the materials before me |\n|--------|-----------------------------|--------------------------------------------------------|\n| **Citation and Court** | The case is reported as *2017 YLRN 443* of the Karachi High Court (Sindh) – Larkana Bench, decided on 6 December 2016. The judgment is listed in **[SOURCE‑2]**. | The excerpt does not contain the factual background, the charge(s) against the appellant, the legal issue(s) argued, or the court’s reasoning and holding. |\n| **Parties** | The appellant is “TAJ MUHAMMAD alias TAJO RIND”. The respondent is the State. | No further identification of the appellant (e.g., occupation, residence) or the prosecuting authority is provided. |\n| **Procedural Posture** | The matter is recorded as “Criminal Jail Appeal No. D‑33 of 2014”. | The specific relief sought (e.g., bail, remission, quashing of conviction) and the procedural history (trial court judgment, sentence imposed) are not disclosed in the excerpt. |\n| **Statutory Basis** | The judgment references the “Penal Code (XLV of 1860)”. | The particular provision(s) of the Pakistan Penal Code that were applied, and the statutory language, are not reproduced in the excerpt. |\n| **Holding / Outcome** | Not included in the excerpt. | Whether the appeal was allowed or dismissed, and the legal reasoning employed by the court, cannot be ascertained from the material available. |\n\n### Limitations\n\nThe authorities available in this session consist solely of a citation and minimal procedural information for *TAJ MUHAMMAD alias TAJO RIND v. State* (**[SOURCE‑2]**). No substantive facts, legal issues, statutory provisions, or judicial reasoning are present in the excerpt. Consequently, a detailed analysis of the case, its legal significance, or its application to any factual scenario cannot be provided without access to the full judgment text or the relevant statutory provisions.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: IFTIKHAR KIYANI alias Khara VS State | Citation: Citation Name:2025  SCMR  1360   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: TAJ MUHAMMAD alias TAJO RIND VS State | Citation: Citation Name:2017  YLRN  443   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: WALI MUHAMMAD VS State | Citation: Citation Name:2015  YLR  2622   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case",
+   "SOURCE-4 [CASE LAW]: FAZAL WAHAB alias KAKI VS State | Citation: Citation Name:2021  YLRN  6   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: IRSHAD BEGUM VS Mirza MUHAMMAD HALEEM | Citation: Citation Name:2003  YLR  3245   SUPREME-COURT-AZAD-KASHMIRBookmark this Case",
+   "SOURCE-6 [CASE LAW]: SHAH NAWAZ VS BIRJLAL | Citation: Citation Name:2011  MLD  956   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.563,
+   0.5738,
+   0.5966,
+   0.5322,
+   0.5353,
+   0.5397
+  ],
+  "search_query": "TAJ MUHAMMAD VS State",
+  "context_chars": 3148,
+  "source_citations": [
+   "2025scmr1360supremecourt",
+   "2017ylrn443karachihighcourtsindh",
+   "2015ylr2622quettahighcourtbalochistan",
+   "2021ylrn6karachihighcourtsindh",
+   "2003ylr3245supremecourtazadkashmir",
+   "2011mld956karachihighcourtsindh"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "All statements accurately reflect the limited information present in the provided sources.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0353",
+  "query": "MRS. M.N. ARSHAD VS MISS NAEEMA KHAN",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "1990pld612supremecourt"
+  ],
+  "gen_s": 21.37,
+  "answer": "**Answer**\n\nThe authorities available in this session do not contain the substantive judgment, holdings, or procedural details of **Mrs. M.N. Arshad v. Miss Naeema Khan**. The excerpts that refer to the case are merely citations in other judgments (see [SOURCE‑1] and [SOURCE‑2]), and no material from the case record itself has been provided.\n\n**Limitation**\n\n- To determine the facts, legal issues, decision, and reasoning of *Mrs. M.N. Arshad v. Miss Naeema Khan*, the full text of the judgment (or the case record) would be required. The present authorities do not supply that information.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: ABDUL GHAFOOR VS THE STATE | Citation: Citation Name:1994  PCRLJ  733   FEDERAL-SHARIAT-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: Syed MEHMOOD ALI VS NETWORK TELEVISION MARKETING (PVT.) LTD | Citation: Citation Name:2005  CLD  840   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MUHAMMAD TAHIR VS State | Citation: Citation Name:2014  YLR  15   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MOHABAT VS State | Citation: Citation Name:2019  YLRN  51   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MUHAMMAD IKRAM ALIAS MUNJI VS THE STATE | Citation: Citation Name:1997  PCRLJ  1079   FEDERAL-SHARIAT-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: BIBI JAMILA BEGUM  VS MUHAMMAD BASHIR | Citation: Citation Name:1984  SCMR  1372   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.6474,
+   0.6575,
+   0.7255,
+   0.6876,
+   0.7107,
+   0.7153
+  ],
+  "search_query": "MRS. M.N. ARSHAD VS MISS NAEEMA KHAN",
+  "context_chars": 3522,
+  "source_citations": [
+   "1994pcrlj733federalshariatcourt",
+   "2005cld840karachihighcourtsindh",
+   "2014ylr15lahorehighcourtlahore",
+   "2019ylrn51karachihighcourtsindh",
+   "1997pcrlj1079federalshariatcourt",
+   "1984scmr1372supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided sources contain only citations and no substantive judgment details for the case.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0413",
+  "query": "MUHAMMAD SAJID VS JUDGE FAMILY COURT",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2020clc1524lahorehighcourtlahore"
+  ],
+  "gen_s": 30.32,
+  "answer": "**Answer**\n\nThe authorities available in this session do not contain the substantive facts, procedural posture, or the legal issue that you are seeking to resolve in *Muhammad Sajid v. Judge Family Court*. Consequently, a reasoned determination cannot be rendered based on the material before me.  \n\n**Limitation of the available material**  \n- The case citations listed ([SOURCE‑1] through [SOURCE‑6]) provide only the headings of judgments and brief references to the Family Courts Act, but they do not include the operative holdings, reasoning, or factual matrix of *Muhammad Sajid v. Judge Family Court*.  \n- No statutory text (Family Courts Act, 1964 or any other provision) is present in the session, and the “Source Availability Note” confirms that statutory excerpts are unavailable.  \n\n**What would be required**  \nTo give a substantive answer, the following would be needed:  \n\n1. The full judgment of *Muhammad Sajid v. Judge Family Court* (including the court’s reasoning and order).  \n2. The relevant statutory provision(s) of the Family Courts Act, 1964 (or any other applicable law) that the court interpreted in that case.  \n\nWithout those materials, I am unable to address the specific legal question you have posed. If you can provide the complete judgment or the precise issue you wish to explore, I will be able to apply the relevant authorities accordingly.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD SAJID VS JUDGE FAMILY COURT | Citation: Citation Name:2020  CLC  1524   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: HAMEEDA VS KHAN MUHAMMAD | Citation: Citation Name:2024  MLD  51   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MUHAMMAD SHAKEEL VS ADDITIONAL DISTRICT JUDGE, FAISALABAD | Citation: Citation Name:2025  PLD  572   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD ABBASI VS SAMIA ABBASI | Citation: Citation Name:1992  CLC  937   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MUHAMMAD AZAM VS State | Citation: Citation Name:2014  SCMR  1683   SUPREME-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: PROVINCE OF PUNJAB  VS ZAHOOR ELAHI | Citation: Citation Name:1989  SCMR  173   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.4178,
+   0.4651,
+   0.4725,
+   0.4734,
+   0.4746,
+   0.4779
+  ],
+  "search_query": "MUHAMMAD SAJID VS JUDGE FAMILY COURT",
+  "context_chars": 3269,
+  "source_citations": [
+   "2020clc1524lahorehighcourtlahore",
+   "2024mld51quettahighcourtbalochistan",
+   "2025pld572supremecourt",
+   "1992clc937lahorehighcourtlahore",
+   "2014scmr1683supremecourt",
+   "1989scmr173supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": true,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided sources lack the necessary factual or legal details, which is supported by the context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0095",
+  "query": "AYESHA HASHMAT KAMAL VS ADDITIONAL DISTRICT JUDGE",
+  "query_type": "case_name",
+  "answerable": true,
+  "gold": [
+   "2024clc141lahorehighcourtlahore"
+  ],
+  "gen_s": 15.14,
+  "answer": "The language model request failed. Check the server terminal, your GROQ_API_KEY, and the configured GROQ_MODEL, then retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: Mst. AILA NAWAZ VS JUDGE FAMILY COURT, KHANEWAL | Citation: Citation Name:2018  CLC  241   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD TUFAIL VS Mst. SAMIYA | Citation: Citation Name:2020  YLR  2523   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Dr. SARAH YOUSAF VS MUHAMMAD UMAIR | Citation: Citation Name:2016  MLD  1802   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.4803,
+   0.4751,
+   0.4753
+  ],
+  "search_query": "AYESHA HASHMAT KAMAL VS ADDITIONAL DISTRICT JUDGE",
+  "context_chars": 2869,
+  "status": "error"
+ },
+ {
+  "id": "b0291",
+  "query": "what is the ruling on west pakistan industrial and commercial employment (standing orders) ordinance 1968 -- s. o. 15(3)(b)--dismissal for misconduct of theft and dishonesty in connection with property of employer-charged only for not exercising due care which allowing a truck to pass from main gate of the mills allegedly carrying stolen property-not to exercise due care, held, quite different from theft , fraud or dishonesty - dismissal for misconduct of theft etc. in circumstances, held, bad in law.\n\nfull judgment:\n1982 p cr. l j 218\n\n \n\n[karachi]\n\n \n\nbefore z. c. valliani, j\n\n \n\nkhushi muhammad and 4 others‑applicants\n\n \n\nversus\n\n \n\nabdul haf1rez and another‑‑respondents\n\n \n\ncriminal miscellaneous application no. 1155 of 1980, decided on 2nd november, 1981.\n\n \n\ncriminal procedure code (v of 1898)‑‑",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "1981plc235nationalindustrialrelationscommission"
+  ],
+  "gen_s": 4.92,
+  "answer": "**Ruling on the application of S.O. 15(3)(b) of the West Pakistan Industrial and Commercial Employment (Standing Orders) Ordinance, 1968**\n\nThe authorities available in this session do not contain the statutory wording of S.O. 15(3)(b) nor a reported judgment that directly addresses dismissal for “misconduct of theft and dishonesty” where the alleged misconduct is limited to “failure to exercise due care in allowing a truck to pass the main gate of the mills.” Consequently, a precise ruling on whether such conduct falls within the ambit of dismissal under that specific provision cannot be derived from the material before me.\n\n**Limitation**\n\n- The judgment cited (1982 P Cr L J 218) is not provided in the authorities, and no case law in the excerpts ([SOURCE‑1] to [SOURCE‑7]) discusses the distinction between “failure to exercise due care” and “theft, fraud or dishonesty” under S.O. 15(3)(b).  \n- Statutory text of the Ordinance is also absent from the materials.\n\n**Conclusion**\n\nBased on the authorities before me, the question of whether dismissal for the described conduct is “bad in law” under S.O. 15(3)(b) remains unanswered. A full examination of the Ordinance’s wording (as published on the Pakistan Code website) and any judgments that specifically interpret that clause would be required to reach a definitive conclusion.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUSLIM COMMERCIAL BANK LTD. VS FATEH MUHAMMAD SHAH | Citation: Citation Name:2007  PLC  75   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: GENERAL MANAGER, ADAM SUGAR MILLS LIMITED, CHISHTIAN VS Rana TAHIR PERVAIZ | Citation: Citation Name:2011  PLC  370   PUNJAB LABOUR APPELLATE TRIBUNALBookmark this Case",
+   "SOURCE-3 [CASE LAW]: SUO MOTU CASE NO. 6 OF 2010 VS (SUO MOTU ACTION REGARDING PAYMENT OF PRESCRIBED MINIMUM WAGES TO THE SECURITY GUARDS WORKING IN PTCL) | Citation: Citation Name:2012  PLC  232   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: Syed HAIDER IMAM RIZVI  VS IVTH SINDH LABOUR COURT, KARACHI | Citation: Citation Name:2010  PLC  20   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: HYESONS SUGAR MILLS LTD., KHANPUR VS MEHAR DIN | Citation: Citation Name:1978  PLC  250   LABOUR-COURT-PUNJABBookmark this Case",
+   "SOURCE-6 [CASE LAW]: KHALID MEHMOOD BHATTI VS MUHAMMAD SULEYMAN KHAN | Citation: Citation Name:2021  PCrLJ  1850   ISLAMABADBookmark this Case",
+   "SOURCE-7 [CASE LAW]: Syed ATIF RAZA SHAH VS Syed FIDA HUSSAIN SHAH | Citation: Citation Name:2022  SCMR  1262   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.7069,
+   0.3626,
+   0.5489,
+   0.4133,
+   0.58,
+   0.4974,
+   0.5101
+  ],
+  "search_query": "what is the ruling on west pakistan industrial and commercial employment (standing orders) ordinance 1968 -- s. o. 15(3)(b)--dismissal for misconduct of theft and dishonesty in connection with property of employer-charged only for not exercising due care which allowing a truck to pass from main gate of the mills allegedly carrying stolen property-not to exercise due care, held, quite different from theft , fraud or dishonesty - dismissal for misconduct of theft etc. in circumstances, held, bad in law.\n\nfull judgment:\n1982 p cr. l j 218\n\n \n\n[karachi]\n\n \n\nbefore z. c. valliani, j\n\n \n\nkhushi muhammad and 4 others‑applicants\n\n \n\nversus\n\n \n\nabdul haf1rez and another‑‑respondents\n\n \n\ncriminal miscellaneous application no. 1155 of 1980, decided on 2nd november, 1981.\n\n \n\ncriminal procedure code (v of 1898)‑‑",
+  "context_chars": 3362,
+  "source_citations": [
+   "2007plc75karachihighcourtsindh",
+   "2011plc370punjablabourappellatetribunal",
+   "2012plc232supremecourt",
+   "2010plc20karachihighcourtsindh",
+   "1978plc250labourcourtpunjab",
+   "2021pcrlj1850islamabad",
+   "2022scmr1262supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that none of the provided case excerpts address the specific issue, so it faithfully declines to answer.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0063",
+  "query": "what is the ruling on penal code (xlv of 1860), ss. 379 & 420 bail, grant of--accused persons committed fraud with the complainant for which complainant himself was a party to the incident",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "1999ylr236lahorehighcourtlahore"
+  ],
+  "gen_s": 7.82,
+  "answer": "**Ruling on Bail for Offences under S. 379 and S. 420, PPC**\n\n- The courts have held that when the alleged conduct falls under S. 379 (theft) or S. 420 (cheating) of the Penal Code, bail may be granted under the provisions of S. 496 of the Criminal Procedure Code.  \n- In *ALLAH DITTA v. State* the court observed that the case “prima facie did not fall within the purview of the offence of ‘theft’ under S. 379… where the case was alleged to be of deprivation of amount through fraud prima facie falling under S. 420, the same was bailable under S. 496, Cr.P.C.” [**SOURCE‑1**].\n\n**Application to the Present Facts**\n\n- The accused are alleged to have committed fraud together with the complainant, who was also a party to the incident.  \n- The factual scenario therefore aligns with the situation described in *ALLAH DITTA v. State*, where the alleged fraud (S. 420) was treated as bailable.  \n\n**Conclusion**\n\n- On the basis of the authorities available, bail can be granted for offences under S. 379 and S. 420, subject to the discretion of the court under S. 496, Cr.P.C.  \n\n**Limitation**\n\n- The statutory text of S. 496 Cr.P.C. is not present in the materials before me; the conclusion rests on the judicial interpretation shown in the cited judgment.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: ALLAH DITTA  VS STATE | Citation: Citation Name:1999  YLR  236   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: Mst. RIFFAT MUNIR VS NAVEED ZAFAR | Citation: Citation Name:2016  PCrLJ  464   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ABDUL KARIM VS State | Citation: Citation Name:2014  YLR  1130   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: FAKHAR AHMAD VS State | Citation: Citation Name:2007  YLR  1405   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: SAEED AMMAR BIN ALI ALVI VS State | Citation: Citation Name:2011  MLD  1286   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.3545,
+   0.4276,
+   0.3892,
+   0.3928,
+   0.3951
+  ],
+  "search_query": "what is the ruling on penal code (xlv of 1860), ss. 379 & 420 bail, grant of--accused persons committed fraud with the complainant for which complainant himself was a party to the incident",
+  "context_chars": 3817,
+  "source_citations": [
+   "1999ylr236lahorehighcourtlahore",
+   "2016pcrlj464lahorehighcourtlahore",
+   "2014ylr1130peshawarhighcourt",
+   "2007ylr1405lahorehighcourtlahore",
+   "2011mld1286lahorehighcourtlahore"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": true,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": false,
+  "unsupported": [],
+  "judge_reason": "All factual/legal claims in the answer are directly supported by the provided judgment excerpt.",
+  "status": "answered",
+  "relevance": 0.7840912938117981
+ },
+ {
+  "id": "b0426",
+  "query": "what is the ruling on if the prosecution asserted a motive but failed to prove the same then failure on the part of prosecution might be reacted against the sentence of death passed against the convict on the charge of murder .\n\nfull judgment:\n2022 p cr. l j note 77\n\n[sindh (sukkur bench)]\n\nbefore zulfiqar ali sangi, j\n\nmuhammad nawaz and 2 others appellants\n\nversus\n\nthe state",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2022pcrljn72karachihighcourtsindh"
+  ],
+  "gen_s": 25.36,
+  "answer": "**Ruling**\n\nWhen the prosecution alleges a motive for murder but does not prove that motive, the courts have held that this failure may be taken into account to set aside or reduce a death sentence imposed on the convict.  \n\n**Authority**\n\nThe judgment in *Abdul Jabbar v. State* (2022 P Cr L J Note 77, Sindh – Sukkur Bench) expressly states:\n\n> “Motive—Scope—If the prosecution asserted a motive but failed to prove the same then failure on the part of prosecution might be reacted against the sentence of death passed against the convict on the charge of murder.”  \n\n[Source‑1]  \n\nThe same principle is reiterated in *Nawab alias Tharo Gadani v. State* (2024 MLD 110, Sindh – Sukkur Bench), where the court observed that a failure to prove the motive “may react against a sentence of death passed against a convict on the charge of murder.”  \n\n[Source‑2]  \n\n**Application**\n\n- **Fact required:** The prosecution must have expressly pleaded a motive in the charge (e.g., pre‑meditation, revenge) and then been unable to produce evidence establishing that motive at trial.  \n- **Effect:** The appellate court may consider the lack of proof of motive as a ground to commute the death sentence to a lesser punishment, typically life imprisonment, because the motive is a crucial element in establishing the *mens rea* required for the most severe form of murder.  \n\n**Limitations**\n\n- The authorities above discuss the principle but do not provide a detailed procedural test or list of additional factors the court may weigh.  \n- No statutory provision on this specific point is available in the materials before me; the ruling rests solely on the case law cited.  \n\nAccordingly, based on the judgments cited, a failure by the prosecution to prove an asserted motive can be used to challenge and potentially overturn a death sentence for murder.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: ABDUL JABBAR VS State | Citation: Citation Name:2022  PCrLJN  72   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: NAWAB alias THARO GADANI VS State | Citation: Citation Name:2024  MLD  110   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ABDUL QADEER VS PUNJAB LABOUR APPELLATE TRIBUNAL | Citation: Citation Name:2021  PLC  87   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: POONJO VS State | Citation: Citation Name:2022  YLRN  190   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: PESHAWAR ELECTRIC SUPPLY COMPANY (PESCO), WAPDA HOUSE, PESHAWAR VS COMMISSIONER INLAND REVENUE, RTO, PESHAWAR | Citation: Citation Name:2021  PTD  2050   INLAND REVENUE APPELLATE TRIBUNAL OF PAKISTANBookmark this Case"
+  ],
+  "scores": [
+   0.1475,
+   0.2354,
+   0.2476,
+   0.3555,
+   0.3034
+  ],
+  "search_query": "what is the ruling on if the prosecution asserted a motive but failed to prove the same then failure on the part of prosecution might be reacted against the sentence of death passed against the convict on the charge of murder .\n\nfull judgment:\n2022 p cr. l j note 77\n\n[sindh (sukkur bench)]\n\nbefore zulfiqar ali sangi, j\n\nmuhammad nawaz and 2 others appellants\n\nversus\n\nthe state",
+  "context_chars": 3550,
+  "source_citations": [
+   "2022pcrljn72karachihighcourtsindh",
+   "2024mld110karachihighcourtsindh",
+   "2021plc87lahorehighcourtlahore",
+   "2022ylrn190karachihighcourtsindh",
+   "2021ptd2050inlandrevenueappellatetribunalofpakistan"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": true,
+  "gold_cited": false,
+  "faithfulness": 0.6,
+  "refused": false,
+  "unsupported": [
+   "typically life imprisonment",
+   "mens rea required for the most severe form of murder"
+  ],
+  "judge_reason": "Most statements are directly supported by the cited judgments, but the answer adds claims about the usual commutation to life imprisonment and the mens‑rea requirement that are not found in the provided context.",
+  "status": "answered",
+  "relevance": 0.885206937789917
+ },
+ {
+  "id": "b0228",
+  "query": "what is the ruling on o.vi, r.17 & o.i, r.10 court may strike out or add parties",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2021clc87lahorehighcourtlahore"
+  ],
+  "gen_s": 23.15,
+  "answer": "**Ruling on Order VI Rule 17 and Order I Rule 10 – Power to Strike Out or Add Parties**\n\n| Point | Authority | Holding |\n|-------|-----------|---------|\n| The court may **strike out** a party who has been improperly joined, at any stage of the proceedings, either on the application of a party or on its own motion, if it appears just to do so. | [SOURCE‑3] Ali Asghar vs Raja M. Siddique – “The Court may at any stage of the proceedings… order that the name of any party improperly joined… be struck out.” |\n| The court may **add** a party who ought to have been joined, when his presence is necessary for the complete adjudication of the suit. | [SOURCE‑3] Ali Asghar vs Raja M. Siddique – “…that the name of any person who ought to have been joined… be added.” |\n| Order VI Rule 17 gives a party the right to amend pleadings, but the amendment must be clear, specific and just. The court will allow such amendment only when the proposed addition or deletion is expressed in unequivocal terms. | [SOURCE‑4] Shazia Jaffar vs General Public – “The provisions of Order VI, Rule 17, C.P.C. empower any party to a suit to alter or amend his pleadings in such manner as may be just… the applicant… is required to indicate in clear terms… the proposed addition must be provided in unequivocal terms.” |\n| Order I Rule 10 (sub‑rule 4) provides that when a defendant is added, the plaint must, unless the court directs otherwise, be amended as necessary. The court may therefore order amendment of the plaint to reflect the addition of a new defendant. | [SOURCE‑1] Muhammad Saleem Naseem vs Additional District Judge – “Sub‑rule (4) of O.I, R.10… provided that where a defendant was added, the plaint would, unless the court otherwise directed, be amended in such manner as might be necessary.” |\n| The court may also strike out a party under Order I Rule 10 when the party’s presence is no longer justified (e.g., an adult son no longer entitled to maintenance). | [SOURCE‑2] Muhammad Imran vs Samina Kousar – “Court may at any stage of the proceedings… order that the name of any party improperly joined… be struck out.” |\n\n**Summary**\n\n- Both Order VI Rule 17 and Order I Rule 10 empower the court to **add** parties when necessary for a full and just determination of the suit, and to **strike out** parties who are improperly joined.  \n- The power to add or strike out parties can be exercised **at any stage** of the proceedings, either on an application or suo motu, provided the court is satisfied that the order is just.  \n- Amendments under Order VI Rule 17 must be clear and specific; amendments required by the addition of a defendant under Order I Rule 10 are to be made unless the court directs otherwise.  \n\nThese principles are drawn directly from the judgments cited above. No statutory text was available in this session, so the answer relies solely on the case law excerpts provided.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD SALEEM NASEEM VS ADDITIONAL DISTRICT JUDGE, DUNYAPUR | Citation: Citation Name:2021  CLC  87   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD IMRAN VS SAMINA KOUSAR | Citation: Citation Name:2025  PLD  152   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ALI ASGHAR VS RAJA M. SIDDIQUE | Citation: Citation Name:2021  CLC  1348   ISLAMABADBookmark this Case",
+   "SOURCE-4 [CASE LAW]: SHAZIA JAFFAR VS GENERAL PUBLIC | Citation: Citation Name:2025  PLD  21   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case"
+  ],
+  "scores": [
+   0.4719,
+   0.5079,
+   0.5294,
+   0.5846
+  ],
+  "search_query": "what is the ruling on o.vi, r.17 & o.i, r.10 court may strike out or add parties",
+  "context_chars": 3688,
+  "source_citations": [
+   "2021clc87lahorehighcourtlahore",
+   "2025pld152lahorehighcourtlahore",
+   "2021clc1348islamabad",
+   "2025pld21quettahighcourtbalochistan"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": true,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": false,
+  "unsupported": [],
+  "judge_reason": "All factual and legal claims in the answer are directly supported by the provided case law excerpts.",
+  "status": "answered",
+  "relevance": 0.8258628845214844
+ },
+ {
+  "id": "b0279",
+  "query": "what is the ruling on penal code (xlv of 1860); ss.382/436/447/148/149 theft after preparation made for causing death etc., mischief by fire to destroy house etc., criminal trespass, rioting armed with deadly weapons",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2011mld1442lahorehighcourtlahore"
+  ],
+  "gen_s": 22.56,
+  "answer": "**Ruling on the cited provisions**\n\nThe materials before me contain only a brief reference to “Penal Code (XLV of 1860)” in the judgment **[SOURCE‑1] Muhammad Rashid vs Bibi Fatima**. No substantive discussion, interpretation, or holding on sections 382, 436, 447, 148, 149, or on the offences of theft after preparation for causing death, mischief by fire, criminal trespass, or rioting armed with deadly weapons is provided in that excerpt.\n\nAccordingly, the authorities available in this session do **not** establish a judicial ruling on any of the listed sections or offences. To determine the court’s approach to these provisions, the full text of the relevant judgments or statutory provisions would need to be consulted.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: Muhammad Rashid VS Bibi Fatima | Citation: Citation Name:2025  MLD  1751   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case"
+  ],
+  "scores": [
+   0.3806
+  ],
+  "search_query": "what is the ruling on penal code (xlv of 1860); ss.382/436/447/148/149 theft after preparation made for causing death etc., mischief by fire to destroy house etc., criminal trespass, rioting armed with deadly weapons",
+  "context_chars": 274,
+  "source_citations": [
+   "2025mld1751quettahighcourtbalochistan"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided excerpt contains no substantive discussion of the listed sections, matching the limited context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0444",
+  "query": "what is the ruling on arbitration act 1940 ss. 30 & 39-awardgrounds for setting aside-words \"or is otherwise invalid\" occurring in clause (c) of section 30-include all kinds of objections-objection to validity of reference to arbitration falls within purview of clause-practice-objections should be made at time award is filed-objections not raised before arbitrator or court cannot be raised in appeal-objections to award should be decided separately and not in corporate d in order directing decree to be passed in terms of award-composite order may be construed as one refusing to set aside award.\n\nfull judgment:\np l d 1966 supreme court 188\n\n \n\npresent: a. r. cornelius , c. j., s. a. rahman, fazal-e-akbar, b. z. kaikaus and\n\n \n\nhamoodur rahman, jj\n\n \n\n(1) government of west pakistan through secretary, health department, west pakistan, lahore, and\n\n \n\n(2) the director of health services, west pakistan, lahore‑appellants\n\n \n\nversus\n\n \n\ndr. a. a. aziz, medical superintendent, government mental hospital, lahore‑respondent\n\n \n\ncivil appeal no. 35 of 1963, decided on 2nd november 1965",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "1966pld19supremecourtazadkashmir"
+  ],
+  "gen_s": 12.99,
+  "answer": "**Ruling on Arbitration Act, 1940 – Sections 30 & 39 (Award‑setting‑aside)**  \n\n| Point | Authority | Holding / Explanation |\n|-------|-----------|-----------------------|\n| **Scope of “invalid” in clause (c) of s. 30** | [SOURCE‑1] Azad J & K Govt vs Khawaja Muhammad Usman & Co. | The words “or is otherwise invalid” in clause (c) are interpreted to cover **all categories of objection** to the award, not only those expressly listed in the section. |\n| **Objection to the validity of the reference to arbitration** | [SOURCE‑1] (same case) | An objection that the parties were not properly bound to arbitrate falls within the ambit of clause (c); the court may set aside the award on that ground. |\n| **Timing of objections** | [SOURCE‑1] | Objections must be **raised at the time the award is filed**. If a party fails to object when the award is presented, the objection cannot be revived later in an appeal. |\n| **Effect of non‑raised objections** | [SOURCE‑1] | An objection that was **not made before the arbitrator or the court** cannot be introduced on appeal; the appellate court is limited to the grounds expressly pleaded under s. 30. |\n| **Separate determination of award objections** | [SOURCE‑1] | Issues relating to the validity of the award must be **decided separately** and must not be merged into the decree‑issuing process. A composite order that incorporates the award without a distinct determination is not a proper ground for setting aside the award. |\n| **Section 39 – Procedure for setting aside** | [SOURCE‑2] Muhammad vs Sardul | The court may entertain an application under s. 39 only on the specific grounds listed in s. 30 (including the “otherwise invalid” clause). The procedural requirement is that the application be made **within the period prescribed by the Act** and must set out the precise ground of objection. |\n| **Nature of the court’s review** | [SOURCE‑3] Trading Corporation of Pakistan Ltd. vs Messes Aslam Saeed & Co. | The court’s review is **limited to the grounds** in s. 30; an error of law by the arbitrator does **not** by itself vitiate the award unless it falls within those statutory grounds. |\n| **Requirement of a “face‑on‑the‑record” invalidity** | [SOURCE‑5] Imperial Electric Co. vs Zhongxing Telecom Pak. | The award must contain an error or infirmity **apparent on its face**; the court will not re‑appraise the evidence or re‑determine the merits. |\n| **Remedy for a decree‑related defect** | [SOURCE‑6] Ejaz Ali Siddique vs Irshad Ahmed | Where the decree issued on the basis of the award is defective, the appropriate remedy is **revision** under the CPC, not a fresh application under s. 39. |\n\n### Application to the Question  \n\n1. **All‑encompassing “invalid” language** – The phrase “or is otherwise invalid” in s. 30(c) is construed broadly; any defect in the arbitration process, including lack of a valid arbitration agreement, falls within it.  \n\n2. **Objections must be contemporaneous** – Parties must raise any challenge to the award (including validity of the reference to arbitration) **when the award is filed**. Failure to do so bars later reliance on that ground in an appeal.  \n\n3. **Separate adjudication** – The court must decide the validity of the award **independently** of the decree‑issuing stage. A composite order that merely incorporates the award without a distinct determination does not constitute a proper ground for setting aside.  \n\n4. **Procedural gate‑keeping** – Under s. 39, the court’s jurisdiction to set aside is confined to the statutory grounds in s. 30; it does not extend to general errors of law or re‑evaluation of evidence.  \n\n5. **Face‑value test** – The award must exhibit an apparent invalidity; the court will not look beyond the award’s terms to infer a defect.  \n\n### Limitations  \n\n- The **text of Sections 30 and 39** of the Arbitration Act, 1940 is not available in the materials before me; the above conclusions are drawn solely from the cited case law.  \n- No authority in this session addresses the **exact period** for filing an application under s. 39 or the detailed procedural steps required. Those matters would need consultation of the statutory provision itself.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: AZAD J & K GOVERNMENT VS KHAWAJA MUHAMMAD USMAN & CO. | Citation: Citation Name:1966  PLD  19   SUPREME-COURT-AZAD-KASHMIRBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD VS SARDUL | Citation: Citation Name:1965  PLD  472   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: TRADING CORPORATION OF PAKISTAN LTD VS MESSES ASLAM SAEED & CO | Citation: Citation Name:1973  PLD  65   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: KARACHI ELECTRIC SUPPLY CORPORATION LTD. VS CONSORTIUM 2000 P.E.C.H. SOCIETY, KARACHI | Citation: Citation Name:1986  CLC  1350   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: The IMPERIAL ELECTRIC COMPANY (PVT.) LTD. VS M/s. ZHONGXING TELECOM PAK (PVT.) LTD. | Citation: Citation Name:2025  CLD  420   ISLAMABADBookmark this Case",
+   "SOURCE-6 [CASE LAW]: EJAZ ALI SIDDIQUE VS IRSHAD AHMED | Citation: Citation Name:1998  CLC  1684   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case"
+  ],
+  "scores": [
+   0.034,
+   0.1731,
+   0.2773,
+   0.3488,
+   0.3681,
+   0.3215
+  ],
+  "search_query": "what is the ruling on arbitration act 1940 ss. 30 & 39-awardgrounds for setting aside-words \"or is otherwise invalid\" occurring in clause (c) of section 30-include all kinds of objections-objection to validity of reference to arbitration falls within purview of clause-practice-objections should be made at time award is filed-objections not raised before arbitrator or court cannot be raised in appeal-objections to award should be decided separately and not in corporate d in order directing decree to be passed in terms of award-composite order may be construed as one refusing to set aside award.\n\nfull judgment:\np l d 1966 supreme court 188\n\n \n\npresent: a. r. cornelius , c. j., s. a. rahman, fazal-e-akbar, b. z. kaikaus and\n\n \n\nhamoodur rahman, jj\n\n \n\n(1) government of west pakistan through secretary, health department, west pakistan, lahore, and\n\n \n\n(2) the director of health services, west pakistan, lahore‑appellants\n\n \n\nversus\n\n \n\ndr. a. a. aziz, medical superintendent, government mental hospital, lahore‑respondent\n\n \n\ncivil appeal no. 35 of 1963, decided on 2nd november 1965",
+  "context_chars": 4012,
+  "source_citations": [
+   "1966pld19supremecourtazadkashmir",
+   "1965pld472lahorehighcourtlahore",
+   "1973pld65karachihighcourtsindh",
+   "1986clc1350karachihighcourtsindh",
+   "2025cld420islamabad",
+   "1998clc1684quettahighcourtbalochistan"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": true,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": false,
+  "unsupported": [],
+  "judge_reason": "All factual/legal statements in the answer are directly supported by the cited case law excerpts.",
+  "status": "answered",
+  "relevance": 0.9155188202857971
+ },
+ {
+  "id": "b0150",
+  "query": "what is the ruling on constitution of pakistan, art. 199 inherent powers of high court",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2020mld949peshawarhighcourt"
+  ],
+  "gen_s": 22.96,
+  "answer": "**Ruling on Article 199, Constitution of Pakistan – Inherent Powers of the High Court**\n\n| Point | Authority |\n|-------|-----------|\n| **Scope of the power** – Article 199 confers a *constitutional jurisdiction* on the High Court that is **supervisory and extraordinary**. It may be invoked in *exceptional circumstances* such as a violation of fundamental rights, lack of jurisdiction of a lower court, gross miscarriage of justice, or when an order breaches natural‑justice principles. | [SOURCE‑6] |\n| **Judicial‑review function** – The High Court may review the exercise of power by any public authority. Where a public authority acts without due care, in bad faith, or contrary to the concept of law, the High Court can *strike down* that act. | [SOURCE‑5] |\n| **Relation to statutory inherent powers** – Although Article 199 is a constitutional source, the courts have treated it as complementary to the statutory inherent powers (e.g., Section 561‑A, Cr.P.C.). The constitutional power is *not limited* by the statutory provision and can be exercised at any stage of proceedings to secure the ends of justice. | Implied from the discussion in [SOURCE‑1] and [SOURCE‑4] (which deal with Section 561‑A) – the authorities show that the constitutional jurisdiction under Art 199 is likewise wide and not confined to a specific procedural stage. |\n\n### Summary of the Court’s Position\n- **Article 199 is a source of inherent, constitutional authority** for the High Court, enabling it to supervise lower courts and public bodies.\n- The power is **extraordinary** and is to be exercised **only in exceptional cases** where fundamental‑rights or procedural fairness is at stake.\n- It allows the High Court to **declare actions of public authorities ultra vires** and to **nullify such actions**.\n- The jurisdiction is **independent of any statutory provision** (e.g., Section 497, Cr.P.C.) and may be invoked even when no specific statutory remedy exists.\n\n### Limitation\n- The full text of Article 199 is not reproduced in the materials before me; the above ruling is based solely on the case law excerpts provided. For the precise wording of the constitutional provision, the Constitution of Pakistan should be consulted directly.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: YASMIN GUL KHANANI  VS TARIQ MEHMOOD | Citation: Citation Name:2013  YLR  2716   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD RAFIQ BANGASH VS State | Citation: Citation Name:2015  PLD  194   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: DAD KHAN VS State | Citation: Citation Name:2020  SCMR  2062   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: WAHAB VS State | Citation: Citation Name:2010  YLR  1630   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: SIEMENS PAK ENGINEERING VS JAPAN POWER GENERATION LIMITED | Citation: Citation Name:2020  CLD  619   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-6 [CASE LAW]: Ahsan Ali VS Ali Ghulam Khoso | Citation: Citation Name:2026  YLR  492   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.3373,
+   0.4142,
+   0.3927,
+   0.4014,
+   0.403,
+   0.4128
+  ],
+  "search_query": "what is the ruling on constitution of pakistan, art. 199 inherent powers of high court",
+  "context_chars": 3753,
+  "source_citations": [
+   "2013ylr2716karachihighcourtsindh",
+   "2015pld194peshawarhighcourt",
+   "2020scmr2062supremecourt",
+   "2010ylr1630peshawarhighcourt",
+   "2020cld619lahorehighcourtlahore",
+   "2026ylr492karachihighcourtsindh"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 0.8,
+  "refused": false,
+  "unsupported": [
+   "Relation to statutory inherent powers – constitutional power is not limited by the statutory provision and can be exercised at any stage of proceedings"
+  ],
+  "judge_reason": "Most claims are backed by cited sources, but the link between Article 199 and Section 561‑A is inferred rather than explicitly supported.",
+  "status": "answered",
+  "relevance": 0.8722156286239624
+ },
+ {
+  "id": "b0054",
+  "query": "what is the ruling on o.xxxix, rr. 1 & 2 specific relief act (i of 1877), ss. 42, 54 & 55",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2023ylr473quettahighcourtbalochistan"
+  ],
+  "gen_s": 17.25,
+  "answer": "**Ruling on O. XXXIX, RR. 1 & 2 of the Specific Relief Act, 1877 (Ss. 42, 54 & 55)**  \n\nThe authorities available in this session contain only a brief reference to the Specific Relief Act, 1877 in the judgment of *Muhammad Hanif Mughal v. Secretary Forest Azad* ([SOURCE‑1]). That excerpt does not discuss O. XXXIX, RR. 1 & 2, nor does it analyse Sections 42, 54 or 55 of the Act.  \n\nAccordingly, the materials before me do not provide a judicial ruling or interpretation of those specific provisions. To determine the court’s approach to O. XXXIX, RR. 1 & 2 and the cited sections, the full text of the Specific Relief Act, 1877 (as reproduced on the Pakistan Code website) and any judgments that directly address those provisions would need to be consulted.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD HANIF MUGHAL, FOREST GUARD U.T. DIVISION GARHI DOPATTA, TEHSIL AND DISTRICT MUZAFFARABAD VS SECRETARY FORST AZAD GOVERNMENT OF THE STATE OF JAMMU AND KASHMIR HAVING HIS OFFICE AT NEW SECRETARIAT MUZAFFARABAD | Citation: Citation Name:2023  PLC(CS)N  56   SUPREME-COURT-AZAD-KASHMIRBookmark this Case"
+  ],
+  "scores": [
+   0.3612
+  ],
+  "search_query": "what is the ruling on o.xxxix, rr. 1 & 2 specific relief act (i of 1877), ss. 42, 54 & 55",
+  "context_chars": 467,
+  "source_citations": [
+   "2023plccsn56supremecourtazadkashmir"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided judgment does not discuss the requested provisions, matching the context.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0036",
+  "query": "what is the ruling on appreciation of evidence benefit of doubt",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2022pcrlj126lahorehighcourtlahore"
+  ],
+  "gen_s": 15.11,
+  "answer": "**Ruling on the Appreciation of Evidence and the Benefit of Doubt**\n\nThe courts consistently hold that the “benefit of doubt” is a substantive right of the accused, not a discretionary grace. A single circumstance that creates reasonable doubt in the mind of a prudent person is sufficient to entitle the accused to this benefit. Consequently, all favorable aspects of the prosecution’s evidence must be given to the accused, and any lingering doubt must lead to acquittal.\n\n| Authority | Key Holding on Benefit of Doubt |\n|-----------|---------------------------------|\n| **[SOURCE‑1] Javed alias Shahid v. State** | The principle is “deep‑rooted”; a single reasonable doubt obliges the court to grant the benefit of doubt as a right, not as a concession. |\n| **[SOURCE‑2] Asim alias Ahmad Bakhsh v. State** | Reiterates that many doubtful circumstances are not required; one reasonable doubt suffices to invoke the right to benefit of doubt. |\n| **[SOURCE‑3] Farooq Ahmad v. State** | Confirms that “single circumstance which creates reasonable doubt in a prudent mind … entitles the accused to its benefit … as a matter of right.” |\n| **[SOURCE‑4] Muhammad Abid Hussain v. State** | States the principle that “benefit of all doubts is to be given to the accused.” |\n| **[SOURCE‑5] Muhammad Shafi v. State** | Emphasises that “the benefit of all favorable instances in the prosecution evidence must go to the accused regardless of whether he has taken any such plea or not.” |\n\n**Interpretation**\n\n- The benefit of doubt is **mandatory** where the evidence leaves any reasonable doubt about guilt.\n- It is **not dependent** on the number or type of doubtful circumstances; a single reasonable doubt is enough.\n- The rule applies **irrespective of the accused’s plea**; the court must automatically consider any favorable evidence for the accused.\n\n**Application**\n\nWhen a trial court evaluates the prosecution’s case, it must:\n\n1. Identify whether any circumstance creates reasonable doubt in the mind of a prudent person.  \n2. If such doubt exists, grant the benefit of doubt to the accused, leading to acquittal.  \n\nThese principles are derived solely from the judgments listed above; statutory provisions on the matter are not available in the materials before me.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: JAVED alias SHAHID VS State | Citation: Citation Name:2011  YLR  2632   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: ASIM alias AHMAD BAKHSH VS State | Citation: Citation Name:2011  PCrLJ  1567   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: FAROOQ AHMAD VS State | Citation: Citation Name:2010  YLR  2035   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD ABID HUSSAIN VS State | Citation: Citation Name:2009  YLR  1457   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MUHAMMAD SHAFI VS State | Citation: Citation Name:2024  YLR  1425   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.3298,
+   0.3764,
+   0.4021,
+   0.3573,
+   0.3674
+  ],
+  "search_query": "what is the ruling on appreciation of evidence benefit of doubt",
+  "context_chars": 3614,
+  "source_citations": [
+   "2011ylr2632lahorehighcourtlahore",
+   "2011pcrlj1567lahorehighcourtlahore",
+   "2010ylr2035lahorehighcourtlahore",
+   "2009ylr1457lahorehighcourtlahore",
+   "2024ylr1425karachihighcourtsindh"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": false,
+  "unsupported": [],
+  "judge_reason": "All factual/legal claims in the answer are directly supported by the provided case law excerpts.",
+  "status": "answered",
+  "relevance": 0.8513033986091614
+ },
+ {
+  "id": "b0177",
+  "query": "what is the ruling on constitution of pakistan, art.212(3) option for voluntary separation scheme",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2011scmr1924supremecourt"
+  ],
+  "gen_s": 20.5,
+  "answer": "**Ruling on Article 212(3) – Option for a Voluntary Separation Scheme**\n\nThe Supreme Court, in *Shahnaz Parveen v. PTCL through President* (2011 SCMR 1924), examined the validity of an employee’s exercise of the option provided under Article 212(3) of the Constitution for a voluntary separation scheme. The Court considered whether the employee’s acceptance of the scheme was truly voluntary or the result of fraud.\n\n- **Holding:** The Court held that the employee’s exercise of the option was voluntary and that the scheme, as introduced and accepted by the management, was constitutionally valid. Consequently, the grievance petition challenging the voluntariness of the separation was dismissed.  \n- **Authority:** [SOURCE-1] Shahnaz Parveen v. PTCL through President.\n\nNo other authorities in the material before me address the interpretation or limits of Article 212(3) with respect to voluntary separation schemes. Accordingly, the above decision constitutes the present judicial ruling on the matter.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: SHAHNAZ PARVEEN VS PTCL through President | Citation: Citation Name:2011  SCMR  1924   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: WAHEED GUL KHAN VS PROVINCE OF SINDH | Citation: Citation Name:2024  SCMR  1701   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: JAN MUHAMMAD TAYAB VS FEDERATION OF PAKISTAN through Ministry of Law and Justice, Islamabad | Citation: Citation Name:2024  PLD  211   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: SHAH MADAR KHAN VS TARIQ DAUD | Citation: Citation Name:2024  SCMR  1319   SUPREME-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: FEDERAL LAND COMMISSION  VS MUHAMMAD AURANGZEB KHAN | Citation: Citation Name:1997  SCMR  911   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.4034,
+   0.4366,
+   0.4539,
+   0.4611,
+   0.4672
+  ],
+  "search_query": "what is the ruling on constitution of pakistan, art.212(3) option for voluntary separation scheme",
+  "context_chars": 3646,
+  "source_citations": [
+   "2011scmr1924supremecourt",
+   "2024scmr1701supremecourt",
+   "2024pld211lahorehighcourtlahore",
+   "2024scmr1319supremecourt",
+   "1997scmr911supremecourt"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 1,
+  "dangling_markers": 0,
+  "gold_in_sources": true,
+  "gold_cited": true,
+  "faithfulness": 1.0,
+  "refused": false,
+  "unsupported": [],
+  "judge_reason": "All factual claims in the answer are directly supported by the provided case summary.",
+  "status": "answered",
+  "relevance": 0.8592413067817688
+ },
+ {
+  "id": "b0225",
+  "query": "what is the ruling on constitution of pakistan, art. 4 rights of individuals to be dealt in accordance with law",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2022ylr1377karachihighcourtsindh"
+  ],
+  "gen_s": 23.23,
+  "answer": "**Ruling on Article 4, Constitution of Pakistan – “Right of individuals to be dealt with in accordance with law”**\n\n| Point | Authority | Holding / Interpretation |\n|-------|-----------|--------------------------|\n| **Inalienable right** – Every citizen and any other person present in Pakistan is entitled to the protection of law and must be treated in accordance with law. | *Ramzan Sugar Mills Ltd. v. Federal Board of Revenue* [ SOURCE‑1 ] ; *Muhammad Abdāl alias Abdali v. Government of Punjab* [ SOURCE‑2 ] ; *Farm Plant v. Collector of Customs* [ SOURCE‑3 ] ; *KN Traders v. Additional Collector of Customs* [ SOURCE‑4 ] ; *Mohammad Akram v. State* [ SOURCE‑5 ] ; *Bashir Ahmed v. Director General, NAB* [ SOURCE‑6 ] | The courts consistently describe Article 4(2)(a) as an **inalienable** constitutional guarantee. No action that is detrimental to life, liberty, body, reputation or property may be taken except **“in accordance with law.”** |\n| **Scope of “law”** – The term “law” is understood to include substantive and procedural legal rules that are duly enacted and applied. | The above judgments repeatedly state that any governmental action contrary to the procedural safeguards of the Constitution or statutory law is **illegal and void ab‑initio** (see *Bashir Ahmed* [ SOURCE‑6 ]). |\n| **Application to State Action** – State authorities may not deprive a person of life, liberty, reputation or property without due process. | *Bashir Ahmed* [ SOURCE‑6 ] expressly holds that “any action by the Authority, contrary to the guarantee provided in Art 4… is illegal and void ab‑initio.” |\n| **Geographical Reach** – The right extends to citizens wherever they are and to any other person who is **“for the time being in Pakistan.”** | *Muhammad Abdāl* [ SOURCE‑2 ] and *Ramzan Sugar Mills* [ SOURCE‑1 ] both emphasize that the protection applies to “every citizen, wherever he may be, and every other person for the time being in Pakistan.” |\n\n**Summary**\n\nThe authorities uniformly rule that Article 4 of the Constitution creates an absolute, inalienable right for every individual within Pakistan’s territory (and for citizens abroad) to be dealt with only in accordance with law. Any governmental act that infringes on life, liberty, body, reputation or property without compliance with the law is void. The courts have applied this principle across a range of contexts, from tax assessments to customs enforcement and criminal proceedings.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: RAMZAN SUGAR MILLS LIMITED VS FEDERAL BOARD OF REVENUE | Citation: Citation Name:2021  PTD  1321   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD ABDAAL alias ABDALI VS GOVERNMENT OF PUNJAB | Citation: Citation Name:2020  PLD  471   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: FARM PLANT VS The COLLECTOR OF CUSTOMS (ADJUDICATION-I) | Citation: Citation Name:2022  PTD  1345   CUSTOMS-APPELLATE-TRIBUNAL-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: KN TRADERS VS ADDITIONAL COLLECTOR OF CUSTOMS (ADJUDICATION-I) | Citation: Citation Name:2023  PTD  73   CUSTOMS-APPELLATE-TRIBUNAL-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MOHAMMAD AKRAM VS State | Citation: Citation Name:2020  YLR  2428   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-6 [CASE LAW]: BASHIR AHMED VS DIRECTOR GENERAL, NATIONAL ACCOUNTABILITY BUREAU | Citation: Citation Name:2020  PLD  15   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case"
+  ],
+  "scores": [
+   0.2808,
+   0.2982,
+   0.3261,
+   0.3061,
+   0.3531,
+   0.3446
+  ],
+  "search_query": "what is the ruling on constitution of pakistan, art. 4 rights of individuals to be dealt in accordance with law",
+  "context_chars": 3943,
+  "source_citations": [
+   "2021ptd1321lahorehighcourtlahore",
+   "2020pld471lahorehighcourtlahore",
+   "2022ptd1345customsappellatetribunallahore",
+   "2023ptd73customsappellatetribunallahore",
+   "2020ylr2428lahorehighcourtlahore",
+   "2020pld15quettahighcourtbalochistan"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": false,
+  "gold_cited": false,
+  "faithfulness": 1.0,
+  "refused": false,
+  "unsupported": [],
+  "judge_reason": "All factual/legal claims in the answer are directly supported by the provided case law excerpts.",
+  "status": "answered",
+  "relevance": 0.8770825862884521
+ },
+ {
+  "id": "b0180",
+  "query": "what is the ruling on specific performance of agreement to sell immovable property subsequent vendee/purchaser, duty of",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2023mld1372lahorehighcourtlahore"
+  ],
+  "gen_s": 25.54,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: Mst. SHAMIM AKHTAR VS MUHAMMAD YOUNIS KHAN | Citation: Citation Name:2023  MLD  1372   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: UMAR JAN  VS ABDUL JABBAR | Citation: Citation Name:2024  PLC(CS)  79   Gilgit-Baltistan Chief CourtBookmark this Case"
+  ],
+  "scores": [
+   0.2638,
+   0.3534
+  ],
+  "search_query": "what is the ruling on specific performance of agreement to sell immovable property subsequent vendee/purchaser, duty of",
+  "context_chars": 2478,
+  "status": "error"
+ },
+ {
+  "id": "b0078",
+  "query": "what is the ruling on penal code (xlv of 1860), s.392/397/34 accused alongwith his companions in broad daylight had barged in the house of the complainant and committed robbery by putting the inmates of the house in fear of death",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "1999ylr2444karachihighcourtsindh"
+  ],
+  "gen_s": 24.99,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: BACHA RAWAN  VS STATE | Citation: Citation Name:1999  YLR  2444   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD REHAN VS State | Citation: Citation Name:2014  MLD  1317   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: KHAN MUHAMMAD  VS STATE | Citation: Citation Name:1994  PCRLJ  1431   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: BARKAT ALI VS State | Citation: Citation Name:2023  PCrLJ  1146   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: KASHIF ALI alias MOJ VS State | Citation: Citation Name:2022  YLR  1960   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-6 [CASE LAW]: Ghulam Rasool VS State | Citation: Citation Name:2024  PCrLJ  1752   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.3281,
+   0.4162,
+   0.4689,
+   0.4404,
+   0.443,
+   0.4441
+  ],
+  "search_query": "what is the ruling on penal code (xlv of 1860), s.392/397/34 accused alongwith his companions in broad daylight had barged in the house of the complainant and committed robbery by putting the inmates of the house in fear of death",
+  "context_chars": 3805,
+  "status": "error"
+ },
+ {
+  "id": "b0294",
+  "query": "what was decided in AKBLAQ AHMAD  VS KISHWITR SULTANA",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "1984mld464lahorehighcourtlahore"
+  ],
+  "gen_s": 24.77,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: SAID RASOOL KHAN  VS ADDITIONAL DISTRICT JUDGE, LAKKI MARWAT,  DISTRICT BANNU | Citation: Citation Name:1991  MLD  1732   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: SARA NOOR VS ADDITIONAL DISTRICT JUDGE | Citation: Citation Name:2014  CLC  528   ISLAMABADBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ZULFIQAR VS THE STATE | Citation: Citation Name:1997  PCRLJ  1517   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: BASHARAT HUSSAIN VS IJAZ BIBI | Citation: Citation Name:1991  CLC  1328   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: GHULAM ABBAS VS STATE | Citation: Citation Name:1987  PCRLJ  2033   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-6 [CASE LAW]: YAR BEG  VS GUL NAZ | Citation: Citation Name:1976  SCMR  261   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.5484,
+   0.5564,
+   0.5602,
+   0.5679,
+   0.5758,
+   0.5785
+  ],
+  "search_query": "what was decided in AKBLAQ AHMAD  VS KISHWITR SULTANA",
+  "context_chars": 3775,
+  "status": "error"
+ },
+ {
+  "id": "b0216",
+  "query": "what is the ruling on railway servant, dismissed from service on being convicted for theft under s. 379, penal code-held, not entitled to any show-cause notice and, therefore, not protected under art. 177(1).\n\nfull judgment:\n1972 s c m r 28\n\n \n\npresent : sajjad ahmad and salahuddin ahmed, jj\n\n \n\nghulam muhammad‑appellant\n\n \n\nversus\n\n \n\nthe state‑respondent\n\n \n\ncriminal appeal no. 28 of 1971, decided on 7th december 1971.\n\n \n\n(on appeal from the judgment and order of the former high court of west pakistan, lahore, dated the 7th may 1969, in criminal revision no. 488 of 1969).\n\n \n\npenal code (xlv of 1860), ss. 380 & 411‑accused and his father hauled in and tried for theft‑stolen trunk alleged to have been recovered from the house of accused's father‑father acquitted but accused convicted under s. 411‑evidence of recover v unsatis factory and trunk recovered from house jointly occupied by accused and his father‑benefit of doubt given to accused and his conviction set aside.\n\n \n\nnasim hassan, advocate supreme court instructed by sh. abdul karim, advocate‑on‑record for appellant.",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "1971pld117quettahighcourtbalochistan"
+  ],
+  "gen_s": 25.97,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: PROVINCE OF WEST PAKISTAN THROUGH CHAIRMAN OF P. W. R., LAHORE AND ANOTHER- VS MALIK AMAN | Citation: Citation Name:1971  PLD  117   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUKHTAR ALI VS STATE | Citation: Citation Name:1971  PLD  725   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: WAHAB SADIN  VS THE STATE | Citation: Citation Name:1971  PLD  135   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD ANWAR  VS DEPUTY INSPECTOR-GENERAL OF POLICE, LAHORE | Citation: Citation Name:2000  PLC(CS)  853   FEDERAL-SERVICE-TRIBUNALBookmark this Case",
+   "SOURCE-5 [CASE LAW]: HABIB GUL VS PAKISTAN RAILWAYS | Citation: Citation Name:1983  PLC(CS)  1021   LABOUR-APPELLATE-TRIBUNAL-SINDHBookmark this Case",
+   "SOURCE-6 [CASE LAW]: MESSRS PAKISTAN STATE OIL CO. LTD VS MUHAMMAD HAROON | Citation: Citation Name:1988  PLC  96   LABOUR-APPELLANT-TRIBUNAL-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.0997,
+   0.3684,
+   0.4416,
+   0.3819,
+   0.4073,
+   0.4098
+  ],
+  "search_query": "what is the ruling on railway servant, dismissed from service on being convicted for theft under s. 379, penal code-held, not entitled to any show-cause notice and, therefore, not protected under art. 177(1).\n\nfull judgment:\n1972 s c m r 28\n\n \n\npresent : sajjad ahmad and salahuddin ahmed, jj\n\n \n\nghulam muhammad‑appellant\n\n \n\nversus\n\n \n\nthe state‑respondent\n\n \n\ncriminal appeal no. 28 of 1971, decided on 7th december 1971.\n\n \n\n(on appeal from the judgment and order of the former high court of west pakistan, lahore, dated the 7th may 1969, in criminal revision no. 488 of 1969).\n\n \n\npenal code (xlv of 1860), ss. 380 & 411‑accused and his father hauled in and tried for theft‑stolen trunk alleged to have been recovered from the house of accused's father‑father acquitted but accused convicted under s. 411‑evidence of recover v unsatis factory and trunk recovered from house jointly occupied by accused and his father‑benefit of doubt given to accused and his conviction set aside.\n\n \n\nnasim hassan, advocate supreme court instructed by sh. abdul karim, advocate‑on‑record for appellant.",
+  "context_chars": 3753,
+  "status": "error"
+ },
+ {
+  "id": "b0351",
+  "query": "what is the ruling on appellants\n\n \n\nversus\n\n \n\nthe state-respondent",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "1982scmr757supremecourt"
+  ],
+  "gen_s": 36.21,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: DODO VS State | Citation: Citation Name:2015  YLR  2537   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: SHER ZAMAN BAZAI VS DIRECTOR, AGRICULTURE, ECONOMICS AND MARKETING, QUETTA | Citation: Citation Name:2006  PLD  10   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MANZOOR HUSSAIN PARWANA VS State | Citation: Citation Name:2016  YLR  1835   Gilgit-Baltistan Chief CourtBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD ASLAM VS THE STATE | Citation: Citation Name:1973  PCRLJ  685   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MUHAMMAD ASHRAF  VS DEVELOPMENT AUTHORITY, MUZAFFARABAD | Citation: Citation Name:1995  PCRLJ  1343   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-6 [CASE LAW]: ARIF HUSSAIN  VS AZIZ FATIMA | Citation: Citation Name:1994  MLD  2451   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.5665,
+   0.4786,
+   0.5252,
+   0.5411,
+   0.5421,
+   0.5495
+  ],
+  "search_query": "what is the ruling on appellants\n\n \n\nversus\n\n \n\nthe state-respondent",
+  "context_chars": 3040,
+  "status": "error"
+ },
+ {
+  "id": "b0282",
+  "query": "what was decided in ABDUL KHALIQ  VS STATE",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "1986scmr35supremecourt"
+  ],
+  "gen_s": 25.5,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: Siraj VS State | Citation: Citation Name:2024  MLD  1837   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case",
+   "SOURCE-2 [CASE LAW]: Irfan Ali VS State | Citation: Citation Name:2025  PCrLJ  2009   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Muhammad Anwar VS State | Citation: Citation Name:2025  YLR  1394   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MESSRS SERVICE INDUSTRIES LTD., LAHORE VS (CONCILIATION), LAHORE REGION | Citation: Citation Name:1981  PLC  477   LABOUR-APPELLATE-TRIBUNAL-PUNJABBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MUHAMMAD AFZAL VS NATIONAL ACCOUNTABILITY BUREAU (SINDH) | Citation: Citation Name:2015  PCrLJ  1496   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.4979,
+   0.5118,
+   0.4288,
+   0.4295,
+   0.4452
+  ],
+  "search_query": "what was decided in ABDUL KHALIQ  VS STATE",
+  "context_chars": 2287,
+  "status": "error"
+ },
+ {
+  "id": "b0126",
+  "query": "what was decided in STATE  VS MAQBOOL HUSSAIN",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "1987pcrlj1490specialappellatecourtsindh"
+  ],
+  "gen_s": 26.55,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD FEROZE VS SESSIONS JUDGE, BHAKKAR | Citation: Citation Name:2013  YLR  1530   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: JUMA KHAN VS State | Citation: Citation Name:2018  YLR  2512   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: IHSANULLAH VS State | Citation: Citation Name:2018  YLRN  242   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: GHULAM MUSTAFA VS THE STATE | Citation: Citation Name:1988  PCRLJ  1322   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: ABDUL MAJID AFRIDI VS State | Citation: Citation Name:2022  SCMR  676   SUPREME-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: Gulraiz Shahzad VS State | Citation: Citation Name:2025  PCrLJ  508   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.4593,
+   0.4982,
+   0.4698,
+   0.4759,
+   0.4847,
+   0.4899
+  ],
+  "search_query": "what was decided in STATE  VS MAQBOOL HUSSAIN",
+  "context_chars": 3311,
+  "status": "error"
+ },
+ {
+  "id": "b0285",
+  "query": "what is the ruling on penal code (xlv of 1860), ss.302/364, 458, 337-h(ii), 148, 149 & 114 qatl-e-amd, kidnapping or abduction in order to murder",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2010ylr2762karachihighcourtsindh"
+  ],
+  "gen_s": 26.29,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: State VS MUHAMMAD IQBAL | Citation: Citation Name:2012  PCrLJ  1005   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: WAJID HUSSAIN VS State | Citation: Citation Name:2020  PCrLJ  543   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Zahoor Hussain VS State | Citation: Citation Name:2026  YLR  293   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: SAEED AHMAD VS State | Citation: Citation Name:2022  YLRN  172   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.3137,
+   0.3266,
+   0.3262,
+   0.346
+  ],
+  "search_query": "what is the ruling on penal code (xlv of 1860), ss.302/364, 458, 337-h(ii), 148, 149 & 114 qatl-e-amd, kidnapping or abduction in order to murder",
+  "context_chars": 2621,
+  "status": "error"
+ },
+ {
+  "id": "b0273",
+  "query": "what is the ruling on pronouncement of divorce peace of mind, purpose and objective of act of divorce had to be made known to the witnesses present at the spot by the husband which were the prerequisites of pronouncing of divorce .\n\nfull judgment:\n \n\n2015 y l r 1235\n\n \n\n[lahore]\n\n \n\nbefore shezada mazhar, j\n\n \n\nmannan feroz",
+  "query_type": "issue",
+  "answerable": true,
+  "gold": [
+   "2015pld231lahorehighcourtlahore"
+  ],
+  "gen_s": 25.97,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUNAS PARVEEN VS ADDITIONAL SESSIONS JUDGE/EX-OFFICIO JUSTICE OF PEACE, SHORKOT | Citation: Citation Name:2015  PLD  231   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: RIZWAN SARWAR VS SADIA MAJEED | Citation: Citation Name:2015  CLC  1048   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Syed ASAD RAZA NAQVI VS Mst. SAIMA FATIMA | Citation: Citation Name:2014  MLD  254   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: ROBIN DAVID JOHN VS Mst. HUMA SAMUEL | Citation: Citation Name:2015  MLD  1683   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.117,
+   0.3685,
+   0.4112,
+   0.471
+  ],
+  "search_query": "what is the ruling on pronouncement of divorce peace of mind, purpose and objective of act of divorce had to be made known to the witnesses present at the spot by the husband which were the prerequisites of pronouncing of divorce .\n\nfull judgment:\n \n\n2015 y l r 1235\n\n \n\n[lahore]\n\n \n\nbefore shezada mazhar, j\n\n \n\nmannan feroz",
+  "context_chars": 3299,
+  "status": "error"
+ },
+ {
+  "id": "b0457",
+  "query": "how to register a trademark in Japan",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 25.55,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: BASIC TRADE MARK S.A. VS KAPUR AND COMPANY | Citation: Citation Name:2004  CLD  1454   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: PAKISTAN MOBILE COMMUNICATIONS LIMITED VS MUBASHER SAEED SADOZAI, DIRECTOR/HEAD OF DEPARTMENT (CCD), SECP | Citation: Citation Name:2020  CLD  86   SECURITIES-AND-EXCHANGE-COMMISSION-OF-PAKISTANBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Mehr SHAHABUL KHAN VS JUDGE ANTI-TERRORIST COURT, FAISALABAD | Citation: Citation Name:2002  YLR  2390   LAHORE-HIGH-COURT-LAHOREBookmark this Case"
+  ],
+  "scores": [
+   0.6557,
+   0.6917,
+   0.6498
+  ],
+  "search_query": "how to register a trademark in Japan",
+  "context_chars": 2908,
+  "status": "error"
+ },
+ {
+  "id": "b0472",
+  "query": "how does the Canadian charter of rights protect freedom of expression",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 28.23,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: TOM LE VS HER MAJESTY THE QUEEN | Citation: Citation Name:2019  SCMR  1460   SUPREME-COURT-OF-CANADABookmark this Case",
+   "SOURCE-2 [CASE LAW]: IRFAN WAHID VS LUCKY CEMENT LIMITED | Citation: Citation Name:2022  PLD  69   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Asad Ali Toor VS Axact Private Limited | Citation: Citation Name:2024  PCrLJ  1526   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: GHAZI NASIRUDDIN VS SETH HASHIM DAWOOD DIVAN AND OTHERS | Citation: Citation Name:1962  PLD  59   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-5 [CASE LAW]: IBRAHIM alias TAIG VS State | Citation: Citation Name:2024  PCrLJ  190   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case",
+   "SOURCE-6 [CASE LAW]: SECRETARY, INDUSTRIES, GOVERNMENT OF KHYBER PAKHTUNKHWA, PESHAWAR VS SAMAR GUL | Citation: Citation Name:2014  PLC  190   PESHAWAR-HIGH-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.6718,
+   0.6371,
+   0.7259,
+   0.6466,
+   0.7085,
+   0.6458
+  ],
+  "search_query": "how does the Canadian charter of rights protect freedom of expression",
+  "context_chars": 3805,
+  "status": "error"
+ },
+ {
+  "id": "b0459",
+  "query": "how do I bake sourdough bread at home",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 25.55,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: KHURRAM ZAFAR VS Mst. SARAH | Citation: Citation Name:2021  YLR  91   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: Shafqat Ali VS State | Citation: Citation Name:2025  YLR  1187   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: W.T.AS. NOS. 134/KB AND 138/KB OF 1994-65 VS W.T.AS. NOS. 134/KB AND 138/KB OF 1994-65 | Citation: Citation Name:2001  PTD  1790   INCOME-TAX-APPELLATE-TRIBUNAL-PAKISTANBookmark this Case",
+   "SOURCE-4 [CASE LAW]: Gulraiz VS State | Citation: Citation Name:2025  YLR  2153   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: ABDUL WAHAB VS ABDUL RASHEED | Citation: Citation Name:2017  PLD  56   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-6 [CASE LAW]: SOBDAR KHAN  VS THE STATE | Citation: Citation Name:2001  CLC  1559   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   1.0416,
+   1.3365,
+   1.0076,
+   1.268,
+   1.008,
+   1.0225
+  ],
+  "search_query": "how do I bake sourdough bread at home",
+  "context_chars": 3435,
+  "status": "error"
+ },
+ {
+  "id": "b0473",
+  "query": "what is the punishment for theft under the Japanese Penal Code",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 24.87,
+  "answer": "**Punishment for theft under the Japanese Penal Code**\n\nThe authorities available in this session do not contain the text of the Japanese Penal Code nor any Pakistani judgment interpreting it. Consequently, the specific punishment prescribed for theft under the Japanese Penal Code cannot be provided based on the material before me.  \n\n*The material needed:* the relevant provision of the Japanese Penal Code (or an authoritative commentary on it).",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: MUHAMMAD ILYAS  VS THE STATE | Citation: Citation Name:2001  PCRLJ  1982   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: ABDUL JALIL  VS STATE | Citation: Citation Name:1999  PCRLJ  1811   FEDERAL-SHARIAT-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: KHURSHID ALAM VS THE STATE | Citation: Citation Name:1982  PCRLJ  57   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-4 [CASE LAW]: RIAZ HUSSAIN VS THE STATE | Citation: Citation Name:1988  PCRLJ  617   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: THE OFFICIAL ASSIGNEE OF HIGH COURT OF SIND VS THE CONTROLLER OF ESTATE DUTY, LAHORE | Citation: Citation Name:1988  PTD  425   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-6 [CASE LAW]: Customs Appeals Nos.610, 609, 608, 607 and 606/LB of 2004, decided on 24th August, 2006. VS Customs Appeals Nos.610, 609, 608, 607 and 606/LB of 2004, decided on 24th August, 2006. | Citation: Citation Name:2007  PTD  2065   CUSTOM,EXCISE-AND-SALES-TAX-APPELLATE-TRIBUNALBookmark this Case"
+  ],
+  "scores": [
+   0.5799,
+   0.572,
+   0.5979,
+   0.5695,
+   0.5937,
+   0.5249
+  ],
+  "search_query": "what is the punishment for theft under the Japanese Penal Code",
+  "context_chars": 3748,
+  "source_citations": [
+   "2001pcrlj1982peshawarhighcourt",
+   "1999pcrlj1811federalshariatcourt",
+   "1982pcrlj57lahorehighcourtlahore",
+   "1988pcrlj617lahorehighcourtlahore",
+   "1988ptd425karachihighcourtsindh",
+   "2007ptd2065customexciseandsalestaxappellatetribunal"
+  ],
+  "valid_source_rate": 1.0,
+  "n_markers": 0,
+  "dangling_markers": 0,
+  "gold_in_sources": null,
+  "gold_cited": null,
+  "faithfulness": 1.0,
+  "refused": true,
+  "unsupported": [],
+  "judge_reason": "The answer correctly states that the provided Pakistani judgments do not contain Japanese Penal Code provisions, and thus declines to give a substantive answer.",
+  "status": "refused",
+  "relevance": null
+ },
+ {
+  "id": "b0479",
+  "query": "how do I claim asylum in the United Kingdom",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 24.82,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: A. W. CARTER VS MRS: J. M: CARTER | Citation: Citation Name:1958  PLD  923   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: AMAN ULLAH KHAN VS FEDERATION OF PAKISTAN through Secretary Law | Citation: Citation Name:2025  PLD  274   ISLAMABADBookmark this Case",
+   "SOURCE-3 [CASE LAW]: RAHIL AZIZI VS State | Citation: Citation Name:2024  PLD  231   ISLAMABADBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD ZUBAIR VS FEDERAL GOVERNMENT OF PAKISTAN through Secretary, Interior, Islamabad | Citation: Citation Name:2014  PLD  31   ISLAMABADBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MITHA KHAN VS MST. HIDAYAT BIBI | Citation: Citation Name:1958  PLD  219   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-6 [CASE LAW]: SABIR HUSSAIN VS Mst. HINA UROOJ | Citation: Citation Name:2026  PLD  65   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.7849,
+   0.7992,
+   0.7043,
+   0.7507,
+   0.7542,
+   0.7635
+  ],
+  "search_query": "how do I claim asylum in the United Kingdom",
+  "context_chars": 3556,
+  "status": "error"
+ },
+ {
+  "id": "b0471",
+  "query": "requirements for a valid will under New York law",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 24.81,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: Syed PERVAIZ HUSSAIN VS ZIKR-UR-REHMAN | Citation: Citation Name:2024  SCMR  1683   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: NOORUDDIN FEERASTA VS LAHORE DEVELOPMENT AUTHORITY (LDA) | Citation: Citation Name:2025  CLC  121   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: HABIB-UR-REHMAN VS GHULAM MUHAMMAD (LATE) | Citation: Citation Name:2023  CLC  788   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD AKRAM VS MUHAMMAD KHALID | Citation: Citation Name:2020  CLC  1542   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case",
+   "SOURCE-5 [CASE LAW]: BEGUM ZOHRA VS MAJ. GENERAL MUHAMMAD ISHFAQUL MAJID | Citation: Citation Name:1955  PLD  378   SINDH-CHIEF-COURTBookmark this Case",
+   "SOURCE-6 [CASE LAW]: ABID ALI VS MUHAMMAD TAHIR | Citation: Citation Name:2021  CLC  1788   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case"
+  ],
+  "scores": [
+   0.6995,
+   0.6705,
+   0.6799,
+   0.6851,
+   0.6879,
+   0.6928
+  ],
+  "search_query": "requirements for a valid will under New York law",
+  "context_chars": 3426,
+  "status": "error"
+ },
+ {
+  "id": "b0453",
+  "query": "what are the requirements for a valid patent under the European Patent Convention",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 24.81,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: EARTHFACTOR (PRIVATE) LIMITED VS PATENT OFFICE, IPO-PAKISTAN through Controller | Citation: Citation Name:2014  CLD  897   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: SHAH MAQSOOD VS KHAIR-UN-NISA | Citation: Citation Name:2021  CLC  561   QUETTA-HIGH-COURT-BALOCHISTANBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Syed PERVAIZ HUSSAIN VS ZIKR-UR-REHMAN | Citation: Citation Name:2024  SCMR  1683   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MESSRS THE AGRICULTURAL PRODUCTS CORPORATION VS THE STATE | Citation: Citation Name:1973  PLD  46   BOARD-OF-REVENUE-NWFPBookmark this Case"
+  ],
+  "scores": [
+   0.7145,
+   0.7382,
+   0.6738,
+   0.6747
+  ],
+  "search_query": "what are the requirements for a valid patent under the European Patent Convention",
+  "context_chars": 3212,
+  "status": "error"
+ },
+ {
+  "id": "b0470",
+  "query": "how are damages calculated in Australian tort law",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 24.84,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: ANWARZEB VS MUSHTAQ AHMED | Citation: Citation Name:2015  MLD  601   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: HALEEMA SADIA VS SHAKEEL AHMED | Citation: Citation Name:2016  GBLR  199   SUPREME-APPELLATE-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: CITIBANK N.A. VS MUHAMMAD TASLEEM | Citation: Citation Name:2024  CLD  1536   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: NIHAD ALI VS State | Citation: Citation Name:2019  PCrLJN  155   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-5 [CASE LAW]: I.T.A. No.2082/KB of 2001 (Assessment year 2000-2001), decided on 12th March, 2003. VS I.T.A. No.2082/KB of 2001 (Assessment year 2000-2001), decided on 12th March, 2003. | Citation: Citation Name:2003  PTD  2321   INCOME-TAX-APPELLATE-TRIBUNAL-PAKISTANBookmark this Case"
+  ],
+  "scores": [
+   0.5665,
+   0.6367,
+   0.7608,
+   0.6672,
+   0.5869
+  ],
+  "search_query": "how are damages calculated in Australian tort law",
+  "context_chars": 3559,
+  "status": "error"
+ },
+ {
+  "id": "b0475",
+  "query": "what are the employment rights of workers in the European Union",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 24.85,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: TARIQ MEHMOOD VS PAKISTAN RAILWAYS | Citation: Citation Name:2006  PLC  203   NATIONAL-INDUSTRIAL-RELATIONS-COMMISSIONBookmark this Case",
+   "SOURCE-2 [CASE LAW]: CHIEF EXECUTIVE, PESCO, PESHAWAR VS NUSHAD IQBAL | Citation: Citation Name:2013  PLC  204   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MUHAMMAD IQBAL KHAN VS PEARL CONTINENTAL HOTEL through General Manager | Citation: Citation Name:2008  PLC  376   NATIONAL-INDUSTRIAL-RELATIONS-COMMISSIONBookmark this Case",
+   "SOURCE-4 [CASE LAW]: AMIR NAEEM VS PIAC through Deputy General Manager | Citation: Citation Name:2013  PLC  411   NATIONAL-INDUSTRIAL-RELATIONS-COMMISSIONBookmark this Case",
+   "SOURCE-5 [CASE LAW]: Messrs MASTER ENTERPRISES (PVT.) LTD. through Notified Manager VS SHAFQUAT MUBARAK | Citation: Citation Name:2007  PLC  343   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-6 [CASE LAW]: SUI SOUTHERN GAS COMPANY LIMITED VS REGISTRAR OF TRADE UNIONS | Citation: Citation Name:2020  PLC  153   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.6618,
+   0.5978,
+   0.6108,
+   0.6274,
+   0.629,
+   0.6521
+  ],
+  "search_query": "what are the employment rights of workers in the European Union",
+  "context_chars": 3300,
+  "status": "error"
+ },
+ {
+  "id": "b0456",
+  "query": "rules of evidence in Canadian criminal trials",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 24.96,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: TOM LE VS HER MAJESTY THE QUEEN | Citation: Citation Name:2019  SCMR  1460   SUPREME-COURT-OF-CANADABookmark this Case",
+   "SOURCE-2 [CASE LAW]: NOOR ADAM VS State | Citation: Citation Name:2018  YLRN  62   PESHAWAR-HIGH-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: MUHAMMAD AFTAB VS State | Citation: Citation Name:2013  YLR  1680   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD REHMAN VS DISTRICT POLICE OFFICER | Citation: Citation Name:2015  PLD  413   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-5 [CASE LAW]: MOINUDDIN VS State | Citation: Citation Name:2017  MLD  2097   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-6 [CASE LAW]: ABDUL QAYYUM VS State | Citation: Citation Name:2018  MLD  1821   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.4923,
+   0.4542,
+   0.4762,
+   0.4777,
+   0.4807,
+   0.4811
+  ],
+  "search_query": "rules of evidence in Canadian criminal trials",
+  "context_chars": 3560,
+  "status": "error"
+ },
+ {
+  "id": "b0468",
+  "query": "explain the doctrine of consideration in English contract law",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 25.26,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: IJAZ AHMAD CHAUDHRY VS Learned CIVIL JUDGE | Citation: Citation Name:2020  CLC  291   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: Syed PERVAIZ HUSSAIN VS ZIKR-UR-REHMAN | Citation: Citation Name:2024  SCMR  1683   SUPREME-COURTBookmark this Case",
+   "SOURCE-3 [CASE LAW]: UNIVERSAL INSURANCE COMPANY  VS KARIM GUL | Citation: Citation Name:2021  CLD  1189   SUPREME-COURTBookmark this Case",
+   "SOURCE-4 [CASE LAW]: NAZIR AHMAD  VS AZIZ AHMAD | Citation: Citation Name:1997  MLD  253   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.5636,
+   0.565,
+   0.472,
+   0.5306
+  ],
+  "search_query": "explain the doctrine of consideration in English contract law",
+  "context_chars": 3295,
+  "status": "error"
+ },
+ {
+  "id": "b0458",
+  "query": "what is the capital of Australia",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 25.03,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: Mst. NASIMA VS HANIF | Citation: Citation Name:2009  PLD  50   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-2 [CASE LAW]: JOAN MARY CARTER  VS ALBERT WILLIAM CARTER | Citation: Citation Name:1956  PLD  412   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ADMINISTRATOR ISLAMABAD CLUB VS CAPITAL DEVELOPMENT AUTHORITY | Citation: Citation Name:2022  MLD  1869   ISLAMABADBookmark this Case",
+   "SOURCE-4 [CASE LAW]: Dr. Salman Akbar Malik VS Federal Government Employees Housing Authority through Chairman, Islamabad | Citation: Citation Name:2024  YLR  2685   ISLAMABADBookmark this Case",
+   "SOURCE-5 [CASE LAW]: Raja ZAHOOR AHMED  VS CAPITAL DEVELOPMENT AUTHORITY | Citation: Citation Name:2022  SCMR  1411   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.8863,
+   0.9534,
+   0.9249,
+   0.9636,
+   0.9425
+  ],
+  "search_query": "what is the capital of Australia",
+  "context_chars": 3044,
+  "status": "error"
+ },
+ {
+  "id": "b0476",
+  "query": "how to appeal a traffic fine in New South Wales",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 24.93,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: Syed FIDA HUSSAIN SHAH VS State | Citation: Citation Name:2024  SCMR  1622   SUPREME-COURTBookmark this Case",
+   "SOURCE-2 [CASE LAW]: NASIR ALI VS GOVERNMENT OF THE PUNJAB, through Secretary Excise and Taxation | Citation: Citation Name:2021  MLD  1712   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: IRFAN HUSSAIN VS PROVINCIAL GOVERNMENT | Citation: Citation Name:2025  PLC(CS)  907   GILGIT-BALTISTAN-SERVICE TRIBUNALBookmark this Case",
+   "SOURCE-4 [CASE LAW]: Mst. HUSNA BIBI VS State | Citation: Citation Name:2022  PCrLJ  707   PESHAWAR-HIGH-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.7143,
+   0.642,
+   0.6629,
+   0.6804
+  ],
+  "search_query": "how to appeal a traffic fine in New South Wales",
+  "context_chars": 3302,
+  "status": "error"
+ },
+ {
+  "id": "b0465",
+  "query": "what is the statute of limitations for personal injury in California",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 24.87,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: ALTAF KHAN VS State | Citation: Citation Name:2007  YLR  1976   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-2 [CASE LAW]: KARIM DAD KHAN VS MANSAB DAD KHAN | Citation: Citation Name:2025  CLC  966   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-3 [CASE LAW]: Saalim Kalo VS State | Citation: Citation Name:2024  MLD  1010   KARACHI-HIGH-COURT-SINDHBookmark this Case",
+   "SOURCE-4 [CASE LAW]: MUHAMMAD RAFI VS The SECRETARY, REVENUE DIVISION, ISLAMABAD | Citation: Citation Name:2025  PTD  1717   FEDERAL-TAX-OMBUDSMAN-PAKISTANBookmark this Case",
+   "SOURCE-5 [CASE LAW]: ABID VS State | Citation: Citation Name:2024  PCrLJ  790   KARACHI-HIGH-COURT-SINDHBookmark this Case"
+  ],
+  "scores": [
+   0.6268,
+   0.6329,
+   0.6337,
+   0.6531,
+   0.6707
+  ],
+  "search_query": "what is the statute of limitations for personal injury in California",
+  "context_chars": 3693,
+  "status": "error"
+ },
+ {
+  "id": "b0463",
+  "query": "what is the penalty for insider trading under US SEC regulations",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "gold": [],
+  "gen_s": 25.51,
+  "answer": "The language model is temporarily rate-limited (Groq's token-per-minute limit). Your case data is safe. Please wait a few seconds and retry.",
+  "sources": [
+   "SOURCE-1 [CASE LAW]: DIN CAPITAL LIMITED VS COMMISSIONER (SECURITIES MARKET DIVISION), SECURITIES AND EXCHANGE COMMISSION OF PAKISTAN | Citation: Citation Name:2020  CLD  1483   SECURITIES-AND-EXCHANGE-COMMISSION-OF-PAKISTANBookmark this Case",
+   "SOURCE-2 [CASE LAW]: MUHAMMAD RAMZAN VS STATION HOUSE OFFICER | Citation: Citation Name:2011  PLD  175   LAHORE-HIGH-COURT-LAHOREBookmark this Case",
+   "SOURCE-3 [CASE LAW]: ORIENT POWER COMPANY (PRIVATE) LIMITED  VS SUI NORTHERN GAS PIPELINES LIMITED | Citation: Citation Name:2021  SCMR  1728   SUPREME-COURTBookmark this Case"
+  ],
+  "scores": [
+   0.585,
+   0.6103,
+   0.6482
+  ],
+  "search_query": "what is the penalty for insider trading under US SEC regulations",
+  "context_chars": 3930,
+  "status": "error"
+ }
+]

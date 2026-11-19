@@ -1,0 +1,7726 @@
+[
+ {
+  "id": "L0001",
+  "query": "How do I find the local council bylaws for Jhelum?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5100374519824982,
+  "top_sections": [
+   24942,
+   11641,
+   25055,
+   24940,
+   25045
+  ]
+ },
+ {
+  "id": "L0002",
+  "query": "I'm concerned about taking action related to government decisions and whether I could face legal trouble for it. I just want to make sure I'm protected if I act in good faith.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6547964215278625,
+  "top_sections": [
+   11651,
+   25497,
+   4473,
+   22433,
+   25086
+  ],
+  "gold": "186_Fiscal_Responsibility_and_Debt_Limitation_Act_2005::s15",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0003",
+  "query": "I'm confused about some rules that were supposed to be published, and I'm not sure if they are legally binding. How can I find out if these rules are official?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7195041179656982,
+  "top_sections": [
+   18819,
+   30927,
+   7909,
+   10590,
+   4220
+  ],
+  "gold": "205_Stamp_Act_1899::s76",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0004",
+  "query": "Are there any specific practice directions for family law cases in the Lahore High Court?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6061471700668335,
+  "top_sections": [
+   10043,
+   10042,
+   10038,
+   10040,
+   25192
+  ]
+ },
+ {
+  "id": "L0005",
+  "query": "What happens if I don't display the survey certificate on my vessel?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7398680746555328,
+  "top_sections": [
+   1102,
+   1117,
+   1101,
+   1113,
+   1110
+  ],
+  "gold": "532_Inland_Mechanically_Propelled_Vessels_Act_1917::s56",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0006",
+  "query": "I'm part of a trade union and we're considering joining forces with other unions, but I'm unsure how to go about it. I want to make sure we follow the right steps and understand our rights and responsibilities in this process.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6958779096603394,
+  "top_sections": [
+   4339,
+   8095,
+   21250,
+   4354,
+   8084
+  ],
+  "gold": "213_Industrial_Relations_Act_2012::s14",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0007",
+  "query": "I'm really worried because I can't find my child, and I'm not sure what to do next. I need help figuring out how to get them back safely.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6938842833042145,
+  "top_sections": [
+   21902,
+   21886,
+   14080,
+   21899,
+   21885
+  ],
+  "gold": "721_Islamabad_Capital_Territory_Child_Protection_Act_2018::s21",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0008",
+  "query": "I'm really concerned because I received a notice to lower the height of my building, but I'm not sure what will happen if I don't comply. I can't afford to face any legal issues or fines right now.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7239980101585388,
+  "top_sections": [
+   13844,
+   16630,
+   16627,
+   13802,
+   18300
+  ],
+  "gold": "433_Pakistan_Civil_Aviation_Act_2023::s121",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0009",
+  "query": "Is there a difference in building plan approval for commercial vs residential properties in Sialkot?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5134838223457336,
+  "top_sections": [
+   10608,
+   4884,
+   28948,
+   28940,
+   722
+  ]
+ },
+ {
+  "id": "L0010",
+  "query": "I'm an elderly parent struggling to support myself, and my child is not helping me financially. I need to know what I can do to get the support I need from them.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5430411398410797,
+  "top_sections": [
+   21886,
+   356,
+   9249,
+   28031,
+   9261
+  ],
+  "gold": "267_Islamabad_Capital_Territory_Senior_Citizens_Act_2021::s14",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0011",
+  "query": "I'm concerned because my insurance company is operating without proper registration and I'm not sure what that means for my coverage. I want to know if they can still provide me with insurance services legally.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.659288078546524,
+  "top_sections": [
+   13965,
+   7593,
+   7596,
+   7589,
+   7699
+  ],
+  "gold": "440_National_Insurance_Corporation_Reorganization_Ordinance_::s6",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0012",
+  "query": "I'm really worried because I think I might have violated some regulations related to food products, and I'm not sure what the consequences could be. I don't want to end up in trouble or face any serious penalties.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6634359955787659,
+  "top_sections": [
+   8456,
+   8444,
+   8443,
+   8847,
+   8445
+  ],
+  "gold": "645_Hydrogenated_Vegetable_Oil_Industry_Control_and_Developm::s29",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0013",
+  "query": "What happens if I need to serve a warrant for someone living in another country?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.67119500041008,
+  "top_sections": [
+   4714,
+   4717,
+   17147,
+   10862,
+   17150
+  ],
+  "gold": "705_Anti_Money_Laundering_AML_Act_2010::s29",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0014",
+  "query": "I'm concerned because my aircraft seems to be facing some regulations that might not apply to it. I need to know if there's a way to get exemptions for certain rules.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7222176790237427,
+  "top_sections": [
+   13829,
+   13858,
+   16623,
+   19828,
+   16621
+  ],
+  "gold": "531_Civil_Aviation_Ordinance_1960::s3",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0015",
+  "query": "I'm trying to join a farming group, but I'm not sure when I can apply since I just bought some land. I want to make sure I follow the rules correctly.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5946567058563232,
+  "top_sections": [
+   7108,
+   15244,
+   7115,
+   23536,
+   7109
+  ],
+  "gold": "180_Cooperative_Farming_Act_1976::s15",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0016",
+  "query": "What are the penalties for tampering with a gas meter?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8389997184276581,
+  "top_sections": [
+   27000,
+   20141,
+   27001,
+   20142,
+   20139
+  ],
+  "gold": "664_Gas_Theft_Control_and_Recovery_Act_2016::s17",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0017",
+  "query": "What happens if I try to sell a property that might be considered abandoned?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6535465717315674,
+  "top_sections": [
+   2256,
+   2251,
+   2252,
+   2262,
+   2248
+  ],
+  "gold": "038_Abandoned_Properties_Management_Act_1975::s12",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0018",
+  "query": "What are the consequences for someone who alters post office documents?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8106886893510818,
+  "top_sections": [
+   4314,
+   4313,
+   4322,
+   4321,
+   24391
+  ],
+  "gold": "1010_Post_Office_Act_1898::s55",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0019",
+  "query": "What happens if the assessment list is not updated regularly?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7517085373401642,
+  "top_sections": [
+   18383,
+   18379,
+   18398,
+   6928,
+   18378
+  ],
+  "gold": "598_Cantonments_Ordinance_2002_CXXXVII_Repealed_by_Act_No_XL::s257",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0020",
+  "query": "I'm concerned about what happens if the person in charge of the commission can't do their job. How will the work continue if there's a delay in finding a replacement?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6857194900512695,
+  "top_sections": [
+   27433,
+   2361,
+   28874,
+   8507,
+   19890
+  ],
+  "gold": "740_National_Commission_on_the_Rights_of_Child_Act_2017::s10",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0021",
+  "query": "Who is responsible for ensuring maternity benefits are provided to mine workers?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7769731134176254,
+  "top_sections": [
+   12033,
+   12040,
+   12030,
+   12036,
+   12034
+  ],
+  "gold": "382_Mines_Maternity_Benefit_Act_1941::s18",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0022",
+  "query": "Can I sue the university for their actions that harmed me?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6471839249134064,
+  "top_sections": [
+   19029,
+   3686,
+   9138,
+   19058,
+   3727
+  ],
+  "gold": "595_Bahria_University_Ordinance_2000::s29",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0023",
+  "query": "What happens if my employer doesn't pay my wages on time?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7278326153755188,
+  "top_sections": [
+   5070,
+   18680,
+   28550,
+   1010,
+   2691
+  ],
+  "gold": "109_West_Pakistan_Shops_and_Establishments_Ordinance_1969::s11",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0024",
+  "query": "How does the State Bank of Pakistan address issues related to digital payment systems?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.7316504120826721,
+  "top_sections": [
+   30829,
+   3581,
+   3572,
+   3583,
+   12494
+  ]
+ },
+ {
+  "id": "L0025",
+  "query": "What are the penalties for intentionally damaging an aircraft?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8172690868377686,
+  "top_sections": [
+   13842,
+   13845,
+   13839,
+   13840,
+   6027
+  ],
+  "gold": "433_Pakistan_Civil_Aviation_Act_2023::s119",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0026",
+  "query": "Can I get a refund on court fees if my case is dismissed?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6579925715923309,
+  "top_sections": [
+   3448,
+   3447,
+   3443,
+   28209,
+   24165
+  ]
+ },
+ {
+  "id": "L0027",
+  "query": "What can I do to get my child back if they are living with someone else?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6022999584674835,
+  "top_sections": [
+   21902,
+   21900,
+   21885,
+   25213,
+   21897
+  ],
+  "gold": "643_Guardians_and_Wards_Act_1890::s25",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0028",
+  "query": "I'm really concerned because I found out that my credit report has incorrect information that could hurt my chances of getting a loan. I don't know what to do about it.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7216363549232483,
+  "top_sections": [
+   12700,
+   12689,
+   12687,
+   12679,
+   12676
+  ],
+  "gold": "404_Credit_Bureaus_Act_2015::s25",
+  "gold_in_index": true,
+  "rank": 7
+ },
+ {
+  "id": "L0029",
+  "query": "How often does Pakistan Railways revise its passenger fares?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.58030104637146,
+  "top_sections": [
+   23139,
+   23138,
+   30944,
+   23140,
+   1098
+  ]
+ },
+ {
+  "id": "L0030",
+  "query": "What happens if the rules aren't published in the official Gazette?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7448022961616516,
+  "top_sections": [
+   10590,
+   7909,
+   30927,
+   22867,
+   28848
+  ],
+  "gold": "205_Stamp_Act_1899::s76",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0031",
+  "query": "I'm really worried because I think my business might be accused of messing with the gas meter. I don't want to face serious penalties for something I didn't do.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7666525542736053,
+  "top_sections": [
+   27000,
+   20142,
+   20141,
+   27001,
+   20127
+  ],
+  "gold": "664_Gas_Theft_Control_and_Recovery_Act_2016::s17",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0032",
+  "query": "What can I do if I want to appeal a decision about my collective bargaining unit?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7378161549568176,
+  "top_sections": [
+   4390,
+   21258,
+   8143,
+   4388,
+   21256
+  ],
+  "gold": "716_Industrial_Relations_Act_2008_Repealed_by_Act_X_of_2012::s28",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0033",
+  "query": "I'm worried because my friend in the Territorial Force missed a mandatory meeting, and I'm not sure what the consequences will be for him. I heard there might be some official documents involved that could affect his situation.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5551441609859467,
+  "top_sections": [
+   25839,
+   25835,
+   25837,
+   25827,
+   25834
+  ],
+  "gold": "862_Pakistan_Territorial_Force_Act_1950::s15",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0034",
+  "query": "What is the process to appeal a contempt order?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6953188478946686,
+  "top_sections": [
+   15179,
+   15185,
+   11143,
+   15169,
+   15178
+  ],
+  "gold": "477_Contempt_of_Court_Ordinance_2003::s19",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0035",
+  "query": "I'm really concerned because I saw someone tampering with an aircraft, and I don't know what could happen if it gets damaged. I feel like this could put a lot of people in danger.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6864041686058044,
+  "top_sections": [
+   19152,
+   19159,
+   19158,
+   19151,
+   19157
+  ],
+  "gold": "433_Pakistan_Civil_Aviation_Act_2023::s119",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0036",
+  "query": "I'm concerned about my retirement benefits and what kind of financial support I can expect as an employee of the university. I want to make sure I'm covered in case of any emergencies or after I retire.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7392659187316895,
+  "top_sections": [
+   9165,
+   3208,
+   25336,
+   3716,
+   20307
+  ],
+  "gold": "244_National_University_of_Science_and_Technology_Act_NUST_1::s20",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0037",
+  "query": "How do I access the local government bylaws for Rawalpindi?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5697874426841736,
+  "top_sections": [
+   25071,
+   25024,
+   25029,
+   25044,
+   25033
+  ]
+ },
+ {
+  "id": "L0038",
+  "query": "Where can I find the nearest office to register my trademark?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6402230262756348,
+  "top_sections": [
+   15871,
+   4631,
+   8403,
+   15870,
+   15895
+  ],
+  "gold": "510_Trade_Marks_Ordinance_2001::s9",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0039",
+  "query": "I'm really anxious because someone I know is being extradited, and I'm not sure what will happen if they escape during the process. I just want to understand the rules around their custody.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7111555933952332,
+  "top_sections": [
+   24385,
+   6016,
+   14876,
+   16316,
+   17561
+  ],
+  "gold": "520_Extradition_Act_1972::s21",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0040",
+  "query": "What are the consequences for someone who offers a bribe?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7005547285079956,
+  "top_sections": [
+   26637,
+   26570,
+   24978,
+   20629,
+   26563
+  ],
+  "gold": "870_Pakistan_Penal_Code_PPC_1860_Under_Review::s171E",
+  "gold_in_index": true,
+  "rank": 8
+ },
+ {
+  "id": "L0041",
+  "query": "What are the rules for operating a cinema during Ramazan?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8462224006652832,
+  "top_sections": [
+   5846,
+   5849,
+   5843,
+   27757,
+   5844
+  ],
+  "gold": "137_Ehtram_e_Ramazan_Ordinance_1981::s6",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0042",
+  "query": "Can I file for divorce if my partner is mentally incapacitated?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5676937103271484,
+  "top_sections": [
+   10733,
+   15201,
+   15227,
+   10720,
+   25196
+  ],
+  "gold": "478_Divorce_Act_1869::s48",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0043",
+  "query": "I'm having trouble understanding how to comply with the regulations regarding wildlife trade, and I feel stuck. I need guidance on what to do next to resolve this issue.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7459784150123596,
+  "top_sections": [
+   13922,
+   27303,
+   13912,
+   13907,
+   13906
+  ],
+  "gold": "438_Pakistan_Trade_Control_of_Wiled_Fauna_and_Flora_Act_2012::s29",
+  "gold_in_index": true,
+  "rank": 8
+ },
+ {
+  "id": "L0044",
+  "query": "I'm concerned that my boat's captain might not be qualified, and I want to know what steps can be taken if there's an issue with their competence. I don't want to risk safety on the water.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7131653726100922,
+  "top_sections": [
+   1298,
+   947,
+   943,
+   942,
+   956
+  ],
+  "gold": "532_Inland_Mechanically_Propelled_Vessels_Act_1917::s35",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0045",
+  "query": "What happens to a police officer's powers when they are suspended?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8550657629966736,
+  "top_sections": [
+   12209,
+   17967,
+   12296,
+   12298,
+   12214
+  ],
+  "gold": "594_Police_Act_1861::s8",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0046",
+  "query": "Who can be appointed to judge serious criminal cases?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6612975001335144,
+  "top_sections": [
+   3671,
+   3669,
+   9718,
+   2699,
+   16423
+  ],
+  "gold": "092_Pakistan_Criminal_Law_Amendment_Act_1958::s3",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0047",
+  "query": "I'm facing some challenges in implementing certain rules, and I'm not sure how to proceed. It feels like there are obstacles that need to be addressed quickly.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.649640291929245,
+  "top_sections": [
+   19184,
+   27100,
+   19840,
+   12472,
+   11677
+  ],
+  "gold": "492_Pakistan_Council_for_Science_and_Technology_Act_2017::s25",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0048",
+  "query": "I'm confused about how my employee share scheme affects my taxes. I received shares this year, and I'm not sure if I need to report them or how much tax I might owe.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.8074548989534378,
+  "top_sections": [
+   316,
+   378,
+   692,
+   417,
+   315
+  ],
+  "gold": "009_Income_Tax_Ordinance_2001_Same_as_on_the_official_websit::s14",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0049",
+  "query": "What happens if my company conflicts with existing laws?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7027263343334198,
+  "top_sections": [
+   11057,
+   3655,
+   26299,
+   26300,
+   3344
+  ],
+  "gold": "348_Modaraba_Companies_and_Modaraba_Floatation_and_Control_O::s42",
+  "gold_in_index": true,
+  "rank": 8
+ },
+ {
+  "id": "L0050",
+  "query": "How can I stay updated on upcoming fare revisions and freight tariff changes?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5788973271846771,
+  "top_sections": [
+   23139,
+   931,
+   1011,
+   23187,
+   929
+  ]
+ },
+ {
+  "id": "L0051",
+  "query": "I'm concerned that a board member might have a financial interest that could affect their decisions. How can I ensure that conflicts of interest are properly managed?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.707095742225647,
+  "top_sections": [
+   2550,
+   14038,
+   28415,
+   20489,
+   27444
+  ],
+  "gold": "591_Pakistan_Airports_Authority_Act_2023::s14",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0052",
+  "query": "I'm part of a group that earns income together, and I'm worried about how taxes will affect my share. I heard there are specific rules about this, especially if we have a large turnover or if one member is a company.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6685000061988831,
+  "top_sections": [
+   421,
+   423,
+   417,
+   462,
+   370
+  ],
+  "gold": "009_Income_Tax_Ordinance_2001_Same_as_on_the_official_websit::s92",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0053",
+  "query": "Will my international load line certificate be valid in Pakistan?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8711127489805222,
+  "top_sections": [
+   1224,
+   1230,
+   1227,
+   1226,
+   1223
+  ],
+  "gold": "014_Pakistan_Merchant_Shipping_Ordinance_2001::s373",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0054",
+  "query": "I'm really concerned because a public official I know has been accused of a serious crime, and I don't know what will happen next. Will they be removed from their position immediately?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6569123268127441,
+  "top_sections": [
+   24753,
+   4622,
+   19557,
+   12229,
+   12265
+  ],
+  "gold": "806_Torture_and_Custodial_Death_Prevention_and_Punishment_Ac::s7",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0055",
+  "query": "I'm concerned about the use of pesticides in my farming area and whether they are being properly regulated. I want to know who checks if the pesticides are safe and compliant.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6593190729618073,
+  "top_sections": [
+   22827,
+   22796,
+   22811,
+   22800,
+   22813
+  ],
+  "gold": "749_Agricultural_Pesticides_Ordinance_1971::s15",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0056",
+  "query": "What happens if there is a tie in the Board's decision?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6571030616760254,
+  "top_sections": [
+   8489,
+   2471,
+   10105,
+   5824,
+   5273
+  ],
+  "gold": "288_Access_to_the_Media_Deaf_Persons_Act_2022::s9",
+  "gold_in_index": true,
+  "rank": 9
+ },
+ {
+  "id": "L0057",
+  "query": "What should I do if I see someone trying to vote when they're not allowed?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6991193890571594,
+  "top_sections": [
+   24985,
+   4691,
+   11507,
+   18205,
+   15086
+  ],
+  "gold": "1024_Cantonments_Local_Government_Elections_Ordinance_2002_L::s29",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0058",
+  "query": "What do I need to do to register a federation of trade unions?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8233983367681503,
+  "top_sections": [
+   8095,
+   21250,
+   4354,
+   8088,
+   21233
+  ],
+  "gold": "213_Industrial_Relations_Act_2012::s14",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0059",
+  "query": "Can I get a temporary building permit while my application is under review in Abbottabad?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.48159170150756836,
+  "top_sections": [
+   28351,
+   18740,
+   9596,
+   18750,
+   18751
+  ]
+ },
+ {
+  "id": "L0060",
+  "query": "I'm really concerned because someone I know is claiming to be a doctor without any real qualifications. What can be done about this?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.685307502746582,
+  "top_sections": [
+   13988,
+   806,
+   5379,
+   818,
+   13989
+  ],
+  "gold": "795_Medical_and_Dental_Degrees_Ordinance_1982::s6",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0061",
+  "query": "I'm worried about the interest on a loan I took out for my farm. The lender is charging me a high rate, and I'm not sure if it's fair or legal.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6628645658493042,
+  "top_sections": [
+   13536,
+   29213,
+   18601,
+   29214,
+   29221
+  ],
+  "gold": "603_Dekkhan_Agriculturists_Relief_Act_1879::s71A",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0062",
+  "query": "How does the PCB enforce anti-doping regulations among its players?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5135760307312012,
+  "top_sections": [
+   11345,
+   11347,
+   27473,
+   3168,
+   16021
+  ]
+ },
+ {
+  "id": "L0063",
+  "query": "I'm trying to understand who will help the committee with its work and if there's someone in charge of that support. I feel confused about how this all works.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6010446548461914,
+  "top_sections": [
+   5309,
+   11993,
+   24708,
+   10689,
+   2472
+  ],
+  "gold": "329_National_Judicial_Policy_Making_Committee_Ordinance_2002::s8",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0064",
+  "query": "I'm really concerned because I can't find any information on how the laws protect deaf individuals when it comes to accessing media. It feels like there are so many conflicting rules out there.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7896402329206467,
+  "top_sections": [
+   9782,
+   9766,
+   9780,
+   9785,
+   9783
+  ],
+  "gold": "288_Access_to_the_Media_Deaf_Persons_Act_2022::s19",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0065",
+  "query": "What happens if I don't register my lodging place?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.781858503818512,
+  "top_sections": [
+   21334,
+   10613,
+   21323,
+   1091,
+   21335
+  ],
+  "gold": "929_Sarais_Act_1867::s5",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0066",
+  "query": "How can I access the financial statements of candidates?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5891512632369995,
+  "top_sections": [
+   15023,
+   14971,
+   11432,
+   14975,
+   15341
+  ],
+  "gold": "475_Elections_Act_2017::s138",
+  "gold_in_index": true,
+  "rank": 7
+ },
+ {
+  "id": "L0067",
+  "query": "I'm concerned because my local government is being asked to do more work without enough funding. How will they manage to complete these tasks?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6001140177249908,
+  "top_sections": [
+   12478,
+   24727,
+   18217,
+   25018,
+   24995
+  ],
+  "gold": "818_Islamabad_Capital_Territory_Local_Government_Act_2015::s94",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0068",
+  "query": "I found some coins that I later learned were altered, and I'm worried about what might happen to me. I didn't know they were fake when I got them, but now I'm scared of getting in trouble.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7693768441677094,
+  "top_sections": [
+   26730,
+   26717,
+   26728,
+   26724,
+   7806
+  ],
+  "gold": "THE_PAKISTAN_PENAL_CODE::s253",
+  "gold_in_index": true,
+  "rank": 7
+ },
+ {
+  "id": "L0069",
+  "query": "Are there any specific bylaws for heritage conservation in Murree?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.4816237688064575,
+  "top_sections": [
+   5921,
+   5930,
+   5931,
+   5927,
+   23694
+  ]
+ },
+ {
+  "id": "L0070",
+  "query": "What happens if my ship doesn't have the required pollution prevention certificate?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.780787855386734,
+  "top_sections": [
+   1404,
+   1426,
+   1405,
+   1413,
+   1410
+  ],
+  "gold": "014_Pakistan_Merchant_Shipping_Ordinance_2001::s553",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0071",
+  "query": "I'm concerned because my foreign ship needs to comply with local regulations in Pakistan, and I'm not sure if the certificates from my home country will be accepted. I want to avoid any legal issues while operating here.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7995854765176773,
+  "top_sections": [
+   983,
+   951,
+   1202,
+   1201,
+   1224
+  ],
+  "gold": "014_Pakistan_Merchant_Shipping_Ordinance_2001::s373",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0072",
+  "query": "What happens if I don't pay the tax for a horse race meeting?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7547885775566101,
+  "top_sections": [
+   20546,
+   20544,
+   20541,
+   20549,
+   20548
+  ],
+  "gold": "687_West_Pakistan_Horse_race_Betting_Tax_Act_1958::s7",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0073",
+  "query": "I'm really anxious because I think someone I know might be involved in money laundering, and I'm not sure how to report it or what will happen next. I just want to make sure everything is handled properly and legally.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6881175637245178,
+  "top_sections": [
+   21018,
+   21019,
+   21017,
+   21015,
+   21036
+  ],
+  "gold": "705_Anti_Money_Laundering_AML_Act_2010::s29",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0074",
+  "query": "I'm concerned because I've been fined for something related to a ferry, and I'm not sure if the money goes to the ferry operator or somewhere else. I need clarity on how fines are handled in this situation.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7477078437805176,
+  "top_sections": [
+   14419,
+   14417,
+   14418,
+   14413,
+   14390
+  ],
+  "gold": "453_Ferries_Act_1878::s27",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0075",
+  "query": "What happens to the money if a legacy is given for life?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7621778547763824,
+  "top_sections": [
+   28194,
+   27958,
+   27957,
+   27978,
+   27998
+  ],
+  "gold": "906_Succession_Act_1925::s341",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0076",
+  "query": "What types of financial support are available for university employees?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5755178928375244,
+  "top_sections": [
+   4512,
+   11243,
+   4481,
+   2948,
+   14630
+  ],
+  "gold": "244_National_University_of_Science_and_Technology_Act_NUST_1::s20",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0077",
+  "query": "What can I do if my vehicle registration is denied?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7202139794826508,
+  "top_sections": [
+   18717,
+   22225,
+   18712,
+   18725,
+   18724
+  ],
+  "gold": "732_National_Highways_Safety_Ordinance_2000::s31",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0078",
+  "query": "I'm really struggling to pay back my loans after the recent disaster. Is there any way I can get help with this situation?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7206061482429504,
+  "top_sections": [
+   3120,
+   13537,
+   14734,
+   14733,
+   14729
+  ],
+  "gold": "066_National_Disaster_Management_NDM_Act_2010::s12",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0079",
+  "query": "What happens if I take action based on government advice?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5682133734226227,
+  "top_sections": [
+   25024,
+   29848,
+   9287,
+   26361,
+   14817
+  ],
+  "gold": "186_Fiscal_Responsibility_and_Debt_Limitation_Act_2005::s15",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0080",
+  "query": "I'm really anxious because my case has been stuck with one administrator for a long time, and I'm not sure what to do next. I just want it to be resolved quickly and fairly.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5525615513324738,
+  "top_sections": [
+   10979,
+   22551,
+   23991,
+   10977,
+   28105
+  ],
+  "gold": "787_Evacuee_Trust_Properties_Management_and_Disposal_Act_197::s18",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0081",
+  "query": "I'm concerned that my case might be handled differently because it involves military personnel. I want to know if the usual laws apply in my situation.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7039254307746887,
+  "top_sections": [
+   26428,
+   25837,
+   30417,
+   21861,
+   18902
+  ],
+  "gold": "092_Pakistan_Criminal_Law_Amendment_Act_1958::s13",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0082",
+  "query": "I'm concerned that the products I'm selling might not be labeled correctly, and I want to make sure I'm not misleading my customers. I need to understand how to properly use trade descriptions on my goods.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7592182457447052,
+  "top_sections": [
+   30851,
+   30854,
+   30850,
+   15967,
+   30848
+  ],
+  "gold": "510_Trade_Marks_Ordinance_2001::s98",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0083",
+  "query": "I'm concerned because my political party hasn't held elections for its leaders in a long time, and I'm not sure what to do about it. I want to make sure we follow the rules and have fair elections soon.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6764732599258423,
+  "top_sections": [
+   15117,
+   15124,
+   15110,
+   15116,
+   15121
+  ],
+  "gold": "475_Elections_Act_2017::s208",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0084",
+  "query": "Is there a refund policy for unsuccessful bidders in PTA spectrum auctions?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.4777461290359497,
+  "top_sections": [
+   23661,
+   13835,
+   18866,
+   25450,
+   28210
+  ]
+ },
+ {
+  "id": "L0085",
+  "query": "What can I do if a credit bureau provides false information about me?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7699985504150391,
+  "top_sections": [
+   12681,
+   12683,
+   12700,
+   12682,
+   12679
+  ],
+  "gold": "404_Credit_Bureaus_Act_2015::s25",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0086",
+  "query": "What tax exemptions are available for organizations like mine?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6384030282497406,
+  "top_sections": [
+   27627,
+   20669,
+   360,
+   361,
+   441
+  ],
+  "gold": "354_Alternative_Energy_Development_Board_Act_2010_Repealed_b::s24",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0087",
+  "query": "What are the penalties for not returning documents related to Esso undertakings?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6327246427536011,
+  "top_sections": [
+   28919,
+   28926,
+   28927,
+   28935,
+   28921
+  ],
+  "gold": "930_Esso_Undertakings_Vesting_Act_1976::s13",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0088",
+  "query": "What are the tax exemptions for foreign workers in Pakistan?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7449960708618164,
+  "top_sections": [
+   350,
+   358,
+   351,
+   359,
+   349
+  ],
+  "gold": "555_Regulation_of_Mines_and_Oil_Fields_and_Mineral_Developme::s13",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0089",
+  "query": "Can I modify my building plan after submission in Lahore, and what is the process?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5399172306060791,
+  "top_sections": [
+   18307,
+   20571,
+   6928,
+   4791,
+   28351
+  ]
+ },
+ {
+  "id": "L0090",
+  "query": "Who is responsible for ensuring the safe storage of registered documents?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6417193412780762,
+  "top_sections": [
+   22953,
+   6266,
+   23847,
+   17462,
+   24415
+  ],
+  "gold": "565_Registration_Act_1908::s16",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0091",
+  "query": "How are spectrum auction rules structured by the PTA in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6368725597858429,
+  "top_sections": [
+   3359,
+   3358,
+   3406,
+   22689,
+   14602
+  ]
+ },
+ {
+  "id": "L0092",
+  "query": "I'm concerned about the qualifications and appointment process for the Registrar at the Institute. I want to know if there's a way to challenge their decisions if I think they're not doing their job properly.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7909479290246964,
+  "top_sections": [
+   18469,
+   6780,
+   16527,
+   8883,
+   16262
+  ],
+  "gold": "449_Institute_For_Art_and_Culture_Act_2018::s14",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0093",
+  "query": "Are there any bylaws concerning public parks in Quetta?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5297549962997437,
+  "top_sections": [
+   13801,
+   18324,
+   25071,
+   28354,
+   18323
+  ]
+ },
+ {
+  "id": "L0094",
+  "query": "Who can I approach if I have a dispute with a modaraba company?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6729744970798492,
+  "top_sections": [
+   11097,
+   11100,
+   11092,
+   11106,
+   11104
+  ],
+  "gold": "348_Modaraba_Companies_and_Modaraba_Floatation_and_Control_O::s24",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0095",
+  "query": "I'm concerned because I committed an act outside of Pakistan, but I'm not sure if I can be held accountable here. I need to know if I can face legal consequences for it in my country.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6968971788883209,
+  "top_sections": [
+   13851,
+   10847,
+   21582,
+   3242,
+   26462
+  ],
+  "gold": "THE_PAKISTAN_PENAL_CODE::s3",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0096",
+  "query": "What happens if I can't prove my claim for a subsidy deduction?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6381120085716248,
+  "top_sections": [
+   3819,
+   23718,
+   3815,
+   3818,
+   23714
+  ],
+  "gold": "777_Countervailing_Duties_Ordinance_2001_Repealed_by_Act_XII::s8",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0097",
+  "query": "Where should I go to resolve a dispute with my gas company?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7533643841743469,
+  "top_sections": [
+   20131,
+   20154,
+   30105,
+   20129,
+   20151
+  ],
+  "gold": "664_Gas_Theft_Control_and_Recovery_Act_2016::s4",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0098",
+  "query": "How do political parties in Pakistan ensure transparency during their internal elections?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6082119941711426,
+  "top_sections": [
+   15117,
+   15118,
+   15115,
+   15109,
+   15110
+  ]
+ },
+ {
+  "id": "L0099",
+  "query": "What happens to the cantonment funds if the area is no longer a cantonment?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8301939219236374,
+  "top_sections": [
+   18132,
+   18133,
+   18134,
+   6924,
+   18131
+  ],
+  "gold": "174_Cantonments_Act_1924::s6",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0100",
+  "query": "I'm worried about some payments I owe to a government authority and how they might collect them. I want to know what could happen if I can't pay on time.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6215883791446686,
+  "top_sections": [
+   20506,
+   22484,
+   8217,
+   10230,
+   15836
+  ],
+  "gold": "767_Special_Technology_Zones_Authority_Act_2021::s37",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0101",
+  "query": "How does the Pakistan Election Commission oversee internal elections of political parties?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6325631439685822,
+  "top_sections": [
+   15117,
+   15118,
+   14914,
+   14909,
+   15111
+  ]
+ },
+ {
+  "id": "L0102",
+  "query": "Are there specific forms required for appeals in the Sindh High Court?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5916225910186768,
+  "top_sections": [
+   10041,
+   10040,
+   4539,
+   4540,
+   19239
+  ]
+ },
+ {
+  "id": "L0103",
+  "query": "What are the grounds for terminating the Registrar's appointment?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6904147267341614,
+  "top_sections": [
+   6780,
+   9144,
+   10925,
+   10195,
+   30775
+  ],
+  "gold": "449_Institute_For_Art_and_Culture_Act_2018::s14",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0104",
+  "query": "What sources of funding are available for health services?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5918753147125244,
+  "top_sections": [
+   25273,
+   8480,
+   30959,
+   5926,
+   8496
+  ],
+  "gold": "084_National_Institute_of_Health_Re_organization_Act_2021::s20",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0105",
+  "query": "Who takes charge of the meetings if the Chairman is not there?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7203527092933655,
+  "top_sections": [
+   28983,
+   23980,
+   29016,
+   19232,
+   23419
+  ],
+  "gold": "649_Deposit_Protection_Corporation_Act_2016::s11",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0106",
+  "query": "Are there any specific bylaws for animal control in Abbottabad?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5280325412750244,
+  "top_sections": [
+   16836,
+   11610,
+   13801,
+   18245,
+   18429
+  ]
+ },
+ {
+  "id": "L0107",
+  "query": "Can I be prosecuted in Pakistan for a crime I committed abroad?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6582024693489075,
+  "top_sections": [
+   26462,
+   13851,
+   3242,
+   10847,
+   16313
+  ],
+  "gold": "THE_PAKISTAN_PENAL_CODE::s3",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0108",
+  "query": "I'm selling my property that has insurance, and I'm worried about what happens to the insurance when the new owner takes over. Will they be covered under the same policy?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.731732964515686,
+  "top_sections": [
+   18978,
+   11885,
+   30658,
+   18514,
+   29660
+  ],
+  "gold": "616_War_Risks_Insurance_Ordinance_1971::s14",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0109",
+  "query": "How do I calculate the court fee for a family law case in Sindh?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6142539978027344,
+  "top_sections": [
+   23470,
+   24052,
+   15422,
+   22126,
+   25663
+  ]
+ },
+ {
+  "id": "L0110",
+  "query": "What can I do if I have an oral agreement about my land that my landlord is ignoring?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5940443873405457,
+  "top_sections": [
+   28943,
+   16767,
+   18534,
+   28944,
+   24674
+  ],
+  "gold": "603_Dekkhan_Agriculturists_Relief_Act_1879::s10A",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0111",
+  "query": "I'm concerned about what will happen to the funds and properties of our cantonment now that it's no longer a cantonment. Will they be managed by someone else?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7921246588230133,
+  "top_sections": [
+   18132,
+   18133,
+   18134,
+   6924,
+   18357
+  ],
+  "gold": "174_Cantonments_Act_1924::s6",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0112",
+  "query": "How does Pakistan Railways notify the public about fare changes?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6240129470825195,
+  "top_sections": [
+   23139,
+   23133,
+   23182,
+   931,
+   23212
+  ]
+ },
+ {
+  "id": "L0113",
+  "query": "What happens if a director is later found to be disqualified?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7373246550559998,
+  "top_sections": [
+   28980,
+   5140,
+   2519,
+   13006,
+   72
+  ],
+  "gold": "410_Companies_Act_2017::s168",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0114",
+  "query": "I'm really concerned because my luggage was lost during a flight that had some unusual delays. I don't know what my rights are in this situation.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6259407103061676,
+  "top_sections": [
+   23147,
+   2068,
+   13843,
+   1154,
+   6996
+  ],
+  "gold": "177_Carriage_by_Air_Act_2012::s51",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0115",
+  "query": "Are there any recent changes in FBR tax rulings affecting withholding tax rates for international transactions?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5289873480796814,
+  "top_sections": [
+   351,
+   655,
+   22456,
+   663,
+   691
+  ]
+ },
+ {
+  "id": "L0116",
+  "query": "What happens to decisions made under old civil service rules?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6983102858066559,
+  "top_sections": [
+   19529,
+   27544,
+   18836,
+   8731,
+   25319
+  ],
+  "gold": "855_Civil_Servants_Validation_of_Rules_Ordinance_2001::s2",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0117",
+  "query": "What happens if I get fined for gas theft but still have to pay compensation?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6848472356796265,
+  "top_sections": [
+   20125,
+   20136,
+   20152,
+   20137,
+   20150
+  ],
+  "gold": "664_Gas_Theft_Control_and_Recovery_Act_2016::s20",
+  "gold_in_index": true,
+  "rank": 8
+ },
+ {
+  "id": "L0118",
+  "query": "I'm really anxious about a situation involving someone in the military who might be facing disciplinary action. I don't know what the process is or who can be held accountable.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6622925698757172,
+  "top_sections": [
+   30417,
+   27093,
+   30396,
+   25837,
+   26432
+  ],
+  "gold": "978_Pakistan_Army_Act_1952::s100",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0119",
+  "query": "I'm concerned that my company has inside information that we haven't shared publicly yet, and I'm not sure if we're handling it correctly. I want to make sure we're not misleading anyone or breaking any rules.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6803635656833649,
+  "top_sections": [
+   2864,
+   8951,
+   29356,
+   8949,
+   8948
+  ],
+  "gold": "255_Securities_and_Exchange_Ordinance_1969_Repealed_by_Act_X::s15D",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0120",
+  "query": "I'm really concerned about how state-owned enterprises are performing and if they're being managed properly. I feel like there should be more oversight and transparency in their operations.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7733787000179291,
+  "top_sections": [
+   16073,
+   16066,
+   16071,
+   16090,
+   16070
+  ],
+  "gold": "514_State_owned_Enterprises_Governance_and_Operations_Act_20::s31",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0121",
+  "query": "What happens if the interest rate on my loan is considered unreasonable?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6700025796890259,
+  "top_sections": [
+   13536,
+   18601,
+   9944,
+   14735,
+   13538
+  ],
+  "gold": "603_Dekkhan_Agriculturists_Relief_Act_1879::s71A",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0122",
+  "query": "I'm worried because my business has been asked to provide a lot of information about its operations and finances. I don't know if we have to comply or what the consequences might be.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6298016905784607,
+  "top_sections": [
+   19445,
+   11069,
+   13469,
+   7797,
+   26135
+  ],
+  "gold": "654_Competition_Act_2010::s36",
+  "gold_in_index": true,
+  "rank": 10
+ },
+ {
+  "id": "L0123",
+  "query": "I'm trying to figure out if I can open a bank account for my business overseas, but I'm not sure about the regulations. I need to know what options I have for managing my funds outside Pakistan.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7065562009811401,
+  "top_sections": [
+   76,
+   4067,
+   25540,
+   147,
+   7204
+  ],
+  "gold": "1005_Pakistan_National_Shipping_Corporation_PNSC_Ordinance_1::s27",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0124",
+  "query": "What happens if I can't pay the deposit after winning an auction?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7662248313426971,
+  "top_sections": [
+   23581,
+   23580,
+   23592,
+   14727,
+   17117
+  ],
+  "gold": "773_West_Pakistan_Land_Revenue_Act_1967::s99",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0125",
+  "query": "What happens if my insurer is acting against the interests of policyholders?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6359296143054962,
+  "top_sections": [
+   7690,
+   7646,
+   18508,
+   7662,
+   18507
+  ],
+  "gold": "200_Insurance_Ordinance_2000::s135",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0126",
+  "query": "I'm having trouble with my lender who won't accept my payment unless I pay interest. I don't know what to do since I want to settle my debt without extra charges.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6765574812889099,
+  "top_sections": [
+   29218,
+   29221,
+   29224,
+   13536,
+   29213
+  ],
+  "gold": "943_Islamabad_Capital_Territory_Prohibition_of_Interest_of_P::s13",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0127",
+  "query": "I'm really concerned because I might have unknowingly hired a young child to help at home. I don't want to get into trouble for this.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6444108784198761,
+  "top_sections": [
+   10657,
+   12166,
+   4192,
+   15311,
+   3291
+  ],
+  "gold": "1033_Islamabad_Capital_Territory_Domestic_Workers_Act_2022::s29",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0128",
+  "query": "What happens if the mortgage has expired and the mortgagee still has my land?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6638554334640503,
+  "top_sections": [
+   17125,
+   17123,
+   11827,
+   17124,
+   17119
+  ],
+  "gold": "549_West_Pakistan_Redemption_and_Restitution_of_Mortgaged_La::s12",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0129",
+  "query": "I'm concerned about how the university manages its funds and whether they're being used properly. I want to know who is in charge of overseeing the financial matters.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6929180920124054,
+  "top_sections": [
+   4513,
+   17227,
+   2944,
+   2455,
+   9161
+  ],
+  "gold": "880_Air_University_Ordinance_2002::s14",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0130",
+  "query": "I'm concerned about the taxes my organization might have to pay on our income and investments. I need to know if there are any exemptions available for us.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6653532087802887,
+  "top_sections": [
+   27627,
+   12006,
+   10840,
+   15475,
+   30558
+  ],
+  "gold": "354_Alternative_Energy_Development_Board_Act_2010_Repealed_b::s24",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0131",
+  "query": "How does the municipal authority in Islamabad handle illegal encroachments?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6600098609924316,
+  "top_sections": [
+   5325,
+   25041,
+   25045,
+   22479,
+   24981
+  ]
+ },
+ {
+  "id": "L0132",
+  "query": "I'm concerned about how the Vice-Chancellor of my college is chosen and if the process is fair. It seems complicated, and I want to know if there's any way to influence the selection.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7220345139503479,
+  "top_sections": [
+   6837,
+   14637,
+   18468,
+   27399,
+   8882
+  ],
+  "gold": "171_National_College_of_Arts_Institute_Act_2021::s11",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0133",
+  "query": "What happens if a director votes on a contract they are interested in?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6993348300457001,
+  "top_sections": [
+   13045,
+   26061,
+   13051,
+   26059,
+   26063
+  ],
+  "gold": "410_Companies_Act_2017::s207",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0134",
+  "query": "How can I find information on property tax regulations in Gujranwala?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6100245118141174,
+  "top_sections": [
+   25020,
+   20504,
+   6747,
+   6749,
+   18370
+  ]
+ },
+ {
+  "id": "L0135",
+  "query": "Who can I approach for funding assistance for regional development initiatives?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6276346445083618,
+  "top_sections": [
+   12618,
+   27564,
+   6709,
+   12643,
+   12619
+  ],
+  "gold": "403_Regional_Development_Finance_Corporation_Ordinance_1985_::s3",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0136",
+  "query": "I'm concerned about my ongoing legal case with Esso since the government took over their operations. Will my case still proceed as usual?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7500745356082916,
+  "top_sections": [
+   28921,
+   28935,
+   28922,
+   28934,
+   28919
+  ],
+  "gold": "930_Esso_Undertakings_Vesting_Act_1976::s4",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0137",
+  "query": "Can you explain the withholding tax obligations for a foreign company receiving payments for advertising services in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5963053703308105,
+  "top_sections": [
+   530,
+   714,
+   525,
+   713,
+   458
+  ]
+ },
+ {
+  "id": "L0138",
+  "query": "I'm really concerned about the funding for health services in my area. It seems like there might not be enough money to support necessary health programs.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5786877572536469,
+  "top_sections": [
+   8480,
+   25273,
+   12477,
+   12479,
+   8496
+  ],
+  "gold": "084_National_Institute_of_Health_Re_organization_Act_2021::s20",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0139",
+  "query": "What do I need to do to get a survey certificate for my vessel?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7409272789955139,
+  "top_sections": [
+   16645,
+   1110,
+   1101,
+   1113,
+   1102
+  ],
+  "gold": "532_Inland_Mechanically_Propelled_Vessels_Act_1917::s9",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0140",
+  "query": "What happens to the election petition records after they are resolved?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7606222033500671,
+  "top_sections": [
+   15068,
+   15071,
+   15381,
+   20623,
+   15070
+  ],
+  "gold": "485_Senate_Election_Act_1975_Repeal_by_No_F_8_9_2017_dated_2::s52",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0141",
+  "query": "Can I take legal action against the government for decisions made under this ordinance?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.603375256061554,
+  "top_sections": [
+   20255,
+   25086,
+   29871,
+   30745,
+   14830
+  ],
+  "gold": "669_Pakistan_Industrial_Development_Corporation_Dissolution_::s9",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0142",
+  "query": "What happens if a member is removed for misconduct?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7234042882919312,
+  "top_sections": [
+   5868,
+   20483,
+   23418,
+   4622,
+   10386
+  ],
+  "gold": "769_National_Metrology_Institute_of_Pakistan_Act_2022::s9",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0143",
+  "query": "Are there any fees associated with submitting a nomination form for political parties in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5571258068084717,
+  "top_sections": [
+   15110,
+   15111,
+   15113,
+   14967,
+   15109
+  ]
+ },
+ {
+  "id": "L0144",
+  "query": "I'm worried because I want to sell my property, but I've heard there are rules about abandoned properties that might affect me. I don't want to get into trouble if I try to transfer it.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7188458740711212,
+  "top_sections": [
+   2257,
+   2251,
+   2256,
+   2262,
+   2248
+  ],
+  "gold": "038_Abandoned_Properties_Management_Act_1975::s12",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0145",
+  "query": "I'm having trouble understanding how to implement some rules related to alternative energy, and it's causing delays in my project. I need guidance on how to move forward despite these challenges.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6649414896965027,
+  "top_sections": [
+   11283,
+   11291,
+   11281,
+   11298,
+   11284
+  ],
+  "gold": "354_Alternative_Energy_Development_Board_Act_2010_Repealed_b::s22",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0146",
+  "query": "I'm concerned because I exported some agricultural products but now I'm unsure about the duties when I bring them back into the country. I need to know if I can get a refund or avoid paying again.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5873318612575531,
+  "top_sections": [
+   24008,
+   24012,
+   23949,
+   10003,
+   1961
+  ],
+  "gold": "788_Agricultural_Produce_Cess_Act_1940::s5",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0147",
+  "query": "I'm concerned about who makes decisions regarding the university's direction and support. It seems like there are important people involved, but I'm not sure how they are chosen or what their role is.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7053037583827972,
+  "top_sections": [
+   24237,
+   14641,
+   9147,
+   17380,
+   19041
+  ],
+  "gold": "735_National_Textile_University_Ordinance_2002::s15",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0148",
+  "query": "What can I do if my child is missing and I have legal custody?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6194209456443787,
+  "top_sections": [
+   14071,
+   14080,
+   21885,
+   21899,
+   21886
+  ],
+  "gold": "721_Islamabad_Capital_Territory_Child_Protection_Act_2018::s21",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0149",
+  "query": "I'm concerned because I need to ensure my equipment for testing petroleum is accurate, but I'm not sure how to get it certified. I want to avoid any issues with the results I get from my tests.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7146400809288025,
+  "top_sections": [
+   25145,
+   25147,
+   25144,
+   25143,
+   25148
+  ],
+  "gold": "822_Petroleum_Act_1934::s16",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0150",
+  "query": "What happens if the Chairperson is unable to fulfill their duties?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7471298277378082,
+  "top_sections": [
+   1832,
+   22499,
+   5102,
+   9559,
+   27084
+  ],
+  "gold": "740_National_Commission_on_the_Rights_of_Child_Act_2017::s10",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0151",
+  "query": "What are the steps to remove a director from our company?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7347609102725983,
+  "top_sections": [
+   13001,
+   26027,
+   26118,
+   13028,
+   26034
+  ],
+  "gold": "410_Companies_Act_2017::s163",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0152",
+  "query": "I'm worried because my trademark registration is about to expire, and I'm not sure how to renew it. I don't want to lose my brand identity after all this time.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6330861449241638,
+  "top_sections": [
+   15906,
+   8382,
+   15896,
+   15897,
+   16059
+  ],
+  "gold": "510_Trade_Marks_Ordinance_2001::s34",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0153",
+  "query": "How does Pakistan Railways communicate fare revisions to the public?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6230436265468597,
+  "top_sections": [
+   23139,
+   23133,
+   23182,
+   23140,
+   23138
+  ]
+ },
+ {
+  "id": "L0154",
+  "query": "I know someone who was arrested by the Navy, and I'm worried about how long they can be held without a trial. It feels like they might be stuck in custody for too long without any updates.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7120918333530426,
+  "top_sections": [
+   24384,
+   24414,
+   24415,
+   11968,
+   24349
+  ],
+  "gold": "796_Pakistan_Navy_Ordinance_1961::s90",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0155",
+  "query": "I'm concerned because my foreign employees are being taxed as soon as they arrive in Pakistan, and I thought there was a way to avoid that for a while. How can I ensure they don't pay taxes immediately?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6462265253067017,
+  "top_sections": [
+   350,
+   10812,
+   10840,
+   3429,
+   15475
+  ],
+  "gold": "555_Regulation_of_Mines_and_Oil_Fields_and_Mineral_Developme::s13",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0156",
+  "query": "I'm really concerned about a potential biological threat and I don't know how to get help from other countries. Is there a way for Pakistan to work with other nations on this issue?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7068653106689453,
+  "top_sections": [
+   15742,
+   15744,
+   15751,
+   28453,
+   15746
+  ],
+  "gold": "505_Biological_and_Toxin_Weapons_Convention_Implementation_A::s12",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0157",
+  "query": "Can foreign companies apply for a telecom licence in Pakistan, and what are the fees?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.627515584230423,
+  "top_sections": [
+   19817,
+   3402,
+   3375,
+   3376,
+   13783
+  ]
+ },
+ {
+  "id": "L0158",
+  "query": "I'm really confused because two judges on my case have different opinions, and I don't know what will happen next. I'm worried about how this will affect my situation.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6932335495948792,
+  "top_sections": [
+   21703,
+   21763,
+   24117,
+   16666,
+   21693
+  ],
+  "gold": "032_Benami_Transactions_Prohibition_Act_2017::s41",
+  "gold_in_index": true,
+  "rank": 8
+ },
+ {
+  "id": "L0159",
+  "query": "What happens if I need a meeting called urgently?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6962774693965912,
+  "top_sections": [
+   28334,
+   12084,
+   5243,
+   22100,
+   3959
+  ],
+  "gold": "123_China_Pakistan_Economic_Corridor_Authority_Act_2021::s12",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0160",
+  "query": "When can I become a member of a farming society after buying land?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7452289760112762,
+  "top_sections": [
+   7119,
+   7118,
+   22105,
+   7108,
+   7109
+  ],
+  "gold": "180_Cooperative_Farming_Act_1976::s15",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0161",
+  "query": "What happens if a soldier fails to attend a required meeting?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6183790266513824,
+  "top_sections": [
+   17588,
+   18903,
+   17590,
+   24369,
+   25839
+  ],
+  "gold": "862_Pakistan_Territorial_Force_Act_1950::s15",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0162",
+  "query": "Can I open a bank account in a foreign bank for my company?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6930834054946899,
+  "top_sections": [
+   76,
+   4067,
+   23304,
+   28428,
+   2489
+  ],
+  "gold": "1005_Pakistan_National_Shipping_Corporation_PNSC_Ordinance_1::s27",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0163",
+  "query": "Are there specific clauses in PCB contracts regarding player conduct and discipline?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.4839553236961365,
+  "top_sections": [
+   3168,
+   28477,
+   6661,
+   12297,
+   26432
+  ]
+ },
+ {
+  "id": "L0164",
+  "query": "Can I appeal a fare revision decision made by Pakistan Railways?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6441258788108826,
+  "top_sections": [
+   4776,
+   4720,
+   23140,
+   23139,
+   19736
+  ]
+ },
+ {
+  "id": "L0165",
+  "query": "Are there specific clauses in PCB contracts regarding player injuries?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.4961954355239868,
+  "top_sections": [
+   13365,
+   5215,
+   1271,
+   13370,
+   13355
+  ]
+ },
+ {
+  "id": "L0166",
+  "query": "I'm concerned because I run a small lodging place and I'm not sure if I need to register it. What if I let someone stay without the proper registration?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7453369498252869,
+  "top_sections": [
+   21334,
+   21323,
+   10613,
+   5083,
+   17477
+  ],
+  "gold": "929_Sarais_Act_1867::s5",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0167",
+  "query": "How long does the building plan approval process take in Islamabad?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5511056184768677,
+  "top_sections": [
+   20555,
+   22749,
+   4966,
+   28939,
+   28956
+  ]
+ },
+ {
+  "id": "L0168",
+  "query": "Who decides who gets to be the Vice-Chancellor?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7748098224401474,
+  "top_sections": [
+   6779,
+   14637,
+   25312,
+   10923,
+   2925
+  ],
+  "gold": "171_National_College_of_Arts_Institute_Act_2021::s11",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0169",
+  "query": "Can I delegate my application process to someone else?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5760900974273682,
+  "top_sections": [
+   4918,
+   28125,
+   27099,
+   17034,
+   28969
+  ],
+  "gold": "261_Foreigners_Act_1946::s12",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0170",
+  "query": "I'm concerned about a member of a committee who might be removed due to some issues. What should I know about their tenure and how they can resign?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.690852701663971,
+  "top_sections": [
+   19797,
+   23418,
+   29719,
+   9280,
+   3958
+  ],
+  "gold": "769_National_Metrology_Institute_of_Pakistan_Act_2022::s9",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0171",
+  "query": "What are the requirements for disclosing inside information to the public?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7021646499633789,
+  "top_sections": [
+   2864,
+   8951,
+   27468,
+   29356,
+   19926
+  ],
+  "gold": "255_Securities_and_Exchange_Ordinance_1969_Repealed_by_Act_X::s15D",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0172",
+  "query": "I'm really anxious about the outcome of my election petition and what happens next. I just want to know how long the records will be kept after the decision is made.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7393462359905243,
+  "top_sections": [
+   15068,
+   15063,
+   15376,
+   11481,
+   24969
+  ],
+  "gold": "485_Senate_Election_Act_1975_Repeal_by_No_F_8_9_2017_dated_2::s52",
+  "gold_in_index": true,
+  "rank": 7
+ },
+ {
+  "id": "L0173",
+  "query": "I received a decision about my workplace's collective bargaining unit, but I don't agree with it. I'm worried about how to challenge this decision within the time limit.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7152273058891296,
+  "top_sections": [
+   8143,
+   4390,
+   21258,
+   4388,
+   8139
+  ],
+  "gold": "716_Industrial_Relations_Act_2008_Repealed_by_Act_X_of_2012::s28",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0174",
+  "query": "I'm really concerned because I have an ongoing case in the High Court related to my job, and I don't know what will happen to it now. Will it just be moved somewhere else without any further hearings?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.578614741563797,
+  "top_sections": [
+   24133,
+   4384,
+   26166,
+   26167,
+   25111
+  ],
+  "gold": "716_Industrial_Relations_Act_2008_Repealed_by_Act_X_of_2012::s86",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0175",
+  "query": "What happens if a naval ship is lost and there are no specific charges against the crew?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7114425599575043,
+  "top_sections": [
+   24512,
+   24510,
+   24509,
+   24373,
+   24513
+  ],
+  "gold": "796_Pakistan_Navy_Ordinance_1961::s183",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0176",
+  "query": "How can I report irregularities in the internal election process of a political party in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6252636611461639,
+  "top_sections": [
+   15117,
+   15146,
+   15118,
+   15111,
+   15142
+  ]
+ },
+ {
+  "id": "L0177",
+  "query": "What happens if a track access agreement is made without the necessary approval?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7828542143106461,
+  "top_sections": [
+   19078,
+   19079,
+   19077,
+   11404,
+   22316
+  ],
+  "gold": "620_Railway_Regulatory_Authority_Ordinance_2002::s19",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0178",
+  "query": "I'm concerned about who leads the meetings when the main person isn't available. It seems important for decision-making, and I want to know how that works.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6763891577720642,
+  "top_sections": [
+   11576,
+   12247,
+   27091,
+   17340,
+   19798
+  ],
+  "gold": "649_Deposit_Protection_Corporation_Act_2016::s11",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0179",
+  "query": "I'm concerned because I might face a penalty that seems too harsh for my situation. I want to understand if there's a way to reduce the consequences I'm facing.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6442349851131439,
+  "top_sections": [
+   24437,
+   3675,
+   12324,
+   25114,
+   16619
+  ],
+  "gold": "1019_Law_Reforms_Ordinance_1972::s15",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0180",
+  "query": "What happens if I unknowingly possess altered coins?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8073517680168152,
+  "top_sections": [
+   26730,
+   26726,
+   26728,
+   26727,
+   26729
+  ],
+  "gold": "THE_PAKISTAN_PENAL_CODE::s253",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0181",
+  "query": "How does the FBR treat withholding tax on remittances made to foreign affiliates?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6044053733348846,
+  "top_sections": [
+   3428,
+   359,
+   350,
+   8427,
+   458
+  ]
+ },
+ {
+  "id": "L0182",
+  "query": "How do I find the bylaws regarding public gatherings in Larkana?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5785212218761444,
+  "top_sections": [
+   28364,
+   28366,
+   28365,
+   12104,
+   23694
+  ]
+ },
+ {
+  "id": "L0183",
+  "query": "I'm really worried because my bank is in trouble and I might lose my savings. I need to know what will happen to my deposits if the bank goes under.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6476460695266724,
+  "top_sections": [
+   150,
+   143,
+   7176,
+   192,
+   12494
+  ],
+  "gold": "649_Deposit_Protection_Corporation_Act_2016::s22C",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0184",
+  "query": "What happens if a contract is made that violates the law?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6353589296340942,
+  "top_sections": [
+   14138,
+   14126,
+   14140,
+   14176,
+   1145
+  ],
+  "gold": "947_Futures_Market_Act_2016::s101",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0185",
+  "query": "How can I appeal a rejected building plan application in Quetta?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5340893566608429,
+  "top_sections": [
+   10409,
+   7479,
+   3927,
+   6928,
+   4789
+  ]
+ },
+ {
+  "id": "L0186",
+  "query": "I'm really concerned about the testing of substances related to narcotics and where I can get them analyzed. I need to know if there's a lab that can help me with this issue.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6793452501296997,
+  "top_sections": [
+   29161,
+   8855,
+   3161,
+   29159,
+   3158
+  ],
+  "gold": "942_Control_of_Narcotic_Substances_Act_CNSA_1997::s34",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0187",
+  "query": "How does the PCB ensure compliance with international cricket regulations?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.47672975063323975,
+  "top_sections": [
+   13829,
+   13828,
+   11344,
+   1460,
+   13868
+  ]
+ },
+ {
+  "id": "L0188",
+  "query": "What happens to my job if I reach the retirement age?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6892045736312866,
+  "top_sections": [
+   3208,
+   18046,
+   17395,
+   27248,
+   20307
+  ],
+  "gold": "311_Hyderabad_Institute_for_Technology_and_Management_Scienc::s31",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0189",
+  "query": "Can I ask to reopen my case if it was finalized less than a year ago?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6643125116825104,
+  "top_sections": [
+   2173,
+   11716,
+   11367,
+   15725,
+   17787
+  ],
+  "gold": "034_Customs_Act_1969_Same_as_on_the_official_website_of_FBR_::s196S",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0190",
+  "query": "What happens if I report a captain for misconduct?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.614876389503479,
+  "top_sections": [
+   24353,
+   6029,
+   1054,
+   24354,
+   1059
+  ],
+  "gold": "532_Inland_Mechanically_Propelled_Vessels_Act_1917::s35",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0191",
+  "query": "I'm concerned because I'm a government employee and I've been told I might be evicted from my home. I don't want to lose my place, especially since my job is important for the community.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6799622774124146,
+  "top_sections": [
+   28956,
+   14849,
+   28957,
+   4792,
+   10617
+  ],
+  "gold": "326_Cantonments_Rent_Restriction_Act_1963::s22",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0192",
+  "query": "How does Pakistan Railways determine its freight tariffs?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6319471895694733,
+  "top_sections": [
+   25810,
+   3382,
+   931,
+   1011,
+   23134
+  ]
+ },
+ {
+  "id": "L0193",
+  "query": "I'm concerned about a decision made by the government that negatively affects my business, and I want to know if I can take legal action against them. It feels unfair, but I'm unsure about my options.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6457680463790894,
+  "top_sections": [
+   25086,
+   20255,
+   30154,
+   29433,
+   20257
+  ],
+  "gold": "875_Microfinance_Institutions_Ordinance_2001::s29",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0194",
+  "query": "What should a board member do if they have a conflict of interest?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7734437882900238,
+  "top_sections": [
+   2550,
+   20489,
+   13736,
+   14495,
+   22609
+  ],
+  "gold": "591_Pakistan_Airports_Authority_Act_2023::s14",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0195",
+  "query": "What happens if my financing statement has incorrect details?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7171429693698883,
+  "top_sections": [
+   28606,
+   28607,
+   28600,
+   28601,
+   28602
+  ],
+  "gold": "922_Financial_Institutions_Secured_Transactions_Act_2016::s30",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0196",
+  "query": "How does the FBR handle withholding tax for payments made to foreign artists performing in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.601044237613678,
+  "top_sections": [
+   350,
+   448,
+   714,
+   301,
+   530
+  ]
+ },
+ {
+  "id": "L0197",
+  "query": "What can the government do to help people like me with financial problems?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6343880295753479,
+  "top_sections": [
+   30561,
+   11174,
+   20105,
+   29070,
+   11199
+  ],
+  "gold": "936_Financial_Institutions_Recovery_of_Finances_Ordinance_20::s25",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0198",
+  "query": "I'm concerned about what happens to a legacy that isn't specific but is meant for someone's lifetime. I want to know how the money will be managed and paid out over time.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7017139494419098,
+  "top_sections": [
+   28004,
+   27998,
+   28194,
+   28010,
+   28195
+  ],
+  "gold": "906_Succession_Act_1925::s341",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0199",
+  "query": "How can I find the latest updates on PTA telecom licence fees and auction rules?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5403147637844086,
+  "top_sections": [
+   29587,
+   3402,
+   3382,
+   3376,
+   11710
+  ]
+ },
+ {
+  "id": "L0200",
+  "query": "How do I report an encroachment issue in Bahawalpur?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.620773196220398,
+  "top_sections": [
+   23658,
+   5325,
+   3940,
+   2218,
+   11586
+  ]
+ },
+ {
+  "id": "L0201",
+  "query": "What options are available for loan relief after a disaster?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8113468140363693,
+  "top_sections": [
+   3120,
+   3119,
+   3144,
+   3139,
+   13537
+  ],
+  "gold": "066_National_Disaster_Management_NDM_Act_2010::s12",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0202",
+  "query": "I was misled by my insurance agent, and now I'm facing financial losses. I thought I could trust their advice, but it turned out to be wrong.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6727015972137451,
+  "top_sections": [
+   7681,
+   7682,
+   7685,
+   7662,
+   7589
+  ],
+  "gold": "200_Insurance_Ordinance_2000::s95",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0203",
+  "query": "I'm concerned about the safety of my important documents related to property registration. I want to ensure they are stored securely and won't be damaged or lost.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5887780785560608,
+  "top_sections": [
+   17467,
+   17496,
+   20499,
+   17475,
+   17499
+  ],
+  "gold": "565_Registration_Act_1908::s16",
+  "gold_in_index": true,
+  "rank": 10
+ },
+ {
+  "id": "L0204",
+  "query": "What happens if a member reaches the age limit during their term?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6897900104522705,
+  "top_sections": [
+   4904,
+   10785,
+   9280,
+   19797,
+   18907
+  ],
+  "gold": "268_Federal_Public_Service_Commission_Ordinance_FPSC_1977::s4",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0205",
+  "query": "What happens if my company refuses to provide the requested information?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6230297684669495,
+  "top_sections": [
+   751,
+   13469,
+   13276,
+   26107,
+   13091
+  ],
+  "gold": "654_Competition_Act_2010::s36",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0206",
+  "query": "What steps do I need to take to ensure I'm following the wildlife protection rules?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6461508870124817,
+  "top_sections": [
+   27289,
+   2555,
+   27330,
+   2583,
+   2559
+  ],
+  "gold": "047_Islamabad_Nature_Conservation_and_Wildlife_Management_Ac::s37",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0207",
+  "query": "I'm concerned because I'm having trouble getting reliable electricity service and I feel like I'm being charged unfairly. I want to know if there's a way to address this issue with the electricity provider.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6493582129478455,
+  "top_sections": [
+   6497,
+   7558,
+   6465,
+   6463,
+   29900
+  ],
+  "gold": "923_Regulation_of_Generation_Transmission_and_Distribution_o::s18",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0208",
+  "query": "What happens if my employer doesn't deduct the rent from my wages as directed?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7437286078929901,
+  "top_sections": [
+   14848,
+   4357,
+   11607,
+   21260,
+   8103
+  ],
+  "gold": "469_Workers_Welfare_Fund_Ordinance_1971::s11D",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0209",
+  "query": "How do I calculate the court fee for a divorce petition in Sindh?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6215656399726868,
+  "top_sections": [
+   23470,
+   3479,
+   25197,
+   15217,
+   15214
+  ]
+ },
+ {
+  "id": "L0210",
+  "query": "Are there any exemptions or discounts available for PTA telecom licence fees?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.620133638381958,
+  "top_sections": [
+   3383,
+   3376,
+   3402,
+   19828,
+   3375
+  ]
+ },
+ {
+  "id": "L0211",
+  "query": "How can I find information on past internal elections and candidate nominations for political parties in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5851172804832458,
+  "top_sections": [
+   782,
+   15118,
+   15117,
+   15111,
+   7919
+  ]
+ },
+ {
+  "id": "L0212",
+  "query": "How can I find the latest stamp duty rates for various document types in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6881155371665955,
+  "top_sections": [
+   23398,
+   7229,
+   7848,
+   7849,
+   7850
+  ]
+ },
+ {
+  "id": "L0213",
+  "query": "Who is responsible for preparing the annual budget for the authority?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7707011252641678,
+  "top_sections": [
+   5006,
+   13752,
+   5756,
+   9308,
+   18445
+  ],
+  "gold": "271_Pakistan_General_Cosmetics_Act_2023::s14",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0214",
+  "query": "What happens to my case if it's transferred to a different tribunal?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7397684752941132,
+  "top_sections": [
+   20123,
+   8467,
+   25121,
+   20344,
+   19441
+  ],
+  "gold": "716_Industrial_Relations_Act_2008_Repealed_by_Act_X_of_2012::s86",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0215",
+  "query": "I'm confused about who can make decisions regarding the establishment of new industries in my area. It seems like there are specific authorities involved, but I'm not sure how it works.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6191362142562866,
+  "top_sections": [
+   8006,
+   7996,
+   7997,
+   7995,
+   29078
+  ],
+  "gold": "209_West_Pakistan_Industries_Control_on_Establishment_and_En::s6",
+  "gold_in_index": true,
+  "rank": 9
+ },
+ {
+  "id": "L0216",
+  "query": "Are there any specific deadlines for submitting nomination papers for political parties in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5927326083183289,
+  "top_sections": [
+   14967,
+   15111,
+   15110,
+   11429,
+   15112
+  ]
+ },
+ {
+  "id": "L0217",
+  "query": "I'm concerned about a candidate's financial background and whether they have disclosed their assets properly. I want to know how I can find this information to ensure transparency in the election process.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6030101478099823,
+  "top_sections": [
+   15081,
+   15040,
+   15042,
+   15149,
+   15041
+  ],
+  "gold": "475_Elections_Act_2017::s138",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0218",
+  "query": "I'm concerned that someone might come onto my property without my permission. I want to know what rights I have regarding this situation.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5865537524223328,
+  "top_sections": [
+   29766,
+   4795,
+   26975,
+   21535,
+   22571
+  ],
+  "gold": "598_Cantonments_Ordinance_2002_CXXXVII_Repealed_by_Act_No_XL::s213",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0219",
+  "query": "Are there any discounts available for freight services in Pakistan Railways?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5762854814529419,
+  "top_sections": [
+   1011,
+   30944,
+   11404,
+   22780,
+   19106
+  ]
+ },
+ {
+  "id": "L0220",
+  "query": "I received a decision regarding my hotel license that I believe is unfair, and I want to know how I can challenge it. I'm worried about the time limit to appeal and what steps I need to take next.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5948355197906494,
+  "top_sections": [
+   4759,
+   22084,
+   27750,
+   28525,
+   4758
+  ],
+  "gold": "1029_Pakistan_Hotels_and_Restaurants_Act_1976::s25",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0221",
+  "query": "I'm concerned about how the budget for the upcoming year will be managed and if it will cover all necessary expenses. I want to make sure everything is planned properly for the financial year ahead.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7176712155342102,
+  "top_sections": [
+   19805,
+   9308,
+   13752,
+   10833,
+   19181
+  ],
+  "gold": "271_Pakistan_General_Cosmetics_Act_2023::s14",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0222",
+  "query": "I have a piece of land that was mortgaged a long time ago, and the mortgagee has had it for over twenty years. I'm worried about getting my land back without having to pay anything for the mortgage.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7369162440299988,
+  "top_sections": [
+   17123,
+   17125,
+   17116,
+   11818,
+   11827
+  ],
+  "gold": "549_West_Pakistan_Redemption_and_Restitution_of_Mortgaged_La::s12",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0223",
+  "query": "I'm really anxious about the upcoming exams and I don't know who to talk to about my concerns. I feel like there should be someone in charge of handling exam-related issues, but I'm not sure how it works.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6737620830535889,
+  "top_sections": [
+   14640,
+   25316,
+   9146,
+   11410,
+   6775
+  ],
+  "gold": "615_Smart_Institute_of_Science_and_Technology_Act_2022::s17",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0224",
+  "query": "I'm concerned because I forgot to put the survey certificate on my boat, and I'm not sure what the consequences are for that. I don't want to get into trouble or face any fines.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7564589828252792,
+  "top_sections": [
+   1117,
+   1110,
+   1102,
+   1114,
+   1113
+  ],
+  "gold": "532_Inland_Mechanically_Propelled_Vessels_Act_1917::s56",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0225",
+  "query": "I'm concerned about the management of the port and how decisions are made when the Chairman is not available. I want to know who handles things in their absence.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6789788603782654,
+  "top_sections": [
+   5871,
+   15512,
+   1747,
+   6591,
+   6577
+  ],
+  "gold": "164_Karachi_Port_Trust_Act_1886::s20",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0226",
+  "query": "Who provides assistance to the committee?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7072328925132751,
+  "top_sections": [
+   10689,
+   2472,
+   27587,
+   9018,
+   11421
+  ],
+  "gold": "329_National_Judicial_Policy_Making_Committee_Ordinance_2002::s8",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0227",
+  "query": "Who is responsible for hiring the staff needed for blood safety?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.703570693731308,
+  "top_sections": [
+   12813,
+   12816,
+   12812,
+   12819,
+   12808
+  ],
+  "gold": "408_Islamabad_Transfusion_of_Safe_Blood_Ordinance_2002::s7",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0228",
+  "query": "I'm concerned about the availability of qualified staff for blood transfusions in my area. I want to know if there are enough experts to ensure safe blood supply.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6724038124084473,
+  "top_sections": [
+   12809,
+   12813,
+   12812,
+   12816,
+   12808
+  ],
+  "gold": "408_Islamabad_Transfusion_of_Safe_Blood_Ordinance_2002::s7",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0229",
+  "query": "Can I pay my debt in installments if I can't afford to pay it all at once?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.717034786939621,
+  "top_sections": [
+   18545,
+   29218,
+   18558,
+   14734,
+   14733
+  ],
+  "gold": "603_Dekkhan_Agriculturists_Relief_Act_1879::s17",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0230",
+  "query": "What happens if the local government doesn't have the resources to carry out the required tasks?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6737678647041321,
+  "top_sections": [
+   24995,
+   25025,
+   3132,
+   25059,
+   25011
+  ],
+  "gold": "818_Islamabad_Capital_Territory_Local_Government_Act_2015::s94",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0231",
+  "query": "I'm really stressed about my financial situation and need to know what steps I can take to resolve my issues with the bank. It feels like I'm stuck and don't know where to turn for help.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6154681444168091,
+  "top_sections": [
+   20362,
+   240,
+   29053,
+   23406,
+   28443
+  ],
+  "gold": "936_Financial_Institutions_Recovery_of_Finances_Ordinance_20::s25",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0232",
+  "query": "What happens if I take a job that conflicts with my military experience?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5994515419006348,
+  "top_sections": [
+   26428,
+   30397,
+   14369,
+   25837,
+   23074
+  ],
+  "gold": "978_Pakistan_Army_Act_1952::s55A",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0233",
+  "query": "Can I get a refund on duties for agricultural products I exported and then imported back?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7644014358520508,
+  "top_sections": [
+   24012,
+   1961,
+   23949,
+   10003,
+   22858
+  ],
+  "gold": "788_Agricultural_Produce_Cess_Act_1940::s5",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0234",
+  "query": "I'm trying to start a modaraba, but I'm not sure what approvals I need to get or what conditions I have to follow. I'm worried about whether I can proceed without the right permissions.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7163913249969482,
+  "top_sections": [
+   11088,
+   11091,
+   11103,
+   11093,
+   11097
+  ],
+  "gold": "348_Modaraba_Companies_and_Modaraba_Floatation_and_Control_O::s11",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0235",
+  "query": "What happens if a political party doesn't hold elections on time?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6985593438148499,
+  "top_sections": [
+   15117,
+   15122,
+   15121,
+   15116,
+   15111
+  ],
+  "gold": "475_Elections_Act_2017::s208",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0236",
+  "query": "I'm worried because I have some debts that I incurred after I learned about someone else's insolvency. I don't know if I can claim those debts now.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.698093831539154,
+  "top_sections": [
+   12750,
+   12751,
+   28780,
+   18560,
+   28748
+  ],
+  "gold": "924_Insolvancy_Karachi_Division_Act_1909::s46",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0237",
+  "query": "I'm really worried because I know someone who is in custody and is thinking about escaping. What could happen to them if they try to get away?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7340289950370789,
+  "top_sections": [
+   4718,
+   24385,
+   6016,
+   26590,
+   17559
+  ],
+  "gold": "144_Pakistan_Air_Force_PAF_Act_1953::s51",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0238",
+  "query": "What should I do if I face obstacles while trying to comply with the energy regulations?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5887280702590942,
+  "top_sections": [
+   6501,
+   6460,
+   6484,
+   3331,
+   6487
+  ],
+  "gold": "354_Alternative_Energy_Development_Board_Act_2010_Repealed_b::s22",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0239",
+  "query": "Who can be tried in a summary court martial?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.8058690428733826,
+  "top_sections": [
+   30445,
+   30446,
+   30433,
+   30447,
+   30475
+  ],
+  "gold": "978_Pakistan_Army_Act_1952::s100",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0240",
+  "query": "How can I get my petroleum testing apparatus certified?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7387586236000061,
+  "top_sections": [
+   25141,
+   25142,
+   25147,
+   25144,
+   25145
+  ],
+  "gold": "822_Petroleum_Act_1934::s16",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0241",
+  "query": "I'm concerned because I haven't seen a new assessment list for my property in a while, and I'm not sure if I'm being charged the correct amount. It's been over three years since the last update, and I want to make sure everything is in order.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7416781187057495,
+  "top_sections": [
+   18383,
+   6742,
+   6744,
+   6928,
+   18378
+  ],
+  "gold": "598_Cantonments_Ordinance_2002_CXXXVII_Repealed_by_Act_No_XL::s257",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0242",
+  "query": "I'm really concerned because my ship might not have all the necessary navigation tools and equipment. What if the authorities find out and stop us from sailing?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7609945237636566,
+  "top_sections": [
+   1259,
+   1190,
+   1104,
+   1264,
+   1183
+  ],
+  "gold": "014_Pakistan_Merchant_Shipping_Ordinance_2001::s408",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0243",
+  "query": "What happens if my company fails to appoint a legal adviser?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7743197083473206,
+  "top_sections": [
+   20792,
+   20794,
+   20791,
+   20793,
+   26126
+  ],
+  "gold": "699_Companies_Appointment_of_Legal_Advisers_Act_1974::s3",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0244",
+  "query": "What happens if my property is challenged under different laws?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6075181365013123,
+  "top_sections": [
+   24031,
+   6225,
+   2272,
+   20531,
+   12824
+  ],
+  "gold": "032_Benami_Transactions_Prohibition_Act_2017::s56",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0245",
+  "query": "Are there any specific practice directions for family law cases in the Sindh High Court?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6479122042655945,
+  "top_sections": [
+   10041,
+   23461,
+   25192,
+   29954,
+   23453
+  ]
+ },
+ {
+  "id": "L0246",
+  "query": "Are there any specific waste management bylaws for Faisalabad?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5002994239330292,
+  "top_sections": [
+   13801,
+   22670,
+   25049,
+   14653,
+   25041
+  ]
+ },
+ {
+  "id": "L0247",
+  "query": "What happens if I can't pay the full amount immediately?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6094973683357239,
+  "top_sections": [
+   23582,
+   26845,
+   26813,
+   20759,
+   18545
+  ],
+  "gold": "933_Provincial_Industrial_Development_Corporation_West_Pakis::s15F",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0248",
+  "query": "How does the Pakistan Election Commission oversee internal party elections?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.633374810218811,
+  "top_sections": [
+   15117,
+   14909,
+   14914,
+   15118,
+   29992
+  ]
+ },
+ {
+  "id": "L0249",
+  "query": "I'm worried because I think my case needs to be looked at again, but I'm not sure if it's too late to reopen it. I need help figuring out if I can still do this after the previous decision was made.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5823312103748322,
+  "top_sections": [
+   15235,
+   28959,
+   19094,
+   2173,
+   10618
+  ],
+  "gold": "034_Customs_Act_1969_Same_as_on_the_official_website_of_FBR_::s196S",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0250",
+  "query": "How can I report irregularities in the candidate nomination process of a political party in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.615855485200882,
+  "top_sections": [
+   15142,
+   15111,
+   14969,
+   11429,
+   30053
+  ]
+ },
+ {
+  "id": "L0251",
+  "query": "I'm concerned about the fees I need to pay to get my trade organization licensed or renewed. I want to make sure I'm prepared for any additional costs related to my documents and reports.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5964487791061401,
+  "top_sections": [
+   27110,
+   27132,
+   16001,
+   27114,
+   27113
+  ],
+  "gold": "874_Trade_Organizations_Act_2013::s24",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0252",
+  "query": "I'm really worried because my friend passed away after giving birth, and I don't know if her family will receive any financial help. She was supposed to get maternity benefits, but now I'm unsure how that works after her death.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.750341609120369,
+  "top_sections": [
+   12037,
+   20433,
+   3040,
+   20431,
+   16141
+  ],
+  "gold": "680_West_Pakistan_Maternity_Benefit_Ordinance_1958::s6",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0253",
+  "query": "How does the PCB handle player contract disputes?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.46693259477615356,
+  "top_sections": [
+   8029,
+   16021,
+   6661,
+   3651,
+   8116
+  ]
+ },
+ {
+  "id": "L0254",
+  "query": "Can I take legal action against a police officer for their actions if they were just doing their job?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6143662929534912,
+  "top_sections": [
+   17978,
+   18010,
+   21942,
+   15402,
+   15103
+  ],
+  "gold": "390_Police_Order_2002::s171",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0255",
+  "query": "I'm really concerned because I received a notice about land acquisition, and I don't know how to voice my objections in court. I want to make sure my rights are protected during this process.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7481339871883392,
+  "top_sections": [
+   24640,
+   15543,
+   24659,
+   24644,
+   1778
+  ],
+  "gold": "802_Land_Acquisition_Act_1894::s22",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0256",
+  "query": "I'm concerned because my oil tanker is over the required tonnage, and I don't have the necessary pollution prevention certificate. I want to make sure I'm compliant before we set sail.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.8038427531719208,
+  "top_sections": [
+   1404,
+   1426,
+   1406,
+   1410,
+   1413
+  ],
+  "gold": "014_Pakistan_Merchant_Shipping_Ordinance_2001::s553",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0257",
+  "query": "Who is responsible for updating the electoral rolls in my area?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7427377700805664,
+  "top_sections": [
+   14942,
+   14944,
+   14929,
+   15129,
+   18188
+  ],
+  "gold": "475_Elections_Act_2017::s24",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0258",
+  "query": "I'm really concerned because there was a fight in my neighborhood, and I don't know what the consequences could be for those involved. I just want to understand what could happen if someone gets charged for causing a disturbance like that.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.617762953042984,
+  "top_sections": [
+   24362,
+   24367,
+   26774,
+   26606,
+   26621
+  ],
+  "gold": "870_Pakistan_Penal_Code_PPC_1860_Under_Review::s147",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0259",
+  "query": "Who decides the responsibilities of the college's leadership?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6606919169425964,
+  "top_sections": [
+   3538,
+   10358,
+   10361,
+   10360,
+   11919
+  ],
+  "gold": "320_Military_College_of_Engineering_Risalpur_Degree_Ordinanc::s5",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0260",
+  "query": "Who is responsible for ensuring fair electricity transmission rates?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.663131058216095,
+  "top_sections": [
+   28687,
+   28685,
+   29900,
+   28688,
+   28696
+  ],
+  "gold": "923_Regulation_of_Generation_Transmission_and_Distribution_o::s18",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0261",
+  "query": "What are the consequences for someone who escapes from custody?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7865210175514221,
+  "top_sections": [
+   24385,
+   6016,
+   17559,
+   4718,
+   30385
+  ],
+  "gold": "144_Pakistan_Air_Force_PAF_Act_1953::s51",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0262",
+  "query": "What happens to the insurance policy when I sell my property?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.703208327293396,
+  "top_sections": [
+   18978,
+   11885,
+   7676,
+   29660,
+   7677
+  ],
+  "gold": "616_War_Risks_Insurance_Ordinance_1971::s14",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0263",
+  "query": "I'm struggling to pay back a loan and I'm worried about how I can manage the payments without losing everything. I need some guidance on what options I have for paying in smaller amounts over time.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.526569277048111,
+  "top_sections": [
+   13536,
+   8531,
+   14734,
+   29224,
+   14733
+  ],
+  "gold": "603_Dekkhan_Agriculturists_Relief_Act_1879::s17",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0264",
+  "query": "I'm concerned that the subsidies I received for my exports might be considered countervailable, and I'm not sure how to prove my case. I need help understanding how these calculations work and what I need to do next.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7987073808908463,
+  "top_sections": [
+   23718,
+   3817,
+   3816,
+   3819,
+   23715
+  ],
+  "gold": "777_Countervailing_Duties_Ordinance_2001_Repealed_by_Act_XII::s8",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0265",
+  "query": "I'm worried because my relative left me a specific item in their will, but there are debts to pay. Will I still get the item even if the estate owes money?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6543605029582977,
+  "top_sections": [
+   28181,
+   28007,
+   27998,
+   28180,
+   28182
+  ],
+  "gold": "906_Succession_Act_1925::s328",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0266",
+  "query": "What should I do if I encounter problems while following the wildlife trade regulations?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6014178097248077,
+  "top_sections": [
+   2559,
+   27303,
+   13922,
+   13926,
+   2563
+  ],
+  "gold": "438_Pakistan_Trade_Control_of_Wiled_Fauna_and_Flora_Act_2012::s29",
+  "gold_in_index": true,
+  "rank": 7
+ },
+ {
+  "id": "L0267",
+  "query": "I'm concerned about the term limits for members of a certain commission and whether they can be reappointed. I want to know how this affects current members and their ability to continue serving.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6900373101234436,
+  "top_sections": [
+   19891,
+   2364,
+   18013,
+   12252,
+   12228
+  ],
+  "gold": "268_Federal_Public_Service_Commission_Ordinance_FPSC_1977::s4",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0268",
+  "query": "I'm worried that I might have unknowingly used confidential information to make a trade. What should I do?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6779483258724213,
+  "top_sections": [
+   2088,
+   8144,
+   21287,
+   4411,
+   5902
+  ],
+  "gold": "947_Futures_Market_Act_2016::s72",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0269",
+  "query": "I'm really concerned because I think someone is trying to bribe me with food and drinks to get something done. I don't know what to do in this situation.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6408337950706482,
+  "top_sections": [
+   26637,
+   26640,
+   3866,
+   24977,
+   17059
+  ],
+  "gold": "870_Pakistan_Penal_Code_PPC_1860_Under_Review::s171E",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0270",
+  "query": "Are there any specific bylaws regarding waste management in Peshawar?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5313638746738434,
+  "top_sections": [
+   13801,
+   6713,
+   16979,
+   28354,
+   1405
+  ]
+ },
+ {
+  "id": "L0271",
+  "query": "I'm really concerned because I think my insurance company is not handling things properly, and I'm worried about my policy. What can I do if I feel my interests are at risk?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7001510858535767,
+  "top_sections": [
+   7751,
+   7663,
+   7587,
+   30621,
+   7728
+  ],
+  "gold": "200_Insurance_Ordinance_2000::s135",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0272",
+  "query": "What happens to my money if my bank is liquidated?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7254236340522766,
+  "top_sections": [
+   7176,
+   15670,
+   23400,
+   18097,
+   25547
+  ],
+  "gold": "649_Deposit_Protection_Corporation_Act_2016::s22C",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0273",
+  "query": "What happens if I can't pay the docking fees for my vessel?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6467080414295197,
+  "top_sections": [
+   28295,
+   5506,
+   15525,
+   859,
+   6629
+  ],
+  "gold": "164_Karachi_Port_Trust_Act_1886::s52",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0274",
+  "query": "I'm worried because my ship is docked, and I haven't been able to pay the fees. I'm afraid they might take my vessel if I don't settle the dues soon.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6673459708690643,
+  "top_sections": [
+   28295,
+   3098,
+   6629,
+   28293,
+   28296
+  ],
+  "gold": "164_Karachi_Port_Trust_Act_1886::s52",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0275",
+  "query": "I'm thinking about starting a travel agency, but I'm not sure if I need a special license to operate legally. I don't want to get into trouble for not following the rules.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7503616660833359,
+  "top_sections": [
+   22077,
+   22075,
+   22073,
+   22082,
+   22076
+  ],
+  "gold": "730_Travel_Agencies_Act_1976::s6",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0276",
+  "query": "Are there any exemptions for court fees for low-income individuals in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5700396299362183,
+  "top_sections": [
+   3456,
+   353,
+   351,
+   714,
+   3477
+  ]
+ },
+ {
+  "id": "L0277",
+  "query": "I'm really concerned because I might have to pay for damages related to gas theft, and I'm not sure how this affects my situation. I want to know if I can be penalized and still owe compensation at the same time.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.729010820388794,
+  "top_sections": [
+   20125,
+   20141,
+   20142,
+   27000,
+   20136
+  ],
+  "gold": "664_Gas_Theft_Control_and_Recovery_Act_2016::s20",
+  "gold_in_index": true,
+  "rank": 8
+ },
+ {
+  "id": "L0278",
+  "query": "What are the penalties for my offense?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7166759371757507,
+  "top_sections": [
+   19845,
+   12324,
+   20507,
+   2728,
+   25036
+  ],
+  "gold": "1019_Law_Reforms_Ordinance_1972::s15",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0279",
+  "query": "How can I request a change of venue in a case at the Sindh High Court?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5856406390666962,
+  "top_sections": [
+   4540,
+   10041,
+   4539,
+   29950,
+   26167
+  ]
+ },
+ {
+  "id": "L0280",
+  "query": "What can I do if I want to change the manager for someone with mental health problems?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7642035633325577,
+  "top_sections": [
+   10732,
+   10725,
+   10727,
+   10729,
+   10735
+  ],
+  "gold": "330_Mental_Health_Ordinance_2001::s41",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0281",
+  "query": "Who is responsible for creating disaster management plans in my province?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.776972621679306,
+  "top_sections": [
+   3125,
+   3122,
+   3124,
+   3121,
+   3129
+  ],
+  "gold": "066_National_Disaster_Management_NDM_Act_2010::s14",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0282",
+  "query": "I'm really worried about my family member who has mental health issues. Their current manager isn't doing a good job, and I don't know how to change that.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7298934161663055,
+  "top_sections": [
+   10732,
+   10725,
+   10727,
+   10694,
+   10696
+  ],
+  "gold": "330_Mental_Health_Ordinance_2001::s41",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0283",
+  "query": "What are the penalties if I ignore a notice to change my building's height?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7485952973365784,
+  "top_sections": [
+   13844,
+   18300,
+   16630,
+   18390,
+   18385
+  ],
+  "gold": "433_Pakistan_Civil_Aviation_Act_2023::s121",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0284",
+  "query": "Who can take over if the Chancellor is not able to perform their duties?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6835219860076904,
+  "top_sections": [
+   26384,
+   27219,
+   18024,
+   5231,
+   17375
+  ],
+  "gold": "880_Air_University_Ordinance_2002::s9",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0285",
+  "query": "What happens if I want to challenge the compensation amount offered for my land?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7176572382450104,
+  "top_sections": [
+   7027,
+   15540,
+   1775,
+   1780,
+   15545
+  ],
+  "gold": "802_Land_Acquisition_Act_1894::s22",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0286",
+  "query": "What happens if my ship doesn't have the required navigational instruments?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7913150787353516,
+  "top_sections": [
+   1259,
+   1190,
+   1183,
+   1187,
+   1194
+  ],
+  "gold": "014_Pakistan_Merchant_Shipping_Ordinance_2001::s408",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0287",
+  "query": "I'm really concerned because I've been having issues with my gas supplier, and I don't know where to go for help. It feels like I'm stuck and don't know my rights.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6880922317504883,
+  "top_sections": [
+   20131,
+   20154,
+   20129,
+   30105,
+   20147
+  ],
+  "gold": "664_Gas_Theft_Control_and_Recovery_Act_2016::s4",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0288",
+  "query": "Who receives the fines from ferry-related violations?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7781605124473572,
+  "top_sections": [
+   14419,
+   14417,
+   14418,
+   14413,
+   14390
+  ],
+  "gold": "453_Ferries_Act_1878::s27",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0289",
+  "query": "I'm confused about the rules for starting a limited liability partnership and what I need to do to comply. I want to make sure I'm following everything correctly to avoid any fines.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6967599391937256,
+  "top_sections": [
+   15,
+   43,
+   41,
+   30,
+   60
+  ],
+  "gold": "002_Limited_Liability_Partnership_Act_2017::s51",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0290",
+  "query": "What can I do if the arbitration award has obvious mistakes?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.737024188041687,
+  "top_sections": [
+   21998,
+   22154,
+   22014,
+   22000,
+   22016
+  ],
+  "gold": "726_Arbitration_Act_1940::s15",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0291",
+  "query": "I recently had my vehicle registration refused, and I'm really worried about what to do next. I feel like I need to challenge this decision but I'm not sure how.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7290621995925903,
+  "top_sections": [
+   18717,
+   22225,
+   22231,
+   18725,
+   18724
+  ],
+  "gold": "732_National_Highways_Safety_Ordinance_2000::s31",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0292",
+  "query": "I'm concerned about how decisions are made in the fund management and who ensures everything is running smoothly. I want to know if there are checks in place to prevent issues.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5908441245555878,
+  "top_sections": [
+   10263,
+   2553,
+   7513,
+   7519,
+   7510
+  ],
+  "gold": "196_Pakistan_Sovereign_Wealth_Fund_Act_2023::s21",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0293",
+  "query": "What happens if a state-owned enterprise fails to meet its performance targets?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6518065333366394,
+  "top_sections": [
+   16103,
+   16071,
+   16073,
+   16097,
+   16074
+  ],
+  "gold": "514_State_owned_Enterprises_Governance_and_Operations_Act_20::s31",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0294",
+  "query": "How can I access the candidate nomination forms for the Pakistan Peoples Party (PPP)?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5372582077980042,
+  "top_sections": [
+   11429,
+   15020,
+   11430,
+   14967,
+   30053
+  ]
+ },
+ {
+  "id": "L0295",
+  "query": "Are there specific rules for player representation and agents in Pakistan cricket?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5331236720085144,
+  "top_sections": [
+   23218,
+   24588,
+   1542,
+   16273,
+   970
+  ]
+ },
+ {
+  "id": "L0296",
+  "query": "Can foreign companies apply for telecom licences in Pakistan, and what are the associated fees?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.613802969455719,
+  "top_sections": [
+   19817,
+   3359,
+   3402,
+   3382,
+   26309
+  ]
+ },
+ {
+  "id": "L0297",
+  "query": "I'm worried because one of our directors is involved in a contract with the company, and I'm not sure if that's allowed. What should we do about it?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6723241806030273,
+  "top_sections": [
+   26061,
+   13048,
+   26064,
+   26060,
+   26364
+  ],
+  "gold": "410_Companies_Act_2017::s207",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0298",
+  "query": "I'm concerned because I need to discuss an urgent issue with the Authority, but I'm not sure how to get a meeting scheduled quickly. It seems like there are specific rules about calling meetings that I don't fully understand.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6669569313526154,
+  "top_sections": [
+   9300,
+   5439,
+   28334,
+   6318,
+   22597
+  ],
+  "gold": "123_China_Pakistan_Economic_Corridor_Authority_Act_2021::s12",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0299",
+  "query": "What are the rules for setting fees at educational institutions?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6391773819923401,
+  "top_sections": [
+   19273,
+   19269,
+   19268,
+   19274,
+   19286
+  ],
+  "gold": "692_Kalam_Bibi_International_Women_Institute_Bannu_Act_2023::s30",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0300",
+  "query": "Who can authorize the establishment of new industries?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6964278221130371,
+  "top_sections": [
+   7996,
+   7997,
+   8006,
+   7995,
+   7999
+  ],
+  "gold": "209_West_Pakistan_Industries_Control_on_Establishment_and_En::s6",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0301",
+  "query": "I'm concerned because I'm organizing a horse race, but I'm not sure about the tax obligations since I haven't received any official notifications. I want to make sure I'm compliant and avoid any penalties.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6757057309150696,
+  "top_sections": [
+   20544,
+   20540,
+   20541,
+   20545,
+   20548
+  ],
+  "gold": "687_West_Pakistan_Horse_race_Betting_Tax_Act_1958::s7",
+  "gold_in_index": true,
+  "rank": 7
+ },
+ {
+  "id": "L0302",
+  "query": "Is there a specific authority responsible for building plan approvals in Gujranwala?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5387248396873474,
+  "top_sections": [
+   15514,
+   7014,
+   28340,
+   28354,
+   17424
+  ]
+ },
+ {
+  "id": "L0303",
+  "query": "What happens if I don't follow the rules for my limited liability partnership?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7303155958652496,
+  "top_sections": [
+   59,
+   43,
+   33,
+   18,
+   15
+  ],
+  "gold": "002_Limited_Liability_Partnership_Act_2017::s51",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0304",
+  "query": "Can I represent myself in the Sindh High Court, and what are the procedural rules for self-representation?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6001535356044769,
+  "top_sections": [
+   10041,
+   4540,
+   4539,
+   29954,
+   15740
+  ]
+ },
+ {
+  "id": "L0305",
+  "query": "I'm concerned about a compensation issue related to some property damage. I need to know how the amounts are determined and what I can expect.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.731907308101654,
+  "top_sections": [
+   1775,
+   7027,
+   15540,
+   1800,
+   15567
+  ],
+  "gold": "189_Works_of_Defence_Act_1903::s26",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0306",
+  "query": "I'm facing a situation where my landlord is trying to evict me, but I believe I have a mortgage agreement with him. I'm worried about losing my home and need to understand my rights.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6283921003341675,
+  "top_sections": [
+   20501,
+   25645,
+   11825,
+   17125,
+   891
+  ],
+  "gold": "603_Dekkhan_Agriculturists_Relief_Act_1879::s10A",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0307",
+  "query": "How can I find the noise regulation bylaws for Karachi?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5940228700637817,
+  "top_sections": [
+   24626,
+   24604,
+   24603,
+   11394,
+   24620
+  ]
+ },
+ {
+  "id": "L0308",
+  "query": "How does the PTA handle disputes related to telecom licence fees or spectrum auction results?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6779849529266357,
+  "top_sections": [
+   3359,
+   3358,
+   3382,
+   3377,
+   3362
+  ]
+ },
+ {
+  "id": "L0309",
+  "query": "Are there any recent changes to the PTA's spectrum auction rules that I should be aware of?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5619014203548431,
+  "top_sections": [
+   3359,
+   22689,
+   3358,
+   14602,
+   4033
+  ]
+ },
+ {
+  "id": "L0310",
+  "query": "How can I find the bylaws related to property taxes in Gujranwala?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5084677636623383,
+  "top_sections": [
+   20504,
+   23870,
+   5597,
+   25019,
+   25021
+  ]
+ },
+ {
+  "id": "L0311",
+  "query": "How can I obtain a copy of the procedural rules for the Sindh High Court?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.7120313942432404,
+  "top_sections": [
+   10041,
+   29954,
+   4540,
+   4539,
+   15740
+  ]
+ },
+ {
+  "id": "L0312",
+  "query": "I'm concerned because I run a cinema and I'm not sure if we can stay open during Ramazan evenings. I don't want to face any legal issues.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.8545910120010376,
+  "top_sections": [
+   5846,
+   5844,
+   5843,
+   5849,
+   5845
+  ],
+  "gold": "137_Ehtram_e_Ramazan_Ordinance_1981::s6",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0313",
+  "query": "What happens to my tax liability if I'm a member of an income-earning group?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6910193562507629,
+  "top_sections": [
+   370,
+   429,
+   423,
+   371,
+   417
+  ],
+  "gold": "009_Income_Tax_Ordinance_2001_Same_as_on_the_official_websit::s92",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0314",
+  "query": "Who can I contact for assistance with my child's rights?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.592085599899292,
+  "top_sections": [
+   22501,
+   4466,
+   8987,
+   22491,
+   22510
+  ],
+  "gold": "740_National_Commission_on_the_Rights_of_Child_Act_2017::s13",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0315",
+  "query": "I'm confused because I thought the regular company laws applied, but now I see something that might change that. What does this mean for my business?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6356377601623535,
+  "top_sections": [
+   12861,
+   25857,
+   26299,
+   26300,
+   26301
+  ],
+  "gold": "348_Modaraba_Companies_and_Modaraba_Floatation_and_Control_O::s42",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0316",
+  "query": "I received an arbitration award, but it has some mistakes that don't seem right. I'm worried it might not be enforceable because of these errors.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6475811004638672,
+  "top_sections": [
+   22014,
+   22016,
+   22000,
+   8646,
+   21998
+  ],
+  "gold": "726_Arbitration_Act_1940::s15",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0317",
+  "query": "What are the penalties for violating food safety regulations?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6785698533058167,
+  "top_sections": [
+   8847,
+   8456,
+   8445,
+   8444,
+   8457
+  ],
+  "gold": "645_Hydrogenated_Vegetable_Oil_Industry_Control_and_Developm::s29",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0318",
+  "query": "I'm worried because I accepted some property that I later found out I shouldn't have. Now I'm afraid it might be taken away from me due to legal issues.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6491064429283142,
+  "top_sections": [
+   6241,
+   21832,
+   6234,
+   29767,
+   10895
+  ],
+  "gold": "870_Pakistan_Penal_Code_PPC_1860_Under_Review::s207",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0319",
+  "query": "What happens if I want to pledge my securities but the pledgee doesn't allow me to handle them?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7140367329120636,
+  "top_sections": [
+   16483,
+   16495,
+   14251,
+   8953,
+   14253
+  ],
+  "gold": "525_Central_Depositories_Act_1997::s12",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0320",
+  "query": "Can I get an exemption from the regulations for my aircraft?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7449052333831787,
+  "top_sections": [
+   13858,
+   13829,
+   13822,
+   16623,
+   13869
+  ],
+  "gold": "531_Civil_Aviation_Ordinance_1960::s3",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0321",
+  "query": "I'm concerned that important decisions are being made without proper oversight. How can I ensure that the right people are in charge of these decisions?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5497651100158691,
+  "top_sections": [
+   23345,
+   28657,
+   25057,
+   22942,
+   19798
+  ],
+  "gold": "084_National_Institute_of_Health_Re_organization_Act_2021::s24",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0322",
+  "query": "What happens if someone is not tried within a certain time after being arrested?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6741212606430054,
+  "top_sections": [
+   24414,
+   21439,
+   2111,
+   26462,
+   17057
+  ],
+  "gold": "796_Pakistan_Navy_Ordinance_1961::s90",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0323",
+  "query": "Are there any recent amendments to the election procedures for political parties in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6438050270080566,
+  "top_sections": [
+   15110,
+   15112,
+   15109,
+   15111,
+   15117
+  ]
+ },
+ {
+  "id": "L0324",
+  "query": "Are there any FBR tax rulings regarding the withholding tax on dividends paid to non-residents?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6234735548496246,
+  "top_sections": [
+   301,
+   525,
+   298,
+   521,
+   303
+  ]
+ },
+ {
+  "id": "L0325",
+  "query": "How does the PCB regulate the use of technology and analytics in player contracts?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.4292125701904297,
+  "top_sections": [
+   1952,
+   1682,
+   8027,
+   16021,
+   15476
+  ]
+ },
+ {
+  "id": "L0326",
+  "query": "I'm concerned because I received a notice about a court date regarding a compensation issue, and I'm not sure what to do next. I want to make sure I'm following the right steps and that my interests are protected.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6005755662918091,
+  "top_sections": [
+   7347,
+   20176,
+   7355,
+   7358,
+   27747
+  ],
+  "gold": "189_Works_of_Defence_Act_1903::s20",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0327",
+  "query": "I'm really concerned because I've been using water from the canal without permission, and I heard there could be penalties. What should I do if I get charged for wasting water?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6444752514362335,
+  "top_sections": [
+   5525,
+   5489,
+   5490,
+   5491,
+   5473
+  ],
+  "gold": "125_Canal_and_Drainage_Act_1873::s35",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0328",
+  "query": "I'm confused about how to follow the rules for protecting wildlife in my area. I need guidance on what steps I should take to comply with the regulations.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6781895458698273,
+  "top_sections": [
+   2555,
+   27309,
+   27291,
+   27330,
+   2583
+  ],
+  "gold": "047_Islamabad_Nature_Conservation_and_Wildlife_Management_Ac::s37",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0329",
+  "query": "I'm concerned because I booked a hotel room, but I heard the government can take it away from me at any time. What should I do if that happens?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.676371693611145,
+  "top_sections": [
+   4765,
+   4778,
+   21328,
+   4762,
+   21332
+  ],
+  "gold": "1029_Pakistan_Hotels_and_Restaurants_Act_1976::s14",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0330",
+  "query": "I'm really concerned about a decision made by the government regarding a project I was involved in. I feel like I can't challenge it in court, and I'm not sure what my options are.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6161164045333862,
+  "top_sections": [
+   20255,
+   27775,
+   3947,
+   9653,
+   25086
+  ],
+  "gold": "669_Pakistan_Industrial_Development_Corporation_Dissolution_::s9",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0331",
+  "query": "I'm concerned because my company doesn't have a legal adviser, and I'm not sure if we need one to operate legally. I want to make sure we're following the rules properly.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6288130879402161,
+  "top_sections": [
+   20792,
+   20791,
+   20794,
+   26126,
+   11084
+  ],
+  "gold": "699_Companies_Appointment_of_Legal_Advisers_Act_1974::s3",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0332",
+  "query": "I sent a package by air, but now I'm worried about what happens if it gets damaged or lost. How can I prove what was in the package and its condition?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5771086513996124,
+  "top_sections": [
+   12015,
+   7879,
+   1037,
+   23148,
+   7001
+  ],
+  "gold": "177_Carriage_by_Air_Act_2012::s11",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0333",
+  "query": "What are the consequences of trading based on confidential information?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6245081722736359,
+  "top_sections": [
+   7232,
+   30149,
+   29425,
+   5902,
+   23739
+  ],
+  "gold": "947_Futures_Market_Act_2016::s72",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0334",
+  "query": "How does the PTA determine the reserve price for spectrum auctions?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5492278039455414,
+  "top_sections": [
+   3359,
+   8777,
+   23661,
+   3406,
+   4033
+  ]
+ },
+ {
+  "id": "L0335",
+  "query": "I'm concerned about my obligations as a reservist and what laws I need to follow. I want to make sure I'm compliant with military regulations.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7634474337100983,
+  "top_sections": [
+   16850,
+   16852,
+   16848,
+   16851,
+   16853
+  ],
+  "gold": "536_Pakistan_Army_and_Air_Force_Reserves_Act_1950::s4",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0336",
+  "query": "I'm really concerned because my friend left his military unit without permission, and I don't know what will happen to him. I'm worried he might get arrested by the police.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6724703013896942,
+  "top_sections": [
+   24276,
+   30421,
+   30417,
+   6070,
+   30378
+  ],
+  "gold": "793_Civil_Pioneer_Force_Ordinance_1965::s22",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0337",
+  "query": "Can I stop someone from entering my property without notifying me?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5666260719299316,
+  "top_sections": [
+   26976,
+   22571,
+   4795,
+   6928,
+   18339
+  ],
+  "gold": "598_Cantonments_Ordinance_2002_CXXXVII_Repealed_by_Act_No_XL::s213",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0338",
+  "query": "What happens if someone deserts their military unit?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7122397422790527,
+  "top_sections": [
+   24276,
+   30377,
+   30421,
+   6070,
+   25834
+  ],
+  "gold": "793_Civil_Pioneer_Force_Ordinance_1965::s22",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0339",
+  "query": "I'm really concerned because someone has taken over a piece of land that belongs to our community, and I don't know what to do about it. It feels unfair and I want to help resolve the issue.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6175303161144257,
+  "top_sections": [
+   23608,
+   5053,
+   5059,
+   5054,
+   23611
+  ],
+  "gold": "367_Capital_Territory_Local_Government_Ordinance_1979_Repeal::s48",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0340",
+  "query": "What do I need to do to register my vehicle?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.695755273103714,
+  "top_sections": [
+   18716,
+   22224,
+   18717,
+   22237,
+   18730
+  ],
+  "gold": "732_National_Highways_Safety_Ordinance_2000::s22",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0341",
+  "query": "How does the PCB define a 'retired' player in terms of contract obligations?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5097514986991882,
+  "top_sections": [
+   1659,
+   19548,
+   25506,
+   5986,
+   18046
+  ]
+ },
+ {
+  "id": "L0342",
+  "query": "I'm really concerned about a financial issue with a modaraba company and I don't know where to turn for help. I feel like I need to take this to someone who can make a decision on it.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6653499603271484,
+  "top_sections": [
+   11101,
+   11097,
+   11103,
+   11102,
+   11104
+  ],
+  "gold": "348_Modaraba_Companies_and_Modaraba_Floatation_and_Control_O::s24",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0343",
+  "query": "Is there a difference in court fees for criminal cases versus civil cases in Khyber Pakhtunkhwa?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5392434000968933,
+  "top_sections": [
+   3438,
+   3473,
+   3463,
+   7266,
+   25376
+  ]
+ },
+ {
+  "id": "L0344",
+  "query": "How do I request a change of venue in a case before the Lahore High Court?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6515710353851318,
+  "top_sections": [
+   10042,
+   10037,
+   10040,
+   10043,
+   29950
+  ]
+ },
+ {
+  "id": "L0345",
+  "query": "What happens if my baggage is lost during a flight due to unexpected circumstances?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6280913949012756,
+  "top_sections": [
+   13843,
+   1154,
+   6999,
+   2068,
+   2066
+  ],
+  "gold": "177_Carriage_by_Air_Act_2012::s51",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0346",
+  "query": "I'm concerned that I might be doing something illegal with my wireless equipment because I don't have the right permissions. I want to make sure I'm following the rules properly.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6434803009033203,
+  "top_sections": [
+   3389,
+   19195,
+   1192,
+   19189,
+   19186
+  ],
+  "gold": "625_Wireless_Telegraphy_Act_1933::s11",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0347",
+  "query": "Can I sue the government if I believe their actions harmed my business?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6404859125614166,
+  "top_sections": [
+   25086,
+   30154,
+   20255,
+   29433,
+   24096
+  ],
+  "gold": "875_Microfinance_Institutions_Ordinance_2001::s29",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0348",
+  "query": "I'm really anxious because I need to get a survey certificate for my boat, but I'm not sure if I've done everything right. What if I missed something important?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7175590991973877,
+  "top_sections": [
+   1110,
+   1114,
+   1113,
+   1117,
+   1101
+  ],
+  "gold": "532_Inland_Mechanically_Propelled_Vessels_Act_1917::s9",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0349",
+  "query": "What happens to maternity benefits if a woman dies during childbirth?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7850035130977631,
+  "top_sections": [
+   20433,
+   12037,
+   3040,
+   16141,
+   20431
+  ],
+  "gold": "680_West_Pakistan_Maternity_Benefit_Ordinance_1958::s6",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0350",
+  "query": "What happens to a specific item in a will if there are debts to settle?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6455481946468353,
+  "top_sections": [
+   28181,
+   28183,
+   28180,
+   25639,
+   28178
+  ],
+  "gold": "906_Succession_Act_1925::s328",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0351",
+  "query": "What happens if I try to sell my assets without permission from the court?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6572573781013489,
+  "top_sections": [
+   29067,
+   19636,
+   24184,
+   2703,
+   892
+  ],
+  "gold": "936_Financial_Institutions_Recovery_of_Finances_Ordinance_20::s23",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0352",
+  "query": "How can I stay updated on upcoming fare revisions for Pakistan Railways?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6115297079086304,
+  "top_sections": [
+   23139,
+   22793,
+   22780,
+   23140,
+   11404
+  ]
+ },
+ {
+  "id": "L0353",
+  "query": "I participated in an auction and won, but now I'm worried I might not be able to pay the required deposit. What will happen if I can't make the payment?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7217200696468353,
+  "top_sections": [
+   23581,
+   23580,
+   23592,
+   14727,
+   24668
+  ],
+  "gold": "773_West_Pakistan_Land_Revenue_Act_1967::s99",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0354",
+  "query": "I'm concerned about how decisions are made by the Board and if they are fair. I want to know if I can trust their process.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6650781631469727,
+  "top_sections": [
+   27405,
+   5273,
+   28412,
+   7566,
+   5943
+  ],
+  "gold": "288_Access_to_the_Media_Deaf_Persons_Act_2022::s9",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0355",
+  "query": "Who can make decisions on behalf of the Board?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6680928468704224,
+  "top_sections": [
+   29017,
+   19419,
+   27405,
+   9775,
+   2468
+  ],
+  "gold": "084_National_Institute_of_Health_Re_organization_Act_2021::s24",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0356",
+  "query": "What happens if the mine manager doesn't display the required information for female workers?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7385884523391724,
+  "top_sections": [
+   12044,
+   2291,
+   12031,
+   2309,
+   2318
+  ],
+  "gold": "382_Mines_Maternity_Benefit_Act_1941::s16",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0357",
+  "query": "What are the legal responsibilities for reservists in the Army and Air Force?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7743503749370575,
+  "top_sections": [
+   16850,
+   16853,
+   30522,
+   5996,
+   16854
+  ],
+  "gold": "536_Pakistan_Army_and_Air_Force_Reserves_Act_1950::s4",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0358",
+  "query": "What happens if the company doesn't register within a year?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6696251928806305,
+  "top_sections": [
+   25995,
+   26298,
+   13965,
+   13262,
+   12963
+  ],
+  "gold": "440_National_Insurance_Corporation_Reorganization_Ordinance_::s6",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0359",
+  "query": "Are there any specific regulations for construction permits in Abbottabad?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.48788440227508545,
+  "top_sections": [
+   4791,
+   13802,
+   28340,
+   28354,
+   16978
+  ]
+ },
+ {
+  "id": "L0360",
+  "query": "What are the legal requirements for killing an animal for religious purposes?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7502715140581131,
+  "top_sections": [
+   10491,
+   26962,
+   26963,
+   25607,
+   27308
+  ],
+  "gold": "323_Prevention_of_Cruelty_to_Animals_Act_1890::s11",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0361",
+  "query": "I'm really concerned about how my area is handling disaster preparedness and response. It feels like there are no clear plans in place for emergencies.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6431741714477539,
+  "top_sections": [
+   3110,
+   3128,
+   3125,
+   3134,
+   3118
+  ],
+  "gold": "066_National_Disaster_Management_NDM_Act_2010::s14",
+  "gold_in_index": true,
+  "rank": 10
+ },
+ {
+  "id": "L0362",
+  "query": "I'm having trouble with my landlord because they haven't received the rent I owe, and I'm worried about the consequences. My employer might be involved in this situation, and I'm not sure what to do next.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.677931010723114,
+  "top_sections": [
+   14848,
+   28957,
+   10612,
+   28966,
+   28951
+  ],
+  "gold": "469_Workers_Welfare_Fund_Ordinance_1971::s11D",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0363",
+  "query": "I'm really stressed because I received a demand for immediate payment from a corporation, and I'm not sure if I have to pay everything right away. What are my options in this situation?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7291731834411621,
+  "top_sections": [
+   28990,
+   10230,
+   8217,
+   20759,
+   9461
+  ],
+  "gold": "933_Provincial_Industrial_Development_Corporation_West_Pakis::s15F",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0364",
+  "query": "Can I access historical fare revision notices for Pakistan Railways?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5993852317333221,
+  "top_sections": [
+   23182,
+   23139,
+   23215,
+   23214,
+   11404
+  ]
+ },
+ {
+  "id": "L0365",
+  "query": "Who is responsible for inspecting pesticides used in agriculture?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7322675883769989,
+  "top_sections": [
+   22811,
+   22813,
+   22812,
+   22827,
+   22816
+  ],
+  "gold": "749_Agricultural_Pesticides_Ordinance_1971::s15",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0366",
+  "query": "I'm really worried because I want to sell some of my assets that I used as collateral for a loan, but I'm not sure if I can do that right now. I need to know what my options are before I make any decisions.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6287776827812195,
+  "top_sections": [
+   28617,
+   7527,
+   21971,
+   28625,
+   892
+  ],
+  "gold": "936_Financial_Institutions_Recovery_of_Finances_Ordinance_20::s23",
+  "gold_in_index": true,
+  "rank": 9
+ },
+ {
+  "id": "L0367",
+  "query": "How often are court fee schedules updated in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.637479305267334,
+  "top_sections": [
+   10411,
+   3439,
+   23470,
+   24165,
+   7543
+  ]
+ },
+ {
+  "id": "L0368",
+  "query": "I'm concerned about my rights to maternity benefits while working in the mines. I need to know if the government has to follow the rules regarding this issue.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7879703044891357,
+  "top_sections": [
+   12043,
+   12044,
+   12045,
+   12028,
+   12033
+  ],
+  "gold": "382_Mines_Maternity_Benefit_Act_1941::s18",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0369",
+  "query": "How can I appeal a rejected building plan in Quetta?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5325012803077698,
+  "top_sections": [
+   7479,
+   10409,
+   6928,
+   18308,
+   18307
+  ]
+ },
+ {
+  "id": "L0370",
+  "query": "I'm really worried because my child has been taken away from me, and I want to know if I can get them back. I think it's important for their well-being to return to my care.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6407564282417297,
+  "top_sections": [
+   21899,
+   21886,
+   21901,
+   21900,
+   21902
+  ],
+  "gold": "643_Guardians_and_Wards_Act_1890::s25",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0371",
+  "query": "Are there any special tariffs for bulk freight shipments in Pakistan Railways?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6874731779098511,
+  "top_sections": [
+   1241,
+   25810,
+   931,
+   1011,
+   30944
+  ]
+ },
+ {
+  "id": "L0372",
+  "query": "Are there any exemptions from court fees for certain types of cases in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6302393674850464,
+  "top_sections": [
+   3451,
+   3477,
+   3440,
+   353,
+   7911
+  ]
+ },
+ {
+  "id": "L0373",
+  "query": "What do I need to do to get a travel agency license?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7554889768362045,
+  "top_sections": [
+   22077,
+   22082,
+   22075,
+   22081,
+   22079
+  ],
+  "gold": "730_Travel_Agencies_Act_1976::s6",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0374",
+  "query": "Who is responsible for the mistakes made by my insurance agent?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7304654121398926,
+  "top_sections": [
+   7681,
+   7685,
+   7687,
+   7682,
+   7684
+  ],
+  "gold": "200_Insurance_Ordinance_2000::s95",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0375",
+  "query": "How do I file a writ petition in the Sindh High Court?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5861149430274963,
+  "top_sections": [
+   10041,
+   4540,
+   4539,
+   15229,
+   22574
+  ]
+ },
+ {
+  "id": "L0376",
+  "query": "What happens if a public official is accused of a crime?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6600538492202759,
+  "top_sections": [
+   24753,
+   21593,
+   21595,
+   19558,
+   15100
+  ],
+  "gold": "806_Torture_and_Custodial_Death_Prevention_and_Punishment_Ac::s7",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0377",
+  "query": "I'm concerned about a legal issue and I need to know who can handle my case. I want to make sure that the person judging my situation is qualified and experienced.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5648746490478516,
+  "top_sections": [
+   2476,
+   20516,
+   1348,
+   2671,
+   26474
+  ],
+  "gold": "092_Pakistan_Criminal_Law_Amendment_Act_1958::s3",
+  "gold_in_index": true,
+  "rank": 8
+ },
+ {
+  "id": "L0378",
+  "query": "Who is responsible for managing the university's finances?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7391539812088013,
+  "top_sections": [
+   25317,
+   24539,
+   16886,
+   3695,
+   9810
+  ],
+  "gold": "880_Air_University_Ordinance_2002::s14",
+  "gold_in_index": true,
+  "rank": 8
+ },
+ {
+  "id": "L0379",
+  "query": "What happens to my lawsuit against Esso now that the government owns their assets?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.762154832482338,
+  "top_sections": [
+   28921,
+   28919,
+   28934,
+   28935,
+   28922
+  ],
+  "gold": "930_Esso_Undertakings_Vesting_Act_1976::s4",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0380",
+  "query": "Are there any recent changes to the freight tariff for bulk cargo in Pakistan Railways?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6761624217033386,
+  "top_sections": [
+   1241,
+   929,
+   940,
+   1011,
+   1232
+  ]
+ },
+ {
+  "id": "L0381",
+  "query": "I'm concerned that the women working in our mine aren't aware of their rights and benefits. I want to make sure they have access to important information about maternity benefits.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7789076864719391,
+  "top_sections": [
+   12028,
+   3040,
+   4829,
+   16141,
+   12044
+  ],
+  "gold": "382_Mines_Maternity_Benefit_Act_1941::s16",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0382",
+  "query": "What happens if I have debts that were created after I knew about the insolvency?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6435414552688599,
+  "top_sections": [
+   12750,
+   28780,
+   12751,
+   18560,
+   28785
+  ],
+  "gold": "924_Insolvancy_Karachi_Division_Act_1909::s46",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0383",
+  "query": "What happens if existing laws conflict with the rights of deaf individuals to access media?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7898668050765991,
+  "top_sections": [
+   9785,
+   9781,
+   9783,
+   9782,
+   9775
+  ],
+  "gold": "288_Access_to_the_Media_Deaf_Persons_Act_2022::s19",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0384",
+  "query": "What can the government do if there are issues with applying the rules?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6864967942237854,
+  "top_sections": [
+   2428,
+   1809,
+   12496,
+   2539,
+   12472
+  ],
+  "gold": "492_Pakistan_Council_for_Science_and_Technology_Act_2017::s25",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0385",
+  "query": "What happens if I accidentally mislabel my products?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6831309497356415,
+  "top_sections": [
+   8452,
+   27037,
+   25227,
+   30855,
+   1235
+  ],
+  "gold": "510_Trade_Marks_Ordinance_2001::s98",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0386",
+  "query": "What happens if a committee can't reach a decision?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6240244209766388,
+  "top_sections": [
+   19174,
+   9840,
+   23305,
+   16909,
+   14909
+  ],
+  "gold": "196_Pakistan_Sovereign_Wealth_Fund_Act_2023::s21",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0387",
+  "query": "I'm trying to register my brand's logo, but I'm not sure where to go or how to start the process. It feels overwhelming and I need some guidance.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.695847749710083,
+  "top_sections": [
+   4631,
+   8385,
+   4630,
+   4629,
+   6938
+  ],
+  "gold": "510_Trade_Marks_Ordinance_2001::s9",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0388",
+  "query": "What happens if I claim property that I know isn't mine?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6650695204734802,
+  "top_sections": [
+   26681,
+   11880,
+   21832,
+   26958,
+   17981
+  ],
+  "gold": "870_Pakistan_Penal_Code_PPC_1860_Under_Review::s207",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0389",
+  "query": "I'm concerned because I heard that the railway administration might be entering agreements without proper approval. How can I ensure that these agreements are legitimate?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7730105966329575,
+  "top_sections": [
+   19078,
+   19077,
+   19079,
+   19068,
+   22316
+  ],
+  "gold": "620_Railway_Regulatory_Authority_Ordinance_2002::s19",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0390",
+  "query": "How often does the PTA conduct spectrum auctions in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6368284821510315,
+  "top_sections": [
+   3359,
+   23661,
+   3406,
+   3358,
+   3405
+  ]
+ },
+ {
+  "id": "L0391",
+  "query": "How are spectrum auction rules structured under the PTA in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6254810094833374,
+  "top_sections": [
+   3359,
+   3358,
+   3406,
+   22689,
+   4033
+  ]
+ },
+ {
+  "id": "L0392",
+  "query": "What are the penalties for hiring a child under the legal age?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6816223859786987,
+  "top_sections": [
+   9851,
+   4823,
+   26535,
+   3289,
+   9849
+  ],
+  "gold": "1033_Islamabad_Capital_Territory_Domestic_Workers_Act_2022::s29",
+  "gold_in_index": true,
+  "rank": 9
+ },
+ {
+  "id": "L0393",
+  "query": "Is there a specific FBR ruling on withholding tax for payments made to foreign consultants?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5672061443328857,
+  "top_sections": [
+   301,
+   525,
+   350,
+   655,
+   714
+  ]
+ },
+ {
+  "id": "L0394",
+  "query": "Are there additional fees for filing urgent applications in court?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6818801760673523,
+  "top_sections": [
+   16049,
+   7045,
+   1551,
+   3437,
+   15997
+  ]
+ },
+ {
+  "id": "L0395",
+  "query": "I'm really concerned about a director in our company who isn't performing well. I want to know how we can remove them from their position.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6952153742313385,
+  "top_sections": [
+   28980,
+   176,
+   25534,
+   26027,
+   7214
+  ],
+  "gold": "410_Companies_Act_2017::s163",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0396",
+  "query": "I'm concerned about the legality of an animal sacrifice for a religious ceremony. I want to make sure I'm following the law while practicing my beliefs.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.705579400062561,
+  "top_sections": [
+   10491,
+   16845,
+   25607,
+   27299,
+   25616
+  ],
+  "gold": "323_Prevention_of_Cruelty_to_Animals_Act_1890::s11",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0397",
+  "query": "I'm really worried because I think the details in my financing statement might be wrong, and I'm not sure if it will still be valid. What if I didn't authorize it properly?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6789109110832214,
+  "top_sections": [
+   28606,
+   28600,
+   28602,
+   28608,
+   28601
+  ],
+  "gold": "922_Financial_Institutions_Secured_Transactions_Act_2016::s30",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0398",
+  "query": "What should the mine owner do if there is a serious accident?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7122590839862823,
+  "top_sections": [
+   2299,
+   2292,
+   1268,
+   2301,
+   2291
+  ],
+  "gold": "039_Mines_Act_1923::s20",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0399",
+  "query": "What happens if my issue involves someone from the military?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6819036304950714,
+  "top_sections": [
+   30417,
+   26428,
+   25837,
+   21861,
+   19731
+  ],
+  "gold": "092_Pakistan_Criminal_Law_Amendment_Act_1958::s13",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0400",
+  "query": "I entered into a contract that I later found out was against the rules, and I'm worried about what that means for me. Can I get my money back or take any action?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5801297724246979,
+  "top_sections": [
+   14149,
+   28951,
+   1095,
+   1145,
+   28799
+  ],
+  "gold": "947_Futures_Market_Act_2016::s101",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0401",
+  "query": "I'm concerned about whether I can authorize someone else to handle my application since I'm unable to do it myself. I need to know if that's possible and what the process is.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.555186003446579,
+  "top_sections": [
+   19615,
+   17034,
+   19613,
+   10706,
+   2962
+  ],
+  "gold": "261_Foreigners_Act_1946::s12",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0402",
+  "query": "Can my case be moved to a different administrator if it's taking too long?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6089142560958862,
+  "top_sections": [
+   23991,
+   23993,
+   4854,
+   28845,
+   10979
+  ],
+  "gold": "787_Evacuee_Trust_Properties_Management_and_Disposal_Act_197::s18",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0403",
+  "query": "What do I need to do to renew my trademark registration?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.594081699848175,
+  "top_sections": [
+   8382,
+   22403,
+   8403,
+   15966,
+   22804
+  ],
+  "gold": "510_Trade_Marks_Ordinance_2001::s34",
+  "gold_in_index": true,
+  "rank": 7
+ },
+ {
+  "id": "L0404",
+  "query": "I'm concerned about the validity of some rules related to civil servants that were in place before a certain date. I want to know if actions taken under those rules are still considered valid.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7922160923480988,
+  "top_sections": [
+   25706,
+   25704,
+   19529,
+   19992,
+   8731
+  ],
+  "gold": "855_Civil_Servants_Validation_of_Rules_Ordinance_2001::s2",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0405",
+  "query": "What are the penalties for someone involved in a violent disturbance?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.62431201338768,
+  "top_sections": [
+   26774,
+   24362,
+   13839,
+   24367,
+   26611
+  ],
+  "gold": "870_Pakistan_Penal_Code_PPC_1860_Under_Review::s147",
+  "gold_in_index": true,
+  "rank": 7
+ },
+ {
+  "id": "L0406",
+  "query": "I'm worried because I found out that one of our directors might not have been properly appointed, but they've been making decisions for us. What does this mean for our company?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6977958083152771,
+  "top_sections": [
+   26364,
+   13345,
+   26031,
+   26043,
+   26353
+  ],
+  "gold": "410_Companies_Act_2017::s168",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0407",
+  "query": "I'm concerned about my child's rights and who can help address issues related to them. I need guidance on how to get support for my situation.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.5981751382350922,
+  "top_sections": [
+   21886,
+   4466,
+   21891,
+   21901,
+   22490
+  ],
+  "gold": "740_National_Commission_on_the_Rights_of_Child_Act_2017::s13",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0408",
+  "query": "I'm really concerned because I think someone at the post office might have tampered with my important documents. What can I do about it?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6360122561454773,
+  "top_sections": [
+   4314,
+   4277,
+   4320,
+   4311,
+   4330
+  ],
+  "gold": "1010_Post_Office_Act_1898::s55",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0409",
+  "query": "What happens if the person being extradited escapes?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7123230695724487,
+  "top_sections": [
+   24385,
+   21444,
+   6016,
+   14876,
+   4718
+  ],
+  "gold": "520_Extradition_Act_1972::s21",
+  "gold_in_index": true,
+  "rank": 6
+ },
+ {
+  "id": "L0410",
+  "query": "Who takes charge when the Chairman is sick or unavailable?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6653668284416199,
+  "top_sections": [
+   2363,
+   27433,
+   23773,
+   19890,
+   5936
+  ],
+  "gold": "164_Karachi_Port_Trust_Act_1886::s20",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0411",
+  "query": "I'm worried because I need to register my vehicle, but I'm not sure if I have all the necessary documents and if I need to show my vehicle in person. What if the details I provided aren't correct?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6669095754623413,
+  "top_sections": [
+   18716,
+   22225,
+   22224,
+   18717,
+   18723
+  ],
+  "gold": "732_National_Highways_Safety_Ordinance_2000::s22",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0412",
+  "query": "What do I need to do to get the necessary permissions for my wireless communication?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6577880084514618,
+  "top_sections": [
+   19189,
+   19188,
+   19186,
+   19195,
+   19191
+  ],
+  "gold": "625_Wireless_Telegraphy_Act_1933::s11",
+  "gold_in_index": true,
+  "rank": 7
+ },
+ {
+  "id": "L0413",
+  "query": "Are there different stamp duty rates for residential and commercial leases in Punjab?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5741211473941803,
+  "top_sections": [
+   23869,
+   23398,
+   7229,
+   7908,
+   7848
+  ]
+ },
+ {
+  "id": "L0414",
+  "query": "I heard about an accident at the mine where I work, and I'm really worried about what happens next. I want to make sure everything is handled properly and that the right people are informed.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7146106362342834,
+  "top_sections": [
+   2299,
+   2309,
+   2301,
+   2318,
+   4163
+  ],
+  "gold": "039_Mines_Act_1923::s20",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0415",
+  "query": "How can I find information on the internal election results of political parties in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.578973263502121,
+  "top_sections": [
+   15118,
+   14919,
+   15117,
+   15111,
+   15110
+  ]
+ },
+ {
+  "id": "L0416",
+  "query": "What happens if someone is occupying community land without permission?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6211396753787994,
+  "top_sections": [
+   4794,
+   18325,
+   4789,
+   5325,
+   10275
+  ],
+  "gold": "367_Capital_Territory_Local_Government_Ordinance_1979_Repeal::s48",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0417",
+  "query": "What should I do if a female is held by a male officer?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6258912086486816,
+  "top_sections": [
+   24750,
+   9001,
+   21901,
+   24813,
+   26872
+  ],
+  "gold": "806_Torture_and_Custodial_Death_Prevention_and_Punishment_Ac::s4",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0418",
+  "query": "I'm really concerned because my spouse has been diagnosed with a severe mental illness, and I don't know how to handle our marriage situation. I need to know what options I have for moving forward legally.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.599457323551178,
+  "top_sections": [
+   30585,
+   25196,
+   10717,
+   9863,
+   10693
+  ],
+  "gold": "478_Divorce_Act_1869::s48",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0419",
+  "query": "Can I request international assistance for biological safety concerns?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6276277899742126,
+  "top_sections": [
+   15751,
+   15754,
+   15748,
+   15742,
+   15745
+  ],
+  "gold": "505_Biological_and_Toxin_Weapons_Convention_Implementation_A::s12",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0420",
+  "query": "What is the process for appealing a decision made about my hotel?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6021025776863098,
+  "top_sections": [
+   4763,
+   4759,
+   10616,
+   4765,
+   21323
+  ],
+  "gold": "1029_Pakistan_Hotels_and_Restaurants_Act_1976::s25",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0421",
+  "query": "I'm worried because I need to pledge some securities to secure a loan, but I'm not sure how to do it properly. I want to make sure everything is legal and that I won't lose my investment.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6551494002342224,
+  "top_sections": [
+   16483,
+   28988,
+   2509,
+   8953,
+   27455
+  ],
+  "gold": "525_Central_Depositories_Act_1997::s12",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0422",
+  "query": "Are there any discounts or incentives for new entrants in the telecom market in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5588667392730713,
+  "top_sections": [
+   23312,
+   14563,
+   3382,
+   3399,
+   3375
+  ]
+ },
+ {
+  "id": "L0423",
+  "query": "How can I find the latest court fee schedule for small claims in Peshawar?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6549646258354187,
+  "top_sections": [
+   15707,
+   15719,
+   15732,
+   15739,
+   15703
+  ]
+ },
+ {
+  "id": "L0424",
+  "query": "I'm concerned about the accuracy of the voter list in my area and who is in charge of updating it. I want to know how I can ensure my information is correct before the elections.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.636634349822998,
+  "top_sections": [
+   14940,
+   15336,
+   15017,
+   14949,
+   20218
+  ],
+  "gold": "475_Elections_Act_2017::s24",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0425",
+  "query": "How does the PCB handle player selection for national teams based on contract status?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.4430592656135559,
+  "top_sections": [
+   12273,
+   12272,
+   10778,
+   10786,
+   6882
+  ]
+ },
+ {
+  "id": "L0426",
+  "query": "I'm really anxious because I've been facing harassment at work, and I don't know how to report it without facing backlash. I just want to feel safe and supported in my job.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6223286986351013,
+  "top_sections": [
+   10077,
+   27072,
+   10064,
+   10065,
+   10075
+  ],
+  "gold": "305_Protection_Against_Harassment_of_Women_at_the_Work_Place::s4",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0427",
+  "query": "What should I do if I disagree with the compensation amount?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6075698733329773,
+  "top_sections": [
+   23679,
+   7352,
+   24662,
+   3146,
+   20170
+  ],
+  "gold": "189_Works_of_Defence_Act_1903::s20",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0428",
+  "query": "How does the PCB regulate player endorsements and sponsorship deals?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5003910064697266,
+  "top_sections": [
+   1682,
+   6661,
+   11347,
+   16021,
+   11345
+  ]
+ },
+ {
+  "id": "L0429",
+  "query": "I'm really concerned because I received a contempt order from the court and I don't know what to do next. Is there a way to challenge this decision?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6933315992355347,
+  "top_sections": [
+   15179,
+   15169,
+   15168,
+   15178,
+   20345
+  ],
+  "gold": "477_Contempt_of_Court_Ordinance_2003::s19",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0430",
+  "query": "How much is the stamp duty for a property transfer deed in Karachi?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.578387975692749,
+  "top_sections": [
+   7856,
+   28849,
+   7913,
+   28795,
+   26957
+  ]
+ },
+ {
+  "id": "L0431",
+  "query": "What facilities are available for testing narcotic substances in Pakistan?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6517518162727356,
+  "top_sections": [
+   29161,
+   29201,
+   29134,
+   29128,
+   29186
+  ],
+  "gold": "942_Control_of_Narcotic_Substances_Act_CNSA_1997::s34",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0432",
+  "query": "What happens if I disagree with the compensation amount awarded?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7017574608325958,
+  "top_sections": [
+   7352,
+   24662,
+   3441,
+   7361,
+   7358
+  ],
+  "gold": "189_Works_of_Defence_Act_1903::s26",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0433",
+  "query": "Are there any exemptions available for withholding tax on payments to foreign contractors in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6993321180343628,
+  "top_sections": [
+   350,
+   351,
+   358,
+   359,
+   714
+  ]
+ },
+ {
+  "id": "L0434",
+  "query": "Are there any specific timelines for filing documents in the Sindh High Court?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5779570937156677,
+  "top_sections": [
+   10041,
+   4539,
+   4540,
+   25661,
+   25637
+  ]
+ },
+ {
+  "id": "L0435",
+  "query": "What happens if I sell shares I received through my employee share scheme?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7363827228546143,
+  "top_sections": [
+   316,
+   26149,
+   10457,
+   12912,
+   25935
+  ],
+  "gold": "009_Income_Tax_Ordinance_2001_Same_as_on_the_official_websit::s14",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0436",
+  "query": "Are there any specific eligibility criteria for telecom operators to participate in spectrum auctions in Pakistan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6283261179924011,
+  "top_sections": [
+   3359,
+   3406,
+   926,
+   19809,
+   3358
+  ]
+ },
+ {
+  "id": "L0437",
+  "query": "I'm concerned about getting financial support for a local development project, but I'm not sure where to start or who can help. I need guidance on how to proceed with this matter.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.59126877784729,
+  "top_sections": [
+   6709,
+   25012,
+   20522,
+   15653,
+   15806
+  ],
+  "gold": "403_Regional_Development_Finance_Corporation_Ordinance_1985_::s3",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0438",
+  "query": "What are the consequences for someone pretending to be a qualified medical professional?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6102346181869507,
+  "top_sections": [
+   13989,
+   24314,
+   24312,
+   810,
+   5376
+  ],
+  "gold": "795_Medical_and_Dental_Degrees_Ordinance_1982::s6",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0439",
+  "query": "Who is in charge of managing the exams at the institute?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7629447877407074,
+  "top_sections": [
+   25316,
+   6782,
+   16887,
+   16264,
+   9811
+  ],
+  "gold": "615_Smart_Institute_of_Science_and_Technology_Act_2022::s17",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0440",
+  "query": "I'm concerned about the job security of my position at the institute and how my employment terms are determined. I want to know if I'm considered a government employee and what that means for my rights.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6602285802364349,
+  "top_sections": [
+   29727,
+   8913,
+   18498,
+   5011,
+   17283
+  ],
+  "gold": "311_Hyderabad_Institute_for_Technology_and_Management_Scienc::s31",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0441",
+  "query": "I'm really concerned because my friend was suspended from the police force, and I don't know what that means for his job and responsibilities. Will he still have to follow the same rules even though he's not actively working?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7614882290363312,
+  "top_sections": [
+   12209,
+   17967,
+   17968,
+   12296,
+   12212
+  ],
+  "gold": "594_Police_Act_1861::s8",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0442",
+  "query": "How do I access the latest traffic regulations for Faisalabad?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.6038292944431305,
+  "top_sections": [
+   15428,
+   15434,
+   22291,
+   16065,
+   14651
+  ]
+ },
+ {
+  "id": "L0443",
+  "query": "What can I do if my lender refuses to take my payment without interest?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6502689719200134,
+  "top_sections": [
+   29221,
+   29224,
+   24049,
+   25378,
+   29218
+  ],
+  "gold": "943_Islamabad_Capital_Territory_Prohibition_of_Interest_of_P::s13",
+  "gold_in_index": true,
+  "rank": 2
+ },
+ {
+  "id": "L0444",
+  "query": "I'm concerned about what happens if the Chancellor is unavailable. Who will make decisions in their absence?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7256988286972046,
+  "top_sections": [
+   27219,
+   10192,
+   21106,
+   25309,
+   24534
+  ],
+  "gold": "880_Air_University_Ordinance_2002::s9",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0445",
+  "query": "I'm concerned because I worked in the military and now I want to take a job with a private company that deals with defense contracts. I'm not sure if that's allowed.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6007752120494843,
+  "top_sections": [
+   24838,
+   30023,
+   6401,
+   24820,
+   6398
+  ],
+  "gold": "978_Pakistan_Army_Act_1952::s55A",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0446",
+  "query": "Can I apply for financial support from my child if I'm unable to take care of myself?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5852978825569153,
+  "top_sections": [
+   21907,
+   21886,
+   21901,
+   21898,
+   21902
+  ],
+  "gold": "267_Islamabad_Capital_Territory_Senior_Citizens_Act_2021::s14",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0447",
+  "query": "What happens if I fail to pay the amounts due to the Authority?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6192710101604462,
+  "top_sections": [
+   22484,
+   20519,
+   22624,
+   19095,
+   8769
+  ],
+  "gold": "767_Special_Technology_Zones_Authority_Act_2021::s37",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0448",
+  "query": "Who can intervene if the Board makes questionable decisions?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6491800546646118,
+  "top_sections": [
+   27405,
+   19419,
+   9775,
+   5824,
+   1336
+  ],
+  "gold": "028_Port_Qasim_Authority_PQA_Act_1973::s70",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0449",
+  "query": "I'm really concerned because a female relative of mine was taken into custody by a male officer, and I don't think that's right. I want to know if this is legal or if there's something I can do about it.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7211720049381256,
+  "top_sections": [
+   24750,
+   9001,
+   21901,
+   30417,
+   6066
+  ],
+  "gold": "806_Torture_and_Custodial_Death_Prevention_and_Punishment_Ac::s4",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0450",
+  "query": "I'm concerned about the fees and charges at my educational institution and how they are determined. I also want to understand the process for appointing teachers and staff there.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6401768326759338,
+  "top_sections": [
+   4507,
+   19269,
+   30793,
+   19274,
+   3556
+  ],
+  "gold": "692_Kalam_Bibi_International_Women_Institute_Bannu_Act_2023::s30",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0451",
+  "query": "Can I be evicted from my home if I work for the government?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.5693187713623047,
+  "top_sections": [
+   17064,
+   4794,
+   10616,
+   10617,
+   17052
+  ],
+  "gold": "326_Cantonments_Rent_Restriction_Act_1963::s22",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0452",
+  "query": "What steps should I take if I want to file a complaint about harassment at work?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6946663856506348,
+  "top_sections": [
+   10071,
+   10077,
+   10063,
+   10064,
+   10067
+  ],
+  "gold": "305_Protection_Against_Harassment_of_Women_at_the_Work_Place::s4",
+  "gold_in_index": true,
+  "rank": 5
+ },
+ {
+  "id": "L0453",
+  "query": "What happens if the hotel has to give my room to someone else?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6553716063499451,
+  "top_sections": [
+   4762,
+   21327,
+   4765,
+   21326,
+   10616
+  ],
+  "gold": "1029_Pakistan_Hotels_and_Restaurants_Act_1976::s14",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0454",
+  "query": "What happens if the judges disagree on a decision?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.675180196762085,
+  "top_sections": [
+   24117,
+   21703,
+   21763,
+   2159,
+   24129
+  ],
+  "gold": "032_Benami_Transactions_Prohibition_Act_2017::s41",
+  "gold_in_index": true,
+  "rank": 10
+ },
+ {
+  "id": "L0455",
+  "query": "I'm concerned that my property might be considered illegal under some other laws, and I need to know if this will affect me. I want to understand how these rules apply to my situation.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.653156578540802,
+  "top_sections": [
+   10892,
+   10895,
+   22736,
+   26616,
+   10889
+  ],
+  "gold": "032_Benami_Transactions_Prohibition_Act_2017::s56",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0456",
+  "query": "I'm concerned that I can't take legal action against the university for a decision they made that negatively affected me. It feels unfair that I have no recourse.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6280547082424164,
+  "top_sections": [
+   4523,
+   3727,
+   9830,
+   19047,
+   14657
+  ],
+  "gold": "595_Bahria_University_Ordinance_2000::s29",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0457",
+  "query": "I'm really concerned about what happens to the crew of a ship that was lost. I don't know if they can all be tried together or if they will face individual charges.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7537445724010468,
+  "top_sections": [
+   24510,
+   24509,
+   24512,
+   24513,
+   1026
+  ],
+  "gold": "796_Pakistan_Navy_Ordinance_1961::s183",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0458",
+  "query": "I'm really concerned because I think someone is trying to cheat in the upcoming election, and I'm not sure what to do about it. I also heard that some people might be voting illegally.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7019436955451965,
+  "top_sections": [
+   11500,
+   15392,
+   24981,
+   4687,
+   18201
+  ],
+  "gold": "1024_Cantonments_Local_Government_Elections_Ordinance_2002_L::s29",
+  "gold_in_index": true,
+  "rank": 4
+ },
+ {
+  "id": "L0459",
+  "query": "Who decides who gets to be on the Council of Regents?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7825890928506851,
+  "top_sections": [
+   22365,
+   8629,
+   17385,
+   24546,
+   9051
+  ],
+  "gold": "735_National_Textile_University_Ordinance_2002::s15",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0460",
+  "query": "Is there a reduced court fee for low-income individuals in Khyber Pakhtunkhwa?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5580196976661682,
+  "top_sections": [
+   3456,
+   719,
+   3476,
+   23470,
+   10411
+  ]
+ },
+ {
+  "id": "L0461",
+  "query": "Are there any restrictions on commercial signage in Rawalpindi?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5525360405445099,
+  "top_sections": [
+   4630,
+   5077,
+   5091,
+   18828,
+   7996
+  ]
+ },
+ {
+  "id": "L0462",
+  "query": "I'm really worried because I have some documents related to Esso that I haven't handed over to the government yet. What could happen to me if I don't return them?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6898951530456543,
+  "top_sections": [
+   28921,
+   28919,
+   28934,
+   28935,
+   28926
+  ],
+  "gold": "930_Esso_Undertakings_Vesting_Act_1976::s13",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0463",
+  "query": "I'm really anxious because my employer hasn't paid my wages for the last month, and I'm not sure what to do about it. I need to understand when I should expect to get paid after my job ends too.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.7698505222797394,
+  "top_sections": [
+   5070,
+   4838,
+   28550,
+   4833,
+   2691
+  ],
+  "gold": "109_West_Pakistan_Shops_and_Establishments_Ordinance_1969::s11",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0464",
+  "query": "Are there specific zoning regulations for residential buildings in Multan?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.55819171667099,
+  "top_sections": [
+   28948,
+   8897,
+   8908,
+   8896,
+   8898
+  ]
+ },
+ {
+  "id": "L0465",
+  "query": "What happens if the air consignment note doesn't match the actual condition of the goods?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.728740006685257,
+  "top_sections": [
+   6996,
+   6997,
+   29667,
+   29666,
+   7000
+  ],
+  "gold": "177_Carriage_by_Air_Act_2012::s11",
+  "gold_in_index": false,
+  "rank": null
+ },
+ {
+  "id": "L0466",
+  "query": "I'm concerned about who is in charge at the college and what authority they have over the students and staff. I need to understand how decisions are made there.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6780049204826355,
+  "top_sections": [
+   3542,
+   10358,
+   10360,
+   3548,
+   6843
+  ],
+  "gold": "320_Military_College_of_Engineering_Risalpur_Degree_Ordinanc::s5",
+  "gold_in_index": true,
+  "rank": 3
+ },
+ {
+  "id": "L0467",
+  "query": "What do I need to do to get authorization for my modaraba?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.7628996223211288,
+  "top_sections": [
+   11091,
+   11086,
+   11088,
+   11093,
+   11090
+  ],
+  "gold": "348_Modaraba_Companies_and_Modaraba_Floatation_and_Control_O::s11",
+  "gold_in_index": true,
+  "rank": 1
+ },
+ {
+  "id": "L0468",
+  "query": "I'm concerned about a situation where a police officer acted in a way that affected me, and I'm not sure if they can be held accountable for their actions. I want to know if they can be punished for what they did.",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.657782256603241,
+  "top_sections": [
+   12338,
+   17989,
+   14072,
+   12339,
+   12297
+  ],
+  "gold": "390_Police_Order_2002::s171",
+  "gold_in_index": true,
+  "rank": 7
+ },
+ {
+  "id": "L0469",
+  "query": "How can I access historical fare revision notices for Pakistan Railways?",
+  "query_type": "unanswerable",
+  "answerable": false,
+  "top_score": 0.5965769290924072,
+  "top_sections": [
+   23182,
+   23139,
+   23215,
+   23214,
+   11404
+  ]
+ },
+ {
+  "id": "L0470",
+  "query": "I'm concerned about some decisions made by the Board that seem unfair and might not follow the rules. Is there a way to challenge or change those decisions?",
+  "query_type": "paraphrase",
+  "answerable": true,
+  "top_score": 0.6570127606391907,
+  "top_sections": [
+   27405,
+   5943,
+   17306,
+   2468,
+   9775
+  ],
+  "gold": "028_Port_Qasim_Authority_PQA_Act_1973::s70",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0471",
+  "query": "What happens if I get charged for using canal water without authorization?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6790682077407837,
+  "top_sections": [
+   5525,
+   5528,
+   5473,
+   5471,
+   5488
+  ],
+  "gold": "125_Canal_and_Drainage_Act_1873::s35",
+  "gold_in_index": true,
+  "rank": null
+ },
+ {
+  "id": "L0472",
+  "query": "What fees do I need to pay for my trade organization's license?",
+  "query_type": "direct",
+  "answerable": true,
+  "top_score": 0.6391180753707886,
+  "top_sections": [
+   27110,
+   15997,
+   15937,
+   15938,
+   27132
+  ],
+  "gold": "874_Trade_Organizations_Act_2013::s24",
+  "gold_in_index": true,
+  "rank": 5
+ }
+]
