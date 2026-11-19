@@ -36,6 +36,7 @@ import hybrid_retrieval
 import pakistancode_web
 from case_context import build_case_context, build_precedent_context
 from law_index_store import build_law_store
+from case_index_store import build_case_store
 from context_budget import (
     CASE_CONTEXT_TOKEN_BUDGET,
     EARLY_MEMORY_TOKEN_BUDGET,
@@ -71,7 +72,7 @@ from session_manager import session_manager
 load_dotenv(".env")
 
 BASE_DIR = Path(__file__).resolve().parent
-CASES_INDEX_PATH = os.getenv("CASES_INDEX_PATH", str(BASE_DIR / "faiss_index_cases"))
+CASES_INDEX_PATH = os.getenv("CASES_INDEX_PATH", str(BASE_DIR / "faiss_case_retrieval"))
 LAW_INDEX_PATH = os.getenv("LAW_INDEX_PATH", str(BASE_DIR / "faiss_index_law"))
 JUDGMENTS_INDEX_PATH = os.getenv("JUDGMENTS_INDEX_PATH", str(BASE_DIR / "judgments_faiss_index"))
 
@@ -102,8 +103,8 @@ def provider_model(provider: str) -> str:
 def provider_label(provider: str) -> str:
     return "Groq" if provider == PROVIDER_GROQ else "Ollama"
 
-# The two retrievers share one embedding model; both indexes are 768-dim
-# bge-base vectors, so scores stay comparable across sources.
+# The two retrievers share one Qwen3-Embedding-0.6B model; both indexes are
+# 1024-dim unit vectors (squared L2; cosine = 1 - d/2), so scores stay comparable.
 KIND_LAW = "law"
 KIND_CASES = "cases"
 RETRIEVER_KINDS = (KIND_LAW, KIND_CASES)
@@ -196,7 +197,7 @@ def _load_faiss(path: str):
 
 def _candidate_paths(kind: str) -> List[str]:
     if kind == KIND_CASES:
-        return [CASES_INDEX_PATH, JUDGMENTS_INDEX_PATH]
+        return [CASES_INDEX_PATH]
     return [LAW_INDEX_PATH]
 
 
@@ -231,7 +232,7 @@ def get_store(kind: str) -> Optional[Any]:
         path = available[0]
         try:
             print(f"Loading {kind} FAISS index from '{path}'...", flush=True)
-            store = build_law_store(path) if kind == KIND_LAW else _load_faiss(path)
+            store = build_law_store(path) if kind == KIND_LAW else build_case_store(path)
             _stores[kind] = store
             status.update(
                 {"state": "ready", "path": path, "vectors": int(store.index.ntotal), "error": None}
